@@ -627,3 +627,17 @@ universities.each do |university|
 end
 
 puts "Creating Education"
+
+users = User.all
+
+users.size.times do |i|
+  start_year = rand(2014..2022)
+  end_year = start_year + rand(1..4)
+  academic_degree = 'Bachelor'
+  course = Faker::Educator.subject
+  curr_education = Education.new(start_year:, end_year:, academic_degree:, course:)
+  curr_education.user = users[i]
+  curr_education.university = University.all.sample
+  curr_education.department = Department.all.sample
+  curr_education.save!
+end
