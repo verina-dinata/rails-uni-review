@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_27_060746) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_27_150927) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,8 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_060746) do
   end
 
   create_table "educations", force: :cascade do |t|
-    t.date "start_year"
-    t.date "end_year"
+    t.string "start_year"
+    t.string "end_year"
     t.string "course"
     t.boolean "verified", default: false
     t.bigint "university_id", null: false
@@ -32,6 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_060746) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "department_id"
+    t.string "academic_degree"
+    t.string "university_email"
     t.index ["department_id"], name: "index_educations_on_department_id"
     t.index ["university_id"], name: "index_educations_on_university_id"
     t.index ["user_id"], name: "index_educations_on_user_id"
@@ -72,12 +74,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_060746) do
     t.string "address"
     t.text "description"
     t.integer "ranking"
-    t.float "course_fee"
+    t.string "domestic_course_fee"
     t.date "application_deadline"
     t.integer "student_count"
     t.boolean "dorm", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "international_course_fee"
+    t.string "email_domain"
   end
 
   create_table "users", force: :cascade do |t|
