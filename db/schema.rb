@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_27_054846) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_27_061334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_054846) do
     t.date "start_year"
     t.date "end_year"
     t.string "course"
-    t.boolean "verified"
+    t.boolean "verified", default: false
     t.bigint "university_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -46,6 +46,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_054846) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "university_id", null: false
+    t.integer "reputabilty_rating"
+    t.integer "education_quality_rating"
+    t.integer "campus_facilities_accom_rating"
+    t.integer "course_difficulty_rating"
+    t.integer "social_element_rating"
+    t.integer "value_for_money_rating"
+    t.integer "safety_rating"
+    t.integer "career_services_rating"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["university_id"], name: "index_reviews_on_university_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "universities", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -57,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_054846) do
     t.float "course_fee"
     t.date "application_deadline"
     t.integer "student_count"
-    t.boolean "dorm"
+    t.boolean "dorm", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -79,4 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_054846) do
   add_foreign_key "educations", "users"
   add_foreign_key "favorites", "universities"
   add_foreign_key "favorites", "users"
+  add_foreign_key "reviews", "universities"
+  add_foreign_key "reviews", "users"
 end
