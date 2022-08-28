@@ -655,11 +655,11 @@ puts "Creating Education"
 users = User.all
 
 users.size.times do |i|
-  start_year = rand(2014..2022)
-  end_year = start_year + rand(1..4)
-  academic_degree = 'Bachelor'
+  start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
+  end_date = start_date + Faker::Date.between(from: 1.year, to: 7.year)
+  academic_degree = 'Bachelor`s Degree'
   course = Faker::Educator.subject
-  curr_education = Education.new(start_year:, end_year:, academic_degree:, course:)
+  curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
   curr_education.user = users[i]
   curr_education.university = University.all.sample
   curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"

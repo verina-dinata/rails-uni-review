@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get "edit_profile", to: "educations#index", as: :edit_profile
 end
