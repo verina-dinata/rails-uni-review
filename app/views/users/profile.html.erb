@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="d-flex">
+    <div class="m-2 back_link">
+      <%= link_to :back, class: "link" do %>
+        <i class="fa-solid fa-chevron-left"></i>
+      <% end %>
+    </div>
+    <h1 class="mb-4"><strong>Profile</strong></h1>
+  </div>
+  <div class="d-flex justify-content-between my-2">
+    <h5><strong>General details</strong></h5>
+    <%= link_to edit_user_registration_path, class: "link" do %>
+      <i class="fa-solid fa-pen"></i>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+      <h6 class="my-3"><strong>First name</strong></h6>
+      <%= @user.first_name %>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+      <h6 class="my-3"><strong>Last name</strong></h6>
+      <%= @user.last_name %>
+    </div>
+  </div>
+  <h6 class="mb-3 mt-5"><strong>Email</strong></h6>
+  <%= @user.email %>
+
+  <div class="d-flex justify-content-between mt-5 my-4">
+    <h5><strong>Education</strong></h5>
+    <%= link_to "#", class: "link" do %>
+      <i class="fa-light fa-plus"></i>
+    <% end %>
+
+
+  </div>
+  <%= render "education", educations: @educations %>
+</div>
