@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-  }
+  devise_for :users
   devise_scope :users do
     get "users/profile", to: "users#profile", as: :profile
   end
@@ -11,5 +9,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get "education", to: "educations#index"
-
 end
