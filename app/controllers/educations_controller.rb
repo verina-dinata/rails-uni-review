@@ -1,9 +1,10 @@
 class EducationsController < ApplicationController
-  before_action :set_education, only: %i[:index :edit update]
+  before_action :set_education, only: %i[ :edit update]
   def index
     @educations = current_user.educations
-    @education = Education.new
+    @education_new = Education.new
     @universities = University.all
+    # @education_edit =
   end
 
   def new

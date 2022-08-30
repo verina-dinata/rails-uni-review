@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="educationModal<%= education.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -19,12 +19,12 @@
 
 
           <div class="row">
-            <div class="col">
-              <%= f.input :start_date, as: :date, html5: true, :input_html => { value: Date.today} %>
+            <div class="col-6">
+              <%= f.input :start_date, as: :date, html5: true, :input_html => { value: education.start_date.presence || Date.today } %>
             </div>
 
-            <div class="col">
-              <%= f.input :end_date, as: :date, html5: true, :input_html => { value: Date.today + 2.month} %>
+            <div class="col-6">
+              <%= f.input :end_date, as: :date, html5: true, :input_html => { value: education.end_date.presence || Date.today + 2.month } %>
             </div>
           </div>
           <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>

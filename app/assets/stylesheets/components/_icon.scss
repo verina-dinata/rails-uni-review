@@ -1,3 +1,23 @@
-.test:hover {
-  color: red !important;
+.icon {
+  display: inline-block;
+  text-decoration: none !important;
+  color: rgb(144, 144, 144);
+
+  text-align:center;
+
+  &:hover {
+
+    // height: 50px;
+    // background-color: rgb(101, 101, 101);
+    color: rgb(111, 111, 111);
+
+  }
 }
+
+// .icon-box {
+//   border-radius: 50%;
+//   padding: auto;
+//   width: 2em;
+//   height: 2em;
+//   background-color: blue;
+// }
