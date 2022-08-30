@@ -32,9 +32,17 @@
 
     <%# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     </button> %>
-    <span class="test">
-      <i class="fa-light fa-plus fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-    </span>
+    <div class="d-flex">
+      <span class="test">
+        <i class="fa-light fa-plus fa-2x mt-0 mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+      </span>
+      <div>
+        <%= link_to educations_path, class: "link" do %>
+          <i class="fa-solid fa-pen"></i>
+        <% end %>
+
+      </div>
+    </div>
 
     <%= render "add_education_modal", education: @education, universities: @universities %>
   </div>
