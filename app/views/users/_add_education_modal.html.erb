@@ -6,41 +6,41 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <%= simple_form_for (education) do |f| %>
-        <%= f.association :university %>
-        <%= f.association :department %>
-        <%= f.input :course %>
-        <%= f.input_field :academic_degree, as: :select,
-        collection:  ["Diploma", "Bachelor's Degree", "Master's Degree", "Phd"],
-        # selected: 1,
-        class: "form-select",
-        placeholder:"Enter number of guests"  %>
-        <%= f.label :academic_degree, 'Academic Degree' %>
-        <form>
+        <%= simple_form_for (education) do |f| %>
+          <%= f.association :university %>
+          <%= f.association :department %>
+          <%= f.input :course %>
+          <%= f.input_field :academic_degree, as: :select,
+          collection:  ["Diploma", "Bachelor`s Degree", "Master`s Degree", "Phd"],
+          # selected: 1,
+          class: "form-select",
+          placeholder:"Enter number of guests"  %>
+          <%= f.label :academic_degree, 'Academic Degree' %>
+
+
           <div class="row">
             <div class="col">
-              <label for="formGroupExampleInput">Start date</label>
-              <input id="startDate" class="form-control" data-booking-target="startDate" type="date" value="<%= Date.today %>" data-action="change->booking#startDateChange"/>
+              <%= f.input :start_date, as: :date, html5: true, :input_html => { value: Date.today} %>
             </div>
 
             <div class="col">
-              <label for="formGroupExampleInput">Checkout</label>
-              <input id="endDate" class="form-control" data-booking-target="endDate" type="date" value="<%= Date.today + 1.month %>" />
+              <%= f.input :end_date, as: :date, html5: true, :input_html => { value: Date.today + 2.month} %>
             </div>
           </div>
-        </form>
-        <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>
-        <%= f.label :university_email, 'University email' %>
-        <%= f.full_error :university_email %>
-        <div class="form-text">Include your university email to leave a review for your university</div>
-      <% end %>
+          <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>
+          <%= f.label :university_email, 'University email' %>
+          <%= f.full_error :university_email %>
+          <div class="form-text">Include your university email to leave a review for your university</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%= f.submit 'Save', class:"btn btn-primary" %>
+            <%# <button type="button" class="btn btn-primary">Save</button> %>
+          </div>
+        <% end %>
 
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
-      </div>
+
     </div>
   </div>
 </div>

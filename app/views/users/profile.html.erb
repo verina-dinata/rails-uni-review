@@ -30,9 +30,12 @@
     <h5><strong>Education</strong></h5>
 
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <i class="fa-light fa-plus"></i>
-    </button>
+    <%# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    </button> %>
+    <span class="test">
+      <i class="fa-light fa-plus fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+    </span>
+
     <%= render "add_education_modal", education: @education, universities: @universities %>
   </div>
   <%= render "education", educations: @educations %>
