@@ -28,11 +28,18 @@
 
   <div class="d-flex justify-content-between mt-5 my-4">
     <h5><strong>Education</strong></h5>
-    <%= link_to "#", class: "link" do %>
-      <i class="fa-light fa-plus"></i>
-    <% end %>
 
 
+    <%# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    </button> %>
+    <span class="test">
+      <i class="fa-light fa-plus fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+    </span>
+
+    <%= render "add_education_modal", education: @education, universities: @universities %>
   </div>
   <%= render "education", educations: @educations %>
+
+  <!-- Modal -->
+
 </div>
