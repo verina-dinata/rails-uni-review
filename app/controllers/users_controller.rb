@@ -5,6 +5,4 @@ class UsersController < ApplicationController
     @universities = University.all
     @education = Education.new
   end
-
-
 end
