@@ -1,4 +1,27 @@
 <div class="container">
-  <h3>Education</h3>
-  <%= render "education", educations: @educations %>
+  <div class="d-flex justify-content-between mt-5 my-4">
+    <div class="d-flex">
+      <div class="m-2 back_link">
+        <%= link_to :back, class: "icon" do %>
+          <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
+      </div>
+      <div class="d-flex align-items-center">
+        <h5 class="mb-0"><strong>Education</strong></h5>
+      </div>
+    </div>
+
+    <%# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    </button> %>
+    <span class="icon">
+      <i class="fa-light fa-plus fa-2x" data-bs-toggle="modal" data-bs-target="#educationModal<%= @education_new.id %>"></i>
+    </span>
+
+    <%= render "users/education_modal", education: @education_new, universities: @universities, departments: @departments %>
+  </div>
+
+  <%= render "education_list", educations: @educations %>
+
+
+
 </div>

@@ -261,20 +261,6 @@ universities = {
     dorm: true,
     'email domain' => '@nus.edu.sg'
   },
-  'Singapore University of Social Sciences' => {
-    description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H`s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
-    address: '463 Clementi Road, Singapore 599494',
-    city: 'Singapore',
-    country: 'Singapore',
-    url: 'https://www.suss.edu.sg/',
-    ranking: 330,
-    'domestic course fee' => '30k SGD',
-    'international course fee' => '130k SGD',
-    'application deadline' => Date.parse('20230930'),
-    'student count' => 14_000,
-    dorm: false,
-    'email domain' => '@suss.edu.sg'
-  },
   'Nanyang Technological University' => {
     description: 'The university has asked for tour groups and other visits to the campus be suspended until further notice. All international arrivals at the university must follow the self-quarantine guidelines that apply to all of Singapore. Young and research-intensive, Nanyang Technological University, Singapore (NTU Singapore) is placed 11th globally, and 1st among the world’s best young universities for five consecutive years (QS university rankings). Home to 33,000 students, NTU offers engineering, science, business, humanities, arts, social sciences, and education, and has a joint medical school with Imperial College London. Ranked the top university in the world for citations in artificial intelligence (Nikkei and Elsevier 2017) for the period 2012-2016, NTU is embracing digital technologies for better learning and living as part of its Smart Campus vision. It has partnerships with the world’s leading technology companies such as Alibaba, Rolls-Royce, BMW, Volvo, Delta Electronics, and Singtel in many areas of societal importance and impact that include artificial intelligence, data science, robotics, smart transportation, computing, personalised medicine, healthcare and clean energy. The NTU Smart Campus is not only a living testbed of tomorrow’s technologies, but it is also frequently listed among the world’s Top 15 most beautiful university campuses. It has 57 Green Mark-certified (equivalent to LEED-certified) building projects comprising more than 230 buildings, of which 95% are certified Green Mark Platinum. Apart from its main campus, NTU also has a medical campus in Novena, Singapore’s healthcare district.',
     address: '50 Nanyang Ave, Singapore 639798',
@@ -302,6 +288,20 @@ universities = {
     'student count' => 9280,
     dorm: true,
     'email domain' => '@smu.edu.sg'
+  },
+  'Singapore University of Social Sciences' => {
+    description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H`s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
+    address: '463 Clementi Road, Singapore 599494',
+    city: 'Singapore',
+    country: 'Singapore',
+    url: 'https://www.suss.edu.sg/',
+    ranking: 330,
+    'domestic course fee' => '30k SGD',
+    'international course fee' => '130k SGD',
+    'application deadline' => Date.parse('20230930'),
+    'student count' => 14_000,
+    dorm: false,
+    'email domain' => '@suss.edu.sg'
   },
   'Singapore University of Technology and Design' => {
     description: 'SUTD is set up in collaboration with MIT, USA, to advance knowledge and nurture future leaders and innovators to serve societal needs. This will be accomplished, with a focus on Design, through an integrated multi-disciplinary curriculum and research. The Singapore University of Technology and Design will provide something different from the existing institutions – a very high quality education, not just an academic education, but one which is going to stimulate students to go beyond the book knowledge, to apply it to solving problems.',
@@ -513,6 +513,53 @@ reviews = {
 
     In the USP (I`m not really sure whether it`s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.'
   ],
+  'Nanyang Technological University' => [
+    'Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
+    'NTU could have spent more money on providing a more reliable campus bus service or ensuring the module selection website works due to the "first come first serve" system. But instead the money went into funding a fancy looking building and a garden.
+
+    Food prices are also too high for an institution and lack of Halal food',
+    'Really nice campus. Great facilities. Nice people.
+
+    But if you`re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It`s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
+    'It`s a great university with lots of things going around. But be competitive minded otherwise it`s going to be tough like hell.'
+  ],
+  'Singapore Management University' => [
+    'The Good
+    1. Because of the intensity of the projects and because I am a perfectionist, I stayed long hours at school doing projects with friends. Because of the time we spent together, both the duration and the stress that we endured, most of my project friends are friends who last. Not that we have time to hang out with each other all the time, but we are the type of friends that randomly whatsapp each other in a while to check on others. We pass on opportunities that we think others will be interested. We come together again to participate in case challenges, form a startup (and it was adopted by the school and we just become advisors of the sort), travel and other stuffs together. I know it is not the type of friends who will hang out and who you will whine and gossip with. But they are great friends, indeed.
+
+    2. The people here are amazing. In SIS, the guys take projects onto an amazing eye-opening level. My Data Mining Prof even commented that most of our projects are beyond the scale of the thousands of dollars projects in the real life. And because we have time and are willing to explore new technology, the stuffs that they can do is truly awesome. I know a few who found startups and avoid the beaten path of becoming a tech person at banks. Their take on life is different. I am inspired and motivated to learn even more to stay on top of my game.
+
+    3. Most Profs are very down to earth and helpful. They dont try to hide behind books. They constantly push to adopt new technologies. They try hard to let us know the standards are high but they are there to help. They try really really hard to let us know they are our friends and they want us to excel. That helps a lot, especially for modules that I am scared of and/ or have no interest in.
+
+    The Bad
+    1. The learning curve for SIS students is so damn high. I have had exams when they ask you to properly implement the solution when the modules only teach you the theory behind designing it. You are always expected to reach the impossibly high standards. The Profs seem like they do not have enough time to teach us that much coding in class, so they dedicate all their time to the design theory and assume we know how to implement the actual solution. It is tough, but after a while, I guess it teaches me to be an independent learner. Nonetheless, at least for some of the modules, my GPA is greatly affected.
+
+    2. After a while (in my case, exactly 3 semesters), I have a group of close friends. We kind of bid for classes together to be in the same group. It is comforting because you know other people`s working style, you know they`ll commit and you know you can trust the quality of their work. But then again, after a while, it gets boring. I dont get to know other people on a deeper level anymore. And SIS is very small, if you piss off your first group by being the bossy one or the slack one, well, I guess gossip travels very fast and that label will stick for quite some time.
+
+    3. THE WORKLOAD IS JUST CRAZY. Projects, meetings, CCA commitments, quiz, exams. It sounds like any other college student. But it is really crazy. I am grateful if I have more than 4 hours to sleep any given day.
+
+
+    Well that is just my two cents. All in all, I dont regret making SMU my first choice.',
+    'Hmm it`s tiring and frustrating at times. The competitiveness, the grading system, the endless projects, assignments, mid-terms and finals. But the exhaustion is also what bonds all SMU students together, when you find yourself in an awkward situation with a peer and don`t know what to say, the safest bet is to go "Man I`ve so much work to do!" Then, the conversation will probably flow from there, lo and behold a (mind my french) bitching session has started and your instantly (for that moment at least) bonded and awkward moment have successfully been passed. Plus, the craziness also forces you to either learn to manage your time or die trying. Or well you can always opt for failing, which well, kind off defeats the purpose of going to school if your not going to try at all (trying then failing is completely different from failing without trying!)
+
+    Sometimes it can also be very uncomfortable and disconcerting because you get thrown into courses you`ve absolutely no skill in. I am an IT idiot, I`m the type that prefers all things in the traditional technological free way, I`m even somewhat averse to texting. But I get thrown into a Computer Analysis Tool class (well its basically an excel class), I suffered, badly, barely survived, barely passed, no surprises there. But being placed out of your comfort zones is not necessarily a bad thing. You do learn valuable skills but more than the skills, you meet students from different faculties, you are forced to mingle and sometimes work with them closely, you network and you learn and you share. You may end up hating each other, but you will no doubt have learned a thing or two from the other (whether you admit it or not).
+
+    The CCA-obsessed culture is another hidden gem of SMU. To outsiders they sometimes do not understand our "obsession" with it. But to us, that`s where our friends are, that`s where we get to escape from the stress of studying and focus on something we are truly passionate about, it is also there that we get hands-on practice in management, in communication, peer-learning and discipline, among many other things. I was in and still am in 2 myself, though am sort off taking a short break from both, was fully devoted to both the year before and well, it did get a bit draining. It was draining, but if someone asked me if I`d do it again or if i regretted making the choice I did last year, I would say yes and no respectively. It was tiring, emotionally, mentally and physically, I cried so much and got frustrated so many times, but i learned a lot too :) I definitely grew from the experience and i wouldn`t exchange it for anything else (though ok there were some bad and stupid calls i made in the process which i wince at and wished i could have done or chosen better, but think "Overall" heh)
+
+    However the downside of being an undergraduate in SMU is that we sometimes forget about our family, we are so focused on the hecticness of Uni that we forget all else. So engrossed with our youth, our friends, our school work, our internships, that we sometimes completely forget or push aside family time. In the pass 3 years, I`ve faced many situations in which i ended up sacrifincing family time, but after a tragedy happened in my family. I faced a rude awakening and realised just how important family is, and how much time I`ve missed with them, so this year, I`ve been trying my best to gain some lost time, and spend more time with them.
+
+    I still loved and still do love my experience as an undergraduate in SMU, the key is balance, choose and pick your priorities and balance them as best as you can. We have to remind ourselves that we can`t have it all, there`s just so much that we can do in the limited time we`re given, and to truly experience and enjoy something, choices and sacrifices need to be made. Decide what kind of uni life you want, and start learning to balance! Though remember, sleep really is an option here in SMU ;)',
+    'Getting drunk at Ice Cold in the afternoon
+    Attending classes after that made class participation more palatable
+    The need to stand out made me realise quickly that even though you can bullshit well, nobody likes you (they just pretend that they do)
+    Traveling to town is definitely more convenient
+    I enjoyed the afternoons hanging out at the coffee shop on Armenian Street before they closed it down
+    There were genuinely some interesting times bonding with group mates late into the night rushing for that presentation in the morning
+    I wasn`t one of those grade-obsessed students but I learnt a lot trying to juggle a business, school projects, running a CCA, family, love, friends and homework during my time in school (did not sleep very much)
+    Seriously people should get over the whole idea of being like at Wharton and fighting for that JPM, DB, MS blah internship. Find your voice!
+    Then again, school and life, in general, is what you make out of it. If you wanna be another cog in the machine and run the rat race with your frenemies, go ahead',
+    'SMU`s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.'
+  ],
   'Singapore University of Social Sciences' => [
     'Most of the lecturers are good. The school environment is moderate, as there are not enough canteens to accommodate the school population (shared with SIM Global). The school`s communication with the students can be improved because regarding some issues like paperwork for eportfolio and work attachment, there is some confusion among students.',
     'Many (not all) lecturers encountered are only part-time or associate lecturers and are not committed to help the students. Facilities are also not helpful and sufficient to meet students’ needs.
@@ -573,53 +620,6 @@ reviews = {
     But if you just want a job, and doesn`t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
     'Currently I`m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.'
   ],
-  'Nanyang Technological University' => [
-    'Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
-    'NTU could have spent more money on providing a more reliable campus bus service or ensuring the module selection website works due to the "first come first serve" system. But instead the money went into funding a fancy looking building and a garden.
-
-    Food prices are also too high for an institution and lack of Halal food',
-    'Really nice campus. Great facilities. Nice people.
-
-    But if you`re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It`s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
-    'It`s a great university with lots of things going around. But be competitive minded otherwise it`s going to be tough like hell.'
-  ],
-  'Singapore Management University' => [
-    'The Good
-    1. Because of the intensity of the projects and because I am a perfectionist, I stayed long hours at school doing projects with friends. Because of the time we spent together, both the duration and the stress that we endured, most of my project friends are friends who last. Not that we have time to hang out with each other all the time, but we are the type of friends that randomly whatsapp each other in a while to check on others. We pass on opportunities that we think others will be interested. We come together again to participate in case challenges, form a startup (and it was adopted by the school and we just become advisors of the sort), travel and other stuffs together. I know it is not the type of friends who will hang out and who you will whine and gossip with. But they are great friends, indeed.
-
-    2. The people here are amazing. In SIS, the guys take projects onto an amazing eye-opening level. My Data Mining Prof even commented that most of our projects are beyond the scale of the thousands of dollars projects in the real life. And because we have time and are willing to explore new technology, the stuffs that they can do is truly awesome. I know a few who found startups and avoid the beaten path of becoming a tech person at banks. Their take on life is different. I am inspired and motivated to learn even more to stay on top of my game.
-
-    3. Most Profs are very down to earth and helpful. They dont try to hide behind books. They constantly push to adopt new technologies. They try hard to let us know the standards are high but they are there to help. They try really really hard to let us know they are our friends and they want us to excel. That helps a lot, especially for modules that I am scared of and/ or have no interest in.
-
-    The Bad
-    1. The learning curve for SIS students is so damn high. I have had exams when they ask you to properly implement the solution when the modules only teach you the theory behind designing it. You are always expected to reach the impossibly high standards. The Profs seem like they do not have enough time to teach us that much coding in class, so they dedicate all their time to the design theory and assume we know how to implement the actual solution. It is tough, but after a while, I guess it teaches me to be an independent learner. Nonetheless, at least for some of the modules, my GPA is greatly affected.
-
-    2. After a while (in my case, exactly 3 semesters), I have a group of close friends. We kind of bid for classes together to be in the same group. It is comforting because you know other people`s working style, you know they`ll commit and you know you can trust the quality of their work. But then again, after a while, it gets boring. I dont get to know other people on a deeper level anymore. And SIS is very small, if you piss off your first group by being the bossy one or the slack one, well, I guess gossip travels very fast and that label will stick for quite some time.
-
-    3. THE WORKLOAD IS JUST CRAZY. Projects, meetings, CCA commitments, quiz, exams. It sounds like any other college student. But it is really crazy. I am grateful if I have more than 4 hours to sleep any given day.
-
-
-    Well that is just my two cents. All in all, I dont regret making SMU my first choice.',
-    'Hmm it`s tiring and frustrating at times. The competitiveness, the grading system, the endless projects, assignments, mid-terms and finals. But the exhaustion is also what bonds all SMU students together, when you find yourself in an awkward situation with a peer and don`t know what to say, the safest bet is to go "Man I`ve so much work to do!" Then, the conversation will probably flow from there, lo and behold a (mind my french) bitching session has started and your instantly (for that moment at least) bonded and awkward moment have successfully been passed. Plus, the craziness also forces you to either learn to manage your time or die trying. Or well you can always opt for failing, which well, kind off defeats the purpose of going to school if your not going to try at all (trying then failing is completely different from failing without trying!)
-
-    Sometimes it can also be very uncomfortable and disconcerting because you get thrown into courses you`ve absolutely no skill in. I am an IT idiot, I`m the type that prefers all things in the traditional technological free way, I`m even somewhat averse to texting. But I get thrown into a Computer Analysis Tool class (well its basically an excel class), I suffered, badly, barely survived, barely passed, no surprises there. But being placed out of your comfort zones is not necessarily a bad thing. You do learn valuable skills but more than the skills, you meet students from different faculties, you are forced to mingle and sometimes work with them closely, you network and you learn and you share. You may end up hating each other, but you will no doubt have learned a thing or two from the other (whether you admit it or not).
-
-    The CCA-obsessed culture is another hidden gem of SMU. To outsiders they sometimes do not understand our "obsession" with it. But to us, that`s where our friends are, that`s where we get to escape from the stress of studying and focus on something we are truly passionate about, it is also there that we get hands-on practice in management, in communication, peer-learning and discipline, among many other things. I was in and still am in 2 myself, though am sort off taking a short break from both, was fully devoted to both the year before and well, it did get a bit draining. It was draining, but if someone asked me if I`d do it again or if i regretted making the choice I did last year, I would say yes and no respectively. It was tiring, emotionally, mentally and physically, I cried so much and got frustrated so many times, but i learned a lot too :) I definitely grew from the experience and i wouldn`t exchange it for anything else (though ok there were some bad and stupid calls i made in the process which i wince at and wished i could have done or chosen better, but think "Overall" heh)
-
-    However the downside of being an undergraduate in SMU is that we sometimes forget about our family, we are so focused on the hecticness of Uni that we forget all else. So engrossed with our youth, our friends, our school work, our internships, that we sometimes completely forget or push aside family time. In the pass 3 years, I`ve faced many situations in which i ended up sacrifincing family time, but after a tragedy happened in my family. I faced a rude awakening and realised just how important family is, and how much time I`ve missed with them, so this year, I`ve been trying my best to gain some lost time, and spend more time with them.
-
-    I still loved and still do love my experience as an undergraduate in SMU, the key is balance, choose and pick your priorities and balance them as best as you can. We have to remind ourselves that we can`t have it all, there`s just so much that we can do in the limited time we`re given, and to truly experience and enjoy something, choices and sacrifices need to be made. Decide what kind of uni life you want, and start learning to balance! Though remember, sleep really is an option here in SMU ;)',
-    'Getting drunk at Ice Cold in the afternoon
-    Attending classes after that made class participation more palatable
-    The need to stand out made me realise quickly that even though you can bullshit well, nobody likes you (they just pretend that they do)
-    Traveling to town is definitely more convenient
-    I enjoyed the afternoons hanging out at the coffee shop on Armenian Street before they closed it down
-    There were genuinely some interesting times bonding with group mates late into the night rushing for that presentation in the morning
-    I wasn`t one of those grade-obsessed students but I learnt a lot trying to juggle a business, school projects, running a CCA, family, love, friends and homework during my time in school (did not sleep very much)
-    Seriously people should get over the whole idea of being like at Wharton and fighting for that JPM, DB, MS blah internship. Find your voice!
-    Then again, school and life, in general, is what you make out of it. If you wanna be another cog in the machine and run the rat race with your frenemies, go ahead',
-    'SMU`s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.'
-  ],
   'Singapore University of Technology and Design' => [
     'Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
     'When I first accepted enrollment, it was for their curriculum approach and their scholarship.
@@ -667,12 +667,9 @@ puts "Creating Departments"
 
 departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
 
-universities.each do |university|
-  departments.each do |department|
-    curr_department = Department.new(name: department)
-    curr_department.university = university
-    curr_department.save!
-  end
+departments.each do |department|
+  curr_department = Department.new(name: department)
+  curr_department.save!
 end
 
 puts "Creating Education"
@@ -681,7 +678,7 @@ users = User.all
 
 users.size.times do |i|
   start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
-  end_date = start_date + Faker::Date.between(from: 1.year, to: 7.year)
+  end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
   academic_degree = 'Bachelor`s Degree'
   course = Faker::Educator.subject
   curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
