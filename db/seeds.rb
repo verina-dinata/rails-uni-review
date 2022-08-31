@@ -9,6 +9,7 @@
 
 puts "Cleaning database"
 
+Favorite.destroy_all
 Review.destroy_all
 Department.destroy_all
 Education.destroy_all
@@ -343,6 +344,16 @@ puts "Creating Users"
   )
 end
 
+users = User.all
+
+puts "Creating Favourites"
+users.each do |user|
+  3.times do
+    university = University.all.sample
+    Favourite.create(:user, :university)
+  end
+end
+
 puts "Creating Departments"
 
 departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
@@ -356,7 +367,7 @@ end
 
 puts "Creating Education"
 
-users = User.all
+
 
 users.size.times do |i|
   2.times do |j|
