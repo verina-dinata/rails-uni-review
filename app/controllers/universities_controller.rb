@@ -16,7 +16,7 @@ class UniversitiesController < ApplicationController
   def show
     set_university
     @reviews = @university.reviews
-    # @education = Education
+    @resource = User.new
   end
 
   private
