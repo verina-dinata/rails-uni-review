@@ -7,7 +7,13 @@ class UniversitiesController < ApplicationController
 
   def show
     set_university
-  end
+    @markers = [
+      {
+        lat: @university.latitude,
+        lng: @university.longitude
+      }
+    ]
+   end
 
   private
 
