@@ -1,10 +1,10 @@
 class EducationsController < ApplicationController
-  before_action :set_education, only: %i[ :edit update]
+  before_action :set_education, only: %i[:edit update destroy]
   def index
     @educations = current_user.educations
     @education_new = Education.new
     @universities = University.all
-    # @education_edit =
+    @departments = Department.all
   end
 
   def new
@@ -26,10 +26,15 @@ class EducationsController < ApplicationController
 
   def update
     if @education.update(education_params)
-      redirect_to edit_education_path(@education), notice: "education has been updated."
+      redirect_to educations_path, notice: "Youe education has been updated."
     else
       render :edit
     end
+  end
+
+  def destroy
+    @education.destroy
+    redirect_to educations_path, status: :see_other, notice: "Education record was successfully destroyed."
   end
 
   private

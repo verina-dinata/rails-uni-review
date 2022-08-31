@@ -2,45 +2,92 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add education record</h5>
+        <h5 class="modal-title my-2" id="exampleModalLabel"><strong><%= education.id.present? ? "Edit" : "Add" %> education record</strong></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <%= simple_form_for (education) do |f| %>
-          <%= f.association :university %>
-          <%= f.association :department %>
-          <%= f.input :course %>
-          <%= f.input_field :academic_degree, as: :select,
-          collection:  ["Diploma", "Bachelor`s Degree", "Master`s Degree", "Phd"],
-          # selected: 1,
-          class: "form-select",
-          placeholder:"Enter number of guests"  %>
-          <%= f.label :academic_degree, 'Academic Degree' %>
+          <%= f.error_notification %>
 
+          <% university_list = [] %>
+          <% universities.each do | university | %>
+            <% university_list << [university.name, university.id] %>
+          <% end %>
 
-          <div class="row">
-            <div class="col-6">
-              <%= f.input :start_date, as: :date, html5: true, :input_html => { value: education.start_date.presence || Date.today } %>
+          <% department_list = [] %>
+          <% departments.each do | department | %>
+            <% department_list << [department.name, department.id] %>
+          <% end %>
+
+          <div class="form-floating mb-3 mt-3">
+            <%= f.input_field :university_id,
+            collection: university_list,
+            selected: education.university_id.presence || university_list.first.first,
+            class: "form-select",
+            placeholder:"Enter the name of your university"  %>
+            <%= f.label :university_id, 'University name' %>
+            <%= f.full_error :university_id %>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.input_field :department_id,
+            collection: department_list,
+            selected: education.department_id.presence || department_list.first.first,
+            class: "form-select",
+            placeholder:"Enter the name of your department"  %>
+            <%= f.label :department_id, 'Department name' %>
+            <%= f.full_error :department_id %>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.input_field :course, class: 'form-control', placeholder: "Input your course name" %>
+            <%= f.label :course, 'Course name' %>
+            <%= f.full_error :course %>
+            <div class="form-text">Let us know your field of study!</div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <%= f.input_field :academic_degree, as: :select,
+            collection:  ["Diploma", "Bachelor`s Degree", "Master`s Degree", "Phd"],
+            selected: 0,
+            class: "form-select",
+            placeholder:"Enter number of guests"  %>
+            <%= f.label :academic_degree, 'Academic Degree' %>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="form-floating mb-3 col-6">
+              <%= f.input_field :start_date, as: :date, html5: true,
+              class: "form-control",
+              value: education.start_date.presence || Date.today  %>
+              <%= f.label :start_date, 'Start date' %>
             </div>
 
-            <div class="col-6">
-              <%= f.input :end_date, as: :date, html5: true, :input_html => { value: education.end_date.presence || Date.today + 2.month } %>
+            <div class="form-floating mb-3 col-6">
+              <%= f.input_field :end_date, as: :date, html5: true,
+              class: "form-control",
+              value: education.end_date.presence || (Date.today + 1.year)  %>
+              <%= f.label :end_date, 'End date (or expected)' %>
             </div>
           </div>
-          <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>
-          <%= f.label :university_email, 'University email' %>
-          <%= f.full_error :university_email %>
-          <div class="form-text">Include your university email to leave a review for your university</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <%= f.submit 'Save', class:"btn btn-primary" %>
-            <%# <button type="button" class="btn btn-primary">Save</button> %>
+
+          <div class="form-floating mb-4">
+            <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>
+            <%= f.label :university_email, 'University email' %>
+            <%= f.full_error :university_email %>
+            <div class="form-text">Include your university email to leave a review for your university</div>
+          </div>
+
+          <div class="modal-footer d-flex justify-content-between">
+            <% if education.id.present? %>
+              <%= link_to 'Delete', education_path(education), class: "cancel-btn mx-0", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <% else %>
+              <button type="button" class="cancel-btn mx-0" data-bs-dismiss="modal">Cancel</button>
+            <% end %>
+            <%= f.submit 'Save', class:"save-btn mx-0" %>
           </div>
         <% end %>
-
-
       </div>
-
     </div>
   </div>
 </div>
