@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add education record</h5>
+        <h5 class="modal-title my-2" id="exampleModalLabel"><strong><%= education.id.present? ? "Edit" : "Add" %> education record</strong></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -19,7 +19,7 @@
             <% department_list << [department.name, department.id] %>
           <% end %>
 
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-3 mt-3">
             <%= f.input_field :university_id,
             collection: university_list,
             selected: education.university_id.presence || university_list.first.first,
@@ -71,7 +71,7 @@
             </div>
           </div>
 
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-4">
             <%= f.input_field :university_email, class: 'form-control', placeholder: "Enter your university email" %>
             <%= f.label :university_email, 'University email' %>
             <%= f.full_error :university_email %>
@@ -84,7 +84,7 @@
             <% else %>
               <button type="button" class="cancel-btn mx-0" data-bs-dismiss="modal">Cancel</button>
             <% end %>
-            <%= f.submit 'Save', class:"save-btn mx-0", style:"width:100%;" %>
+            <%= f.submit 'Save', class:"save-btn mx-0" %>
           </div>
         <% end %>
       </div>
