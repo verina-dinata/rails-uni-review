@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # get "education", to: "educations#index"
 
   resources :universities, only: %i[index show]
+  resources :reviews, only: %i[index destroy]
 end
