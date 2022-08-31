@@ -41,15 +41,16 @@
 
     <div class="row">
       <div id="map" class="col-md-7">
-        Map should show up here
-        <div class=""
+
+        <div class="" style="width: 100%; height: 600px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        Map should end here
+
       </div>
       <div class="col-md-5">
+        <strong><%= @university.name %></strong><br><br>
         <% @university.address.split(", ").each do |line|%>
           <%= "#{line}"%><br>
         <% end %>

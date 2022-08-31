@@ -130,7 +130,8 @@ universities = {
     'application deadline' => Date.parse('20230831'),
     'student count' => 17_192,
     dorm: true,
-    'email domain' => '@siswa.um.edu.my'
+    'email domain' => '@siswa.um.edu.my',
+
   },
   'Universiti Kebangsaan Malaysia' => {
     description: 'Second among the top universities in Malaysia is the Universiti Kebangsaan Malaysia (UKM), also known as the National University of Malaysia (NUM). Like most of the top universities in Malaysia, Universiti Kebangsaan Malaysia is publicly funded, with a fairly large intake of students at both undergraduate and graduate levels, teaching a comprehensive range of subjects alongside a strong research focus. It has its main campus in Bangi, a small town in the Selangor region to the south of Kuala Lumpur.',
@@ -158,7 +159,9 @@ universities = {
     'application deadline' => Date.parse('20230523'),
     'student count' => 25_628,
     dorm: true,
-    'email domain' => '@student.upm.edu.my'
+    'email domain' => '@student.upm.edu.my',
+    latitude: 6.457510,
+    longitude: 100.505455
   },
   'Universiti Sains Malaysia' => {
     description: 'The APEX (Accelerated PGelugorrogramme for Excellence) agenda among others is to propel the university to be one of the best institutions of higher learning in the world. USM is also the premium Research Intensive University in the country and has adopted an innovative approach to higher education, departing from the traditional faculty system to the broad-based school system. A university that champions sustainability issues, USM has 26 schools, offering undergraduate and postgraduate education and research based studies to both local and international students.',
@@ -218,6 +221,7 @@ universities = {
   },
   'Taylors University' => {
     description: 'Taylor`s University is the No. 1 private university in Malaysia and Southeast Asia, ranked #332 in the QS World University Rankings 2022. This ranking places the university among the top 1.1% of the most influential institutions globally.',
+    address: '1 Jalan Taylors, 47500 Subang Jaya, Selangor, Malaysia',
     city: 'Subang Jaya',
     country: 'Malaysia',
     url: 'https://university.taylors.edu.my/',
@@ -231,7 +235,7 @@ universities = {
   },
   'Management and Science University' => {
     description: 'Management & Science University (MSU) is one of Malaysia`s top universities with a focus on developing and delivering quality human capital in national and global critical- need areas; among these are Medicine, Health Sciences, Pharmacy, Information Sciences, and Engineering, besides Business Management & Professional Studies, Education & Social Sciences, Hospitality & Culinary, and Music & Fashion.   The moment you step into the MSU campus, you will experience the dynamic cultural diversity that is felt all around. Our students bring life into the overall vibrancy on site, with their combination of personalities and lifestyles. Their different racial or academic backgrounds and experiences, add unique features of the university, where individual growth and communication are leveraged.',
-    address: 'University Drive, Off Persiaran Olahraga, 40100 Shah Alam, Selangor, Malaysia',
+    address: 'University Drive, Off Persiaran Olahraga, Section 13, 40100 Shah Alam, Selangor Darul Ehsan, Malaysia',
     city: 'Shah Alam',
     country: 'Malaysia',
     url: 'https://www.msu.edu.my/',
@@ -245,7 +249,7 @@ universities = {
   },
   'National University of Singapore' => {
     description: 'A leading global university centred in Asia, the National University of Singapore (NUS) is Singapore’s flagship university, which offers a global approach to education and research, with a focus on Asian perspectives and expertiseNUS has 17 faculties and schools across three campuses. Its transformative education includes a broad-based curriculum underscored by multi-disciplinary courses and cross-faculty enrichment. Over 38,000 students from 100 countries enrich the community with their diverse social and cultural perspectives. NUS also strives to create a supportive and innovative environment to promote creative enterprise within its community.',
-    address: '21 Lower Kent Ridge Rd, Singapore 119077',
+    address: '21 Lower Kent Ridge Road, Singapore 119077',
     city: 'Singapore',
     country: 'Singapore',
     url: 'https://www.nus.edu.sg/',
@@ -259,7 +263,7 @@ universities = {
   },
   'Singapore University of Social Sciences' => {
     description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H`s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
-    address: '463 Clementi Rd, Singapore 599494',
+    address: '463 Clementi Road, Singapore 599494',
     city: 'Singapore',
     country: 'Singapore',
     url: 'https://www.suss.edu.sg/',
@@ -331,6 +335,27 @@ universities.each do |university, detail|
   email_domain = detail['email domain']
   University.create(name:, description:, address:, city:, country:, url:, ranking:, domestic_course_fee:, international_course_fee:, application_deadline:, student_count:, dorm:, email_domain:)
 end
+
+puts "Manually patching Coordinates"
+@university = University.find(8)
+@university.latitude = 3.117750,
+@university.longitude = 101.636600
+
+@university = University.find(10)
+@university.latitude =2.937890,
+@university.longitude = 101.801860
+
+@university = University.find(13)
+@university.latitude = 6.457510,
+@university.longitude = 100.505455
+
+@university = University.find(16)
+@university.latitude = 3.075530,
+@university.longitude = 101.549310
+
+@university = University.find(17)
+@university.latitude = 1.297990,
+@university.longitude = 103.775063
 
 puts "Creating Users"
 
