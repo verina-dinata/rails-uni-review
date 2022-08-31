@@ -7,6 +7,9 @@
 // }
 .banner{
   background-color: #2F8F9D;
+  background: linear-gradient(150deg, #2F8F9D, rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(0, 255, 251, 0.8), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, #2F8F9D, rgba(0,0,255,0) 70.71%);
   clear: both;
   position: relative;
   width: 100%;
@@ -15,10 +18,11 @@
 }
 
 // .header {
-//   background-image: url(http://lorempixel.com/image_output/people-q-c-1200-400-6.jpg);
+//   // background-image: url(https://images.unsplash.com/photo-1560364897-91578ff41817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3174&q=80);
+
 //   background-repeat: no-repeat;
 //   background-attachment: scroll;
-//   background-position: center;
+//   // background-position: center;
 //   background-size: 100% auto;
 // }
 .banner-sizing {
@@ -42,6 +46,7 @@
 .banner-content p {
   margin-top: 0px;
   margin-bottom: 6px;
+  // color: rgb(40, 39, 39);
 }
 
 .banner .home-form {
