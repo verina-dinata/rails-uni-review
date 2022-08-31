@@ -1,5 +1,5 @@
 class UniversitiesController < ApplicationController
-  # skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!
 
   def index
     @universities = University.all
@@ -8,6 +8,7 @@ class UniversitiesController < ApplicationController
   def show
     set_university
     @reviews = @university.reviews
+    # @education = Education
   end
 
   private
