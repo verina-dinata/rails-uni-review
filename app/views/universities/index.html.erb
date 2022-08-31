@@ -1,5 +1,7 @@
 <% @universities.each do |university| %>
-  <%= university.name  %><br>
-  <%= university.reviews.count %> Reviews<br>
-  <%# <%= university.description %> %>
+    <%= link_to university_path(university) do %>
+    <%= university.name  %><br>
+    <%= university.reviews.count %> Reviews<br>
+    <%# <%= university.description %> %>
+  <% end %>
 <% end %>
