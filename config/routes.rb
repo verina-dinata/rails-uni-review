@@ -9,8 +9,14 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get "education", to: "educations#index"
-  
+
   get "universities",     to: "universities#index"
   get "universities/:id", to: "universities#show"
+
+  namespace :api do
+    namespace :v1 do
+      resources :universities, only: [:index, :show, :create]
+    end
+  end
 
 end

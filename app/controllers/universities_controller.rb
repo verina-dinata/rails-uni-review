@@ -2,7 +2,7 @@ class UniversitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @universities = University.all
+      @universities = University.all
   end
 
   def show
