@@ -46,3 +46,15 @@
     border: 1px solid #959595 !important;
   }
 }
+
+.search-btn {
+  background-color: #2F8F9D !important;
+  width: 25%;
+  border: none !important;
+
+  &:hover {
+    background-color:  #fff !important;
+    color: #2F8F9D !important;
+    transition-duration: .5s;
+  }
+}

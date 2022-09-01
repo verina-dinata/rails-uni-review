@@ -6,6 +6,8 @@ class UniversitiesController < ApplicationController
     if params[:query].present?
       sql_query = "name ILIKE :query OR country ILIKE :query"
       @universities = University.where(sql_query, query: "%#{params[:query]}%")
+    elsif params[:query].blank?
+      redirect_to root_path
     else
       @universities = University.all
     end

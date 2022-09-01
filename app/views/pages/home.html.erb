@@ -4,9 +4,9 @@
     <div class="banner-sizing "></div>
     <div class="banner-content">
       <h1>Uni-Review</h1>
-      <p>Select your next .</p>
+      <p>Looking for your next educational journey.</p>
       <div class="row mt-4 home-form" data-controller="autocomplete">
-        <%= form_with url: root_path, method: :get, html: { class: "d-flex home-search", data: {autocomplete_target: "form"} } do |f|%>
+        <%= form_with url: universities_path, method: :get, html: { class: "d-flex home-search", data: {autocomplete_target: "form"} } do |f|%>
           <%= f.text_field :query,
             value: params[:query],
             data: {
@@ -15,7 +15,7 @@
             class: "form-control",
             placeholder: "Enter University name or Country"
           %>
-          <%= submit_tag "Search", class: "btn" %>
+          <%= submit_tag "Search", class: "btn search-btn" %>
         <% end %>
         <div data-autocomplete-target="list">
 
