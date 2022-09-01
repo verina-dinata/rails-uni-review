@@ -17,4 +17,8 @@ export default class extends Controller {
       this.listTarget.innerHTML = data
     })
   }
+
+  clear() {
+    this.listTarget.innerHTML = ''
+  }
 }
