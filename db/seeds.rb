@@ -346,13 +346,13 @@ end
 
 users = User.all
 
-puts "Creating Favourites"
-users.each do |user|
-  3.times do
-    university = University.all.sample
-    Favourite.create(:user, :university)
-  end
-end
+# puts "Creating Favorites"
+# users.each do |user|
+#   3.times do
+#     university = University.all.sample
+#     Favorite.create(:user, :university)
+#   end
+# end
 
 puts "Creating Departments"
 
