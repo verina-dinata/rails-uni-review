@@ -11,11 +11,11 @@
             value: params[:query],
             data: {
                 autocomplete_target: "input",
-                action: "keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear"},
+                action: "keyup->autocomplete#update focus->autocomplete#update "},
             class: "form-control",
             placeholder: "Enter University name or Country"
           %>
-          <%= submit_tag "Search", class: "btn" %>
+          <button data-action="click->autocomplete#filterUni">Search</button>
         <% end %>
         <div data-autocomplete-target="list">
 

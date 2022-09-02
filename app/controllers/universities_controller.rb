@@ -4,7 +4,7 @@ class UniversitiesController < ApplicationController
   def index
     # @universities = University.all
     if params[:query].present?
-      sql_query = "name ILIKE :query OR country ILIKE :query"
+      sql_query = "name ILIKE :query OR country ILIKE :query OR city ILIKE :query"
       @universities = University.where(sql_query, query: "%#{params[:query]}%")
     else
       @universities = University.all

@@ -8,8 +8,9 @@ Rails.application.routes.draw do
 
   get "search", to: "pages#home_search", as: :home_search
 
-  get "universities",     to: "universities#index"
-  get "universities/:id", to: "universities#show"
+  resources :universities, only: %i[index show]
+  # get "universities",     to: "universities#index"
+  # get "universities/:id", to: "universities#show"
 
   namespace :api do
     namespace :v1 do

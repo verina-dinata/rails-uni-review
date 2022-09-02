@@ -21,4 +21,9 @@ export default class extends Controller {
   clear() {
     this.listTarget.innerHTML = ''
   }
+
+  filterUni() {
+    const url = 'universities?query=' + this.inputTarget.value
+    window.location = url
+  }
 }
