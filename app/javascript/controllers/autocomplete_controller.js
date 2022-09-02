@@ -4,16 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["form", "input", "list"]
   connect() {
-    console.log(this.formTarget)
-    console.log(this.inputTarget)
-    console.log(this.listTarget)
-    console.log(this.formTarget.action)
-    console.log(this.inputTarget.value)
+
   }
 
   update() {
-    console.log("test keyup")
-    // const url = `http://localhost:3000/universities?query=${this.inputTarget.value}`
+    // console.log("test keyup")
     const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
@@ -23,7 +18,7 @@ export default class extends Controller {
   }
 
   clear() {
-    console.log("testtt")
+    // console.log("testtt")
 
     setTimeout(() => {
       this.listTarget.innerHTML = ""
