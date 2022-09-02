@@ -9,6 +9,7 @@
 
 puts "Cleaning database"
 
+Favorite.destroy_all
 Review.destroy_all
 Department.destroy_all
 Education.destroy_all
@@ -334,8 +335,8 @@ end
 
 puts "Creating Users"
 
-20.times do |i|
-  User.create!(
+50.times do |i|
+  User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: "user#{i}@gmail.com",
@@ -343,10 +344,47 @@ puts "Creating Users"
   )
 end
 
-universities = University.all
+users = User.all
+
+# puts "Creating Favorites"
+# users.each do |user|
+#   3.times do
+#     university = University.all.sample
+#     Favorite.create(:user, :university)
+#   end
+# end
+
+puts "Creating Departments"
+
+departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
+
+departments.each do |department|
+  curr_department = Department.new(name: department)
+  curr_department.save!
+end
+
+# universities = University.all
+
+puts "Creating Education"
+
+
+
+users.size.times do |i|
+  2.times do |j|
+    start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
+    end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
+    academic_degree = ['Diploma', 'Bachelor`s Degree'][j]
+    course = Faker::Educator.subject
+    curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
+    curr_education.user = users[i]
+    curr_education.university = University.all.sample
+    curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
+    curr_education.department = Department.all.sample
+    curr_education.save!
+  end
+end
 
 puts "Creating Reviews"
-
 
 reviews = {
   'The University of Melbourne' => [
@@ -620,8 +658,13 @@ reviews = {
   ]
 }
 
-universities.each do |university|
-  reviews[university.name].each do |review|
+# for each user, go through the educations list
+# for each education, get the university id
+# use that university id to add to review
+# add user_id to review user
+
+users.each do |user|
+  user.educations.each do |education|
     reputabilty_rating = rand(1..5)
     education_quality_rating = rand(1..5)
     campus_facilities_accom_rating = rand(1..5)
@@ -630,36 +673,33 @@ universities.each do |university|
     value_for_money_rating = rand(1..5)
     safety_rating = rand(1..5)
     career_services_rating = rand(1..5)
-    comment = review
-    curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:, comment:)
-    curr_review.user = User.all.sample
-    curr_review.university = university
-    curr_review.save!
+    # comment =
+    curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:)
+    curr_review.user = user
+    curr_review.university = education.university
+    unless reviews[education.university.name].empty?
+      review = reviews[education.university.name].sample
+      curr_review.comment = review
+      reviews[education.university.name].delete("review")
+      curr_review.save!
+    end
   end
 end
 
-puts "Creating Departments"
-
-departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
-
-departments.each do |department|
-  curr_department = Department.new(name: department)
-  curr_department.save!
-end
-
-puts "Creating Education"
-
-users = User.all
-
-users.size.times do |i|
-  start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
-  end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
-  academic_degree = 'Bachelor`s Degree'
-  course = Faker::Educator.subject
-  curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
-  curr_education.user = users[i]
-  curr_education.university = University.all.sample
-  curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
-  curr_education.department = Department.all.sample
-  curr_education.save!
-end
+# universities.each do |university|
+#   reviews[university.name].each do |review|
+#     reputabilty_rating = rand(1..5)
+#     education_quality_rating = rand(1..5)
+#     campus_facilities_accom_rating = rand(1..5)
+#     course_difficulty_rating = rand(1..5)
+#     social_element_rating = rand(1..5)
+#     value_for_money_rating = rand(1..5)
+#     safety_rating = rand(1..5)
+#     career_services_rating = rand(1..5)
+#     comment = review
+#     curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:, comment:)
+#     curr_review.user = User.all.sample
+#     curr_review.university = university
+#     curr_review.save!
+#   end
+# end

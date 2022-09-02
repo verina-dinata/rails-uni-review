@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show]
+  resources :reviews, only: %i[index destroy]
 end

@@ -1,6 +1,48 @@
-<%= @university.name %> | <%= @university.ranking %><br>
-<%= @university.city %>, <%= @university.country %><br>
+<div class="container">
 
-<%= @university.description %><br>
-----<br>
-<%= @university.address %> | INSERT MAPBOX HERE
+  <%= @university.name %> | <%= @university.ranking %><br>
+  <%= @university.city %>, <%= @university.country %><br>
+
+  <%= @university.description %><br>
+  ----<br>
+  <%= @university.address %> | INSERT MAPBOX HERE
+
+  <hr>
+  <h5><strong>Reviews</strong></h5>
+  <%# <div class="row"> %>
+    <% @reviews.each_with_index do |review, i| %>
+      <% education = review.user.educations.where(university: @university) %>
+      <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
+      <% if i <= 1 && current_user == nil%>
+        <div class="row my-2">
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <%= image_tag("logo.png", class: "avatar") %>
+            <div class="">
+              <p class="mb-0 review-font"><strong><%= review.user.first_name %> <%= review.user.last_name %></strong></p>
+              <div class="card-info-light review-font-small">
+                <p class="mb-0"><%= education[0].course %></p>
+                <p class=""><%= education[0].start_date.strftime("%h %Y") %> - <%= education[0].end_date.strftime("%h %Y") %></p>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-10">
+            <p><%= "⭐️" * average_review_rating %></p>
+            <p><%= review.comment %></p>
+          </div>
+        </div>
+      <% else %>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Launch static backdrop modal
+        </button>
+        <%= render "signup", resource: @resource %>
+        <!-- Modal -->
+
+        <% break %>
+      <% end %>
+    <% end %>
+  <%# </div> %>
+
+</div>
