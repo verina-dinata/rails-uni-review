@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "education", to: "educations#index"
 
+  get "search", to: "pages#home_search", as: :home_search
+
   get "universities",     to: "universities#index"
   get "universities/:id", to: "universities#show"
 

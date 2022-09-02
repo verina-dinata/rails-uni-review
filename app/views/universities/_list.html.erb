@@ -1,3 +1,8 @@
 <% universities.each do |university| %>
-  <li><%= university.name %></li>
+  <%= link_to universities_path(university) do %>
+  <div>
+    <p><%= university.name %></p>
+  </div>
+  <% end %>
+  <%# <li><%= university.name %>
 <% end %>
