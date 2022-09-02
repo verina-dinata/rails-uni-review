@@ -11,7 +11,7 @@
             value: params[:query],
             data: {
                 autocomplete_target: "input",
-                action: "keyup->autocomplete#update focus->autocomplete#update"},
+                action: "keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear"},
             class: "form-control",
             placeholder: "Enter University name or Country"
           %>

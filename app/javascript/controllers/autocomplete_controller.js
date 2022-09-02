@@ -12,6 +12,7 @@ export default class extends Controller {
   }
 
   update() {
+    console.log("test keyup")
     // const url = `http://localhost:3000/universities?query=${this.inputTarget.value}`
     const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
     fetch(url, {headers: {"Accept": "text/plain"}})
@@ -22,7 +23,11 @@ export default class extends Controller {
   }
 
   clear() {
-    this.listTarget.innerHTML = " "
+    console.log("testtt")
+
+    setTimeout(() => {
+      this.listTarget.innerHTML = ""
+    }, 500);
   }
 
   filterUni() {
