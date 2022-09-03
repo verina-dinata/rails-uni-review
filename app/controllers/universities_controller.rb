@@ -7,8 +7,6 @@ class UniversitiesController < ApplicationController
       @universities = University.where(sql_query, query: "%#{params[:query]}%")
     elsif params[:country]
       @universities = University.where(country: params[:country])
-    elsif params[:query].blank?
-      render root_path
     else
       @universities = University.all
     end
