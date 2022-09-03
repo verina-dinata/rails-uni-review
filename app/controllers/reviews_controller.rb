@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
+  before_action :set_review, only: %i[destroy]
+  before_action :set_university, only: %i[create]
+
   def create
-    @university = University.find(params[:university_id])
     @review = Review.new(review_params)
     @review.user = current_user
     @review.university = @university
@@ -18,7 +20,21 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review.destroy
+    redirect_to university_path(@university), status: :see_other, notice: "Review has been deleted."
+  end
+
   private
+
+  def set_review
+    @review = Review.find(params[:id])
+  end
+
+  def set_university
+    @university = University.find(params[:university_id])
+
+  end
 
   def review_params
     params.require(:review).permit(:comment, :reputabilty_rating, :education_quality_rating, :campus_facilities_accom_rating, :course_difficulty_rating, :social_element_rating, :value_for_money_rating, :safety_rating, :career_services_rating)
