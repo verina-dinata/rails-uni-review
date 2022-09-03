@@ -4,11 +4,9 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["form", "input", "list"]
   connect() {
-
   }
 
   update() {
-    // console.log("test keyup")
     const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
@@ -18,8 +16,6 @@ export default class extends Controller {
   }
 
   clear() {
-    // console.log("testtt")
-
     setTimeout(() => {
       this.listTarget.innerHTML = ""
     }, 500);
