@@ -16,6 +16,9 @@ class UniversitiesController < ApplicationController
   def show
     set_university
     @reviews = @university.reviews
+    if current_user.nil?
+      @reviews = @university.reviews.limit(2)
+    end
     @resource = User.new
   end
 
