@@ -2,67 +2,61 @@
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-body p-0 ps-4">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-5 my-3 px-2 d-flex align-items-center justify-content-center">
+            <div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h2>Create an account with us!</h2>
 
-        <div class="">
-          <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-5 my-3 px-2 d-flex align-items-center justify-content-center">
-              <div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h2>Create an account with us!</h2>
+              <%= simple_form_for(resource, as: :user, url: registration_path(:user),
+                data: {turbo: false}) do |f| %>
+                <%= f.error_notification %>
 
-                <%= simple_form_for(resource, as: :user, url: registration_path(:user),
-                  data: {turbo: false}) do |f| %>
-                  <%= f.error_notification %>
-
-                  <div class="form-floating mb-3">
-                    <%= f.input_field :first_name, class: 'form-control',required: true, placeholder: "Input your first name" %>
-                    <%= f.label :first_name, 'First name' %>
-                    <%= f.full_error :first_name %>
-                  </div>
-
-                  <div class="form-floating mb-3">
-                    <%= f.input_field :last_name, class: 'form-control',required: true, placeholder: "Input your last name" %>
-                    <%= f.label :last_name, 'Last name' %>
-                    <%= f.full_error :last_name %>
-                  </div>
-
-                  <div class="form-floating mb-3">
-                    <%= f.input_field :email, class: 'form-control',required: true, placeholder: "Input your last name" %>
-                    <%= f.label :email, 'Email' %>
-                    <%= f.full_error :email %>
-                  </div>
-
-                  <div class="form-floating mb-3">
-                    <%= f.input_field :password, class: 'form-control',required: true, placeholder: "Input your new password" %>
-                    <%= f.label :password, 'Password' %>
-                    <%= f.full_error :password %>
-                    <div class="form-text">6 or more characters</div>
-                  </div>
-
-                  <div class="form-floating mb-3">
-                    <%= f.input_field :password_confirmation, class: 'form-control',required: true, placeholder: "Input your new password" %>
-                    <%= f.label :password_confirmation, 'Confirm password' %>
-                    <%= f.full_error :password_confirmation %>
-                    <div class="form-text">Retype your password</div>
-                  </div>
-                  <div class="form-actions form-btn my-4">
-                    <%= f.submit "Sign up", class:"save-btn mx-0", style:"width:100%;" %>
-                  </div>
-                <% end %>
-                <div class="d-flex justify-content-center card-info-light">
-                  <p class="pe-1">Already a member?</p>
-                  <p><strong>Sign in here</strong></p>
+                <div class="form-floating mb-3">
+                  <%= f.input_field :first_name, class: 'form-control',required: true, placeholder: "Input your first name" %>
+                  <%= f.label :first_name, 'First name' %>
+                  <%= f.full_error :first_name %>
                 </div>
+
+                <div class="form-floating mb-3">
+                  <%= f.input_field :last_name, class: 'form-control',required: true, placeholder: "Input your last name" %>
+                  <%= f.label :last_name, 'Last name' %>
+                  <%= f.full_error :last_name %>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <%= f.input_field :email, class: 'form-control',required: true, placeholder: "Input your last name" %>
+                  <%= f.label :email, 'Email' %>
+                  <%= f.full_error :email %>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <%= f.input_field :password, class: 'form-control',required: true, placeholder: "Input your new password" %>
+                  <%= f.label :password, 'Password' %>
+                  <%= f.full_error :password %>
+                  <div class="form-text">6 or more characters</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <%= f.input_field :password_confirmation, class: 'form-control',required: true, placeholder: "Input your new password" %>
+                  <%= f.label :password_confirmation, 'Confirm password' %>
+                  <%= f.full_error :password_confirmation %>
+                  <div class="form-text">Retype your password</div>
+                </div>
+                <div class="form-actions form-btn my-4">
+                  <%= f.submit "Sign up", class:"save-btn mx-0", style:"width:100%;" %>
+                </div>
+              <% end %>
+              <div class="d-flex justify-content-center card-info-light">
+                <p class="pe-1">Already a member?</p>
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Sign in here</button>
               </div>
             </div>
-            <div class="col-lg-7 col-md-7 col-sm-7 overflow-hidden signup-img">
-              <%= image_tag "https://wallpaperaccess.com/full/6592980.jpg", style: 'max-width:100%; max-height: 100%; object-fit: contain;'%>
-            </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-7 overflow-hidden signup-img">
+            <%= image_tag "https://wallpaperaccess.com/full/6592980.jpg", style: 'max-width:100%; max-height: 100%; object-fit: contain;'%>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
       </div>
       <%# <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -73,17 +67,46 @@
   </div>
 </div>
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Hide this modal and show the first with the button below.
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0 ps-4">
+
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5 my-3 px-2 d-flex align-items-center justify-content-center">
+          <div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h2>Welcome back!</h2>
+
+            <%= simple_form_for(resource, as: :user, url: session_path(:user),
+              data: {turbo: false}) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-floating mb-3">
+                <%= f.input_field :email, class: 'form-control',required: true, placeholder: "Input your email" %>
+                <%= f.label :email, 'Email' %>
+                <%= f.full_error :email %>
+              </div>
+
+              <div class="form-floating mb-3">
+                <%= f.input_field :password, class: 'form-control',required: true, placeholder: "Input your password" %>
+                <%= f.label :password, 'Password' %>
+                <%= f.full_error :password %>
+              </div>
+
+              <%= f.input :remember_me, as: :boolean %>
+
+              <div class="form-actions form-btn my-4">
+                <%= f.submit "Sign in", class:"save-btn mx-0", style:"width:100%;" %>
+              </div>
+            <% end %>
+            <div class="d-flex justify-content-center card-info-light">
+              <p class="pe-1">Don't have an account?</p>
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Sign up for free</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-7 overflow-hidden signup-img">
+          <%= image_tag "https://wallpaperaccess.com/full/6592980.jpg", style: 'max-width:100%; max-height: 100%; object-fit: contain;'%>
+        </div>
       </div>
     </div>
   </div>

@@ -30,9 +30,12 @@
         </div>
     <% end %>
     <% if current_user == nil %>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
-      </button>
       <%= render "signup", resource: @resource %>
+      <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">View more reviews</a>
+
+      <%# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        View more reviews
+      </button> %>
+
     <% end %>
 </div>
