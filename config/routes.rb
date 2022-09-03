@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show] do
-    resources :reviews, only: %i[index destroy create]
+    resources :reviews, only: %i[create]
   end
 
 end
