@@ -10,3 +10,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.fixed-top:scrolled {
+  background-color: #2F8F9D !important;
+  transition: background-color 200ms linear;
+}
