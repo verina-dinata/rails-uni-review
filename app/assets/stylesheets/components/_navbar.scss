@@ -12,15 +12,16 @@
   width: 40px;
 }
 
-.fixed-top {
-  position: fixed;
+.navbar-fixed {
+  position: fixed !important;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
 }
 
-.fixed-top:scrolled {
-  background-color: #2F8F9D !important;
-  transition: background-color 200ms linear;
-}
+// .navbar-scroll {
+//   background-color: rgba(47, 143, 157, 0.5)  !important;
+//   // background-color: #2F8F9D !important;
+//   transition: background-color 200ms linear;
+// }
