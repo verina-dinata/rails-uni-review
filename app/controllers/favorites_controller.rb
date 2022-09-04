@@ -1,8 +1,8 @@
 class FavoritesController < ApplicationController
   def create
-    @favorite = current_user.favorites.new(favorite_params)
-    if !@favorite.save
-      flash[:notice] = @favorite.errors.full_messages.to_sentence
+    @favorites = current_user.favorites.new(favorites_params)
+    if !@favorites.save
+      flash[:notice] = @favorites_params.errors.full_messages.to_sentence
     end
     redirect_to @favorite.university
   end
