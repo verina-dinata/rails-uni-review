@@ -22,7 +22,8 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    redirect_to university_path(@university), status: :see_other, notice: "Review has been deleted."
+    flash[:notice] = "Review has been deleted."
+    redirect_back(fallback_location: root_path)
   end
 
   private
