@@ -239,6 +239,13 @@
           View more reviews
         </button>
       <% end %>
+      <div>
+      <form action="/favorites" method="university">
+        <input type= "hidden" name="authenticitiy_token" value="<%= form_authenticity_token %>">
+        <input type= "hidden" name="favorite[university_id]" value="<%= form_authenticity_token %>">
+        <input type= "submit" value="FAVORITE">
+      </form>
+      <br>
     </div>
   </div>
 </div>
