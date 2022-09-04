@@ -1,0 +1,11 @@
+<%= tag.div id: dom_id(@university), class: "container" do %>
+  <% if favorite.nil? %>
+    <%= link_to university_favorites_path(university_id: university.id), data: {turbo_method: :post} do %>
+      <i class="fa-regular fa-heart"></i>
+    <% end %>
+  <% else %>
+    <%= link_to favorite_path(favorite), data: {turbo_method: :delete} do %>
+      <i class="fa-solid fa-heart" data-action="click->click#refresh"></i>
+    <% end %>
+  <% end %>
+<% end %>

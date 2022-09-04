@@ -18,7 +18,6 @@
         <% education = review.user.educations.where(university: @university) %>
         <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
         <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
-        <i class="fa-solid fa-heart"></i>
       <% end %>
       <% if current_user == nil %>
         <%= render "signup", resource: @resource %>
@@ -30,17 +29,16 @@
 
 
       <% end %>
-      <div class="card-university-favorite">
-          <% if user_signed_in? %>
-            <% bookmark = @cloth.bookmarks.find_by(user_id: current_user.id) %>
-            <%= render partial: "cloths/bookmark_link", locals: {cloth: @cloth, bookmark: bookmark} %>
-          <% else %>
-            <%= link_to new_user_session_path do %>
-              <i class="fa-regular fa-heart"></i>
-            <% end %>
-          <% end %>
-        </div>
-
     </div>
+  </div>
+  <div>
+  <% if user_signed_in? %>
+    <% favorite = @university.favouritable.find_by(user_id: current_user.id) %>
+      <%= render partial: "universities/favorite_link", locals: {university: @university, favorite: favorite} %>
+  <% else %>
+      <%= link_to new_user_session_path do %>
+      <button type="button" class="btn btn-primary fa-regular fa-heart" ></button>
+      <% end %>
+    <% end %>
   </div>
 </div>

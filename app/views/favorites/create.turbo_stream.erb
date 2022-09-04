@@ -1,0 +1,3 @@
+<%= turbo_stream.replace dom_id(@university) do %>
+  <%= render partial: "universities/favorite_link", locals: {university: nil, favorite: @favorite} %>
+<% end %>
