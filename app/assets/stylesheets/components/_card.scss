@@ -51,6 +51,10 @@
   padding: 2vh !important;
 }
 
+.uni-index-card p {
+  padding-top: 16px !important;
+}
+
 .limited-text {
   // white-space: nowrap;
   width: auto;
@@ -59,8 +63,4 @@
   text-overflow: ellipsis;
   font-size: medium;
   padding: 16px;
-}
-
-.uni-index-card p {
-  padding-top: 16px !important;
 }
