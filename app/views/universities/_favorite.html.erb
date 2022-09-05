@@ -1,0 +1,9 @@
+<% if university.favorites.find_by(user: current_user) %>
+  <%= link_to university_favorite_path(university, university.favorites.find_by(user: current_user)), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, remote: true do %>
+    <i class="fas fa-heart"></i>
+  <% end %>
+<% else %>
+  <%= link_to university_favorites_path(university), data: {turbo_method: :post}, remote: true do %>
+    <i class="far fa-heart"></i>
+  <% end %>
+<% end %>

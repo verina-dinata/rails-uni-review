@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :educations
-  resources :likes, only: %i[create destory]
+  resources :favorites, only: %i[index]
+
+  resources :universities do
+    resources :favorites, only: %i[create destroy]
+  end
   # Defines the root path route ("/")
   # root "articles#index"
   # get "education", to: "educations#index"

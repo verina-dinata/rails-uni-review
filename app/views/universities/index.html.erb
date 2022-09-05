@@ -7,6 +7,10 @@
             <%= image_tag university.logo, class: "logo"%>
             <p><strong><%= university.name  %></strong><br></p>
         <% end %>
+            <strong><%= university.name  %></strong><br>
+            <div style="z-index: 100;">
+              <%= render 'universities/favorite', university: university %>
+            </div>
             <%= university.reviews.count %> Reviews<br>
             <%# <%= (university.reputabilty_rating + university.education_quality_rating) %> rating <br> %>
             <div class="pt-3">
@@ -20,4 +24,3 @@
     <% end %>
   </div>
 </div>
-
