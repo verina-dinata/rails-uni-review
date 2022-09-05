@@ -4,87 +4,95 @@
           insert_in_list_target: "form",
           action: "submit->insert-in-list#send"
         }) do |f| %>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div>
+        <%= f.collection_radio_buttons :reputabilty_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :reputabilty_rating, 'Reputability', class: "fw-bold text-grey" %>
+        <p class="text-green">Did you find your school/course reputable?</p>
+        <%= f.full_error :reputabilty_rating %>
+      </div>
 
-  <i class="fa-solid fa-star"></i>
-  <div>
-    <%= f.collection_radio_buttons :reputabilty_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :reputabilty_rating, 'Reputability', class: "fw-bold text-grey" %>
-    <p class="text-color">Did you find your school/course reputable?</p>
-    <%= f.full_error :reputabilty_rating %>
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :education_quality_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :education_quality_rating, 'Education quality', class: "fw-bold text-grey" %>
+        <p class="text-green">How would you rate the quality of the education given?</p>
+        <%= f.full_error :education_quality_rating %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :campus_facilities_accom_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :campus_facilities_accom_rating, 'Campus facilities and accommodation', class: "fw-bold text-grey" %>
+        <p class="text-green">How's the quality of on-campus facilities and accomodation?</p>
+        <%= f.full_error :campus_facilities_accom_rating %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :course_difficulty_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :course_difficulty_rating, 'Course difficulty', class: "fw-bold text-grey" %>
+        <p class="text-green">Is the course you took challenging?</p>
+        <%= f.full_error :course_difficulty_rating %>
+      </div>
+
+      <br>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div>
+        <%= f.collection_radio_buttons :social_element_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :social_element_rating, 'Social life', class: "fw-bold text-grey" %>
+        <p class="text-green">How did you find the social aspect of the university (e.g. organizations and clubs, sports activities, etc)?</p>
+        <%= f.full_error :social_element_rating %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :value_for_money_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :value_for_money_rating, 'Value for money', class: "fw-bold text-grey" %>
+        <p class="text-green">Do the courses offer good value for money?</p>
+        <%= f.full_error :value_for_money_rating %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :safety_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :safety_rating, 'Safety', class: "fw-bold text-grey" %>
+        <p class="text-green">Do you feel safe around the campus premises?</p>
+        <%= f.full_error :safety_rating %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= f.collection_radio_buttons :career_services_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
+        <br>
+        <%= f.label :career_services_rating, 'Career services', class: "fw-bold text-grey" %>
+        <p class="text-green">How supportive are the career consultants in helping you to understand your career aspirational and developmental needs?</p>
+        <%= f.full_error :career_services_rating %>
+      </div>
+
+      <br>
+    </div>
   </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :education_quality_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :education_quality_rating, 'Education quality', class: "fw-bold text-grey" %>
-    <p class="text-color">How would you rate the quality of the education given?</p>
-    <%= f.full_error :education_quality_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :campus_facilities_accom_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :campus_facilities_accom_rating, 'Campus facilities and accommodation', class: "fw-bold text-grey" %>
-    <p class="text-color">How's the quality of on-campus facilities and accomodation?</p>
-    <%= f.full_error :campus_facilities_accom_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :course_difficulty_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :course_difficulty_rating, 'Course difficulty', class: "fw-bold text-grey" %>
-    <p class="text-color">Is the course you took challenging?</p>
-    <%= f.full_error :course_difficulty_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :social_element_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :social_element_rating, 'Social life', class: "fw-bold text-grey" %>
-    <p class="text-color">How did you find the social aspect of the university (e.g. organizations and clubs, sports activities, etc)?</p>
-    <%= f.full_error :social_element_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :value_for_money_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <br>
-    <%= f.label :value_for_money_rating, 'Value for money rating', class: "fw-bold text-grey" %>
-    <%= f.full_error :value_for_money_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :safety_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <%= f.label :safety_rating, 'Safety rating' %>
-    <%= f.full_error :safety_rating %>
-  </div>
-
-  <br>
-
-  <div>
-    <%= f.collection_radio_buttons :career_services_rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-    <%= f.label :career_services_rating, 'Career services rating' %>
-    <%= f.full_error :career_services_rating %>
-  </div>
-
-  <br>
-
   <div class="form-floating mb-3">
     <%= f.input_field :comment, as: :text, class: 'form-control',required: true, style: 'height:8em;', placeholder: "Input your comment" %>
     <%= f.label :comment, 'Write feedback' %>
     <%= f.full_error :comment %>
   </div>
-  <%= f.button :submit, class: "save-btn mt-3", style: "width: 100%;" %>
+  <%= f.button :submit, "Submit review", class: "save-btn mt-3", style: "width: 100%;" %>
 <% end %>

@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
+        # flash[:notice] = "Review has been added."
         format.html { redirect_to university_path(@university) }
         format.json # Follow the classic Rails flow and look for a create.json view
       else
