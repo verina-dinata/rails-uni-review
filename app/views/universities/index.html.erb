@@ -4,17 +4,18 @@
       <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
         <%= link_to university_path(university), class: "home-link" do %>
           <div class="card uni-index-card" >
-            <strong><%= university.name  %></strong><br>
+            <%= image_tag university.logo, style: 'height:10vw; width:10vw; margin:0 auto;'%>
+            <p><strong><%= university.name  %></strong><br></p>
+        <% end %>
             <%= university.reviews.count %> Reviews<br>
             <%# <%= (university.reputabilty_rating + university.education_quality_rating) %> rating <br> %>
             <div class="pt-3">
               <strong><%= university.country %></strong>
             </div>
-            <div class="limited-text">
+            <div class="limited-text text-justify">
               <%= university.description %>
             </div>
           </div>
-        <% end %>
       </div>
     <% end %>
   </div>
