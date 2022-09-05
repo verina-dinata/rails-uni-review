@@ -30,7 +30,10 @@
       <% end %>
       <% @educations.each do |education|  %>
         <% if education.university == @university %>
-          <%= render "reviews/form", university: @university, review: @review %>
+          <div class="review-form my-4 py-5">
+            <h4 class = "mt-3"><strong>A student at this university? Share your experiences!</strong></h4>
+            <%= render "reviews/form", university: @university, review: @review %>
+          </div>
         <% end %>
       <% end %>
     </div>
