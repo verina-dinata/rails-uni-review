@@ -15,12 +15,11 @@ class UniversitiesController < ApplicationController
   def show
     set_university
     @reviews = @university.reviews
-    if current_user.nil?
-      @reviews = @university.reviews.limit(2)
-    end
+    @reviews = @university.reviews.limit(2) if current_user.nil?
     @resource = User.new
     @review = Review.new
-    @educations = current_user.educations
+    @educations = []
+    @educations = current_user.educations unless current_user.nil?
   end
 
   private
