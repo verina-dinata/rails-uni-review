@@ -3,9 +3,26 @@
     <% @universities.each do |university| %>
       <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
         <%= link_to university_path(university), class: "home-link" do %>
+<<<<<<< HEAD
           <div class="card uni-index-card position-relative" >
           <%= image_tag university.logo, class: "logo"%>
           <p><strong><%= university.name  %></strong><br></p>
+=======
+          <div class="card uni-index-card" >
+            <strong><%= university.name  %></strong><br>
+            <div style="z-index: 100;">
+              <%= render 'universities/favorite', university: university %>
+            </div>
+            <%= university.reviews.count %> Reviews<br>
+            <%# <%= (university.reputabilty_rating + university.education_quality_rating) %> rating <br> %>
+            <div class="pt-3">
+              <strong><%= university.country %></strong>
+            </div>
+            <div class="limited-text">
+              <%= university.description %>
+            </div>
+          </div>
+>>>>>>> a328326 (backend for fav works)
         <% end %>
 
         <%= render 'universities/favorite', university: university %>
