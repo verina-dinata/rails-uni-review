@@ -19,6 +19,8 @@ class UniversitiesController < ApplicationController
       @reviews = @university.reviews.limit(2)
     end
     @resource = User.new
+    @review = Review.new
+    @educations = current_user.educations
   end
 
   private

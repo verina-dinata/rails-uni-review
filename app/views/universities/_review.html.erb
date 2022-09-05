@@ -1,0 +1,24 @@
+<div class="row my-2">
+  <div class="col-lg-2 col-md-2 col-sm-2">
+    <%= image_tag("logo.png", class: "avatar") %>
+    <div class="">
+      <p class="mb-0 review-font"><strong><%= review.user.first_name %> <%= review.user.last_name %></strong></p>
+      <div class="card-info-light review-font-small">
+        <p class="mb-0"><%= education[0].course %></p>
+        <p class=""><%= education[0].start_date.strftime("%h %Y") %> - <%= education[0].end_date.strftime("%h %Y") %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-10 col-md-10 col-sm-10">
+    <div class="d-flex justify-content-between">
+      <p><%= "⭐️" * average_review_rating %></p>
+      <% if current_user == review.user %>
+        <%= link_to review_path(review), class: "hollow-btn py-0 px-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <p><%= average_review_rating %></p>
+    <p><%= review.comment %></p>
+  </div>
+</div>
