@@ -20,6 +20,7 @@ class UniversitiesController < ApplicationController
     end
     @resource = User.new
     @review = Review.new
+    @educations = current_user.educations
   end
 
   private
