@@ -11,3 +11,13 @@
     transition-duration: .5s;
   }
 }
+
+.sign-up-link {
+  text-decoration: none !important;
+  color: rgb(162, 162, 162);
+
+  &:hover {
+    color: rgba(61, 59, 59, 0.8);
+    transition-duration: .5s;
+  }
+}
