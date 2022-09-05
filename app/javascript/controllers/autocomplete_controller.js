@@ -25,4 +25,9 @@ export default class extends Controller {
     const url = 'universities?query=' + this.inputTarget.value
     window.location = url
   }
+
+  select(event){
+    console.log(event.currentTarget.innerHTML)
+    this.inputTarget.value = event.currentTarget.innerHTML
+  }
 }
