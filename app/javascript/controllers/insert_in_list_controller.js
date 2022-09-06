@@ -22,9 +22,11 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then((data) => {
-        console.log(data)
         if (data.inserted_item) {
           this.itemsTarget.insertAdjacentHTML(this.positionValue, data.inserted_item)
+          if (this.itemsTarget.children.length > 5) {
+            this.itemsTarget.removeChild(this.itemsTarget.lastElementChild)
+          }
         }
         this.formTarget.outerHTML = data.form
         this.closeTarget.click()

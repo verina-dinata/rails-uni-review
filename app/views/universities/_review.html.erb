@@ -11,9 +11,24 @@
   </div>
   <div class="col-lg-10 col-md-10 col-sm-10">
     <div class="d-flex justify-content-between">
-      <p><%= "⭐️" * average_review_rating %></p>
+      <div>
+        <% full_stars = average_review_rating.to_i %>
+        <% average_review_rating % 1 > 0 ? half_star = 1 : half_star = 0 %>
+        <% empty_stars = 5 - full_stars - half_star %>
+
+        <% full_stars.times do %>
+          <i class="fa-solid fa-star star-icon"></i>
+        <% end %>
+        <% half_star.times do %>
+          <i class="fa-solid fa-star-half-stroke star-icon"></i>
+        <% end %>
+        <% empty_stars.times do %>
+          <i class="fa-regular fa-star star-icon"></i>
+        <% end %>
+      </div>
+
       <% if current_user == review.user %>
-        <%= link_to review_path(review), class: "hollow-btn py-0 px-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <%= link_to review_path(review), class: "delete-icon py-0 px-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
       <% end %>
