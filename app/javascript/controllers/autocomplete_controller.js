@@ -32,7 +32,6 @@ export default class extends Controller {
   }
 
   select(event){
-    console.log(event.currentTarget.innerHTML)
     this.inputTarget.value = event.currentTarget.innerHTML
   }
 }
