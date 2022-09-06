@@ -14,8 +14,8 @@ class UniversitiesController < ApplicationController
 
   def show
     set_university
-    @reviews = @university.reviews.order(created_at: :asc)
-    @reviews = @university.reviews.limit(2) if current_user.nil?
+    @reviews = @university.reviews.order(created_at: :desc).page params[:page]
+    @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
     @review = Review.new
     @educations = []
