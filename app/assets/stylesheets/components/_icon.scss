@@ -21,3 +21,13 @@
 //   height: 2em;
 //   background-color: blue;
 // }
+
+.delete-icon {
+  text-decoration: none !important;
+  color: rgba(47, 143, 157, 0.7);
+
+  &:hover {
+    color: #2F8F9D;
+    transition-duration: .5s;
+  }
+}

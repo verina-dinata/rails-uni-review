@@ -13,7 +13,7 @@
     <div class="d-flex justify-content-between">
       <p><%= "⭐️" * average_review_rating %></p>
       <% if current_user == review.user %>
-        <%= link_to review_path(review), class: "hollow-btn py-0 px-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <%= link_to review_path(review), class: "delete-icon py-0 px-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
       <% end %>
