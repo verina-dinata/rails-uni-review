@@ -6,8 +6,9 @@ export default class extends Controller {
   connect() {
   }
 
-  update() {
-    const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
+  update(event) {
+    event.preventDefault()
+    const url = `${this.inputTarget.getAttribute('search-url')}?query=${this.inputTarget.value}`
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
     .then((data) => {
@@ -22,8 +23,12 @@ export default class extends Controller {
   }
 
   filterUni() {
-    const url = 'universities?query=' + this.inputTarget.value
-    window.location = url
+    console.log("testtt")
+    debugger
+    if (this.inputTarget.value != "" && this.inputTarget.value != undefined) {
+      const url = 'universities?query=' + this.inputTarget.value
+      window.location = url
+    }
   }
 
   select(event){
