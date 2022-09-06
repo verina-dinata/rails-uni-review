@@ -11,7 +11,18 @@
 
   <div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
 
-    <h5><strong>Reviews</strong></h5>
+    <div class="d-flex justify-content-between">
+      <h5><strong>Reviews</strong></h5>
+      <div>
+        <% @educations.each do |education|  %>
+          <% if education.university == @university %>
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="review-link">Leave a review</a>
+            <%= render "review_form" %>
+            <% break %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
     <div data-insert-in-list-target="items">
 
       <% @reviews.each do |review| %>
@@ -23,21 +34,13 @@
         <%= render "signup", resource: @resource %>
         <%# <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">View more reviews</a> %>
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> %>
           View more reviews
         </button>
 
       <% end %>
 
     </div>
-    <% @educations.each do |education|  %>
-      <% if education.university == @university %>
-        <div class="review-form my-4 py-5">
-          <p class="text-green">YOUR WORDS MATTER</p>
-          <h3 class = "mt-3 mb-4 text-grey"><strong>A student at this university? We would love to hear about your experience!</strong></h3>
-          <%= render "reviews/form", university: @university, review: @review %>
-        </div>
-      <% end %>
-    <% end %>
+
   </div>
 </div>

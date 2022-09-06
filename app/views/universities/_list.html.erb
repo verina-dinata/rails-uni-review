@@ -1,5 +1,5 @@
 <% universities.each do |university| %>
-  <%# <%= link_to university_path(university) do %>
+  <%# <%= link_to university_path(university), class:"decoration-none" do %>
     <li class="list" data-action="click->autocomplete#select"><%= university.name %></li>
   <%# <% end %>
 <% end %>

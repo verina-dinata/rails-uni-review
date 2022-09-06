@@ -5,23 +5,15 @@
     <div class="banner-content">
       <h1>Uni-Review</h1>
       <p>Looking for your next educational journey.</p>
-      <div class="row mt-4 home-form" data-controller="autocomplete">
-        <%= form_with url: home_search_path, method: :get, html: { class: "d-flex", data: {autocomplete_target: "form"} } do |f|%>
-          <div style="width:100%; position:relative;">
-            <%= f.text_field :query,
-              value: params[:query],
-              data: {
-                  autocomplete_target: "input",
-                  action: "keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear"},
-              class: "form-control",
-              placeholder: "Enter University name or Country"
-            %>
-            <div data-autocomplete-target="list" style="z-index: 1; position:absolute; top:38; left:0; width:100%;">
+      <div class="mt-4 home-form d-flex" data-controller="autocomplete">
+        <div style="width:100%; position:relative;">
+          <input data-autocomplete-target="input" search-url=<%= home_search_path %> data-action="keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear" class="form-control" placeholder="Enter University name or Country" type="text" name="query" id="query">
+          <div data-autocomplete-target="list" style="z-index: 1; position:absolute; top:38; left:0; width:100%;">
 
-            </div>
           </div>
-          <button data-action="click->autocomplete#filterUni" class="btn search-btn">Search</button>
-        <% end %>
+        </div>
+        <button data-action="click->autocomplete#filterUni" class="btn search-btn">Search</button>
+        <%# <button class="btn search-btn">Search</button> %>
 
       </div>
     </div>

@@ -1,5 +1,5 @@
-.back_link {
-  text-decoration: none;
+.decoration-none {
+  text-decoration: none !important;
 }
 
 .home-link {
@@ -18,6 +18,17 @@
 
   &:hover {
     color: rgba(61, 59, 59, 0.8);
+    transition-duration: .5s;
+  }
+}
+
+
+.review-link {
+  text-decoration: none !important;
+  color: rgba(47, 143, 157, 0.7);
+
+  &:hover {
+    color: #2F8F9D;
     transition-duration: .5s;
   }
 }
