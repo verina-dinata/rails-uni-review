@@ -29,7 +29,10 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sign-up-link">Sign Up</a>
+            <%# <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sign-up-link">Sign Up</a> %>
+            <%# <%= link_to "Log In/", user_session_path, class: "sign-up-link"%>
+            <%= link_to "Sign Up", new_user_registration_path, class: "sign-up-link"%>
+
           </li>
         <% end %>
       </ul>
