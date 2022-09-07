@@ -721,7 +721,7 @@ users.each do |user|
     curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:)
     curr_review.user = user
     curr_review.university = education.university
-    unless reviews[education.university.name].empty?
+    unless reviews[education.university.name].blank?
       review = reviews[education.university.name].sample
       curr_review.comment = review
       reviews[education.university.name].delete("review")

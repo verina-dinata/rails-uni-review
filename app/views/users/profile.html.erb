@@ -17,9 +17,11 @@
   </div>
   <div class="mb-3 mt-5">
     <h6 class="my-3"><strong>Profile picture</strong></h6>
-    <%= image_tag("user_avatar.png", class:"avatar-bordered") %>
-
-
+    <% if current_user.photo.present? %>
+      <%= cl_image_tag current_user.photo.key, class: "avatar-bordered" %>
+    <% else %>
+      <%= image_tag("user_avatar.png", class:"avatar-bordered") %>
+    <% end %>
   </div>
 
   <div class="row">
