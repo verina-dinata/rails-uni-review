@@ -57,7 +57,7 @@ gem "devise"
 gem "pundit"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'kaminari'
-
+gem "dotenv-rails", groups: [:development, :test]
 
 
 group :development, :test do
