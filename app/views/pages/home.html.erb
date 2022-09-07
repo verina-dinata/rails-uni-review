@@ -72,6 +72,52 @@
         </div>
       </div>
     </div>
+    <div class="container">
+
+      <div class="row justify-content-around">
+        <h2 class="text-center mt-4 mb-5">Student Reviews</h2>
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= Review.first.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((Review.first.reputabilty_rating + Review.first.education_quality_rating + Review.first.campus_facilities_accom_rating + Review.first.course_difficulty_rating + Review.first.social_element_rating + Review.first.value_for_money_rating + Review.first.safety_rating + Review.first.career_services_rating) / 8.0) %></span>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= Review.first.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= Review.first.comment %></span>
+        </div>
+
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= Review.third.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((Review.third.reputabilty_rating + Review.third.education_quality_rating + Review.third.campus_facilities_accom_rating + Review.third.course_difficulty_rating + Review.third.social_element_rating + Review.third.value_for_money_rating + Review.third.safety_rating + Review.third.career_services_rating) / 8.0) %></span>
+          <%# (Review.third.reputabilty_rating + Review.third.education_quality_rating + Review.third.campus_facilities_accom_rating + Review.third.course_difficulty_rating + Review.third.social_element_rating + Review.third.value_for_money_rating + Review.third.safety_rating + Review.third.career_services_rating) / 8.0 %>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= Review.third.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= Review.third.comment %></span>
+        </div>
+
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= Review.last.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((Review.last.reputabilty_rating + Review.last.education_quality_rating + Review.last.campus_facilities_accom_rating + Review.last.course_difficulty_rating + Review.last.social_element_rating + Review.last.value_for_money_rating + Review.last.safety_rating + Review.last.career_services_rating) / 8.0) %></span>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= Review.last.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= Review.last.comment %></span>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </div>
