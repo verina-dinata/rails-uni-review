@@ -333,32 +333,32 @@ universities.each do |university, detail|
 end
 
 puts "Manually patching Coordinates"
-@university = University.find(8)
+@university = University.find_by(name: "Universiti Malaya")
 @university.latitude = 3.1221317076137627
 @university.longitude = 101.65368765508087
 @university.save
 
-@university = University.find(10)
+@university = University.find_by(name: "Universiti Putra Malaysia")
 @university.latitude = 2.9969109802356555
 @university.longitude = 101.70555528391576
 @university.save
 
-@university = University.find(13)
+@university = University.find_by(name: "Universiti Utara Malaysia")
 @university.latitude = 6.457510
 @university.longitude = 100.505455
 @university.save
 
-@university = University.find(16)
+@university = University.find_by(name: "Management and Science University")
 @university.latitude = 3.0780914642469623
 @university.longitude = 101.55293423166276
 @university.save
 
-@university = University.find(17)
+@university = University.find_by(name: "National University of Singapore")
 @university.latitude = 1.296609511216492
 @university.longitude = 103.7764268317635
 @university.save
 
-@university = University.find(20)
+@university = University.find_by(name: "Singapore University of Social Sciences")
 @university.latitude = 1.3294701834655231
 @university.longitude = 103.77615440609962
 @university.save
