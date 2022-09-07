@@ -9,3 +9,40 @@
   background-color: white;
   color: #2F8F9D;
 }
+
+.save-btn {
+  width: 48%;
+  display: block;
+  color: rgb(255, 255, 255) !important;
+  background-color: #2F8F9D !important;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #2F8F9D !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  &:hover {
+    background-color: white !important;
+    color: #2F8F9D !important;
+    border: 1px solid #2F8F9D !important;
+  }
+}
+
+.cancel-btn {
+  width: 48%;
+  display: block;
+  color: rgb(255, 255, 255) !important;
+  background-color: #959595 !important;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #959595 !important;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  &:hover {
+    background-color: white !important;
+    color: #959595 !important;
+    border: 1px solid #959595 !important;
+  }
+}

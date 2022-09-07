@@ -15,6 +15,7 @@ class UniversitiesController < ApplicationController
     ]
   end
 
+
   private
 
   def set_university
