@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container mt-5 pt-3">
   <h1><strong>Favorites</strong></h1>
   <% @favorites.each do |f| %>
@@ -9,7 +8,7 @@
       <% end %>
     </div>
   <% end %>
-=======
+
 <h1> My Favorites </h1>
 <div class="container mt-5">
   <div class="row">
@@ -18,6 +17,21 @@
         <%= link_to "Favorites", universities_path %>
       </div>
     <% end %>
+
+<div class="card mb-3">
+  <img src="..." class="card-img-top" alt="university_logo">
+   <% @favorites.each do |f| %>
+  <div class="card-body">
+    <h5 class="card-title"><%= favorite.name %></h5>
+    <p class="card-text"><%= university.country %></p>
+    <p class="card-text"><%= university.description %></p>
   </div>
->>>>>>> d2fe948 (backend for fav works)
+</div>
+<div class="card">
+  <% @favorites.each do |f| %>
+  <h5 class="card-title"><%= favorite.name %></h5>
+  <p class="card-text"><%= university.country %></p>
+  <p class="card-text"><%= university.description %></p>
+  </div>
+  <img src="..." class="card-img-bottom" alt="...">
 </div>
