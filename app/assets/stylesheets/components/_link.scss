@@ -22,6 +22,18 @@
   }
 }
 
+.sign-up-link-small {
+  text-decoration: none !important;
+  font-size: 14px;
+  color: rgba(61, 59, 59, 0.8);
+  font-weight: bolder;
+
+  &:hover {
+    color: rgb(42, 42, 42);
+    transition-duration: .5s;
+  }
+}
+
 
 .review-link {
   text-decoration: none !important;
