@@ -23,7 +23,9 @@
         <% end %>
       </div>
     </div>
-    <%= paginate @reviews, remote: true %>
+    <% if user_signed_in? %>
+      <%= paginate @reviews, remote: true %>
+    <% end %>
     <div data-insert-in-list-target="items">
 
       <% @reviews.each do |review| %>
