@@ -58,14 +58,18 @@
 .limited-text {
   // white-space: nowrap;
   width: auto;
-  height: 400px;
+  height: 135px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  // text-overflow: ellipsis;
   font-size: medium;
   padding: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .review-card{
+  height: 400px;
   position: relative;
   margin-bottom: 30px;
   line-height: 1.41;
@@ -85,11 +89,15 @@
 }
 
 .review-bottom {
+  height: 120px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   padding: 5%;
   font-size: 24px;
   color: #333;
-  line-height: 1.41;
+  // line-height: 1.41;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
 }
