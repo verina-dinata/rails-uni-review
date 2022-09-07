@@ -130,8 +130,7 @@ universities = {
     'application deadline' => Date.parse('20230831'),
     'student count' => 17_192,
     dorm: true,
-    'email domain' => '@siswa.um.edu.my',
-
+    'email domain' => '@siswa.um.edu.my'
   },
   'Universiti Kebangsaan Malaysia' => {
     description: 'Second among the top universities in Malaysia is the Universiti Kebangsaan Malaysia (UKM), also known as the National University of Malaysia (NUM). Like most of the top universities in Malaysia, Universiti Kebangsaan Malaysia is publicly funded, with a fairly large intake of students at both undergraduate and graduate levels, teaching a comprehensive range of subjects alongside a strong research focus. It has its main campus in Bangi, a small town in the Selangor region to the south of Kuala Lumpur.',
@@ -340,22 +339,27 @@ puts "Manually patching Coordinates"
 @university = University.find(8)
 @university.latitude = 3.117750,
 @university.longitude = 101.636600
+University.save!
 
 @university = University.find(10)
 @university.latitude =2.937890,
 @university.longitude = 101.801860
+University.save!
 
 @university = University.find(13)
 @university.latitude = 6.457510,
 @university.longitude = 100.505455
+University.save!
 
 @university = University.find(16)
 @university.latitude = 3.075530,
 @university.longitude = 101.549310
+University.save!
 
 @university = University.find(17)
 @university.latitude = 1.297990,
 @university.longitude = 103.775063
+University.save!
 
 puts "Creating Users"
 

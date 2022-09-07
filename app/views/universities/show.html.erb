@@ -1,59 +1,201 @@
-<div class="banner">
-  <div class="container p-3">
-    <div class="row" margin="10px">
-      <div class="col-md-9">
-        <h1><%= @university.name %><button type="button" class="btn fav-button">❤</button></h1>
-        <h4><%= @university.city%>, <%= @university.country %></h4>
-        <%= @university.reviews.length %> Reviews</p>
-      </div>
-      <div class="col-md-3">
-        <img src="data:image/png;base64,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" alt="" height="80%" width="50%"><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-9">
-        <h3>Ranked by our users: #<%= @university.ranking %></h2><br>
-      </div>
-      <div class="col-md-3">
-        <button type="button" class="btn btn-primary">Visit Website</button>
-      </div>
-        <div class="row">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <p class="accordion-header" id="headingOne">
-                <button class="accordian-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Description
-                </button>
-              </p>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p><%= @university.description %></p><br>
-                </div>
+<div class="container">
+  <div class="col-11">
+    <div class="banner">
+      <div class="row" >
+        <div class="col-xs-7 col-sm-6 col-lg-8">
+          <div class="uni-header">
+            <div>
+              <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/300px-Harvard_shield_wreath.svg.png" width=100%>
+            </div>
+            <div>
+              <div>
+                <span style="color:grey"><%= @university.city %> | <%= @university.country %></span><br>
+                <span style="font-size:36px"><strong><%= @university.name %></strong></span><br>
+                Rating <i data-star="4.1"></i>
+                <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews | <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
               </div>
+              <div>
+                <button class="accordian-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                    Description
+                </button>
+                <button type="button" class="btn btn-secondary">Leave a review</button>
+                <button type="button" class="btn btn-secondary">Official Website</button>
+                <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->heart-button#heartAnimation">
+                  <span class="far fa-heart"></span>
+                  <div class="ring"></div>
+                  <div class="ring2"></div>
+                  <p class="info">Added to favourites!</p>
+                </i>
+              </div>
+            </div>
+            <div>
             </div>
           </div>
         </div>
-    </div>
-  </div>
-  <div class="container">
-    <button type="button" class="btn btn-primary">Book a campus tour</button><br>
-    ----<br><br>
 
-    <div class="row">
-      <div id="map" class="col-md-7">
-
-        <div class="" style="width: 100%; height: 600px;"
-          data-controller="map"
-          data-map-markers-value="<%= @markers.to_json %>"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        <div id="university-img" class="carousel slide col-xs-5 col-sm-6 col-lg-4" data-ride="carousel" data-interval="5000">
+          <ol class="carousel-indicators">
+            <li data-target="#university-img" data-slide-to="0" class="active"></li>
+            <li data-target="#university-img" data-slide-to="1"></li>
+            <li data-target="#university-img" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="First Photo">
+            </div>
+            <div class="carousel-item">
+              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="Second Photo">
+            </div>
+            <div class="carousel-item">
+              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="Third Photo">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#university-img" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#university-img" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
       </div>
-      <div class="col-md-5">
-        <strong><%= @university.name %></strong><br><br>
-        <% @university.address.split(", ").each do |line|%>
-          <%= "#{line}"%><br>
-        <% end %>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item">
+          <div id="collapse" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#accordion">
+            <div class="accordion-body">
+              <p><%= @university.description %></p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content" >
+      <nav>
+        <div class="side-nav-menu">
+          <a href="#info-section">Info</a>
+          <a href="#departments-section">Departments</a>
+          <a href="#reviews-section">Reviews</a>
+          <a href="#map-section">Get there</a>
+        </div>
+      </nav>
+
+      <div data-spy="scroll" data-target=".side-nav-menu" data-offset="220px" tabindex="0">
+        <section class="row">
+          <div class="col-4">
+            Student Population:<br>
+              <i class="fa-sharp fa-solid fa-screen-users"></i><%= @university.student_count %><br><br>
+            Average fees for locals:<br>
+              <i data-price="3.2"></i> <%= @university.domestic_course_fee %><br><br>
+            </i>Average fees for foreigners:<br>
+              <i data-price="1.7"></i> <%= @university.international_course_fee %><br><br>
+          </div>
+          <div id="info-section"
+            data-controller="display-circle-ratings"
+            class="stats-grid col-8">
+            <div>Reputation
+              <div class="circle-rating">100%</div>
+            </div>
+            <div>Education Quality
+              <div class="circle-rating">87.5%</div>
+            </div>
+            <div>Facilities/Accomodation
+              <div class="circle-rating">75%</div>
+            </div>
+            <div>Course Difficulty
+              <div class="circle-rating">62.5%</div>
+            </div>
+            <div>Social elements
+              <div class="circle-rating">50%</div>
+            </div>
+            <div>Value for Money
+              <div class="circle-rating">37.5%</div>
+            </div>
+            <div>Safety
+              <div class="circle-rating">25%</div>
+            </div>
+            <div>Career Services
+              <div class="circle-rating">0%</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="departments-section" class="row">
+        Check out the departments of <%= @university.name %> below!<br>
+
+          <div id="cardsCarousel" class="carousel" data-controller="cards-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                    <h5 class="dept-card-title">Department of A</h5>
+                    <p class="dept-card-text">Some random description</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                    <h5 class="dept-card-title">Department of B</h5>
+                    <p class="dept-card-text">Some random description</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                    <h5 class="dept-card-title">Department of C</h5>
+                    <p class="dept-card-text">Some random description</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                    <h5 class="dept-card-title">Department of D</h5>
+                    <p class="dept-card-text">Some random description</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews-section" class="row">
+        </section>
+
+        <section id="map-section" class="row">
+          <div id="map" class="col-9">
+            <div class="" style="width: 100%; height: 450px;"
+              data-controller="map"
+              data-map-markers-value="<%= @markers.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+          </div>
+          <div class="col-3">
+            <strong><%= @university.name %></strong><br><br>
+            <% @university.address.split(", ").each do |line|%>
+              <%= "#{line}"%><br>
+            <% end %>
+            <br>
+            Enrollment Deadline:<br>
+            1 Jan 2023
+            <button type="button" class="btn btn-secondary">Book a campus tour</button>
+          </div>
+        </section>
       </div>
     </div>
   </div>

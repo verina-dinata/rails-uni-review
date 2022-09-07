@@ -13,7 +13,7 @@ class UniversitiesController < ApplicationController
         lng: @university.longitude
       }
     ]
-   end
+  end
 
   private
 
