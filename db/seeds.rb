@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 puts "Cleaning database"
 
 Review.destroy_all
@@ -120,7 +119,7 @@ universities = {
   },
   'Universiti Malaya' => {
     description: 'The highest-ranking Malaysian institution is Universiti Malaya (UM), a public research university based in Malaysia’s federal capital and largest city, Kuala Lumpur (which features in the QS Best Student Cities). Malaysia’s oldest university, Universiti Malaya was established in 1949, based on a merger of several existing colleges in neighboring Singapore. It offers courses across the full subject spectrum, with an enrollment of more than 14,580 undergraduate students and more than 13,700 postgraduates.',
-    address: '50603, Jln Profesor Diraja Ungku Aziz, Seksyen 13, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia',
+    address: '50603 Jln Profesor Diraja Ungku Aziz, Seksyen 13, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia',
     city: 'Kuala Lumpur',
     country: 'Malaysia',
     url: 'https://www.um.edu.my',
@@ -158,9 +157,7 @@ universities = {
     'application deadline' => Date.parse('20230523'),
     'student count' => 25_628,
     dorm: true,
-    'email domain' => '@student.upm.edu.my',
-    latitude: 6.457510,
-    longitude: 100.505455
+    'email domain' => '@student.upm.edu.my'
   },
   'Universiti Sains Malaysia' => {
     description: 'The APEX (Accelerated PGelugorrogramme for Excellence) agenda among others is to propel the university to be one of the best institutions of higher learning in the world. USM is also the premium Research Intensive University in the country and has adopted an innovative approach to higher education, departing from the traditional faculty system to the broad-based school system. A university that champions sustainability issues, USM has 26 schools, offering undergraduate and postgraduate education and research based studies to both local and international students.',
@@ -337,29 +334,34 @@ end
 
 puts "Manually patching Coordinates"
 @university = University.find(8)
-@university.latitude = 3.117750,
-@university.longitude = 101.636600
-University.save!
+@university.latitude = 3.1221317076137627
+@university.longitude = 101.65368765508087
+@university.save
 
 @university = University.find(10)
-@university.latitude =2.937890,
-@university.longitude = 101.801860
-University.save!
+@university.latitude = 2.9969109802356555
+@university.longitude = 101.70555528391576
+@university.save
 
 @university = University.find(13)
-@university.latitude = 6.457510,
+@university.latitude = 6.457510
 @university.longitude = 100.505455
-University.save!
+@university.save
 
 @university = University.find(16)
-@university.latitude = 3.075530,
-@university.longitude = 101.549310
-University.save!
+@university.latitude = 3.0780914642469623
+@university.longitude = 101.55293423166276
+@university.save
 
 @university = University.find(17)
-@university.latitude = 1.297990,
-@university.longitude = 103.775063
-University.save!
+@university.latitude = 1.296609511216492
+@university.longitude = 103.7764268317635
+@university.save
+
+@university = University.find(20)
+@university.latitude = 1.3294701834655231
+@university.longitude = 103.77615440609962
+@university.save
 
 puts "Creating Users"
 

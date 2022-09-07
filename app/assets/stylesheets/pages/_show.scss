@@ -2,16 +2,17 @@
 @import "../components/add_to_favourite";
 @import "components/price_ratings";
 
-.banner {
+.container {
+  // align-items: center;
+}
+
+.info-block {
   position: sticky;
   top: 0;
   z-index: 99;
   background: white;
 }
 
-.container {
-  align: center;
-}
 .uni-header {
   display: grid;
   grid-template-columns: 100px 1fr 50px;
@@ -32,7 +33,7 @@
 .side-nav-menu a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
   color: #2196F3;
   display: block;
 }
