@@ -1,7 +1,7 @@
 <div class="row">
   <% educations.each do |education| %>
     <div class="d-flex my-2">
-      <%= image_tag("logo.png", class: "uni-card-image") %>
+      <%= image_tag(education.university.logo, class: "uni-card-image") %>
       <div class="ms-3">
         <p class="mb-0"><strong><%= education.university.name %></strong></p>
         <div class="card-info-light">
