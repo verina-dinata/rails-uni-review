@@ -44,3 +44,12 @@
     transition-duration: .5s;
   }
 }
+
+.next-action-link {
+  text-decoration: none;
+  font-size: 13px;
+
+  &:hover {
+    font-weight: bolder;
+  }
+}
