@@ -1,4 +1,9 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% unless user_signed_in? %>
+  <%= render "universities/signup", resource: User.new %>
+<% end %>
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-scroll navbar-fixed" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://cdn.iconscout.com/icon/free/png-256/social-258-116292.png", height: "35px", width: "auto" %>
@@ -13,14 +18,14 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Universities", universities_path, class: "nav-link" %>
 
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag user_avatar(current_user) , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to 'My profile', users_profile_path, class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -29,8 +34,15 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Universities", universities_path, class: "nav-link"%>
           </li>
+
+          <li class="nav-item">
+            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="nav-link">Sign Up</a>
+            <%# <%= link_to "Log In/", user_session_path, class: "sign-up-link"%>
+
+          </li>
+
         <% end %>
       </ul>
     </div>
