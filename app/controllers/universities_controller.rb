@@ -14,6 +14,12 @@ class UniversitiesController < ApplicationController
 
   def show
     set_university
+    @markers = [
+      {
+        lat: @university.latitude,
+        lng: @university.longitude
+      }
+    ]
     @reviews = @university.reviews.order(created_at: :desc).page params[:page]
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
@@ -29,6 +35,6 @@ class UniversitiesController < ApplicationController
   end
 
   def university_params
-    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address)
+    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address, :latitude, :longitude)
   end
 end

@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 puts "Cleaning database"
 
 Favorite.destroy_all
@@ -135,7 +134,7 @@ universities = {
   },
   'Universiti Malaya' => {
     description: 'The highest-ranking Malaysian institution is Universiti Malaya (UM), a public research university based in Malaysia’s federal capital and largest city, Kuala Lumpur (which features in the QS Best Student Cities). Malaysia’s oldest university, Universiti Malaya was established in 1949, based on a merger of several existing colleges in neighboring Singapore. It offers courses across the full subject spectrum, with an enrollment of more than 14,580 undergraduate students and more than 13,700 postgraduates.',
-    address: '50603, Jln Profesor Diraja Ungku Aziz, Seksyen 13, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia',
+    address: '50603 Jln Profesor Diraja Ungku Aziz, Seksyen 13, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia',
     city: 'Kuala Lumpur',
     country: 'Malaysia',
     url: 'https://www.um.edu.my',
@@ -165,7 +164,7 @@ universities = {
     logo: 'https://dxvn2m2gq0cmw.cloudfront.net/landing_page/272/original/UKM_logo.png',
     image: 'https://assets.nst.com.my/images/articles/ukm50th_1589945315.jpg'
   },
-  'Universiti Putra Malaysia ' => {
+  'Universiti Putra Malaysia' => {
     description: 'Universiti Putra Malaysia (UPM) formerly known as Universiti Pertanian Malaysia was founded in 1971 through the merger of Faculty of Agriculture, University Malaya and Agriculture College in Serdang',
     address: 'Jalan Universiti 1, 43400 Serdang, Selangor, Malaysia',
     city: 'Serdang',
@@ -247,6 +246,7 @@ universities = {
   },
   'Taylors University' => {
     description: 'Taylor`s University is the No. 1 private university in Malaysia and Southeast Asia, ranked #332 in the QS World University Rankings 2022. This ranking places the university among the top 1.1% of the most influential institutions globally.',
+    address: '1 Jalan Taylors, 47500 Subang Jaya, Selangor, Malaysia',
     city: 'Subang Jaya',
     country: 'Malaysia',
     url: 'https://university.taylors.edu.my/',
@@ -262,7 +262,7 @@ universities = {
   },
   'Management and Science University' => {
     description: 'Management & Science University (MSU) is one of Malaysia`s top universities with a focus on developing and delivering quality human capital in national and global critical- need areas; among these are Medicine, Health Sciences, Pharmacy, Information Sciences, and Engineering, besides Business Management & Professional Studies, Education & Social Sciences, Hospitality & Culinary, and Music & Fashion.   The moment you step into the MSU campus, you will experience the dynamic cultural diversity that is felt all around. Our students bring life into the overall vibrancy on site, with their combination of personalities and lifestyles. Their different racial or academic backgrounds and experiences, add unique features of the university, where individual growth and communication are leveraged.',
-    address: 'University Drive, Off Persiaran Olahraga, 40100 Shah Alam, Selangor, Malaysia',
+    address: 'University Drive, Off Persiaran Olahraga, Section 13, 40100 Shah Alam, Selangor Darul Ehsan, Malaysia',
     city: 'Shah Alam',
     country: 'Malaysia',
     url: 'https://www.msu.edu.my/',
@@ -278,7 +278,7 @@ universities = {
   },
   'National University of Singapore' => {
     description: 'A leading global university centred in Asia, the National University of Singapore (NUS) is Singapore’s flagship university, which offers a global approach to education and research, with a focus on Asian perspectives and expertiseNUS has 17 faculties and schools across three campuses. Its transformative education includes a broad-based curriculum underscored by multi-disciplinary courses and cross-faculty enrichment. Over 38,000 students from 100 countries enrich the community with their diverse social and cultural perspectives. NUS also strives to create a supportive and innovative environment to promote creative enterprise within its community.',
-    address: '21 Lower Kent Ridge Rd, Singapore 119077',
+    address: '21 Lower Kent Ridge Road, Singapore 119077',
     city: 'Singapore',
     country: 'Singapore',
     url: 'https://www.nus.edu.sg/',
@@ -326,7 +326,7 @@ universities = {
   },
   'Singapore University of Social Sciences' => {
     description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H`s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
-    address: '463 Clementi Rd, Singapore 599494',
+    address: '463 Clementi Road, Singapore 599494',
     city: 'Singapore',
     country: 'Singapore',
     url: 'https://www.suss.edu.sg/',
@@ -376,6 +376,37 @@ universities.each do |university, detail|
   image = detail[:image]
   University.create(name:, description:, address:, city:, country:, url:, ranking:, domestic_course_fee:, international_course_fee:, application_deadline:, student_count:, dorm:, email_domain:, logo:, image:)
 end
+
+puts "Manually patching Coordinates"
+university = University.find_by(name: "Universiti Malaya")
+university.latitude = 3.1221317076137627
+university.longitude = 101.65368765508087
+university.save
+
+university = University.find_by(name: "Universiti Putra Malaysia")
+university.latitude = 2.9969109802356555
+university.longitude = 101.70555528391576
+university.save
+
+university = University.find_by(name: "Universiti Utara Malaysia")
+university.latitude = 6.457510
+university.longitude = 100.505455
+university.save
+
+university = University.find_by(name: "Management and Science University")
+university.latitude = 3.0780914642469623
+university.longitude = 101.55293423166276
+university.save
+
+university = University.find_by(name: "National University of Singapore")
+university.latitude = 1.296609511216492
+university.longitude = 103.7764268317635
+university.save
+
+university = University.find_by(name: "Singapore University of Social Sciences")
+university.latitude = 1.3294701834655231
+university.longitude = 103.77615440609962
+university.save
 
 puts "Creating Users"
 
@@ -724,7 +755,7 @@ users.each do |user|
     unless reviews[education.university.name].blank?
       review = reviews[education.university.name].sample
       curr_review.comment = review
-      reviews[education.university.name].delete("review")
+      reviews[education.university.name].delete(review)
       curr_review.save!
     end
   end

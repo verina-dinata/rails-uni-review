@@ -1,0 +1,101 @@
+@import "../components/circle_ratings";
+@import "../components/add_to_favourite";
+@import "components/price_ratings";
+
+.container {
+  // align-items: center;
+}
+
+.info-block {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: white;
+}
+
+.uni-header {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  margin: 10px;
+}
+
+.side-nav-menu {
+  width: 130px;
+  position: fixed;
+  top: 50%;
+  left: 150px;
+  z-index: 1;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.side-nav-menu a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #2196F3;
+  display: block;
+}
+
+.side-nav-menu a:hover {
+  color: #064579;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  row-gap: 20px;
+}
+
+.accordian {
+  border: black;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 10px;
+  position: relative;
+}
+
+.dept-cards-wrapper {
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dept-card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+}
