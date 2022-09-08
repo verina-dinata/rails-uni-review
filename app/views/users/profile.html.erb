@@ -20,7 +20,7 @@
     <% if current_user.photo.present? %>
       <%= cl_image_tag current_user.photo.key, class: "avatar-bordered" %>
     <% else %>
-      <%= image_tag("user_avatar.png", class:"avatar-bordered") %>
+      <%= image_tag("https://image.shutterstock.com/image-vector/person-icon-on-white-background-260nw-1699358734.jpg", class:"avatar-bordered") %>
     <% end %>
   </div>
 

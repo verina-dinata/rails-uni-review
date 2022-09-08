@@ -15,9 +15,9 @@
     <div class="row mb-3">
       <div class="col-sm-4">
         <% if resource.photo.attached? %>
-          <%= image_tag resource.photo.variant(resize: "100x100!"), class: "rounded-circle" %>
+          <%= image_tag(resource.photo, class:"avatar-bordered")  %>
         <% else %>
-          <%= image_tag gravatar_image_url(current_user.email, size:100), height:100, width:100, class: "rounded-circle" %>
+          <%= image_tag("https://image.shutterstock.com/image-vector/person-icon-on-white-background-260nw-1699358734.jpg", class:"avatar-bordered") %>
         <% end %>
 
       </div>
