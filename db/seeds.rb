@@ -164,7 +164,7 @@ universities = {
     logo: 'https://dxvn2m2gq0cmw.cloudfront.net/landing_page/272/original/UKM_logo.png',
     image: 'https://assets.nst.com.my/images/articles/ukm50th_1589945315.jpg'
   },
-  'Universiti Putra Malaysia ' => {
+  'Universiti Putra Malaysia' => {
     description: 'Universiti Putra Malaysia (UPM) formerly known as Universiti Pertanian Malaysia was founded in 1971 through the merger of Faculty of Agriculture, University Malaya and Agriculture College in Serdang',
     address: 'Jalan Universiti 1, 43400 Serdang, Selangor, Malaysia',
     city: 'Serdang',
@@ -378,35 +378,35 @@ universities.each do |university, detail|
 end
 
 puts "Manually patching Coordinates"
-@university = University.find_by(name: "Universiti Malaya")
-@university.latitude = 3.1221317076137627
-@university.longitude = 101.65368765508087
-@university.save
+university = University.find_by(name: "Universiti Malaya")
+university.latitude = 3.1221317076137627
+university.longitude = 101.65368765508087
+university.save
 
-@university = University.find_by(name: "Universiti Putra Malaysia")
-@university.latitude = 2.9969109802356555
-@university.longitude = 101.70555528391576
-@university.save
+university = University.find_by(name: "Universiti Putra Malaysia")
+university.latitude = 2.9969109802356555
+university.longitude = 101.70555528391576
+university.save
 
-@university = University.find_by(name: "Universiti Utara Malaysia")
-@university.latitude = 6.457510
-@university.longitude = 100.505455
-@university.save
+university = University.find_by(name: "Universiti Utara Malaysia")
+university.latitude = 6.457510
+university.longitude = 100.505455
+university.save
 
-@university = University.find_by(name: "Management and Science University")
-@university.latitude = 3.0780914642469623
-@university.longitude = 101.55293423166276
-@university.save
+university = University.find_by(name: "Management and Science University")
+university.latitude = 3.0780914642469623
+university.longitude = 101.55293423166276
+university.save
 
-@university = University.find_by(name: "National University of Singapore")
-@university.latitude = 1.296609511216492
-@university.longitude = 103.7764268317635
-@university.save
+university = University.find_by(name: "National University of Singapore")
+university.latitude = 1.296609511216492
+university.longitude = 103.7764268317635
+university.save
 
-@university = University.find_by(name: "Singapore University of Social Sciences")
-@university.latitude = 1.3294701834655231
-@university.longitude = 103.77615440609962
-@university.save
+university = University.find_by(name: "Singapore University of Social Sciences")
+university.latitude = 1.3294701834655231
+university.longitude = 103.77615440609962
+university.save
 
 puts "Creating Users"
 
@@ -755,7 +755,7 @@ users.each do |user|
     unless reviews[education.university.name].blank?
       review = reviews[education.university.name].sample
       curr_review.comment = review
-      reviews[education.university.name].delete("review")
+      reviews[education.university.name].delete(review)
       curr_review.save!
     end
   end

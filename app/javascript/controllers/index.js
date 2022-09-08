@@ -12,6 +12,7 @@ application.register("cards-carousel", CardsCarouselController)
 
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
+
 import AutocompleteController from "./autocomplete_controller"
 application.register("autocomplete", AutocompleteController)
 
