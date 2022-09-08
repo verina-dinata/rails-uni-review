@@ -13,15 +13,10 @@
     <%= f.error_notification %>
 
     <div class="row mb-3">
-      <div class="col-sm-4">
-        <% if resource.photo.attached? %>
-          <%= image_tag(resource.photo, class:"avatar-bordered")  %>
-        <% else %>
-          <%= image_tag("https://image.shutterstock.com/image-vector/person-icon-on-white-background-260nw-1699358734.jpg", class:"avatar-bordered") %>
-        <% end %>
-
+      <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3">
+        <%= image_tag(user_avatar(resource), class:"avatar-bordered") %>
       </div>
-      <div class="form-floating col-sm-8">
+      <div class="form-floating col-lg-10 col-md-9 col-sm-9 col-xs-9">
         <%= f.input :photo, as: :file %>
       </div>
     </div>
