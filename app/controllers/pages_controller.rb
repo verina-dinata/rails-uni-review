@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[home home_search]
 
   def home
+    @first_review = Review.first
+    @third_review = Review.third
+    @last_review = Review.last
   end
 
   def home_search

@@ -1,6 +1,6 @@
 <div class="row my-2">
   <div class="col-lg-2 col-md-2 col-sm-2">
-    <%= image_tag("logo.png", class: "avatar") %>
+    <%= image_tag(user_avatar(review.user), class: "avatar") %>
     <div class="">
       <p class="mb-0 review-font"><strong><%= review.user.first_name %> <%= review.user.last_name %></strong></p>
       <div class="card-info-light review-font-small">
