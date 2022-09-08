@@ -58,6 +58,7 @@ gem "pundit"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'kaminari'
 gem "cloudinary"
+gem 'gravatar_image_tag'
 
 
 group :development, :test do
