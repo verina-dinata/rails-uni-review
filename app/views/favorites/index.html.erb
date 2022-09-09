@@ -1,17 +1,12 @@
-<div class="card mb-3">
-  <img src="..." class="card-img-top" alt="university_logo">
-   <% @favorites.each do |f| %>
-  <div class="card-body">
-    <h5 class="card-title"><%= favorite.name %></h5>
-    <p class="card-text"><%= university.country %></p>
-    <p class="card-text"><%= university.description %></p>
-  </div>
-</div>
-<div class="card">
+<div class="container mt-5 pt-3">
+  <h1><strong>Favorites</strong></h1>
   <% @favorites.each do |f| %>
-  <h5 class="card-title"><%= favorite.name %></h5>
-  <p class="card-text"><%= university.country %></p>
-  <p class="card-text"><%= university.description %></p>
-  </div>
-  <img src="..." class="card-img-bottom" alt="...">
+    <div class="d-flex justify-content-between mt-5 my-4">
+      <%= image_tag("logo.png", class: "uni-card-image") %>
+      <div>
+        <h3><%= f.university.name %></h3>
+        <p><%= f.university.description %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
