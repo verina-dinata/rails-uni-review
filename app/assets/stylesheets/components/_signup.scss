@@ -10,3 +10,17 @@
   font-weight: bold;
   font-size: 32px;
 }
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('login_page.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: aqua;
+}
+
+.form-font {
+  color: rgb(58, 53, 53);
+}
