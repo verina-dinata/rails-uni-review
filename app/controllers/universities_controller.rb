@@ -20,12 +20,12 @@ class UniversitiesController < ApplicationController
         lng: @university.longitude
       }
     ]
+    @can_review = current_user.educations.where(university_id: @university.id).exists?
     @reviews = @university.reviews.order(created_at: :desc).page params[:page]
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
     @review = Review.new
     @educations = []
-    @educations = current_user.educations unless current_user.nil?
   end
 
   private
