@@ -1,0 +1,18 @@
+.description{
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 1170px;
+  overflow: clip;
+  text-overflow: ellipsis;
+  height:70px;
+  margin-left: 15px;
+}
+
+.title{
+  margin-left:15px;
+}
+
+.logoo{
+  margin-top: 12px;
+  margin-left: 15px;
+}
