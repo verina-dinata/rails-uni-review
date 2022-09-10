@@ -1,11 +1,15 @@
-<div class="container mt-5 pt-3">
+<div class="container-fluid mt-5 pt-3">
   <h1><strong>Favorites</strong></h1>
+  <div class="container">
   <% @favorites.each do |f| %>
-    <div class="d-flex justify-content-between mt-5 my-4 card">
-      <%= link_to university_path(f.university) do %>
-        <%= image_tag("logo.png", class: "uni-card-image logoo title") %>
+    <div class="col-lg-8 justify-content-between mt-5 my-4 card" style="width: 40rem";>
+      <%= link_to university_path(f.university), class:"text-decoration-none" do %>
+        <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
+        <span class="title">
         <%= f.university.name %>
-      <% end %>
+        </span>
+      <%end %>
     </div>
   <% end %>
+  </div>
 </div>
