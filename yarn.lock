@@ -361,11 +361,7 @@ cross-spawn@^7.0.3:
 
 detect-it@^4.0.0:
   version "4.0.1"
-<<<<<<< HEAD
   resolved "https://registry.npmjs.org/detect-it/-/detect-it-4.0.1.tgz"
-=======
-  resolved "https://registry.yarnpkg.com/detect-it/-/detect-it-4.0.1.tgz#3f8de6b8330f5086270571251bedf10aec049e18"
->>>>>>> master
   integrity sha512-dg5YBTJYvogK1+dA2mBUDKzOWfYZtHVba89SyZUhc4+e3i2tzgjANFg5lDRCd3UOtRcw00vUTMK8LELcMdicug==
 
 electron-to-chromium@^1.4.202:
