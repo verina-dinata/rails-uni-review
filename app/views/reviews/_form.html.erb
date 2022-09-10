@@ -39,7 +39,7 @@
       <div>
         <%= f.label :course_difficulty_rating, 'Course difficulty', class: "fw-bold text-grey" %>
         <p class="text-green">How challenging are the courses you took?</p>
-        <%= f.input :course_difficulty_rating, collection: descsriptive_rating, label: false, input_html: {data: {controller: "star-rating"}} %>
+        <%= f.input :course_difficulty_rating, collection: general_rating, label: false, input_html: {data: {controller: "star-rating"}} %>
         <%= f.full_error :course_difficulty_rating %>
       </div>
 
