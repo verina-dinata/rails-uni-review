@@ -81,7 +81,8 @@
 }
 
 .review-top {
-  padding: 5%;
+  padding: 3%;
+  font-size: 20px;
 }
 
 .review-middle {
@@ -92,10 +93,10 @@
 .review-bottom {
   height: 120px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   padding: 5%;
-  font-size: 24px;
+  // font-size: 24px;
   color: #333;
   // line-height: 1.41;
   overflow: hidden;
