@@ -1,2 +1,139 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner">
+  <header class="header">
+    <div class="banner-sizing "></div>
+    <div class="banner-content">
+      <h1>Uni-Review</h1>
+      <p>Looking for your next educational journey.</p>
+      <div class="mt-4 home-form d-flex" data-controller="autocomplete">
+        <div style="width:100%; position:relative;">
+          <input data-autocomplete-target="input" search-url=<%= home_search_path %> data-action="keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear" class="form-control" placeholder="Enter University name or Country" type="text" name="query" id="query">
+          <div data-autocomplete-target="list" style="z-index: 1; position:absolute; top:38; left:0; width:100%;">
+
+          </div>
+        </div>
+        <button data-action="click->autocomplete#filterUni" class="btn search-btn">Search</button>
+        <%# <button class="btn search-btn">Search</button> %>
+
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+
+    <div class="col-lg-10 col-md-11 col-sm-12 mt-5 mb-5">
+      <div class="card home-card">
+        <div class="row">
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <img src="https://u-paris.fr/wp-content/uploads/2020/12/2017-NUS-Signage-1-1.jpg" alt="" class="home-img">
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 text-align-center home-info" style="padding: 1.5rem; margin: auto;">
+            <h2><%= link_to "Universities in Singapore", universities_path(:country=>"Singapore"), class:"home-link"%></h2>
+            <p>Singapore’s universities and colleges rank as the best in Asia, and among top 20 in the world. Find out more about universities in Singapore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-10 col-md-11 col-sm-12 mb-5">
+      <div class="card home-card">
+        <div class="row justify-content-end" >
+          <div class="col-lg-5 col-md-6 col-sm-6 home-info" style="padding: 1.5rem; margin: auto;">
+            <h2><%= link_to "Universities in Austrialia", universities_path(:country=>"Australia"), class:"home-link"%></h2>
+            <p>Australia has 37 government-funded universities and three private universities, as well as a number of other specialist institutions that provide approved courses at the higher education level. Learn more about Austrialian Universities.</p>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <img src="https://www.anao.gov.au/sites/default/files/anao_report/image/anu-governance-control-frameworks-anao.jpg" alt="" class="home-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-10 col-md-11 col-sm-12 mb-5">
+      <div class="card home-card">
+        <div class="row">
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <img src="https://theacademicinsights.com/wp-content/uploads/2020/07/imej_5ccfe917a8b765ccfef83b7420-740x357.jpg" alt="" class="home-img">
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 text-align-center home-info" style="padding: 1.5rem; margin: auto;">
+            <h2><%= link_to "Universities in Malaysia", universities_path(:country=>"Malaysia"), class:"home-link" %></h2>
+            <p>Malaysia as you know it, is home to one of the most affordable student cities in the world. This is why the number of international students in Malaysia are growing tremenduously.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="row justify-content-around">
+        <h2 class="text-center mt-4 mb-5">Student Reviews</h2>
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= @first_review.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((@first_review.reputabilty_rating + @first_review.education_quality_rating + @first_review.campus_facilities_accom_rating + @first_review.course_difficulty_rating + @first_review.social_element_rating + @first_review.value_for_money_rating + @first_review.safety_rating + @first_review.career_services_rating) / 8.0) %></span>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= @first_review.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= @first_review.comment %>"</span>
+        </div>
+
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= @third_review.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((@third_review.reputabilty_rating + @third_review.education_quality_rating + @third_review.campus_facilities_accom_rating + @third_review.course_difficulty_rating + @third_review.social_element_rating + @third_review.value_for_money_rating + @third_review.safety_rating + @third_review.career_services_rating) / 8.0) %></span>
+          <%# (@third_review.reputabilty_rating + @third_review.education_quality_rating + @third_review.campus_facilities_accom_rating + @third_review.course_difficulty_rating + @third_review.social_element_rating + @third_review.value_for_money_rating + @third_review.safety_rating + @third_review.career_services_rating) / 8.0 %>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= @third_review.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= @third_review.comment %></span>
+        </div>
+
+        <div class="card review-card col-lg-3 p-4">
+          <span class="review-top">
+            <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="30px" style="margin-right: 10px;">
+            <%= @last_review.user.first_name %>
+          </span>
+          <span class="p-3"><%= " ⭐️" * ((@last_review.reputabilty_rating + @last_review.education_quality_rating + @last_review.campus_facilities_accom_rating + @last_review.course_difficulty_rating + @last_review.social_element_rating + @last_review.value_for_money_rating + @last_review.safety_rating + @last_review.career_services_rating) / 8.0) %></span>
+          <span class="review-middle">
+            <strong class="text-secondary">Student at </strong><br>
+            <strong><%= @last_review.university.name %></strong>
+          </span>
+          <span class="review-bottom">"<%= @last_review.comment %></span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-content">
+    <h5><strong>Uni-Review</strong></h5>
+    <p>
+      Uni-Review<br>
+      ABCD Building<br>
+      Singapore 123 456<br>
+      📞 +65 8765 4321
+    </p>
+
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github footer-icon"></i></a>
+      <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+      <a href="#"><i class="fab fa-facebook footer-icon"></i></a>
+      <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+      <a href="#"><i class="fab fa-linkedin footer-icon"></i></a>
+    </div>
+
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart pt-4"></i> at Le Wagon
+    </div>
+  </div>
+</div>

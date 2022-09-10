@@ -1,21 +1,48 @@
-<h2>Log in</h2>
+<div class="background">
+  <div class="container mt-3">
+    <div class="row justify-content-center align-items-center", style="height: 100vh;">
+      <div class="col-xl-4 col-lg-6 col-md-7 col-sm-10">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
-  data: {turbo: false}) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <h2 style="margin-top:10%" class="form-font mb-4"><strong> Login to Your Account</strong></h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+          data: {turbo: false}) do |f| %>
+          <div class="form-inputs">
+            <%= f.error_notification %>
+
+            <div class="form-floating mb-4">
+              <%= f.input_field :email, class: 'form-control',required: true, placeholder: "Input your email" %>
+              <%= f.label :email, 'Email' %>
+              <%= f.full_error :email %>
+            </div>
+            <div class="form-floating mb-4">
+              <%= f.input_field :password, class: 'form-control',required: true, placeholder: "Input your password" %>
+              <%= f.label :password, 'Password' %>
+              <%= f.full_error :password %>
+            </div>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
+          </div>
+
+          <div class="form-actions login-btn my-4">
+            <%= f.button :submit, "Log in" %>
+          </div>
+        <% end %>
+        <div class="d-flex justify-content-between">
+          <div>
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Forgot your password?", new_password_path(resource_name), class:"form-font next-action-link" %><br />
+            <% end %>
+          </div>
+          <div>
+            <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+              <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class:"form-font next-action-link" %><br />
+            <% end %>
+          </div>
+        </div>
+        <%# <%= render "devise/shared/links" %>
+      </div>
+      <div class="col-xl-7 col-lg-6 col-md-5 col-sm-2"></div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
