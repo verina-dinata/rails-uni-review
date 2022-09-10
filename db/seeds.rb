@@ -799,7 +799,7 @@ users.each do |user|
     unless reviews[education.university.name].blank?
       review = reviews[education.university.name].sample
       curr_review.comment = review
-      reviews[education.university.name].delete("review")
+      reviews[education.university.name].delete(review)
       curr_review.save!
     end
   end

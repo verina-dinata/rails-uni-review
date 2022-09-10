@@ -44,3 +44,25 @@
     transition-duration: .5s;
   }
 }
+
+.next-action-link {
+  text-decoration: none;
+  font-size: 13px;
+
+  &:hover {
+    color: black;
+    font-weight: bolder;
+  }
+}
+
+.university-link {
+  text-decoration: none !important;
+  color: black;
+
+
+  &:hover {
+    transition-duration: .5s;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+  }
+}
