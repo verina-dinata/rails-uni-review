@@ -1,7 +1,7 @@
- <div class="container mt-3">
+<div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-lg-8 col-md-6 col-sm-12">
-      <h2>Sign up!</h2>
+      <h2 style="margin-top:10%">Sign up!</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
         data: {turbo: false}) do |f| %>
@@ -45,7 +45,7 @@
           <%= f.button :submit, "Sign up" %>
         </div>
       <% end %>
-      <p>Aready on member? <%= render "devise/shared/links" %></p>
+      <p>Aready a member? <%= render "devise/shared/links" %></p>
     </div>
   </div>
 </div>

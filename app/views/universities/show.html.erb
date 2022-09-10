@@ -2,17 +2,18 @@
   <div class="col-11">
     <div class="title-block">
       <div class="row" >
-        <div class="col-xs-7 col-sm-6 col-lg-8">
+        <div class="col-xs-7 col-sm-7 col-lg-7">
           <div class="uni-header">
             <div>
-              <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/300px-Harvard_shield_wreath.svg.png" width=100%>
+              <%= image_tag(@university.logo, width: "100%") %>
             </div>
             <div>
               <div>
                 <span style="color:grey"><%= @university.city %> | <%= @university.country %></span><br>
-                <span style="font-size:36px"><strong><%= @university.name %></strong></span><br>
+                <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
                 Rating <i data-star="4.1"></i>
-                <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews | <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
+                <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews<br>
+                <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
               </div>
               <div>
                 <button class="accordian-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
@@ -20,11 +21,8 @@
                 </button>
                 <button type="button" class="btn btn-secondary">Leave a review</button>
                 <button type="button" class="btn btn-secondary">Official Website</button>
-                <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->heart-button#heartAnimation">
-                  <span class="far fa-heart"></span>
-                  <div class="ring"></div>
-                  <div class="ring2"></div>
-                  <p class="info">Added to favourites!</p>
+                <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->add-to-favourite-animation#heartAnimation">
+                  <span class="fa-solid fa-heart active"></span>
                 </i>
               </div>
             </div>
@@ -33,31 +31,31 @@
           </div>
         </div>
 
-        <div id="university-img" class="carousel slide col-xs-5 col-sm-6 col-lg-4" data-ride="carousel" data-interval="5000">
-          <ol class="carousel-indicators">
-            <li data-target="#university-img" data-slide-to="0" class="active"></li>
-            <li data-target="#university-img" data-slide-to="1"></li>
-            <li data-target="#university-img" data-slide-to="2"></li>
-          </ol>
+        <div id="university-img" class="carousel slide col-xs-5 col-sm-5 col-lg-5" data-bs-ride="true" data-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="First Photo">
+              <%= image_tag(@university.image, width: "100%") %>
             </div>
             <div class="carousel-item">
-              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="Second Photo">
+              <%= image_tag(@university.image2, width: "100%") %>
             </div>
             <div class="carousel-item">
-              <img src="https://image.cnbcfm.com/api/v1/image/106604493-1594057373282harvarduniversitysdunsterhouseincambridgema.jpg?v=1594057738&w=740&h=416&ffmt=webp" width="100%" alt="Third Photo">
+              <%= image_tag(@university.image3, width: "100%") %>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#university-img" role="button" data-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#university-img" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#university-img" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#university-img" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
       <div class="accordion" id="accordion">
@@ -85,10 +83,10 @@
         <section class="row">
           <div class="col-4">
             Student Population:<br>
-              <i class="fa-sharp fa-solid fa-screen-users"></i><%= @university.student_count %><br><br>
+              <i class="fa fa-user"></i>  <%= @university.student_count %><br><br>
             Average fees for locals:<br>
-              <i data-price="3.2"></i> <%= @university.domestic_course_fee %><br><br>
-            </i>Average fees for foreigners:<br>
+              <i data-price="3.2"></i> <%= @university.domestic_course_fee %><br><br></i>
+            Average fees for foreigners:<br>
               <i data-price="1.7"></i> <%= @university.international_course_fee %><br><br>
           </div>
           <div id="info-section"
@@ -122,54 +120,62 @@
         </section>
 
         <section id="departments-section" class="row">
-        Check out the departments of <%= @university.name %> below!<br>
+        Check out the Faculties of <%= @university.name %> below!<br>
 
-          <div id="cardsCarousel" class="carousel" data-controller="cards-carousel" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card">
-                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                    <h5 class="dept-card-title">Department of A</h5>
-                    <p class="dept-card-text">Some random description</p>
+          <div class="container text-center my-3">
+            <div class="row mx-auto my-auto">
+              <div id="card-carousel" class="carousel slide w-100" data-controller="cards-carousel" data-ride="carousel" data-interval="12000">
+                <div class="carousel-inner w-100" role="listbox">
+                  <div class="carousel-item active">
+                    <div>
+                      <div class="card card-body">
+                        <h5>Department of A</h5>
+                        <p>Some description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                      <div class="card card-body">
+                        <h5>Department of B</h5>
+                        <p>Some description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                      <div class="card card-body">
+                        <h5>Department of C</h5>
+                        <p>Some description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                      <div class="card card-body">
+                        <h5>Department of D</h5>
+                        <p>Some description</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                      <div class="card card-body">
+                        <h5>Department of E</h5>
+                        <p>Some description</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <a class="carousel-control-prev w-auto" href="#card-carousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next w-auto" href="#card-carousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                    <h5 class="dept-card-title">Department of B</h5>
-                    <p class="dept-card-text">Some random description</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                    <h5 class="dept-card-title">Department of C</h5>
-                    <p class="dept-card-text">Some random description</p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                    <h5 class="dept-card-title">Department of D</h5>
-                    <p class="dept-card-text">Some random description</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
         </section>
@@ -182,21 +188,59 @@
               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
           </div>
+
           <div class="col-3">
             <strong><%= @university.name %></strong><br><br>
-            <% @university.address.split(", ").each do |line|%>
+            <span id="university.address"><% @university.address.split(", ").each do |line|%>
               <%= "#{line}"%><br>
             <% end %>
-            <br>
-            Enrollment Deadline:<br>
-            1 Jan 2023
-            <button type="button" class="btn btn-secondary">Book a campus tour</button>
+            </span>
+            <br>Enrollment Deadline:<br>
+            <span id="application-deadline"><%= @university.application_deadline %></span>
+            <button type="button"
+            data-controller="calendar"
+            data-action="click->calendar#createInvite"
+            class="btn btn-secondary">Book a campus tour</button>
           </div>
         </section>
 
-        <section id="reviews-section" class="row">
-        </section>
+        <hr>
 
+        <section id="reviews-section" class="row">
+          <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
+
+            <div class="d-flex justify-content-between">
+              <h5><strong>Reviews</strong></h5>
+              <div>
+                <% @educations.each do |education|  %>
+                  <% if education.university == @university %>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="review-link"><strong>Leave a review</strong></a>
+                    <%= render "review_form" %>
+                    <% break %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+
+            <% if user_signed_in? %>
+              <%= paginate @reviews, remote: true %>
+            <% end %>
+
+            <div data-insert-in-list-target="items">
+              <% @reviews.each do |review| %>
+                <% education = review.user.educations.where(university: @university) %>
+                <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
+                <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
+              <% end %>
+
+              <% if current_user == nil %>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  View more reviews
+                </button>
+              <% end %>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

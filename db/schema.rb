@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_094957) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_10_004954) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -82,6 +82,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_094957) do
     t.string "email_domain"
     t.float "latitude"
     t.float "longitude"
+    t.string "logo"
+    t.string "image"
+    t.string "image2"
+    t.string "image3"
   end
 
   create_table "users", force: :cascade do |t|

@@ -2,7 +2,14 @@ class UniversitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @universities = University.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR country ILIKE :query OR city ILIKE :query"
+      @universities = University.where(sql_query, query: "%#{params[:query]}%")
+    elsif params[:country]
+      @universities = University.where(country: params[:country])
+    else
+      @universities = University.all
+    end
   end
 
   def show
@@ -13,6 +20,12 @@ class UniversitiesController < ApplicationController
         lng: @university.longitude
       }
     ]
+    @reviews = @university.reviews.order(created_at: :desc).page params[:page]
+    @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
+    @resource = User.new
+    @review = Review.new
+    @educations = []
+    @educations = current_user.educations unless current_user.nil?
   end
 
 
@@ -23,6 +36,17 @@ class UniversitiesController < ApplicationController
   end
 
   def university_params
-    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address, :latitude, :longitude)
+    params.require(:university).permit(
+      :name,
+      :ranking,
+      :reviews,
+      :description,
+      :city,
+      :country,
+      :address,
+      :latitude,
+      :longitude,
+      :logo,
+      :image)
   end
 end

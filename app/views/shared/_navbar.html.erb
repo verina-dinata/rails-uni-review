@@ -1,4 +1,9 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% unless user_signed_in? %>
+  <%= render "universities/signup", resource: User.new %>
+<% end %>
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-scroll navbar-fixed" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://cdn.iconscout.com/icon/free/png-256/social-258-116292.png", height: "35px", width: "auto" %>
@@ -29,7 +34,9 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="sign-up-link">Sign Up</a>
+            <%# <%= link_to "Log In/", user_session_path, class: "sign-up-link"%>
+
           </li>
         <% end %>
       </ul>
