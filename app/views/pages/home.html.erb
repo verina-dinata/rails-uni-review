@@ -65,11 +65,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="position: relative; height: 650px;">
 
       <div class="row justify-content-around">
         <h2 class="text-center mt-4 mb-5">Student Reviews</h2>
-        <div class="card review-card col-lg-3 p-4">
+        <div class="card review-card col-lg-3 p-4" style="position: absolute; top:30%; left: 5%">
           <span class="review-top">
             <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="40px" style="margin-right: 10px;">
             <%= @first_review.user.first_name %>
@@ -96,7 +96,7 @@
           <span class="review-bottom">"<%= @third_review.comment %></span>
         </div>
 
-        <div class="card review-card col-lg-3 p-4">
+        <div class="card review-card col-lg-3 p-4" style="position: absolute; top:30%; right: 5%">
           <span class="review-top">
             <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="40px" style="margin-right: 10px;">
             <%= @last_review.user.first_name %>
