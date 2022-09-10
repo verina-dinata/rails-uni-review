@@ -243,5 +243,38 @@
         </section>
       </div>
     </div>
+    <% if user_signed_in? %>
+      <%= paginate @reviews, remote: true %>
+    <% end %>
+
+    <div data-insert-in-list-target="items">
+      <% @reviews.each do |review| %>
+        <% education = review.user.educations.where(university: @university) %>
+        <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
+        <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
+      <% end %>
+
+      <% if current_user == nil %>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          View more reviews
+        </button>
+      <% end %>
+      <div>
+      <% favorite = current_user.favorites.find_by(university: @university)%>
+      <% if favorite.nil? %>
+      <form action="/favorites" method="university">
+        <input type= "hidden" name="authenticitiy_token" value="<%= form_authenticity_token %>">
+        <input type= "hidden" name="favorite[university_id]" value="<%= @university.id %>">
+        <input type= "submit" value="FAVORITE">
+      </form>
+      <% else %>
+      <form action="<% favorites_path %>" method="university">
+        <input type= "hidden" name="authenticitiy_token" value="<%= form_authenticity_token %>">
+        <input type= "hidden" name="_method" value="DELETE">
+        <input type= "submit" value="UNFAVORITE">
+      </form>
+     <% end %>
+      <br>
+    </div>
   </div>
 </div>
