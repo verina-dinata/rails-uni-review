@@ -4,10 +4,17 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["heart", "form"]
   connect() {
+<<<<<<< HEAD
   }
 
   addToFavorite(event) {
     // console.log("a")
+=======
+    console.log("hello")
+  }
+
+  addToFavorite(event) {
+>>>>>>> 7e946db (stimulus)
     event.preventDefault()
 
     let csrfToken = document
@@ -35,5 +42,9 @@ export default class extends Controller {
       })
 
 
+<<<<<<< HEAD
+=======
+    // this.heartTarget.html("far fa-heart position-absolute")
+>>>>>>> 7e946db (stimulus)
   }
 }
