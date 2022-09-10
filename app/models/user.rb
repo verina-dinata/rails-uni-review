@@ -9,4 +9,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :first_name, :last_name, presence: true
+
+  # protected
+
+  # def confirmation_required?
+  #   true
+  # end
 end

@@ -1,27 +1,39 @@
-<h2>Change your password</h2>
+<div class="background">
+  <div class="container mt-3">
+    <div class="row justify-content-center align-items-center", style="height: 100vh;">
+      <div class="col-xl-4 col-lg-6 col-md-7 col-sm-10">
+        <h2 style="margin-top:10%" class="form-font mb-4"><strong>Change your password</strong></h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-  <%= f.input :reset_password_token, as: :hidden %>
-  <%= f.full_error :reset_password_token %>
+          <%= f.input :reset_password_token, as: :hidden %>
+          <%= f.full_error :reset_password_token %>
 
-  <div class="form-inputs">
-    <%= f.input :password,
-                label: "New password",
-                required: true,
-                autofocus: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: "Confirm your new password",
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+
+          <div class="form-inputs">
+            <div class="form-floating mb-4">
+              <%= f.input_field :password, class: 'form-control',required: true, autofocus: true, placeholder: "Input your password" %>
+              <%= f.label :password, 'New password' %>
+              <%= f.full_error :password %>
+              <div class="form-text"><%= "Minimum #{@minimum_password_length} characters" %></div>
+            </div>
+            <div class="form-floating mb-4">
+              <%= f.input_field :password_confirmation, class: 'form-control',required: true, autofocus: true, placeholder: "Input your password again" %>
+              <%= f.label :password_confirmation, 'Confirm your new password' %>
+              <%= f.full_error :password_confirmation %>
+            </div>
+          </div>
+
+          <div class="form-actions login-btn my-4">
+            <%= f.button :submit, "Update password" %>
+          </div>
+        <% end %>
+        <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+          <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class:"form-font next-action-link" %><br />
+        <% end %>
+      </div>
+      <div class="col-xl-7 col-lg-6 col-md-5 col-sm-2"></div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
