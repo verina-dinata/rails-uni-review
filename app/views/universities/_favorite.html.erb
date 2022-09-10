@@ -1,9 +1,11 @@
-<% if university.favorites.find_by(user: current_user) %>
-  <%= link_to university_favorite_path(university, university.favorites.find_by(user: current_user)), data: {turbo_method: :delete}, remote: true do %>
-    <i class="fas fa-heart position-absolute" style="z-index: 100;"></i>
-  <% end %>
-<% else %>
-  <%= link_to university_favorites_path(university), data: {turbo_method: :post}, remote: true do %>
-    <i class="far fa-heart position-absolute" style="z-index: 100;"></i>
-  <% end %>
+
+<%= simple_form_for(:favorite, url: university_favorites_path(university.id), data: {
+  action: "submit->favorite#addToFavorite",
+  favorite_target: "form"
+  }) do |f| %>
+
+    <%= button_tag type: 'submit', class: "position-absolute btn btn-link", style: "top:0;right:0;" do %>
+      <i class="far fa-heart" style="z-index: 100;" data-favorite-target="heart"></i>
+    <% end %>
+
 <% end %>
