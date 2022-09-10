@@ -239,6 +239,22 @@
           View more reviews
         </button>
       <% end %>
+      <div>
+      <% favorite = current_user.favorites.find_by(university: @university)%>
+      <% if favorite.nil? %>
+      <form action="/favorites" method="university">
+        <input type= "hidden" name="authenticitiy_token" value="<%= form_authenticity_token %>">
+        <input type= "hidden" name="favorite[university_id]" value="<%= @university.id %>">
+        <input type= "submit" value="FAVORITE">
+      </form>
+      <% else %>
+      <form action="<% favorites_path %>" method="university">
+        <input type= "hidden" name="authenticitiy_token" value="<%= form_authenticity_token %>">
+        <input type= "hidden" name="_method" value="DELETE">
+        <input type= "submit" value="UNFAVORITE">
+      </form>
+     <% end %>
+      <br>
     </div>
   </div>
 </div>
