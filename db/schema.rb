@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema[7.0].define(version: 2022_09_10_004954) do
+=======
 ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
+>>>>>>> master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -112,6 +116,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
     t.float "longitude"
     t.string "logo"
     t.string "image"
+    t.string "image2"
+    t.string "image3"
   end
 
   create_table "users", force: :cascade do |t|

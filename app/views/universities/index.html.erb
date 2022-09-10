@@ -1,3 +1,9 @@
+<% @universities.each do |university| %>
+  <%= university.name  %><br>
+  <%= university.reviews.count %> Reviews<br>
+  <%# <%= university.description %> %>
+<% end %>
+
 <div class="container mt-5">
   <div class="row">
     <% @universities.each do |university| %>

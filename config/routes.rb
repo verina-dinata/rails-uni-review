@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "education", to: "educations#index"
 
+  get "universities",     to: "universities#index"
+  get "universities/:id", to: "universities#show"
+
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show] do
