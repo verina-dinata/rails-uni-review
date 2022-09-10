@@ -2,13 +2,15 @@
   <h1><strong>Favorites</strong></h1>
   <% @favorites.each do |f| %>
     <div class="d-flex justify-content-between mt-5 my-4 card">
-      <%= image_tag("logo.png", class: "uni-card-image logoo") %>
-      <div>
-      <br>
-        <h3 class="title"><%= f.university.name %></h3>
-        <p class="description">
-        <%= f.university.description %></p>
-      </div>
+      <%= link_to university_path(f.university) do %>
+        <%= image_tag("logo.png", class: "uni-card-image logoo") %>
+        <div>
+        <br>
+          <h3 class="title"><%= f.university.name %></h3>
+          <p class="description">
+          <%= f.university.description %></p>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
