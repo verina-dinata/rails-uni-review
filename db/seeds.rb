@@ -759,7 +759,7 @@ reviews = {
     comment: ['Best research & education university in Asia. Student campus is so good. You will learn your life skills here.',
     'Very nice campus. Full of green. Well connected by MRT and Buses. There are free shuttle buses to get around inside . Lot of eateries and all facilities available.
 
-    I am from computing department. awesome place to learn, almost like a second house',
+    I am from computing department. Awesome place to learn, almost like a second house',
     'The school turns out great researchers and book smarts employees.
 
     However, in general, it does not churn out well-rounded individuals.
@@ -768,14 +768,14 @@ reviews = {
     'NUS provides you with great infrastructures and facilities. There are college bus which you could take to travel between faculties. Went to U-Town to eat at the foodcourt. The variety of the foods there are quite broad. You could find Korean, Indian, Japanese, Chinese and other foods. The price is cheap for students and non-students. There is also a small swimming pool in the U-Town
 
     In the USP (I`m not really sure whether it`s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.'],
-    'reputabilty rating' => [5, 5, 0, 0],
-    'education quality rating' => [5, 0, 0, 0],
-    'campus facilities accom rating' => [5, 0, 0, 0],
-    'course difficulty rating' => [5, 0, 0, 0],
-    'social element rating' => [5, 0, 0, 0],
-    'value for money rating' => [5, 0, 0, 0],
-    'safety rating' => [5, 0, 0, 0],
-    'career services rating' => [5, 0, 0, 0]
+    'reputabilty rating' => [5, 5, 5, 4],
+    'education quality rating' => [5, 4, 4, 5],
+    'campus facilities accom rating' => [5, 5, 4, 5],
+    'course difficulty rating' => [5, 4, 4, 4],
+    'social element rating' => [5, 3, 4, 4],
+    'value for money rating' => [5, 3, 4, 4],
+    'safety rating' => [5, 5, 5, 4],
+    'career services rating' => [5, 4, 3, 4]
   },
   'Nanyang Technological University' => {
     comment: ['Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
@@ -786,14 +786,14 @@ reviews = {
 
     But if you`re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It`s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
     'It`s a great university with lots of things going around. But be competitive minded otherwise it`s going to be tough like hell.'],
-    'reputabilty rating' => [5, 5, 0, 0],
-    'education quality rating' => [5, 0, 0, 0],
-    'campus facilities accom rating' => [5, 0, 0, 0],
-    'course difficulty rating' => [5, 0, 0, 0],
-    'social element rating' => [5, 0, 0, 0],
-    'value for money rating' => [5, 0, 0, 0],
-    'safety rating' => [5, 0, 0, 0],
-    'career services rating' => [5, 0, 0, 0]
+    'reputabilty rating' => [5, 5, 4, 5],
+    'education quality rating' => [5, 4, 3, 5],
+    'campus facilities accom rating' => [4, 3, 4, 5],
+    'course difficulty rating' => [4, 4, 4, 5],
+    'social element rating' => [4, 4, 5, 3],
+    'value for money rating' => [4, 3, 2, 4],
+    'safety rating' => [5, 5, 4, 5],
+    'career services rating' => [4, 4, 3, 3]
   },
   'Singapore Management University' => {
     comment: ['The Good
