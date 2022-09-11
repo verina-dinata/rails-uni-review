@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="col-lg-10 col-md-10 col-sm-10">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-3">
       <div>
         <% full_stars = average_review_rating.to_i %>
         <% average_review_rating % 1 > 0 ? half_star = 1 : half_star = 0 %>
@@ -33,7 +33,9 @@
         <% end %>
       <% end %>
     </div>
-    <p><%= average_review_rating %></p>
     <p><%= review.comment %></p>
+    <div class="d-flex justify-content-end">
+      <p class="posted-text">Posted at <%= review.created_at.localtime.strftime("%d %h %Y, %I:%M %P") %></p>
+    </div>
   </div>
 </div>

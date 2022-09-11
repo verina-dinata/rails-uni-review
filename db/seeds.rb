@@ -93,7 +93,7 @@ universities = {
     image3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhoe-PQxSC4jREuDnyyR5JTte23lK4TrgorA&usqp=CAU'
   },
   'University of Newcastle' => {
-    description: 'Guided by our values of excellence, equity, sustainability and engagement, the University of Newcastle has built a strong reputation as a world-leading university making an impact within our own regions, in Australia and across the globe. We’re ranked number one in the world for Partnering for a Sustainable Future (Times Higher Education Impact Rankings 2021).  Across our campuses in Newcastle, the Central Coast, Sydney and Singapore, the University of Newcastle enrols more than 37,000 students from diverse backgrounds, with a focus on equity and developing our next generation of socially-oriented leaders, entrepreneurs and innovators.    Our University has long been known as a champion of innovative approaches to teaching and learning. Many of our courses are designed to integrate theory with practice, offering rich opportunities for real-life, hands-on experiences.     We are a research-intensive university and proud of the great things we have achieved in collaboration with our partners in industry, business, government and the community here and around the world. Our sights are set firmly on the future, as we work hard to build our research capacity and maintain our position as a competitive destination for the world`s best researchers and global innovation leaders.',
+    description: 'Guided by our values of excellence, equity, sustainability and engagement, the University of Newcastle has built a strong reputation as a world-leading university making an impact within our own regions, in Australia and across the globe. We’re ranked number one in the world for Partnering for a Sustainable Future (Times Higher Education Impact Rankings 2021).  Across our campuses in Newcastle, the Central Coast, Sydney and Singapore, the University of Newcastle enrols more than 37,000 students from diverse backgrounds, with a focus on equity and developing our next generation of socially-oriented leaders, entrepreneurs and innovators.    Our University has long been known as a champion of innovative approaches to teaching and learning. Many of our courses are designed to integrate theory with practice, offering rich opportunities for real-life, hands-on experiences.     We are a research-intensive university and proud of the great things we have achieved in collaboration with our partners in industry, business, government and the community here and around the world. Our sights are set firmly on the future, as we work hard to build our research capacity and maintain our position as a competitive destination for the world’s best researchers and global innovation leaders.',
     address: 'University Drive, Callaghan, New South Wales, NSW 2308, Australia',
     city: 'Newcastle',
     country: 'Australia',
@@ -273,7 +273,7 @@ universities = {
     image3: 'https://image-tc.galaxy.tf/wijpeg-272v4btfu73ioz7soy9ta03d7/dsc-0281_wide.jpg?crop=0%2C53%2C1001%2C563&width=1440'
   },
   'Taylors University' => {
-    description: 'Taylor`s University is the No. 1 private university in Malaysia and Southeast Asia, ranked #332 in the QS World University Rankings 2022. This ranking places the university among the top 1.1% of the most influential institutions globally.',
+    description: 'Taylor’s University is the No. 1 private university in Malaysia and Southeast Asia, ranked #332 in the QS World University Rankings 2022. This ranking places the university among the top 1.1% of the most influential institutions globally.',
     address: '1 Jalan Taylors, 47500 Subang Jaya, Selangor, Malaysia',
     city: 'Subang Jaya',
     country: 'Malaysia',
@@ -291,7 +291,7 @@ universities = {
     image3: 'https://www.taylor.edu/dA/8f41512d40/why-taylor.webp'
   },
   'Management and Science University' => {
-    description: 'Management & Science University (MSU) is one of Malaysia`s top universities with a focus on developing and delivering quality human capital in national and global critical- need areas; among these are Medicine, Health Sciences, Pharmacy, Information Sciences, and Engineering, besides Business Management & Professional Studies, Education & Social Sciences, Hospitality & Culinary, and Music & Fashion.   The moment you step into the MSU campus, you will experience the dynamic cultural diversity that is felt all around. Our students bring life into the overall vibrancy on site, with their combination of personalities and lifestyles. Their different racial or academic backgrounds and experiences, add unique features of the university, where individual growth and communication are leveraged.',
+    description: 'Management & Science University (MSU) is one of Malaysia’s top universities with a focus on developing and delivering quality human capital in national and global critical- need areas; among these are Medicine, Health Sciences, Pharmacy, Information Sciences, and Engineering, besides Business Management & Professional Studies, Education & Social Sciences, Hospitality & Culinary, and Music & Fashion.   The moment you step into the MSU campus, you will experience the dynamic cultural diversity that is felt all around. Our students bring life into the overall vibrancy on site, with their combination of personalities and lifestyles. Their different racial or academic backgrounds and experiences, add unique features of the university, where individual growth and communication are leveraged.',
     address: 'University Drive, Off Persiaran Olahraga, Section 13, 40100 Shah Alam, Selangor Darul Ehsan, Malaysia',
     city: 'Shah Alam',
     country: 'Malaysia',
@@ -357,13 +357,13 @@ universities = {
     'student count' => 9280,
     dorm: true,
     'email domain' => '@smu.edu.sg',
-    logo: 'https://www.topuniversities.com/sites/default/files/profiles/logos/singapore-management-university_1177_large.jpg',
+    logo: 'https://i.pinimg.com/736x/84/fa/5a/84fa5a172ba830d9a64619194056bee2.jpg',
     image: 'https://static1.straitstimes.com.sg/s3fs-public/styles/large30x20/public/articles/2018/08/27/bp_smu1_270818_90.jpg?VersionId=cerYEVfOCTfAcx9FK.7FgTgDiYKYM5Pk',
     image2: 'https://iafor.org/wp-content/uploads/2019/09/IAFOR-partnership-with-Singapore-Management-University-SMU.jpg',
     image3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyiYcHS6lAV0WF210HQNzflsOH62mkpViEbg&usqp=CAU'
   },
   'Singapore University of Social Sciences' => {
-    description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H`s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
+    description: 'SUSS is a university with a rich heritage in inspiring lifelong education, and transforming society through applied social sciences. We develop students and alumni to be work-ready and work-adaptive, aspiring to reach their full potential, through our 3H’s education philosophy – "Head" for professional competency with applied knowledge, "Heart" for social awareness to meet the needs of the society, and "Habit" for passion towards lifelong learning.',
     address: '463 Clementi Road, Singapore 599494',
     city: 'Singapore',
     country: 'Singapore',
@@ -454,13 +454,18 @@ puts "Manually patching Coordinates"
 
 puts "Creating Users"
 
+# avatars = ["avatars/avatar1.jpg"]
+
 50.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: "user#{i}@gmail.com",
     password: "password"
+
   )
+# User.first.photo.attach(io: File.open("app/assets/images/avatars"), filename: "avatar1.jpg", content_type: "ima
+# ge.jpg")
 end
 
 users = User.all
@@ -482,17 +487,13 @@ departments.each do |department|
   curr_department.save!
 end
 
-# universities = University.all
-
 puts "Creating Education"
-
-
 
 users.size.times do |i|
   2.times do |j|
     start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
     end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
-    academic_degree = ['Diploma', 'Bachelor`s Degree'][j]
+    academic_degree = ['Diploma', 'Bachelor’s Degree'][j]
     course = Faker::Educator.subject
     curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
     curr_education.user = users[i]
@@ -506,94 +507,182 @@ end
 puts "Creating Reviews"
 
 reviews = {
-  'The University of Melbourne' => [
-    'One of the best University in the world. Undoubtedly it is a beautiful, green and comfortable place to enjoy your studying.',
+  'The University of Melbourne' => {
+    comment: ['One of the best University in the world. Undoubtedly it is a beautiful, green and comfortable place to enjoy your studying.',
     'Visited the uni today to say good bye after graduating from this lovely place and to take photos for the future. The University offers an amazing services for the students and many courses. My teachers were encouraging and considerate. Proud to be graduated from Unimelb.',
     'You have to work hard on the course yourself with not much help from school, you need to be able to teach yourself. You also have to be very self-discipline and reduce your entertainment. You also have to pay a lot of money if u are not australian. If you are ok with that the school is good because there are many interesting courses.',
-    'Has it`s aestethic`s, although if you want a place here you must either be:
+    'Has it’s aestethics, although if you want a place here you must either be:
     1) Rich
     2) International student
     3) Ridiculously smart
-    Other then that, don`t waste your time here studying a degree that will take you 5 years to get when you could get it at any other university for 3 years of studying only. A great example is the Bachelor of Nursing that Melbourne University offers. For starters, it is a post graduate course which means you must do previous undergraduate studies before hand, whilst you could have direct entry into a Bachelor of nursing at any other institution. Also, as mentioned above, the University is catered to those students who come under the three options, it is so disappointing to see very little representation of students who come from a lower demographic background. It`s not the 18th century anymore!',
-    'Worst uni ever. So many mistake made by school admin while enrollment. A lot of confused standards and discribe for study process such as paying your fees etc. No idea why this suck uni can be ranked so high with such stupid services.'
-  ],
-  'Australian National University' => [
-    'Has spent almost 10 years in ANU, it is always a lovely place for work and study, really enjoyed the peaceful nature environment and the culture of the academics.',
+    Other then that, don’t waste your time here studying a degree that will take you 5 years to get when you could get it at any other university for 3 years of studying only. A great example is the Bachelor of Nursing that Melbourne University offers. For starters, it is a post graduate course which means you must do previous undergraduate studies before hand, whilst you could have direct entry into a Bachelor of nursing at any other institution. Also, as mentioned above, the University is catered to those students who come under the three options, it is so disappointing to see very little representation of students who come from a lower demographic background. It’s not the 18th century anymore!',
+    'Worst uni ever. So many mistake made by school admin while enrollment. A lot of confused standards and discribe for study process such as paying your fees etc. No idea why this suck uni can be ranked so high with such stupid services.'],
+    'reputabilty rating' => [5, 4, 4, 2, 1],
+    'education quality rating' => [5, 5, 5, 3, 2],
+    'campus facilities accom rating' => [5, 4, 3, 3, 1],
+    'course difficulty rating' => [4, 4, 5, 3, 2],
+    'social element rating' => [4, 5, 3, 3, 2],
+    'value for money rating' => [5, 4, 4, 2, 1],
+    'safety rating' => [5, 4, 4, 3, 4],
+    'career services rating' => [5, 5, 3, 2, 1]
+  },
+  'Australian National University' => {
+    comment: ['Has spent almost 10 years in ANU, it is always a lovely place for work and study, really enjoyed the peaceful nature environment and the culture of the academics.',
     'I spend 3.5 years of my life at ANU to do my PhD and I absolutely loved it.
     Campus is phenomenal.
     There are many sport clubs.
     It is amongst the top universities not only in social sciences and philosophy but also is physics and data science globally.',
     'Degree mill, literally go to any other university',
-    'Worst studying experience & service'
-  ],
-  'The University of Queensland' => [
-    'It is a Great university in Australia and is highly ranked on software engineering course. Also the culture of Australia is something that a person would like to explore. Job opportunities in Australia are really good and there is a huge demand of software and data science engineers in Australia',
-    'Terrible University, didn`t have an origin kebabs on site. Would not spend another 40 thousand dollars at this venue again. Instead I prefer the much superior facilities at The Queensland University of Technology which does have an origin kebabs.',
-    'Fantastic facilities for students, it`s such a treat to have well-maintained grounds and good equipment. The library is always clean, tidy and you can easily find quiet places to study.',
-    'This is a university in Queensland. If you are looking to go to university in Queensland this place has your back. Nice trees and I hear some resident turkeys can tutor in horticulture.'
-  ],
-  'University of Sydney' => [
-    'One of the most prestigious universities in Australia with great history yet artistic and innovative at heart! Love thr broadwalk and this Quadrang view never gets old',
+    'Worst studying experience & service'],
+    'reputabilty rating' => [5, 5, 2, 1],
+    'education quality rating' => [4, 5, 2, 1],
+    'campus facilities accom rating' => [5, 5, 3, 1],
+    'course difficulty rating' => [4, 3, 4, 2],
+    'social element rating' => [5, 4, 3, 1],
+    'value for money rating' => [4, 5, 1, 1],
+    'safety rating' => [5, 4, 4, 1],
+    'career services rating' => [5, 4, 2, 2]
+  },
+  'The University of Queensland' => {
+    comment: ['It is a Great university in Australia and is highly ranked on software engineering course. Also the culture of Australia is something that a person would like to explore. Job opportunities in Australia are really good and there is a huge demand of software and data science engineers in Australia',
+    'Terrible University, didn’t have an origin kebabs on site. Would not spend another 40 thousand dollars at this venue again. Instead I prefer the much superior facilities at The Queensland University of Technology which does have an origin kebabs.',
+    'Fantastic facilities for students, it’s such a treat to have well-maintained grounds and good equipment. The library is always clean, tidy and you can easily find quiet places to study.',
+    'This is a university in Queensland. If you are looking to go to university in Queensland this place has your back. Nice trees and I hear some resident turkeys can tutor in horticulture.'],
+    'reputabilty rating' => [5, 2, 4, 5],
+    'education quality rating' => [5, 3, 4, 5],
+    'campus facilities accom rating' => [5, 2, 5, 4],
+    'course difficulty rating' => [3, 4, 3, 4],
+    'social element rating' => [5, 2, 4, 4],
+    'value for money rating' => [5, 1, 5, 4],
+    'safety rating' => [5, 3, 4, 5],
+    'career services rating' => [5, 2, 4, 4]
+  },
+  'University of Sydney' => {
+    comment: ['One of the most prestigious universities in Australia with great history yet artistic and innovative at heart! Love thr broadwalk and this Quadrang view never gets old',
     'THE WORST UNIVERSITY I HAVE EVERY BEEN TO!!!!!
     1)TERRIBLY EXPENSIVE: apart from the ranking and recognition - really worth your money?
-    2) INCREDIBLY SLOW AND TERRIBLE SERVICE - they posted my first student card but I never received it, have to complain via a call very badly to get my card. IT TOOK ME FOUR MONTHS TO GET MY FIRST STUDENT CARD!!!!!!!!!!!!!!! ARE YOU SURE YOU WANT TO WAIT FOR HOURS AND HOURS TO BE ANSWERED????!!!!! AND YOU`D BETTER BE CRYING OR WITH AN EXTREME EMOTION TO GET YOUR PROBLEM SOLVED.
+    2) INCREDIBLY SLOW AND TERRIBLE SERVICE - they posted my first student card but I never received it, have to complain via a call very badly to get my card. IT TOOK ME FOUR MONTHS TO GET MY FIRST STUDENT CARD!!!!!!!!!!!!!!! ARE YOU SURE YOU WANT TO WAIT FOR HOURS AND HOURS TO BE ANSWERED????!!!!! AND YOU’D BETTER BE CRYING OR WITH AN EXTREME EMOTION TO GET YOUR PROBLEM SOLVED.
     3) VERY VERY BUREAUCRATIC - why do you create so many extra steps that take so long and still not working well???! Because you have too much employees and insufficient work for them to do? Many times the website will just guides you from one page to another, it provides no answer to your questions, which forces you to call.
-    TBH, I REGRET MY DECISION TO ACCEPT THEIR OFFER IN MY VERY FIRST SEMESTER, BUT FORTUNATELY, I`M GRADUATING SO I NO LONGER NEED TO SUFFER. LOL',
-    'Trust me this is the best place in the world to study. Australia is the hub of study, environment is the best. but but.. this uni is quite expensive and requires a lot of effort in order to maintain your studies. if you are good at studies, which i was not. this is the place for your,, make sure u check the fees before :)',
-    'One star for their prestige and a few good people working here. But a good majority of them are unsupportive, and egotistical. I learnt nothing of relevance to actual work.'
-  ],
-  'University of Newcastle' => [
-    'Not enough subject choices- too limited! Would love to study here but only has three subjects which is a real shame. Hopefully they improve soon.',
+    TBH, I REGRET MY DECISION TO ACCEPT THEIR OFFER IN MY VERY FIRST SEMESTER, BUT FORTUNATELY, I’M GRADUATING SO I NO LONGER NEED TO SUFFER. LOL',
+    'Trust me this is the best place in the world to study. Australia is the hub of study, environment is the best. but but.. this uni is quite expensive and requires a lot of effort in order to maintain your studies. if you are good at studies, which I was not. this is the place for you, make sure u check the fees before :)',
+    'One star for their prestige and a few good people working here. But a good majority of them are unsupportive, and egotistical. I learnt nothing of relevance to actual work.'],
+    'reputabilty rating' => [4, 1, 5, 1],
+    'education quality rating' => [5, 1, 4, 1],
+    'campus facilities accom rating' => [5, 1, 4, 2],
+    'course difficulty rating' => [2, 1, 3, 2],
+    'social element rating' => [4, 1, 4, 3],
+    'value for money rating' => [5, 1, 3, 1],
+    'safety rating' => [5, 1, 4, 2],
+    'career services rating' => [4, 1, 3, 1]
+  },
+  'University of Newcastle' => {
+    comment: ['Not enough subject choices- too limited! Would love to study here but only has three subjects which is a real shame. Hopefully they improve soon.',
     'I came to this university after completing my degree in Sydney and moved from Sydney to come here. The problem with this university is that there is a huge problem with bullying across the campus which has also been noted in the media as well. I recall coming across Associate Professor Heather Sharp in the education faculty screaming during a lecture and going on about how she’s against multiculturalism. Considering most of the student body are international students, it was a ridiculous statement.',
     'This university does nothing to help me as an autistic and dyslexic person to actually learn or apply the content. The only "help" they offer is an extension on written assignments',
-    'Great campus, but the problem is that there is no help for us international students. It would be good if there were more support and programs!'
-  ],
-  'The University of Western Australia' => [
-    'The University I studied in, really a beautiful place, its modern yet quirkey with the rustic look. Very beautiful at night. Have loads of animals, can be sort of a tourist stop as the building itself is majestic. One of the better Universities in Perth, have a good education system, and everyone is friendly.',
+    'Great campus, but the problem is that there is no help for us international students. It would be good if there were more support and programs!'],
+    'reputabilty rating' => [3, 2, 3, 4],
+    'education quality rating' => [2, 2, 1, 4],
+    'campus facilities accom rating' => [4, 3, 4, 4],
+    'course difficulty rating' => [3, 3, 3, 4],
+    'social element rating' => [4, 3, 3, 3],
+    'value for money rating' => [2, 2, 1, 3],
+    'safety rating' => [5, 3, 4, 3],
+    'career services rating' => [3, 3, 2, 2]
+  },
+  'The University of Western Australia' => {
+    comment: ['The University I studied in, really a beautiful place, its modern yet quirkey with the rustic look. Very beautiful at night. Have loads of animals, can be sort of a tourist stop as the building itself is majestic. One of the better Universities in Perth, have a good education system, and everyone is friendly.',
     'These guys are so bad.
-    Emails don`t get sorted, they just kick you off without answering your questions.
-    Their admission and covid team are USELESS,  no one responds properly. Even visiting the admissions office in person doesn`t help.
-    They say "send us an email" which they can`t answer within their own time frame.
+    Emails don’t get sorted, they just kick you off without answering your questions.
+    Their admission and covid team are USELESS,  no one responds properly. Even visiting the admissions office in person doesn’t help.
+    They say "send us an email" which they can’t answer within their own time frame.
     Ridiculous.',
     'The experience is great, meet new people, make new friends as well as learning the latest information with associate scholar. Now more clubs than ever time join and have fun.',
-    'Lovely environment not just focused on the facilities but also on the fauna and flora. The campus is simply amazing with a wide range of buildings for various subjects. Faultless.'
-  ],
-  'The University of Adelaide' => [
-    'Few electives available in one semester, ban you from the class that they think you have the ability already and force you to choose other subjects. Make decisions for you but not give enough help. Always feel helpless and anxious. Two stars for the teaching quality and ZERO for student service.',
+    'Lovely environment not just focused on the facilities but also on the fauna and flora. The campus is simply amazing with a wide range of buildings for various subjects. Faultless.'],
+    'reputabilty rating' => [5, 3, 4, 4],
+    'education quality rating' => [5, 3, 4, 3],
+    'campus facilities accom rating' => [5, 4, 4, 5],
+    'course difficulty rating' => [3, 3, 4, 4],
+    'social element rating' => [5, 4, 5, 4],
+    'value for money rating' => [5, 2, 4, 4],
+    'safety rating' => [5, 4, 4, 4],
+    'career services rating' => [5, 1, 3, 3]
+  },
+  'The University of Adelaide' => {
+    comment: ['Few electives available in one semester, ban you from the class that they think you have the ability already and force you to choose other subjects. Make decisions for you but not give enough help. Always feel helpless and anxious. Two stars for the teaching quality and ZERO for student service.',
     'The lecturers are wonderful and the only asset the uni has. They are supportive, patient and encouraging.',
     'Currently studying master of mechanical engineering here. Nice campus with warm staff. Some places are unable to access if you are not a student of the faculty after 6 o’clock on weekdays or whole weekends. The teaching styles of professors are all different but normally satisfied with them. If you are looking for a better future, be better prepared.',
-    'We Adelaidians are so privileged to have such highly advanced facilities for education. Thankyou to all staff for your fantastic efforts.'
-  ],
-  'Universiti Malaya' => [
-    'Top university in Malaysia, it`s good to study here. The cafes and foods are very nice especially the Faculty of Science roti canai. Have quite some good places to relieve stress and near to most malls around KL.',
+    'We Adelaidians are so privileged to have such highly advanced facilities for education. Thank you to all staff for your fantastic efforts.'],
+    'reputabilty rating' => [3, 5, 4, 5],
+    'education quality rating' => [2, 5, 5, 5],
+    'campus facilities accom rating' => [4, 4, 3, 4],
+    'course difficulty rating' => [5, 3, 4, 3],
+    'social element rating' => [3, 4, 2, 4],
+    'value for money rating' => [2, 4, 4, 5],
+    'safety rating' => [5, 4, 4, 4],
+    'career services rating' => [1, 5, 4, 5]
+  },
+  'Universiti Malaya' => {
+    comment: ['Top university in Malaysia, it’s good to study here. The cafes and foods are very nice especially the Faculty of Science roti canai. Have quite some good places to relieve stress and near to most malls around KL.',
     'The best place that I study right now that got many necessity for student',
     'Bad administration, bad module registration, bad student mobility, and bad college facilities. Overrated for a no1 university in Malaysia. I still have to suffer in this university for another 1.5 years',
-    'As a student, I would say I`m lucky to be able to study here, the facilities here are adequate and there are many places with beautiful sceneries such as the lake where students and visitors can go canoeing, i dont know the exact term, too lazy to google.'
-  ],
-  'Universiti Kebangsaan Malaysia' => [
-    'Very advanced architectural study and research centre. Don`t let the poor condition of the building paint facade fools you, this place is among best of the faculty among others with its very humble and proffesional lectures which came from various educational background from Masters and PH.D. They also have good proficiency in English. So international student don`t need to worry much. It is even better if you practice simple malay language if you were international, and it was more welcomed to speak malay since it was National University of Malaysia were as you know national relates to the country, Malaysia',
-    'Quite a hostile and discriminatory environment for non-local students. Unfortunately, the university is so vastly different than what`s advertised. They are not prepared to deal with international students at all. During my four years here, I faced countless amount of issues with my visa due to their poor departments coordination. Once you finish your studies you will be asked to leave the country even before receiving your transcript and certificate. Horrible student experience.
+    'As a student, I would say I’m lucky to be able to study here, the facilities here are adequate and there are many places with beautiful sceneries such as the lake where students and visitors can go canoeing, I dont know the exact term, too lazy to google.'],
+    'reputabilty rating' => [5, 5, 2, 4],
+    'education quality rating' => [5, 4, 1, 5],
+    'campus facilities accom rating' => [5, 4, 2, 4],
+    'course difficulty rating' => [5, 4, 3, 4],
+    'social element rating' => [5, 4, 2, 3],
+    'value for money rating' => [5, 4, 1, 4],
+    'safety rating' => [5, 4, 4, 4],
+    'career services rating' => [5, 4, 2, 4]
+  },
+  'Universiti Kebangsaan Malaysia' => {
+    comment: ['Very advanced architectural study and research centre. Don’t let the poor condition of the building paint facade fools you, this place is among best of the faculty among others with its very humble and proffesional lectures which came from various educational background from Masters and PH.D. They also have good proficiency in English. So international student don’t need to worry much. It is even better if you practice simple malay language if you were international, and it was more welcomed to speak malay since it was National University of Malaysia were as you know national relates to the country, Malaysia',
+    'Quite a hostile and discriminatory environment for non-local students. Unfortunately, the university is so vastly different than what’s advertised. They are not prepared to deal with international students at all. During my four years here, I faced countless amount of issues with my visa due to their poor departments coordination. Once you finish your studies you will be asked to leave the country even before receiving your transcript and certificate. Horrible student experience.
 
-    Also, be careful not to get scammed during the visa process by them, because many have. Make sure all your dealings with them is through email in writings. During your studies, an international students coordinator will be assigned to you, but won`t be helpful much. No one seems to be trained on how to deal with international students issues, you will feel lost and excluded from all important notifications that local students receive.
+    Also, be careful not to get scammed during the visa process by them, because many have. Make sure all your dealings with them is through email in writings. During your studies, an international students coordinator will be assigned to you, but won’t be helpful much. No one seems to be trained on how to deal with international students issues, you will feel lost and excluded from all important notifications that local students receive.
 
     As for teaching aspects in Information Technology related majors (took a 4years Software Engineering course), their professors have poor communication skills and teaching abilities. With outdated courses and professors out of touch with current industry practices, you will face a huge load of useless repetitive assignments that keep you busy, but without any practical knowledge. If your plan is to spend your whole life in academia and continue your masters, phd, work career in UKM, then yeah go for UKM, they will love you there. But if you have bigger ambitions, UKM will make sure to waste 4 years of your life and keep you distracted from self-study over academic work.',
-    'I am doing my PG from here and it`s a v nyc university. 1 of the best in Asia and also the fee compared to others is nominal. The science department is v good. People and teachers are courteous and students are not over burdened.',
-    'Very big campus. Law school is great. Adequate facilities for "tutorials" and lectures. Lecture room is very big. The library has a sleeping area, which is great. Professors are really kind.'
-  ],
-  'Universiti Putra Malaysia ' => [
-    'I just loved it here. Living inside campus for a year now. But only got physical classes for 1 month. I really miss that busy month.',
+    'I am doing my PG from here and it’s a v nyc university. 1 of the best in Asia and also the fee compared to others is nominal. The science department is v good. People and teachers are courteous and students are not over burdened.',
+    'Very big campus. Law school is great. Adequate facilities for "tutorials" and lectures. Lecture room is very big. The library has a sleeping area, which is great. Professors are really kind.'],
+    'reputabilty rating' => [5, 3, 4, 4],
+    'education quality rating' => [5, 2, 5, 5],
+    'campus facilities accom rating' => [5, 2, 4, 5],
+    'course difficulty rating' => [4, 3, 3, 3],
+    'social element rating' => [4, 2, 4, 4],
+    'value for money rating' => [5, 2, 5, 4],
+    'safety rating' => [5, 4, 5, 5],
+    'career services rating' => [5, 1, 4, 3]
+  },
+  'Universiti Putra Malaysia' => {
+    comment: ['I just loved it here. Living inside campus for a year now. But only got physical classes for 1 month. I really miss that busy month.',
     'This place that calls itself a university is nothing more than a plausible commercial advertisement aka $pam. Who should go to this university? Those who have loads of money, and do not know what to do with it. You are also the right candidate if you have years to dillydally. Indeed, it is also an ideal institution for those looking to inspire others on why to not select a bad university. These intelligent researches may also be studying on how awful universities can be. Now who should not join this university? First, those that do not meet the eligibility requirements mentioned above. Second, people who genuinely want to study. Third, individuals who know English.... Infinite, who need jobs in future. :D.  I am sure I have made my point, however if you still want to risk it, then I must say you are definitely adventures and love challenges life throws at you.',
-    'As I am a student of this University,I really feel proud of this.The campus is huge&the environment is very study friendly.Though the campus e very big,the movement is very easy because of the given bus for transit.Someone can only feel the beauty of the campus when he will visit it...',
-    'Poor management for new intake. Though there are many volunteers, only concentrate in registration area. Nobody and no sign guiding parents and students to the registration area.'
-  ],
-  'Universiti Sains Malaysia' => [
-    'Hey guys, given your post-pandemic lavish expenditures on the main campus would you make a room in your budgets to upgrade the old degenerate buses that goes back and forth from engineering campus????? They have been in service since day one I joined your uni… i am drenching in my sweat as I am writing this review.',
+    'As I am a student of this University,I really feel proud of this.The campus is huge&the environment is very study friendly.Though the campus is very big,the movement is very easy because of the given bus for transit. Someone can only feel the beauty of the campus when he will visit it...',
+    'Poor management for new intake. Though there are many volunteers, only concentrate in registration area. Nobody and no sign guiding parents and students to the registration area.'],
+    'reputabilty rating' => [5, 3, 5, 4],
+    'education quality rating' => [4, 2, 5, 3],
+    'campus facilities accom rating' => [3, 4, 5, 3],
+    'course difficulty rating' => [3, 2, 4, 4],
+    'social element rating' => [2, 4, 4, 3],
+    'value for money rating' => [4, 1, 5, 4],
+    'safety rating' => [5, 4, 5, 4],
+    'career services rating' => [5, 3, 4, 2]
+  },
+  'Universiti Sains Malaysia' => {
+    comment: ['Hey guys, given your post-pandemic lavish expenditures on the main campus would you make a room in your budgets to upgrade the old degenerate buses that goes back and forth from engineering campus????? They have been in service since day one I joined your uni… I am drenching in my sweat as I am writing this review.',
     'Great place to learn, good place to hang out with friends and study, bad basic facilities',
     'Best university in Malaysia!High education study place to learn a new knowledge!Professor very friendly and get close by course mate which from different country',
-    '4 years studying here and I`m gonna miss all the memories created here.'
-  ],
-  'Universiti Teknologi Petronas' => [
-    'A university in need of much reformation.
+    '4 years studying here and I’m gonna miss all the memories created here.'],
+    'reputabilty rating' => [5, 4, 5, 4],
+    'education quality rating' => [5, 4, 5, 4],
+    'campus facilities accom rating' => [5, 2, 4, 4],
+    'course difficulty rating' => [5, 4, 3, 3],
+    'social element rating' => [5, 4, 4, 4],
+    'value for money rating' => [5, 3, 5, 4],
+    'safety rating' => [5, 4, 5, 4],
+    'career services rating' => [5, 4, 4, 4]
+  },
+  'Universiti Teknologi Petronas' => {
+    comment: ['A university in need of much reformation.
 
     Many graduates here are selfish and insincere people who believe the world revolves around them and only them. The immaturity in them is too much to bear.
     They care only for themselves.
@@ -603,39 +692,79 @@ reviews = {
     UTP is a big disappointment in many ways. But it can be redeemed.
     Much can be done. Much must be done. Do not waste your life, reader/ UTP student/ UTP Staff.',
     'Not recommended coming here. students voices are not being heard. very poor management by the admin.',
-    'This is the WORST university in Malaysia. The staff are unhelpful. I registered for chemical engineering course. The staff seen my message and didn`t even want to help me when I am unable to register a student account. I contacted at least 5 staff and none of them have been helping me to solve my problem. Never waste money in such university which does not cares about their student matters.',
-    'In my fair an unbiased opinion the internet on campus sucks and is hard to work with (it keeps asking you to login every few minutes). Campus administration is slow and the IT department is hardly open.'
-  ],
-  'Universiti Utara Malaysia' => [
-    'My degree life was being spent at this uni, thank you UUM for making me having a great journey',
+    'This is the WORST university in Malaysia. The staff are unhelpful. I registered for chemical engineering course. The staff seen my message and didn’t even want to help me when I am unable to register a student account. I contacted at least 5 staff and none of them have been helping me to solve my problem. Never waste money in such university which does not cares about their student matters.',
+    'In my fair an unbiased opinion the internet on campus sucks and is hard to work with (it keeps asking you to login every few minutes). Campus administration is slow and the IT department is hardly open.'],
+    'reputabilty rating' => [3, 3, 3, 4],
+    'education quality rating' => [2, 2, 2, 4],
+    'campus facilities accom rating' => [3, 3, 2, 2],
+    'course difficulty rating' => [3, 3, 2, 4],
+    'social element rating' => [2, 4, 3, 4],
+    'value for money rating' => [2, 2, 2, 3],
+    'safety rating' => [4, 3, 3, 4],
+    'career services rating' => [2, 2, 1, 4]
+  },
+  'Universiti Utara Malaysia' => {
+    comment: ['My degree life was being spent at this uni, thank you UUM for making me having a great journey',
     'The best place to pursue your studies in the serene environment assisted by excellent educators.',
-    'It is my second International academic journey. I find it distinctive from previous. It`s an excellent experience.',
-    'Nice campus, beautiful environment but low quality education.'
-  ],
-  'Sunway University' => [
-    'An actual horrendous environment to study in, students plagiarising left and right with the teachers allowing it and in fact, encouraging academic dishonesty. Tried reporting said lecturers before with video proof of academic malpractice but the school department straight up told me that reporting teachers were not allowed. A true cesspool of AI disguising as professionals. 0/10 would never come back again.',
+    'It is my second International academic journey. I find it distinctive from previous. It’s an excellent experience.',
+    'Nice campus, beautiful environment but low quality education.'],
+    'reputabilty rating' => [5, 5, 5, 3],
+    'education quality rating' => [5, 5, 5, 2],
+    'campus facilities accom rating' => [5, 4, 5, 5],
+    'course difficulty rating' => [5, 4, 3, 3],
+    'social element rating' => [5, 4, 5, 4],
+    'value for money rating' => [5, 4, 5, 3],
+    'safety rating' => [5, 5, 4, 4],
+    'career services rating' => [5, 4, 4, 3]
+  },
+  'Sunway University' => {
+    comment: ['An actual horrendous environment to study in, students plagiarising left and right with the teachers allowing it and in fact, encouraging academic dishonesty. Tried reporting said lecturers before with video proof of academic malpractice but the school department straight up told me that reporting teachers were not allowed. A true cesspool of AI disguising as professionals. 0/10 would never come back again.',
     'I am Sunway University PhD graduate. I have done my PhD in Biology. Sunway is my dream place. Everything is perfect, all the faculty members are highly skilled and enegetic. The staff is fully cooperative and vibrent. The facilities are more than enough for a PhD studies. I enjoyed the university life and missing those unforgetable moments. In fact, I love Sunway.',
     'The most happening campus!',
-    'The cost of study is really higher than other universities of Malaysia. However the service, education system, faculties and environment are world class. Highly recommended for pursuing a degree where you make your smooth career path.'
-  ],
-  'Taylors University' => [
-    'The education is extremely bad. Lecturers are mostly untrained and lacked experience. The way majority of how they teach is by reading directly from the slides with no effort in attempting to elaborate the materials, and sometimes topics are skipped for idk what reason. One of my former lecturer was literally a recently enrolled part time master`s degree student (in terms of qualification, he only had bachelor`s essentially), which you can imagine how incompetent he was at teaching us students regarding the module that he was teaching. If you ask any other foundation student from different departments (business, arts, engineering, etc), they will say the exact same thing (topics are for some reason skipped, low effort teaching such as reading from the slides with no elaboration, and etc)',
-    'Campus life is god horrible, especially in 2022. A LOT of shops are closed in Syopz Mall. There are no more Tealive, no more Mamak, no more Apple store, no more old town white coffee, no more bakery, and the whole bottom floor of Syopz Mall is COMPLETELY CLOSED DOWN/BANKRUPTED. Honestly I have no idea how would students in 2022+ are gonna survive with such a limited selection of eateries. You might as well choose Sunway University - as it has a mall connected via canopy walk/bridge and MORE eateries both in AND outside (MORE than 30 hawker stalls!!!) campus  - if you prioritize on a good campus life, cause it`s literally 1-2km away from Taylor`s. I would literally would`ve chosen to sacrifice the whole lake to create more eateries. The lake literally serves no purpose other than being an eye candy, which again in my opinion, eye candy is useless if I`m dying from hunger.',
+    'The cost of study is really higher than other universities of Malaysia. However the service, education system, faculties and environment are world class. Highly recommended for pursuing a degree where you make your smooth career path.'],
+    'reputabilty rating' => [1, 5, 4, 4],
+    'education quality rating' => [1, 5, 4, 4],
+    'campus facilities accom rating' => [1, 4, 4, 5],
+    'course difficulty rating' => [1, 4, 3, 4],
+    'social element rating' => [1, 4, 4, 4],
+    'value for money rating' => [1, 4, 4, 5],
+    'safety rating' => [1, 5, 4, 4],
+    'career services rating' => [1, 4, 3, 4]
+  },
+  'Taylors University' => {
+    comment: ['The education is extremely bad. Lecturers are mostly untrained and lacked experience. The way majority of how they teach is by reading directly from the slides with no effort in attempting to elaborate the materials, and sometimes topics are skipped for idk what reason. One of my former lecturer was literally a recently enrolled part time master’s degree student (in terms of qualification, he only had bachelor’s essentially), which you can imagine how incompetent he was at teaching us students regarding the module that he was teaching. If you ask any other foundation student from different departments (business, arts, engineering, etc), they will say the exact same thing (topics are for some reason skipped, low effort teaching such as reading from the slides with no elaboration, and etc)',
+    'Campus life is god horrible, especially in 2022. A LOT of shops are closed in Syopz Mall. There are no more Tealive, no more Mamak, no more Apple store, no more old town white coffee, no more bakery, and the whole bottom floor of Syopz Mall is COMPLETELY CLOSED DOWN/BANKRUPTED. Honestly I have no idea how would students in 2022+ are gonna survive with such a limited selection of eateries. You might as well choose Sunway University - as it has a mall connected via canopy walk/bridge and MORE eateries both in AND outside (MORE than 30 hawker stalls!!!) campus  - if you prioritize on a good campus life, cause it’s literally 1-2km away from Taylor’s. I would literally would’ve chosen to sacrifice the whole lake to create more eateries. The lake literally serves no purpose other than being an eye candy, which again in my opinion, eye candy is useless if I’m dying from hunger.',
     'Overall an above average teaching quality (depending on program).
     Top notch facilities with a stunning lake, wish they could add a bridge connecting both ends as walking distance between both ends are quite far.',
-    'Bad food, good ambiance. You can feel the stress during submission period. Very realistic university experience. Parking is usually very full, and lifts are very slow.'
-  ],
-  'Management and Science University' => [
-    'Please don`t study here. The lecturers are the best, but their management part is the worst. Some of the staffs are even rude.',
+    'Bad food, good ambiance. You can feel the stress during submission period. Very realistic university experience. Parking is usually very full, and lifts are very slow.'],
+    'reputabilty rating' => [2, 3, 4, 4],
+    'education quality rating' => [1, 3, 4, 4],
+    'campus facilities accom rating' => [3, 1, 4, 2],
+    'course difficulty rating' => [3, 3, 4, 3],
+    'social element rating' => [4, 4, 3, 4],
+    'value for money rating' => [2, 4, 3, 4],
+    'safety rating' => [4, 4, 4, 4],
+    'career services rating' => [2, 2, 3, 3]
+  },
+  'Management and Science University' => {
+    comment: ['Please don’t study here. The lecturers are the best, but their management part is the worst. Some of the staffs are even rude.',
     'Excellent university to complete your tertiary education. I completed my PhD in Management here. They have excellent Professors to guide through your thesis. Excellent environment for students, very cosy,  with lots of shops and restaurants.',
-    'The residence needs improvement as I came and it wasn`t clean, it was supposed to be clean before I arrive....',
-    'Good campus, good facility'
-  ],
-  'National University of Singapore' => [
-    'Best research & education university in Asia. Student campus is so good. You will learn your life skills here.',
+    'The residence needs improvement as I came and it wasn’t clean, it was supposed to be clean before I arrive....',
+    'Good campus, good facility'],
+    'reputabilty rating' => [4, 4, 4],
+    'education quality rating' => [5, 5, 4],
+    'campus facilities accom rating' => [5, 4, 2],
+    'course difficulty rating' => [3, 4, 4],
+    'social element rating' => [4, 4, 4],
+    'value for money rating' => [4, 5, 5],
+    'safety rating' => [5, 5, 3],
+    'career services rating' => [3, 5, 4]
+  },
+  'National University of Singapore' => {
+    comment: ['Best research & education university in Asia. Student campus is so good. You will learn your life skills here.',
     'Very nice campus. Full of green. Well connected by MRT and Buses. There are free shuttle buses to get around inside . Lot of eateries and all facilities available.
 
-    I am from computing department. awesome place to learn, almost like a second house',
+    I am from computing department. Awesome place to learn, almost like a second house',
     'The school turns out great researchers and book smarts employees.
 
     However, in general, it does not churn out well-rounded individuals.
@@ -643,20 +772,36 @@ reviews = {
     For some reason, alumnis of NUS do not perform well in large social environment where people to people social skills are required.',
     'NUS provides you with great infrastructures and facilities. There are college bus which you could take to travel between faculties. Went to U-Town to eat at the foodcourt. The variety of the foods there are quite broad. You could find Korean, Indian, Japanese, Chinese and other foods. The price is cheap for students and non-students. There is also a small swimming pool in the U-Town
 
-    In the USP (I`m not really sure whether it`s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.'
-  ],
-  'Nanyang Technological University' => [
-    'Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
+    In the USP (I’m not really sure whether it’s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.'],
+    'reputabilty rating' => [5, 5, 5, 4],
+    'education quality rating' => [5, 4, 4, 5],
+    'campus facilities accom rating' => [5, 5, 4, 5],
+    'course difficulty rating' => [5, 4, 4, 4],
+    'social element rating' => [5, 3, 4, 4],
+    'value for money rating' => [5, 3, 4, 4],
+    'safety rating' => [5, 5, 5, 4],
+    'career services rating' => [5, 4, 3, 4]
+  },
+  'Nanyang Technological University' => {
+    comment: ['Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
     'NTU could have spent more money on providing a more reliable campus bus service or ensuring the module selection website works due to the "first come first serve" system. But instead the money went into funding a fancy looking building and a garden.
 
     Food prices are also too high for an institution and lack of Halal food',
     'Really nice campus. Great facilities. Nice people.
 
-    But if you`re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It`s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
-    'It`s a great university with lots of things going around. But be competitive minded otherwise it`s going to be tough like hell.'
-  ],
-  'Singapore Management University' => [
-    'The Good
+    But if you’re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It’s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
+    'It’s a great university with lots of things going around. But be competitive minded otherwise it’s going to be tough like hell.'],
+    'reputabilty rating' => [5, 5, 4, 5],
+    'education quality rating' => [5, 4, 3, 5],
+    'campus facilities accom rating' => [4, 3, 4, 5],
+    'course difficulty rating' => [4, 4, 4, 5],
+    'social element rating' => [4, 4, 5, 3],
+    'value for money rating' => [4, 3, 2, 4],
+    'safety rating' => [5, 5, 4, 5],
+    'career services rating' => [4, 4, 3, 3]
+  },
+  'Singapore Management University' => {
+    comment: ['The Good
     1. Because of the intensity of the projects and because I am a perfectionist, I stayed long hours at school doing projects with friends. Because of the time we spent together, both the duration and the stress that we endured, most of my project friends are friends who last. Not that we have time to hang out with each other all the time, but we are the type of friends that randomly whatsapp each other in a while to check on others. We pass on opportunities that we think others will be interested. We come together again to participate in case challenges, form a startup (and it was adopted by the school and we just become advisors of the sort), travel and other stuffs together. I know it is not the type of friends who will hang out and who you will whine and gossip with. But they are great friends, indeed.
 
     2. The people here are amazing. In SIS, the guys take projects onto an amazing eye-opening level. My Data Mining Prof even commented that most of our projects are beyond the scale of the thousands of dollars projects in the real life. And because we have time and are willing to explore new technology, the stuffs that they can do is truly awesome. I know a few who found startups and avoid the beaten path of becoming a tech person at banks. Their take on life is different. I am inspired and motivated to learn even more to stay on top of my game.
@@ -666,34 +811,42 @@ reviews = {
     The Bad
     1. The learning curve for SIS students is so damn high. I have had exams when they ask you to properly implement the solution when the modules only teach you the theory behind designing it. You are always expected to reach the impossibly high standards. The Profs seem like they do not have enough time to teach us that much coding in class, so they dedicate all their time to the design theory and assume we know how to implement the actual solution. It is tough, but after a while, I guess it teaches me to be an independent learner. Nonetheless, at least for some of the modules, my GPA is greatly affected.
 
-    2. After a while (in my case, exactly 3 semesters), I have a group of close friends. We kind of bid for classes together to be in the same group. It is comforting because you know other people`s working style, you know they`ll commit and you know you can trust the quality of their work. But then again, after a while, it gets boring. I dont get to know other people on a deeper level anymore. And SIS is very small, if you piss off your first group by being the bossy one or the slack one, well, I guess gossip travels very fast and that label will stick for quite some time.
+    2. After a while (in my case, exactly 3 semesters), I have a group of close friends. We kind of bid for classes together to be in the same group. It is comforting because you know other people’s working style, you know they’ll commit and you know you can trust the quality of their work. But then again, after a while, it gets boring. I dont get to know other people on a deeper level anymore. And SIS is very small, if you piss off your first group by being the bossy one or the slack one, well, I guess gossip travels very fast and that label will stick for quite some time.
 
     3. THE WORKLOAD IS JUST CRAZY. Projects, meetings, CCA commitments, quiz, exams. It sounds like any other college student. But it is really crazy. I am grateful if I have more than 4 hours to sleep any given day.
 
 
     Well that is just my two cents. All in all, I dont regret making SMU my first choice.',
-    'Hmm it`s tiring and frustrating at times. The competitiveness, the grading system, the endless projects, assignments, mid-terms and finals. But the exhaustion is also what bonds all SMU students together, when you find yourself in an awkward situation with a peer and don`t know what to say, the safest bet is to go "Man I`ve so much work to do!" Then, the conversation will probably flow from there, lo and behold a (mind my french) bitching session has started and your instantly (for that moment at least) bonded and awkward moment have successfully been passed. Plus, the craziness also forces you to either learn to manage your time or die trying. Or well you can always opt for failing, which well, kind off defeats the purpose of going to school if your not going to try at all (trying then failing is completely different from failing without trying!)
+    'Hmm it’s tiring and frustrating at times. The competitiveness, the grading system, the endless projects, assignments, mid-terms and finals. But the exhaustion is also what bonds all SMU students together, when you find yourself in an awkward situation with a peer and don’t know what to say, the safest bet is to go "Man I’ve so much work to do!" Then, the conversation will probably flow from there, lo and behold a (mind my french) bitching session has started and your instantly (for that moment at least) bonded and awkward moment have successfully been passed. Plus, the craziness also forces you to either learn to manage your time or die trying. Or well you can always opt for failing, which well, kind off defeats the purpose of going to school if your not going to try at all (trying then failing is completely different from failing without trying!)
 
-    Sometimes it can also be very uncomfortable and disconcerting because you get thrown into courses you`ve absolutely no skill in. I am an IT idiot, I`m the type that prefers all things in the traditional technological free way, I`m even somewhat averse to texting. But I get thrown into a Computer Analysis Tool class (well its basically an excel class), I suffered, badly, barely survived, barely passed, no surprises there. But being placed out of your comfort zones is not necessarily a bad thing. You do learn valuable skills but more than the skills, you meet students from different faculties, you are forced to mingle and sometimes work with them closely, you network and you learn and you share. You may end up hating each other, but you will no doubt have learned a thing or two from the other (whether you admit it or not).
+    Sometimes it can also be very uncomfortable and disconcerting because you get thrown into courses you’ve absolutely no skill in. I am an IT idiot, I’m the type that prefers all things in the traditional technological free way, I’m even somewhat averse to texting. But I get thrown into a Computer Analysis Tool class (well its basically an excel class), I suffered, badly, barely survived, barely passed, no surprises there. But being placed out of your comfort zones is not necessarily a bad thing. You do learn valuable skills but more than the skills, you meet students from different faculties, you are forced to mingle and sometimes work with them closely, you network and you learn and you share. You may end up hating each other, but you will no doubt have learned a thing or two from the other (whether you admit it or not).
 
-    The CCA-obsessed culture is another hidden gem of SMU. To outsiders they sometimes do not understand our "obsession" with it. But to us, that`s where our friends are, that`s where we get to escape from the stress of studying and focus on something we are truly passionate about, it is also there that we get hands-on practice in management, in communication, peer-learning and discipline, among many other things. I was in and still am in 2 myself, though am sort off taking a short break from both, was fully devoted to both the year before and well, it did get a bit draining. It was draining, but if someone asked me if I`d do it again or if i regretted making the choice I did last year, I would say yes and no respectively. It was tiring, emotionally, mentally and physically, I cried so much and got frustrated so many times, but i learned a lot too :) I definitely grew from the experience and i wouldn`t exchange it for anything else (though ok there were some bad and stupid calls i made in the process which i wince at and wished i could have done or chosen better, but think "Overall" heh)
+    The CCA-obsessed culture is another hidden gem of SMU. To outsiders they sometimes do not understand our "obsession" with it. But to us, that’s where our friends are, that’s where we get to escape from the stress of studying and focus on something we are truly passionate about, it is also there that we get hands-on practice in management, in communication, peer-learning and discipline, among many other things. I was in and still am in 2 myself, though am sort off taking a short break from both, was fully devoted to both the year before and well, it did get a bit draining. It was draining, but if someone asked me if I’d do it again or if i regretted making the choice I did last year, I would say yes and no respectively. It was tiring, emotionally, mentally and physically, I cried so much and got frustrated so many times, but i learned a lot too :) I definitely grew from the experience and i wouldn’t exchange it for anything else (though ok there were some bad and stupid calls i made in the process which i wince at and wished i could have done or chosen better, but think "Overall" heh)
 
-    However the downside of being an undergraduate in SMU is that we sometimes forget about our family, we are so focused on the hecticness of Uni that we forget all else. So engrossed with our youth, our friends, our school work, our internships, that we sometimes completely forget or push aside family time. In the pass 3 years, I`ve faced many situations in which i ended up sacrifincing family time, but after a tragedy happened in my family. I faced a rude awakening and realised just how important family is, and how much time I`ve missed with them, so this year, I`ve been trying my best to gain some lost time, and spend more time with them.
+    However the downside of being an undergraduate in SMU is that we sometimes forget about our family, we are so focused on the hecticness of Uni that we forget all else. So engrossed with our youth, our friends, our school work, our internships, that we sometimes completely forget or push aside family time. In the pass 3 years, I’ve faced many situations in which i ended up sacrifincing family time, but after a tragedy happened in my family. I faced a rude awakening and realised just how important family is, and how much time I’ve missed with them, so this year, I’ve been trying my best to gain some lost time, and spend more time with them.
 
-    I still loved and still do love my experience as an undergraduate in SMU, the key is balance, choose and pick your priorities and balance them as best as you can. We have to remind ourselves that we can`t have it all, there`s just so much that we can do in the limited time we`re given, and to truly experience and enjoy something, choices and sacrifices need to be made. Decide what kind of uni life you want, and start learning to balance! Though remember, sleep really is an option here in SMU ;)',
+    I still loved and still do love my experience as an undergraduate in SMU, the key is balance, choose and pick your priorities and balance them as best as you can. We have to remind ourselves that we can’t have it all, there’s just so much that we can do in the limited time we’re given, and to truly experience and enjoy something, choices and sacrifices need to be made. Decide what kind of uni life you want, and start learning to balance! Though remember, sleep really is an option here in SMU ;)',
     'Getting drunk at Ice Cold in the afternoon
     Attending classes after that made class participation more palatable
     The need to stand out made me realise quickly that even though you can bullshit well, nobody likes you (they just pretend that they do)
     Traveling to town is definitely more convenient
     I enjoyed the afternoons hanging out at the coffee shop on Armenian Street before they closed it down
     There were genuinely some interesting times bonding with group mates late into the night rushing for that presentation in the morning
-    I wasn`t one of those grade-obsessed students but I learnt a lot trying to juggle a business, school projects, running a CCA, family, love, friends and homework during my time in school (did not sleep very much)
+    I wasn’t one of those grade-obsessed students but I learnt a lot trying to juggle a business, school projects, running a CCA, family, love, friends and homework during my time in school (did not sleep very much)
     Seriously people should get over the whole idea of being like at Wharton and fighting for that JPM, DB, MS blah internship. Find your voice!
     Then again, school and life, in general, is what you make out of it. If you wanna be another cog in the machine and run the rat race with your frenemies, go ahead',
-    'SMU`s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.'
-  ],
-  'Singapore University of Social Sciences' => [
-    'Most of the lecturers are good. The school environment is moderate, as there are not enough canteens to accommodate the school population (shared with SIM Global). The school`s communication with the students can be improved because regarding some issues like paperwork for eportfolio and work attachment, there is some confusion among students.',
+    'SMU’s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.'],
+    'reputabilty rating' => [4, 4, 4],
+    'education quality rating' => [4, 4, 5],
+    'campus facilities accom rating' => [4, 4, 3],
+    'course difficulty rating' => [5, 4, 3],
+    'social element rating' => [3, 4, 4],
+    'value for money rating' => [4, 4, 4],
+    'safety rating' => [5, 5, 4],
+    'career services rating' => [4, 3, 5]
+  },
+  'Singapore University of Social Sciences' => {
+    comment: ['Most of the lecturers are good. The school environment is moderate, as there are not enough canteens to accommodate the school population (shared with SIM Global). The school’s communication with the students can be improved because regarding some issues like paperwork for eportfolio and work attachment, there is some confusion among students.',
     'Many (not all) lecturers encountered are only part-time or associate lecturers and are not committed to help the students. Facilities are also not helpful and sufficient to meet students’ needs.
 
     Feedback given to the school are not rectified, no actions are taken to improve.',
@@ -725,7 +878,7 @@ reviews = {
 
     No module bidding nonsense like in some other unis. Theres recommended mods to take each sem, just follow and dont think so much unless you have special circumstances.
 
-    A few modules have no exams but a project instead. Really easy if you aren`t aiming for A.
+    A few modules have no exams but a project instead. Really easy if you aren’t aiming for A.
 
     CONS:
 
@@ -745,15 +898,23 @@ reviews = {
 
     I dont really care about CCAs, last I checked 2 years ago there were almost none. But I think even now theres still not many. The only clubs I hear students talk about are of the liver destroying variety. So... your typical uni students I guess?
 
-    Although course grades has many components, it still mainly comes down to exams. Fail the paper, fail the whole mod. Students who aren`t good at exams suffer here.
+    Although course grades has many components, it still mainly comes down to exams. Fail the paper, fail the whole mod. Students who aren’t good at exams suffer here.
 
     My conclusion, if you must go to a local uni for 4 years, SUSS is a good choice. Its less torturous than traditional unis, but you can definitely still learn what is needed. You will still have periods of stress. Degree is recognized, you will definitely have all available career options if you can get the grades. Think of SUSS as local uni "lite".
 
-    But if you just want a job, and doesn`t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
-    'Currently I`m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.'
-  ],
-  'Singapore University of Technology and Design' => [
-    'Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
+    But if you just want a job, and doesn’t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
+    'Currently I’m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.'],
+    'reputabilty rating' => [4, 3, 3, 3],
+    'education quality rating' => [3, 3, 3, 2],
+    'campus facilities accom rating' => [4, 2, 4, 4],
+    'course difficulty rating' => [3, 3, 2, 3],
+    'social element rating' => [4, 4, 5, 3],
+    'value for money rating' => [4, 2, 3, 2],
+    'safety rating' => [5, 4, 4, 4],
+    'career services rating' => [3, 2, 4, 3]
+  },
+  'Singapore University of Technology and Design' => {
+    comment: ['Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
     'When I first accepted enrollment, it was for their curriculum approach and their scholarship.
 
     Today, if you want to join, these should be the main factors:
@@ -761,7 +922,7 @@ reviews = {
     Hands-on Experience. Unlike other universities that follow the traditional curriculum of lectures and classes, SUTD does this with an imbued design methodology - meaning to say, almost every module you do, there is at least 1 project, & not just for Design modules.
     Opportunities. While other universities have well established programs and companies, SUTD has a crazy vibrant innovation culture. Want to do projects outside of curriculum? Join a maker club (we have plenty); join a research program get funding; join a competition; pitch a start-up (at least 3 startup programmes with funding). You literally walk around SUTD and you can spot projects here and there done by different people.
     This is compared to other universities where you have to be of a certain pedigree or scholarship to do research projects or get funding.
-    Maker`s paradise. We have the largest fabrication lab in Asia? And its free to use for students (with limits of course). There’s 3D printers, laser cutters, water jet, metal works, etcera. What you make is only limited by your creativity and drive (and time).
+    Maker’s paradise. We have the largest fabrication lab in Asia? And its free to use for students (with limits of course). There’s 3D printers, laser cutters, water jet, metal works, etcera. What you make is only limited by your creativity and drive (and time).
     Multi-discipline. Unlike other universities, SUTD only has 4 main pillars - Computer Science, Architecture, Systems Engineering or Engineering. And so far each cohort is <500. With a common 1st year, you learn to intermingle and work with interdisciplinary people, and projects become much more dynamic. In other universities, you barely get to work with other majors except maybe hall.
     HASS (humanities & social arts). Tired of doing an engineering degree? Don’t worry, 1/4 of your term modules will be HASS. You can choose from modules like ‘The many lives of Satan’, ‘Ethics of Leadership’ to ‘Psychology’. This really help foster a liberal arts culture in SUTD.
     Scholarship. No kidding. (but you better maintain your GPA)
@@ -773,8 +934,16 @@ reviews = {
     Fast-paced. A double-sided coin. You get 1 year of common studies and ~2.5 years of major. Compare this to 4 years in other universities - that’s alot of content in a tight time. Depending on what you take, you might need to play catch up vs other peers. But you have stronger design & project portfolios.
     Namesake. In SUTD, it is really your own ball game - what you achieve is fully dependent on what you do. You can have great club activities, many research projects and competitions, or have nothing. Here, you better prepare to do much more and work harder - because companies are going to look at your achievement and not your university.
     Hall Life? For now, the new Hall system just began - so this can definitely change. But currently, if you are looking for hall experience like NUS or NTU, you won’t find them here. While there are floor activities and houses, the bond and dedication to your floor is much less than other universities. You would focus on club activities much more instead. Once again, this is for now - things are looking to change.',
-    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduate degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best, we need to solve that.'
-  ]
+    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduate degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best, we need to solve that.'],
+    'reputabilty rating' => [5, 4, 4],
+    'education quality rating' => [5, 5, 4],
+    'campus facilities accom rating' => [4, 4, 3],
+    'course difficulty rating' => [5, 3, 3],
+    'social element rating' => [3, 4, 4],
+    'value for money rating' => [4, 4, 4],
+    'safety rating' => [5, 4, 5],
+    'career services rating' => [4, 4, 4]
+  }
 }
 
 # for each user, go through the educations list
@@ -784,41 +953,43 @@ reviews = {
 
 users.each do |user|
   user.educations.each do |education|
-    reputabilty_rating = rand(1..5)
-    education_quality_rating = rand(1..5)
-    campus_facilities_accom_rating = rand(1..5)
-    course_difficulty_rating = rand(1..5)
-    social_element_rating = rand(1..5)
-    value_for_money_rating = rand(1..5)
-    safety_rating = rand(1..5)
-    career_services_rating = rand(1..5)
-    # comment =
-    curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:)
+    curr_review = Review.new
     curr_review.user = user
     curr_review.university = education.university
-    unless reviews[education.university.name].blank?
-      review = reviews[education.university.name].sample
+
+    unless reviews[education.university.name][:comment].blank?
+
+      uni_reviews = reviews[education.university.name]
+      review = uni_reviews[:comment].first
       curr_review.comment = review
-      reviews[education.university.name].delete(review)
-      curr_review.save!
+      reputabilty_rating = uni_reviews["reputabilty rating"].first
+      education_quality_rating = uni_reviews["education quality rating"].first
+      campus_facilities_accom_rating = uni_reviews["campus facilities accom rating"].first
+      course_difficulty_rating = uni_reviews["course difficulty rating"].first
+      social_element_rating = uni_reviews["social element rating"].first
+      value_for_money_rating = uni_reviews["value for money rating"].first
+      career_services_rating = uni_reviews["career services rating"].first
+      safety_rating = uni_reviews["safety rating"].first
+
+      curr_review.reputabilty_rating = reputabilty_rating
+      curr_review.education_quality_rating = education_quality_rating
+      curr_review.campus_facilities_accom_rating = campus_facilities_accom_rating
+      curr_review.course_difficulty_rating = course_difficulty_rating
+      curr_review.social_element_rating = social_element_rating
+      curr_review.value_for_money_rating = value_for_money_rating
+      curr_review.career_services_rating = career_services_rating
+      curr_review.safety_rating = safety_rating
+
+      uni_reviews[:comment].delete_at(0)
+      uni_reviews["reputabilty rating"].delete_at(0)
+      uni_reviews["education quality rating"].delete_at(0)
+      uni_reviews["campus facilities accom rating"].delete_at(0)
+      uni_reviews["course difficulty rating"].delete_at(0)
+      uni_reviews["social element rating"].delete_at(0)
+      uni_reviews["value for money rating"].delete_at(0)
+      uni_reviews["career services rating"].delete_at(0)
+      uni_reviews["safety rating"].delete_at(0)
+      curr_review.save
     end
   end
 end
-
-# universities.each do |university|
-#   reviews[university.name].each do |review|
-#     reputabilty_rating = rand(1..5)
-#     education_quality_rating = rand(1..5)
-#     campus_facilities_accom_rating = rand(1..5)
-#     course_difficulty_rating = rand(1..5)
-#     social_element_rating = rand(1..5)
-#     value_for_money_rating = rand(1..5)
-#     safety_rating = rand(1..5)
-#     career_services_rating = rand(1..5)
-#     comment = review
-#     curr_review = Review.new(reputabilty_rating:, education_quality_rating:, campus_facilities_accom_rating:, course_difficulty_rating:, social_element_rating:, value_for_money_rating:, safety_rating:, career_services_rating:, comment:)
-#     curr_review.user = User.all.sample
-#     curr_review.university = university
-#     curr_review.save!
-#   end
-# end
