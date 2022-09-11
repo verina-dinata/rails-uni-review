@@ -26,7 +26,6 @@ class UniversitiesController < ApplicationController
     @resource = User.new
     @review = Review.new
     @educations = []
-    @educations = current_user.educations unless current_user.nil?
   end
 
   private
