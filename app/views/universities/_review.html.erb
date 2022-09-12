@@ -37,13 +37,17 @@
     <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-start">
         <div class="me-1">
-          <i class="fa-solid fa-thumbs-up"></i>
+          <%= link_to do %>
+            <i class="fa-solid fa-thumbs-up"></i>
+          <% end %>
         </div>
         <div class="me-3">
           <p><%= review.votes.where(status: :upvote).size %></p>
         </div>
         <div class="me-1">
-          <i class="fa-solid fa-thumbs-down"></i>
+          <%= link_to do %>
+            <i class="fa-solid fa-thumbs-down"></i>
+          <% end %>
         </div>
         <div>
           <p><%= review.votes.where(status: :downvote).size %></p>
