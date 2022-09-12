@@ -34,7 +34,7 @@
       <% end %>
     </div>
     <p><%= review.comment %></p>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between" data-controller="votes">
       <div class="d-flex justify-content-start">
         <div class="me-1">
           <%= link_to "", class: "upvote" do %>
