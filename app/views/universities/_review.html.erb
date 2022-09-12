@@ -34,15 +34,15 @@
       <% end %>
     </div>
     <p><%= review.comment %></p>
-    <div class="d-flex justify-content-between" data-controller="votes">
+    <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-start">
         <div class="me-1">
-          <%= link_to "", class: "upvote" do %>
+          <%= link_to "", class: "upvote", data: {action: "click->votes#upvote"} do %>
             <i class="fa-solid fa-thumbs-up"></i>
           <% end %>
         </div>
         <div class="me-3">
-          <p><%= review.votes.where(status: :upvote).size %></p>
+          <p data-votes-target="like"><%= review.votes.where(status: :upvote).size %></p>
         </div>
         <div class="me-1">
           <%= link_to "", class: "downvote" do %>
