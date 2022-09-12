@@ -34,7 +34,21 @@
       <% end %>
     </div>
     <p><%= review.comment %></p>
-    <div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-start">
+        <div class="me-1">
+          <i class="fa-solid fa-thumbs-up"></i>
+        </div>
+        <div class="me-3">
+          <p><%= review.votes.where(status: :upvote).size %></p>
+        </div>
+        <div class="me-1">
+          <i class="fa-solid fa-thumbs-down"></i>
+        </div>
+        <div>
+          <p><%= review.votes.where(status: :downvote).size %></p>
+        </div>
+      </div>
       <p class="posted-text">Posted at <%= review.created_at.localtime.strftime("%d %h %Y, %I:%M %P") %></p>
     </div>
   </div>
