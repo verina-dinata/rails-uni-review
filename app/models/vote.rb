@@ -1,6 +1,6 @@
 class Vote < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :review_id
+  belongs_to :user
+  belongs_to :review
 
-  enum :type, %i[upvote downvote]
+  enum :status, %i[upvote downvote]
 end
