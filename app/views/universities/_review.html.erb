@@ -37,7 +37,7 @@
     <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-start">
         <div class="me-1">
-          <%= link_to do %>
+          <%= link_to "", class: "upvote" do %>
             <i class="fa-solid fa-thumbs-up"></i>
           <% end %>
         </div>
@@ -45,7 +45,7 @@
           <p><%= review.votes.where(status: :upvote).size %></p>
         </div>
         <div class="me-1">
-          <%= link_to do %>
+          <%= link_to "", class: "downvote" do %>
             <i class="fa-solid fa-thumbs-down"></i>
           <% end %>
         </div>
