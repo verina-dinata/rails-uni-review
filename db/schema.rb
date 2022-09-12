@@ -108,10 +108,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_10_004954) do
     t.datetime "updated_at", null: false
     t.string "international_course_fee"
     t.string "email_domain"
-    t.float "latitude"
-    t.float "longitude"
     t.string "logo"
     t.string "image"
+    t.float "latitude"
+    t.float "longitude"
     t.string "image2"
     t.string "image3"
   end

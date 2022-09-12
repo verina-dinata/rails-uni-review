@@ -70,7 +70,7 @@
   color: black;
   // color: rgb(40, 39, 39);
   // font-family: 'Lobster', cursive;
-  // font-family: 'Anton', sans-serif;
+  font-family: 'Anton', sans-serif;
   // font-family: 'Indie Flower', cursive;
 }
 
@@ -100,4 +100,8 @@
 
 .list:hover{
   background-color: rgb(236, 241, 242);
+}
+
+.animated {
+  animation-duration: .5s;
 }
