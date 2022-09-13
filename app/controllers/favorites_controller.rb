@@ -6,9 +6,20 @@ class FavoritesController < ApplicationController
 
   def create
     @university = University.find(params[:university_id])
-    @favorite = Favorite.new(user: current_user, university: @university)
-    @favorite.save!
-    redirect_to universities_path
+    @favorite = Favorite.find_by(user: current_user, university: @university)
+    if @favorite
+      @favorite.destroy
+      respond_to do |format|
+        format.json { render json: { favorite: nil, status: 200 } }
+        format.html { redirect_to universities_path }
+      end
+    else
+      @favorite = Favorite.create!(user: current_user, university: @university)
+      respond_to do |format|
+        format.json { render json: { favorite: @favorite, status: 200 } }
+        format.html { redirect_to universities_path }
+      end
+    end
   end
 
   def destroy

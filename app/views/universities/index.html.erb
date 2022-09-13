@@ -9,8 +9,9 @@
             <p><strong><%= university.name  %></strong><br></p>
           <% end %>
 
-          <%= render 'universities/favorite', university: university %>
-
+          <div data-controller="favorite">
+            <%= render 'universities/favorite', university: university %>
+          </div>
 
           <%= university.reviews.count %> Reviews<br>
           <div class="pt-3">

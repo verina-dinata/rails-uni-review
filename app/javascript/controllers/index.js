@@ -19,6 +19,9 @@ application.register("cards-carousel", CardsCarouselController)
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
 
+import FavoriteController from "./favorite_controller"
+application.register("favorite", FavoriteController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

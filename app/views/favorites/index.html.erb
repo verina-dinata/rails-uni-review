@@ -1,11 +1,50 @@
 <div class="container mt-5 pt-3">
-  <h1><strong>Favorites</strong></h1>
-  <% @favorites.each do |f| %>
-    <div class="d-flex justify-content-between mt-5 my-4 card">
-      <%= link_to university_path(f.university) do %>
-        <%= image_tag("logo.png", class: "uni-card-image logoo title") %>
-        <%= f.university.name %>
+  <div class="row justify-content-center">
+    <h1 class="text-center"><strong>Favorites</strong></h1>
+    <div class="col-lg-8">
+      <% @favorites.each do |f| %>
+        <div class="card">
+          <%= link_to university_path(f.university) do %>
+            <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
+            <%= f.university.name %>
+          <% end %>
+        </div>
       <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
+
+  <h1> My Favorites </h1>
+  <div class="container mt-5">
+    <div class="row">
+      <% @favorites.each do |f| %>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
+          <%= link_to "Favorites", universities_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <img src="" class="card-img-top" alt="university_logo">
+    <% @favorites.each do |f| %>
+      <div class="card-body">
+        <h5 class="card-title"><%= f.university.name %></h5>
+        <p class="card-text"><%= f.university.country %></p>
+        <p class="card-text"><%= f.university.description %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="card">
+    <% @favorites.each do |f| %>
+      <div class="d-flex justify-content-between mt-5 my-4">
+        <%= image_tag("logo.png", class: "uni-card-image logoo") %>
+        <div>
+          <br>
+          <h3 class="title"><%= f.university.name %></h3>
+          <p class="description">
+          <%= f.university.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+ </div>
