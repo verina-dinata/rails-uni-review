@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   before_action :set_review, only: %i[create destroy]
-  skip_before_action :verify_authenticity_token, only: [:create, :destroy]
+  skip_before_action :verify_authenticity_token, only: %i[create destroy]
 
   def create
     @review.votes.where(user: current_user).delete_all
@@ -9,12 +9,18 @@ class VotesController < ApplicationController
       user: current_user,
       review: @review
     )
-    render json: {}, status: :ok
+    render json: {
+      total_upvote: @review.votes.upvote.size,
+      total_downvote: @review.votes.downvote.size
+    }, status: :ok
   end
 
   def destroy
     @review.votes.where(user: current_user).delete_all
-    render json: {}, status: :ok
+    render json: {
+      total_upvote: @review.votes.upvote.size,
+      total_downvote: @review.votes.downvote.size
+    }, status: :ok
   end
 
   private

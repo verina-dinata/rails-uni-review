@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="votes"
 export default class extends Controller {
-  static targets = ["totalLike", "upvoteIcon", "upvoteButton"]
+  static targets = ["totalUpvote", "upvoteIcon", "downvoteIcon", "totalDownvote"]
   static values = { universityId: Number, reviewId: Number}
   connect() {
 
@@ -10,39 +10,48 @@ export default class extends Controller {
 
   upvote(event) {
     event.preventDefault()
-    console.log(event.target)
-    if (event.target.classList.contains('unvoted')){
-      this.create()
+    if (this.upvoteIconTarget.classList.contains('unvoted')){
+      this.create("upvote",  "upvoted", this.upvoteIconTarget)
     } else {
-      this.delete()
+      this.delete("upvoted", this.upvoteIconTarget)
     }
   }
 
-  create() {
-    console.log('create')
+  downvote(event) {
+    event.preventDefault()
+    if (this.downvoteIconTarget.classList.contains('unvoted')){
+      this.create("downvote", "downvoted", this.downvoteIconTarget)
+    } else {
+      this.delete("downvoted", this.downvoteIconTarget)
+    }
+  }
+
+  create(vote, cssClass, voteIcon) {
+    this.upvoteIconTarget.classList.add("unvoted")
+    this.downvoteIconTarget.classList.add("unvoted")
 
     const url = `/universities/${this.universityIdValue}/reviews/${this.reviewIdValue}/votes`
-    let csrfToken = document
-                .querySelector('meta[name="csrf-token"]')
-                .getAttribute("content")
+
     fetch(url, {
       method: "POST",
-      headers: {"Accept": "application/json",
-      "Content-Type": "application/json",
-      "X-CSRF-Token": csrfToken},
-      body: JSON.stringify({"vote": "upvote"})
-    }).then(
-      response => {
-        if (response.ok) {
-          this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) + 1
-          this.upvoteIconTarget.classList.remove("unvoted")
-          this.upvoteIconTarget.classList.add("upvoted")
-        }
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({"vote": vote})
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.totalUpvoteTarget.innerText = data.total_upvote
+        this.totalDownvoteTarget.innerText = data.total_downvote
+        voteIcon.classList.remove("unvoted")
+        voteIcon.classList.add(cssClass)
+
       }
     )
   }
 
-  delete() {
+  delete(cssClass, voteIcon) {
     console.log('delete')
 
     const url = `/universities/${this.universityIdValue}/reviews/${this.reviewIdValue}/votes`
@@ -51,16 +60,17 @@ export default class extends Controller {
                 .getAttribute("content")
     fetch(url, {
       method: "DELETE",
-      headers: {"Accept": "application/json",
-      "Content-Type": "application/json",
-      "X-CSRF-Token": csrfToken}
-    }).then(
-      response => {
-        if (response.ok) {
-          this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) - 1
-          this.upvoteIconTarget.classList.remove("upvoted")
-          this.upvoteIconTarget.classList.add("unvoted")
-        }
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.totalUpvoteTarget.innerText = data.total_upvote
+        this.totalDownvoteTarget.innerText = data.total_downvote
+        voteIcon.classList.remove(cssClass)
+        voteIcon.classList.add("unvoted")
       }
     )
   }
