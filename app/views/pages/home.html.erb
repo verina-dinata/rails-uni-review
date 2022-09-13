@@ -71,7 +71,7 @@
 
             <%# <h2 class="text-center mt-4 mb-5"><strong>Student Reviews</strong></h2> %>
             <div class="carousel-inner" style="height: 500px; padding-top: 1%; margin-bottom: 2%;">
-              <div class="carousel-item active">
+              <div class="carousel-item active container-fluid">
 
                 <div class="card review-card col-lg-3 p-4" style="position: absolute; top:15%; left: 5%">
                   <span class="review-top" style="color: black !important;" >
@@ -115,12 +115,11 @@
               </div>
 
 
-              <div class="carousel-item">
+              <div class="carousel-item container-fluid">
 
                 <div class="card review-card col-lg-3 p-4" style="position: absolute; top:15%; left: 5%">
                   <span class="review-top">
                     <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="40px" style="margin-right: 10px;">
-                    <%= @second_review.user.first_name %>
                     <%= @second_review.user.last_name %>
                   </span><hr>
                   <span class="p-2"><%= " ⭐️" * ((@second_review.reputabilty_rating + @second_review.education_quality_rating + @second_review.campus_facilities_accom_rating + @second_review.course_difficulty_rating + @second_review.social_element_rating + @second_review.value_for_money_rating + @second_review.safety_rating + @second_review.career_services_rating) / 8.0) %></span>
@@ -135,7 +134,7 @@
                 <div class="card review-card col-lg-3 p-4" style="left: 38%">
                   <span class="review-top">
                     <img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" alt="" width="40px" style="margin-right: 10px;">
-                    <%= @fourth_review.user.first_name %>
+                    <%= @fourth_review.user.last_name %>
                   </span><hr>
                   <span class="p-2"><%= " ⭐️" * ((@fourth_review.reputabilty_rating + @fourth_review.education_quality_rating + @fourth_review.campus_facilities_accom_rating + @fourth_review.course_difficulty_rating + @fourth_review.social_element_rating + @fourth_review.value_for_money_rating + @fourth_review.safety_rating + @fourth_review.career_services_rating) / 8.0) %></span>
                   <br>
