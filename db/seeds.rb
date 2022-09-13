@@ -1000,7 +1000,7 @@ reviews = Review.all
 reviews.each do |review|
   10.times do
     curr_user = users.sample
-    next if review.user == curr_user
+    next if review.user == curr_user || review.votes.map(&:user).include?(curr_user)
 
     status = %i[upvote downvote].sample
     curr_vote = Vote.new(status:)

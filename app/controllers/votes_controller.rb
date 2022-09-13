@@ -1,13 +1,18 @@
 class VotesController < ApplicationController
-  before_action :set_review, only: %i[create]
+  before_action :set_review, only: %i[create destroy]
 
   def create
-    puts params
-    @vote = Vote.new(status: params[:vote])
-    @vote.user = current_user
-    @vote.review = @review
-    @vote.save
+    @vote = Vote.create!(
+      status: params[:vote],
+      user: current_user,
+      review: @review
+    )
+    render json: {}, status: :ok
+  end
 
+  def destroy
+    @review.votes.where(user: current_user).delete_all
+    render json: {}, status: :ok
   end
 
   private
