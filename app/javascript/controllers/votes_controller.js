@@ -29,14 +29,14 @@ export default class extends Controller {
 
         // this.upvoteIconTarget.classList.remove("unvoted")
         // this.upvoteIconTarget.classList.add("upvoted")
-        if (this.upvoteIconTarget.vote) {
+        if (this.upvoteIconTarget.classList.contains("unvoted")) {
           this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) + 1
-          this.upvoteIconTarget.classList.remove("upvoted")
-          this.upvoteIconTarget.classList.add("unvoted")
-        } else {
-          this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) - 1
           this.upvoteIconTarget.classList.remove("unvoted")
           this.upvoteIconTarget.classList.add("upvoted")
+        } else {
+          this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) - 1
+          this.upvoteIconTarget.classList.remove("upvoted")
+          this.upvoteIconTarget.classList.add("unvoted")
 
         }
         // this.upvoteButtonTarget.disabled = true
