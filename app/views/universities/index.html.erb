@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <div class="row" data-controller="favorite">
+  <div class="row">
     <% @universities.each do |university| %>
       <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
         <div class="card uni-index-card position-relative" >
@@ -9,8 +9,9 @@
             <p><strong><%= university.name  %></strong><br></p>
           <% end %>
 
-          <%= render 'universities/favorite', university: university %>
-
+          <div data-controller="favorite">
+            <%= render 'universities/favorite', university: university %>
+          </div>
 
           <%= university.reviews.count %> Reviews<br>
           <div class="pt-3">
