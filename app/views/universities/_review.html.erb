@@ -34,18 +34,18 @@
       <% end %>
     </div>
     <p><%= review.comment %></p>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between"  data-controller="votes" data-votes-university-id-value="<%= review.university.id %>" data-votes-review-id-value="<%= review.id %>">
       <div class="d-flex justify-content-start">
         <div class="me-1">
-          <%= link_to "", class: "upvote", data: {action: "click->votes#upvote"} do %>
-            <i class="fa-solid fa-thumbs-up"></i>
+          <%= link_to "", data: {action: "click->votes#upvote", votes_target: "upvoteButton"} do %>
+            <i class="fa-solid fa-thumbs-up unvoted" data-votes-target="upvoteIcon"></i>
           <% end %>
         </div>
-        <div class="me-3">
-          <p data-votes-target="like"><%= review.votes.where(status: :upvote).size %></p>
+        <div class="me-3" data-votes-target="totalLike">
+          <p><%= review.votes.where(status: :upvote).size %></p>
         </div>
         <div class="me-1">
-          <%= link_to "", class: "downvote" do %>
+          <%= link_to "", class: "unvoted" do %>
             <i class="fa-solid fa-thumbs-down"></i>
           <% end %>
         </div>

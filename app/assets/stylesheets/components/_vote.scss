@@ -1,4 +1,4 @@
-.upvote {
+.upvoted {
   color: rgb(0, 201, 74);
 
   &:hover {
@@ -6,10 +6,18 @@
   }
 }
 
-.downvote {
+.downvoted {
   color: rgb(235, 0, 0);
 
   &:hover {
     color: rgb(210, 0, 0);
+  }
+}
+
+.unvoted {
+  color: rgb(189, 189, 189);
+
+  &:hover {
+    color: rgb(158, 158, 158);
   }
 }
