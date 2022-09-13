@@ -10,9 +10,18 @@ export default class extends Controller {
 
   upvote(event) {
     event.preventDefault()
+    console.log(event.target)
+    if (event.target.classList.contains('unvoted')){
+      this.create()
+    } else {
+      this.delete()
+    }
+  }
+
+  create() {
+    console.log('create')
 
     const url = `/universities/${this.universityIdValue}/reviews/${this.reviewIdValue}/votes`
-
     let csrfToken = document
                 .querySelector('meta[name="csrf-token"]')
                 .getAttribute("content")
@@ -22,24 +31,37 @@ export default class extends Controller {
       "Content-Type": "application/json",
       "X-CSRF-Token": csrfToken},
       body: JSON.stringify({"vote": "upvote"})
-    })
-      .then(response =>  {if (response.ok){
-        if (this.upvoteIconTarget.classList.contains("unvoted")) {
+    }).then(
+      response => {
+        if (response.ok) {
           this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) + 1
           this.upvoteIconTarget.classList.remove("unvoted")
           this.upvoteIconTarget.classList.add("upvoted")
-        } else {
+        }
+      }
+    )
+  }
+
+  delete() {
+    console.log('delete')
+
+    const url = `/universities/${this.universityIdValue}/reviews/${this.reviewIdValue}/votes`
+    let csrfToken = document
+                .querySelector('meta[name="csrf-token"]')
+                .getAttribute("content")
+    fetch(url, {
+      method: "DELETE",
+      headers: {"Accept": "application/json",
+      "Content-Type": "application/json",
+      "X-CSRF-Token": csrfToken}
+    }).then(
+      response => {
+        if (response.ok) {
           this.totalLikeTarget.innerText = parseInt(this.totalLikeTarget.innerText) - 1
           this.upvoteIconTarget.classList.remove("upvoted")
           this.upvoteIconTarget.classList.add("unvoted")
-
         }
-      } else {
-        console.log("fails")
       }
-
-      })
+    )
   }
-
-
 }

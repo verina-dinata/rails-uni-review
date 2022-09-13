@@ -23,9 +23,9 @@ Rails.application.routes.draw do
   resources :universities, only: %i[index show] do
     resources :reviews, only: %i[create] do
       resources :votes, only: %i[create]
+      delete '/votes', to: 'votes#destroy'
     end
   end
 
   resources :reviews, only: :destroy
-  resources :votes, only: :destroy
 end
