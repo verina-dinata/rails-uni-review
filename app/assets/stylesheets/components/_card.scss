@@ -87,7 +87,6 @@
 
 .review-middle {
   padding: 5%;
-
 }
 
 .review-bottom {
@@ -102,4 +101,9 @@
   overflow: hidden;
   // text-overflow: ellipsis;
   // white-space: nowrap;
+}
+
+.carousel .active span,
+.carousel .active-2 span {
+  color: black !important;
 }
