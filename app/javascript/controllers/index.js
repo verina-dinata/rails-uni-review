@@ -10,24 +10,18 @@ application.register("add-to-favourite-animation", AddToFavouriteAnimationContro
 import AutocompleteController from "./autocomplete_controller"
 application.register("autocomplete", AutocompleteController)
 
-<<<<<<< HEAD
 import CalendarController from "./calendar_controller"
 application.register("calendar", CalendarController)
 
-=======
->>>>>>> d730c5d (stimulus)
 import CardsCarouselController from "./cards_carousel_controller"
 application.register("cards-carousel", CardsCarouselController)
 
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
 
-<<<<<<< HEAD
-=======
 import FavoriteController from "./favorite_controller"
 application.register("favorite", FavoriteController)
 
->>>>>>> d730c5d (stimulus)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
