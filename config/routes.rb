@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :reviews, only: :destroy
 
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: %i[show index create] do
     resources :messages, only: :create
   end
 end

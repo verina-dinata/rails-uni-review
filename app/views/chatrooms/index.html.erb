@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <h1>Channels</h1>
+  <div class="row">
+    <% @chatrooms.each do |chatroom| %>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <%= link_to chatroom_path(chatroom.id) do %>
+          <%= render "chatroom", chatroom: chatroom %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+</div>

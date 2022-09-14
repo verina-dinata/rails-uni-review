@@ -8,6 +8,7 @@
 
 puts "Cleaning database"
 
+# Chatroom.destroy_all
 Vote.destroy_all
 Favorite.destroy_all
 Review.destroy_all
@@ -1009,3 +1010,8 @@ reviews.each do |review|
     curr_vote.save
   end
 end
+
+# Chatroom.create(name: "general", description: "Share any announcement / useful information")
+# Chatroom.create(name: "student life", description: "The everyday life of a student")
+# Chatroom.create(name: "city life", description: "Learn more about the city where a university's located at")
+# Chatroom.create(name: "help", description: "Need help with anything?")
