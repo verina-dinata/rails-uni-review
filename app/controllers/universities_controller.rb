@@ -38,22 +38,6 @@ class UniversitiesController < ApplicationController
   end
 
   def university_params
-    params.require(:university).permit(:name,
-                                       :ranking,
-                                       :reviews,
-                                       :description,
-                                       :city,
-                                       :country,
-                                       :address,
-                                       :student_count,
-                                       :domestic_course_fee,
-                                       :international_course_fee,
-                                       :application_deadline,
-                                       :latitude,
-                                       :longitude,
-                                       :logo,
-                                       :image,
-                                       :image2,
-                                       :image3)
+    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address, :latitude, :longitude, :logo, :image, :image2, :image3)
   end
 end
