@@ -55,9 +55,7 @@ export default class extends Controller {
     console.log('delete')
 
     const url = `/universities/${this.universityIdValue}/reviews/${this.reviewIdValue}/votes`
-    let csrfToken = document
-                .querySelector('meta[name="csrf-token"]')
-                .getAttribute("content")
+
     fetch(url, {
       method: "DELETE",
       headers: {
