@@ -16,6 +16,9 @@ application.register("calendar", CalendarController)
 import CardsCarouselController from "./cards_carousel_controller"
 application.register("cards-carousel", CardsCarouselController)
 
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
+
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
 
