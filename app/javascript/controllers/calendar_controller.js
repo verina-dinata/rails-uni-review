@@ -4,10 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   //Create and download a file on click
-  download = (filename, fileBody) => {
+  download = (fileBody) => {
+    let fileName = 'reminder.ics'
     let element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileBody));
-    element.setAttribute('download', filename);
+    element.setAttribute('download', fileName);
 
     element.style.display = 'none';
     document.body.appendChild(element);
@@ -17,51 +18,35 @@ export default class extends Controller {
     document.body.removeChild(element);
   }
 
-  /**
-  * Returns a date/time in ICS format
-  */
-  convertToICSDate = (dateTime) => {
-    const year = dateTime.getFullYear().toString();
-    const month = (dateTime.getMonth() + 1) < 10 ? "0" + (dateTime.getMonth() + 1).toString() : (dateTime.getMonth() + 1).toString();
-    const day = dateTime.getDate() < 10 ? "0" + dateTime.getDate().toString() : dateTime.getDate().toString();
-    const hours = dateTime.getHours() < 10 ? "0" + dateTime.getHours().toString() : dateTime.getHours().toString();
-    const minutes = dateTime.getMinutes() < 10 ? "0" +dateTime.getMinutes().toString() : dateTime.getMinutes().toString();
-
-    return year + month + day + "T" + hours + minutes + "00";
+  convertDate = (date) => {
+    let event = new Date(date).toISOString();
+    event = event.split("T")[0];
+    event = event.split("-");
+    event = event.join("");
+    return event;
   }
 
-  /**
-  * Creates and downloads an ICS file
-  * @params {string} timeZone - In the format America/New_York
-  * @params {object} startTime - Vaild JS Date object in the event timezone
-  * @params {object} endTime - Vaild JS Date object in the event timezone
-  * @params {string} title
-  * @params {string} description
-  * @params {string} venueName
-  * @params {string} address
-  * @params {string} city
-  * @params {string} state
-  */
-  createInvite = (application_deadline, endTime, title, description, venueName, address, city, state) => {
+  createInvite = (event) => {
 
-    // const icsBody = 'BEGIN:VCALENDAR\n' +
-    // 'VERSION:2.0\n' +
-    // 'PRODID:Calendar\n' +
-    // 'CALSCALE:GREGORIAN\n' +
-    // 'METHOD:PUBLISH\n' +
-    // 'BEGIN:VEVENT\n' +
-    // 'SUMMARY:' + 'Campus Tour of ' +  '\n' +
-    // 'UID:@Default\n' +
-    // 'SEQUENCE:0\n' +
-    // 'STATUS:CONFIRMED\n' +
-    // 'TRANSP:TRANSPARENT\n' +
-    // 'DTSTART:' application_deadline + '\n' +
-    // 'DTEND:' (application_deadline + 1) '\n' +
-    // 'LOCATION:' + venueName + '\\n' + address + ', ' + city + ', ' + '\n' +
-    // 'DESCRIPTION:' + description + '\n' +
-    // 'END:VEVENT\n' +
-    // 'END:VCALENDAR\n';
+    let nameValue = event.target.getAttribute('name-value');
+    let deadlineValue = event.target.getAttribute('deadline-value');
+    let addressValue = event.target.getAttribute('address-value');
 
-    // download('campustour' + '.ics', icsBody);
+    let convertedDate = this.convertDate(deadlineValue);
+
+    const icsBody = 'BEGIN:VCALENDAR\r\n' +
+    'VERSION:2.0\r\n' +
+    'PRODID:-//Team Uni-Review//EN\r\n' +
+    'BEGIN:VEVENT\r\n' +
+    'SUMMARY:' + 'Application Deadline for ' + nameValue + '\r\n' +
+    'UID:@Default\r\n' +
+    'STATUS:CONFIRMED\r\n' +
+    'DTSTART;VALUE=DATE:' + convertedDate + '\r\n' +
+    'LOCATION:' + nameValue + '\n' + addressValue + '\r\n' +
+    'DESCRIPTION:' + 'This is a calendar reminder for the upcoming Enrollment Deadline for ' + nameValue + '.\r\n' +
+    'END:VEVENT\r\n' +
+    'END:VCALENDAR\r\n';
+
+    this.download(icsBody);
   }
 }
