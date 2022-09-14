@@ -37,7 +37,8 @@
     <div class="d-flex justify-content-between"  data-controller="votes" data-votes-university-id-value="<%= review.university.id %>" data-votes-review-id-value="<%= review.id %>">
       <div class="d-flex justify-content-start">
         <div class="me-1">
-          <%= link_to "", data: {action: current_user.nil? ? '' : 'click->votes#upvote'} do %>
+
+          <%= link_to "", data: {action: current_user.nil? ? '' : 'click->votes#upvote', bs_toggle: current_user.nil? ? 'modal' : '', bs_target: current_user.nil? ? '#staticBackdrop' : ''} do %>
             <i class="fa-solid fa-thumbs-up <%= review.upvoted?(current_user)? 'upvoted' : 'unvoted' %> " data-votes-target="upvoteIcon"></i>
           <% end %>
         </div>
@@ -45,7 +46,7 @@
           <p><%= review.votes.where(status: :upvote).size %></p>
         </div>
         <div class="me-1">
-          <%= link_to "", data: {action: current_user.nil? ? '' : 'click->votes#downvote'} do %>
+          <%= link_to "", data: {action: current_user.nil? ? '' : 'click->votes#downvote', bs_toggle: current_user.nil? ? 'modal' : '', bs_target: current_user.nil? ? '#staticBackdrop' : ''} do %>
             <i class="fa-solid fa-thumbs-down <%= review.downvoted?(current_user)? 'downvoted' : 'unvoted' %>" data-votes-target="downvoteIcon"></i>
           <% end %>
         </div>
