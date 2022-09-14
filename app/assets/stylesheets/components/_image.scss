@@ -4,3 +4,21 @@
   margin:0 auto;
   object-fit: contain;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10px !important;
+}
+
+
+.carousel-control-next-icon:after {
+  content: '>' !important;
+  font-size: 35px;
+  color: grey;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<' !important;
+  font-size: 35px;
+  color: grey;
+}

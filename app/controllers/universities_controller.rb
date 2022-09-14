@@ -2,9 +2,6 @@ class UniversitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-<<<<<<< HEAD
-    @universities = University.all
-=======
     if params[:query].present?
       sql_query = "name ILIKE :query OR country ILIKE :query OR city ILIKE :query"
       @universities = University.where(sql_query, query: "%#{params[:query]}%")
@@ -13,26 +10,24 @@ class UniversitiesController < ApplicationController
     else
       @universities = University.all
     end
->>>>>>> 4601a3ef88b907b03999e55e6c21df87c99df987
   end
 
   def show
-    set_university
-<<<<<<< HEAD
-=======
     @markers = [
       {
         lat: @university.latitude,
         lng: @university.longitude
       }
     ]
+
     @reviews = @university.reviews.order(created_at: :desc).page params[:page]
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
     @review = Review.new
     @educations = []
-    @educations = current_user.educations unless current_user.nil?
->>>>>>> 4601a3ef88b907b03999e55e6c21df87c99df987
+    if user_signed_in?
+      @educations = current_user.educations
+    end
   end
 
   private

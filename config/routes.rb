@@ -21,7 +21,10 @@ Rails.application.routes.draw do
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show] do
-    resources :reviews, only: %i[create]
+    resources :reviews, only: %i[create] do
+      resources :votes, only: %i[create]
+      delete '/votes', to: 'votes#destroy'
+    end
   end
 
   resources :reviews, only: :destroy

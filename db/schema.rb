@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_12_084443) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -108,10 +108,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
     t.datetime "updated_at", null: false
     t.string "international_course_fee"
     t.string "email_domain"
-    t.float "latitude"
-    t.float "longitude"
     t.string "logo"
     t.string "image"
+    t.float "latitude"
+    t.float "longitude"
     t.string "image2"
     t.string "image3"
   end
@@ -134,6 +134,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "review_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "status", default: 0
+    t.index ["review_id"], name: "index_votes_on_review_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "educations", "universities"
@@ -142,4 +152,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_133432) do
   add_foreign_key "favorites", "users"
   add_foreign_key "reviews", "universities"
   add_foreign_key "reviews", "users"
+  add_foreign_key "votes", "reviews"
+  add_foreign_key "votes", "users"
 end
