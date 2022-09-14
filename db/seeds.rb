@@ -8,6 +8,7 @@
 
 puts "Cleaning database"
 
+Vote.destroy_all
 Favorite.destroy_all
 Review.destroy_all
 Department.destroy_all
@@ -991,5 +992,20 @@ users.each do |user|
       uni_reviews["safety rating"].delete_at(0)
       curr_review.save
     end
+  end
+end
+
+reviews = Review.all
+
+reviews.each do |review|
+  10.times do
+    curr_user = users.sample
+    next if review.user == curr_user || review.votes.map(&:user).include?(curr_user)
+
+    status = %i[upvote downvote].sample
+    curr_vote = Vote.new(status:)
+    curr_vote.user = curr_user
+    curr_vote.review = review
+    curr_vote.save
   end
 end
