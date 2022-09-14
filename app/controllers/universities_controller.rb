@@ -13,7 +13,9 @@ class UniversitiesController < ApplicationController
   end
 
   def show
+    set_university
     @markers = [
+
       {
         lat: @university.latitude,
         lng: @university.longitude
