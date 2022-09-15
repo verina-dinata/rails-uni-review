@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["heart", "form"]
   connect() {
+
   }
 
   addToFavorite(event) {
@@ -33,7 +34,5 @@ export default class extends Controller {
           this.heartTarget.classList.replace('fas', 'far')
         }
       })
-
-
   }
 }
