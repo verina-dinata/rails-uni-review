@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h1>Channels</h1>
+  <div class="row">
+    <% @chatrooms.each do |chatroom| %>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-5">
+        <% random_num = rand(778) %>
+        <%= link_to chatroom_path(chatroom.id) do %>
+          <% image = "https://source.unsplash.com/collection/466697/480x480/?sig=#{random_num}" %>
+          <%= render "chatroom", chatroom: chatroom, image: image %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+</div>
