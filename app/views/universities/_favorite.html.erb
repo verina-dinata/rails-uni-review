@@ -1,11 +1,12 @@
-
+<div data-controller="favorite">
 <%= simple_form_for(:favorite, url: university_favorites_path(university.id), data: {
   action: "submit->favorite#addToFavorite",
   favorite_target: "form"
-  }) do |f| %>
+  }) do %>
 
-    <%= button_tag type: 'submit', class: "position-absolute btn btn-link", style: "top:0;right:0;" do %>
-      <i class="far fa-heart" style="z-index: 100;" data-favorite-target="heart"></i>
+    <%= button_tag type: 'submit', class: favorite_class, style: favorite_style do %>
+      <i class="<%= current_user.favorites.find{|f| f.university == university}? "fas" : "far" %> fa-heart" style="z-index: 100" data-favorite-target="heart"></i>
     <% end %>
 
 <% end %>
+</div>
