@@ -19,24 +19,9 @@ application.register("cards-carousel", CardsCarouselController)
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import FavoriteController from "./favorite_controller"
 application.register("favorite", FavoriteController)
 
-=======
-<<<<<<< HEAD
-=======
-import FavoriteController from "./favorite_controller"
-application.register("favorite", FavoriteController)
-
->>>>>>> d730c5d (stimulus)
->>>>>>> 7e946db (stimulus)
-=======
-import FavoriteController from "./favorite_controller"
-application.register("favorite", FavoriteController)
-
->>>>>>> 3b1d041 (resolve conflict)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

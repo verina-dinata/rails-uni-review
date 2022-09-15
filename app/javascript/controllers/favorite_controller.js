@@ -4,24 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["heart", "form"]
   connect() {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   }
 
   addToFavorite(event) {
     // console.log("a")
-=======
-    console.log("hello")
-  }
-
-  addToFavorite(event) {
->>>>>>> 7e946db (stimulus)
-=======
-  }
-
-  addToFavorite(event) {
-    // console.log("a")
->>>>>>> 2426e4d (Move data controller class)
     event.preventDefault()
 
     let csrfToken = document
@@ -47,14 +34,5 @@ export default class extends Controller {
           this.heartTarget.classList.replace('fas', 'far')
         }
       })
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // this.heartTarget.html("far fa-heart position-absolute")
->>>>>>> 7e946db (stimulus)
-=======
->>>>>>> 2426e4d (Move data controller class)
   }
 }
