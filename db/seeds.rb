@@ -1012,7 +1012,29 @@ reviews.each do |review|
   end
 end
 
+puts "Creating Chatrooms"
+
 Chatroom.create(name: "general", description: "Share any announcement / useful information")
 Chatroom.create(name: "student life", description: "The everyday life of a student")
 Chatroom.create(name: "city life", description: "Learn more about the city where a university's located at")
 Chatroom.create(name: "help", description: "Need help with anything?")
+
+puts "Creating Messages"
+
+chatrooms = Chatroom.all
+
+messages = {
+  general: ["The University of Newcastle is having an open house next month!", "I'll be there! Who else is coming?", "Me!", "Anyone has ever visited the Nanyang Technological University in Singapore?"],
+  "student life" => ["How is student life like in National University of Singapore?", "You have the freedom to focus on what you want in university. Some go hard on academics, some focus on work experience, and some want to socialize and have fun. But don't expect to be able to maintain a perfect CAP and still be able to party on a very regular basis. A trade-off needs to be made and you are largely responsible for curating your own university experience.", "join a cca, you need it as a breather", "What club/organisation should I join in Universiti Kebangsaan Malaysia?", "They have a lot of clubs there. But,  I heard the tennis and e-sports clubs are pretty popular there"],
+  "city life" => ["How expensive is it to live in Melbourne? I'm interested to study at the university of Melbourne next year.", "There are different types of private rental accommodation in Melbourne, and the cost of these vary depending on where you live and how many people you live with. The monthly rental fee for a 1 bedroom flat is around $340 if you choose one in downtown Melbourne. The licing cost will significantly increase if you eat out everyday. To keep the cost low, I would usually cook durint the weekdays and then eat out once or twice during the weekend", "How's the public transport in Singapore?", "Public transport is Singapore is great and reliable! Majority of the students here take publict transport to go to campus. The busses and MRTs are very clean. You can get to almost anywhere in Singapore by public transport"],
+  help: ["I'm an international student and will be studying at University of Adelaide next fall. There's a problem with my student visa so I was wondering if there's anyone from the university that I can contact to ask about this", "You should try contacting their international student support team", "Yes, try emailing their international student support about your issue. All universities have dedicated international student support team who helps internatinal students with their needs"]
+}
+
+messages.each_key do |chatroom_name|
+  messages[chatroom_name].each do |message|
+    curr_message = Message.new(content: message)
+    curr_message.chatroom = Chatroom.find_by(name: chatroom_name)
+    curr_message.user = users.sample
+    curr_message.save
+  end
+end
