@@ -1,4 +1,6 @@
-<% favorite = current_user.favorites.find{|f| f.university == university} %>
+<% if user_signed_in? %>
+  <% favorite = current_user.favorites.find{|f| f.university == university} %>
+<% end %>
 <div data-controller="favorite"
      data-favorite-favorite-id-value="<%= favorite ? favorite.id : 0 %>"
      data-favorite-page-value="<%= request.path %>">
