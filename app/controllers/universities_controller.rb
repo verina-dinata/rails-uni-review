@@ -14,13 +14,7 @@ class UniversitiesController < ApplicationController
 
   def show
     set_university
-    @markers = [
-      {
-        lat: @university.latitude,
-        lng: @university.longitude
-      }
-    ]
-
+    @markers = [{ lat: @university.latitude, lng: @university.longitude }]
     @reviews = @university.reviews.order(created_at: :desc).page params[:page]
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
@@ -29,6 +23,7 @@ class UniversitiesController < ApplicationController
     if user_signed_in?
       @educations = current_user.educations
     end
+    @internal_ranking = find_ranking
   end
 
   private
@@ -55,5 +50,11 @@ class UniversitiesController < ApplicationController
                                        :image,
                                        :image2,
                                        :image3)
+  end
+
+  def find_ranking
+    @all_universities = University.all
+    ranked_unis = @all_universities.sort { |a, b| b.global_avg <=> a.global_avg }
+    ranked_unis.find_index(@university)
   end
 end
