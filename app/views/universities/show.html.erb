@@ -11,9 +11,10 @@
               <div>
                 <span style="color:grey"><%= @university.city %> | <%= @university.country %></span><br>
                 <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
-                Rating <i data-star="4.1"></i>
-                <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews<br>
-                <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
+                Overall Rating <i data-star=<%= @university.global_avg.round(1).to_s %> ></i>
+                <strong> <%= @university.global_avg %> / 5 </strong> based on <%= @university.reviews.length %> Reviews<br>
+                <i class="fa-solid fa-trophy"></i> Ranked Globally: #<%= @university.ranking %><br>
+                <i class="fa-solid fa-crown"></i> Uni-Versus Ranking: <strong>#<%= @internal_ranking %></strong>
               </div>
               <div>
                 <button class="accordian-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
@@ -93,28 +94,28 @@
             data-controller="display-circle-ratings"
             class="stats-grid col-8">
             <div>Reputation
-              <div class="circle-rating">100%</div>
+              <div class="circle-rating"><%= @university.reputability_avg * 20 %>%</div>
             </div>
             <div>Education Quality
-              <div class="circle-rating">87.5%</div>
+              <div class="circle-rating"><%= @university.education_quality_avg * 20 %>%</div>
             </div>
             <div>Facilities/Accomodation
-              <div class="circle-rating">75%</div>
+              <div class="circle-rating"><%= @university.campus_facilities_accom_avg * 20 %>%</div>
             </div>
             <div>Course Difficulty
-              <div class="circle-rating">62.5%</div>
+              <div class="circle-rating"><%= @university.course_difficulty_avg * 20 %>%</div>
             </div>
             <div>Social elements
-              <div class="circle-rating">50%</div>
+              <div class="circle-rating"><%= @university.social_element_avg * 20 %>%</div>
             </div>
             <div>Value for Money
-              <div class="circle-rating">37.5%</div>
+              <div class="circle-rating"><%= @university.value_for_money_avg * 20 %>%</div>
             </div>
             <div>Safety
-              <div class="circle-rating">25%</div>
+              <div class="circle-rating"><%= @university.safety_avg * 20 %>%</div>
             </div>
             <div>Career Services
-              <div class="circle-rating">0%</div>
+              <div class="circle-rating"><%= @university.career_services_avg * 20 %>%</div>
             </div>
           </div>
         </section>
@@ -196,9 +197,12 @@
             <% end %>
             </span>
             <br>Enrollment Deadline:<br>
-            <span id="application-deadline"><%= @university.application_deadline %></span>
+            <span id="create-invite"><%= @university.application_deadline %></span>
             <button type="button"
             data-controller="calendar"
+            name-value="<%= @university.name.to_json %>"
+            deadline-value="<%= @university.application_deadline.to_json %>"
+            address-value="<%= @university.address.to_json %>"
             data-action="click->calendar#createInvite"
             class="btn btn-secondary">Book a campus tour</button>
           </div>
