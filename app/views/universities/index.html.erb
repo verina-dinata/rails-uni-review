@@ -11,7 +11,7 @@
           <% end %>
 
           <div data-controller="favorite">
-            <%= render 'universities/favorite', university: university %>
+            <%= render 'universities/favorite', university: university, favorite_class: "btn btn-link", favorite_style: "top:0;right:0; position:absolute;", page: "universities" %>
           </div>
 
           <%= university.reviews.count %> Reviews<br>

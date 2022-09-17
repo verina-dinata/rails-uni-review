@@ -4,10 +4,16 @@
     <div class="col-lg-8">
       <% @favorites.each do |f| %>
         <div class="card">
-          <%= link_to university_path(f.university) do %>
-            <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
-            <%= f.university.name %>
-          <% end %>
+          <div class="card-body">
+            <%= link_to university_path(f.university), class: "text-decoration-none" do %>
+              <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
+              <strong class="fav-card-info"><%= f.university.name %></strong>
+            <% end %>
+            <%= render "universities/favorite",
+                university: f.university,
+                favorite_class: "btn btn-link",
+                favorite_style: "top:0; right:0; position:absolute; margin:36px; font-size:x-large;" %>
+          </div>
         </div>
       <% end %>
     </div>
