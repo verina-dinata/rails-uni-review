@@ -3,12 +3,15 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="favorite"
 export default class extends Controller {
   static targets = ["heart", "form"]
+  static values = { favoriteId: Number, page: String }
   connect() {
-
+    console.log("hello")
+    console.log(this.favcardTarget)
   }
 
+
   addToFavorite(event) {
-    // console.log("a")
+
     event.preventDefault()
 
     let csrfToken = document
@@ -32,6 +35,11 @@ export default class extends Controller {
         } else {
           // make the heart white
           this.heartTarget.classList.replace('fas', 'far')
+          console.log(this.favoriteIdValue)
+          console.log(this.pageValue)
+          if(this.pageValue === "/favorites"){
+            document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
+          }
         }
       })
   }
