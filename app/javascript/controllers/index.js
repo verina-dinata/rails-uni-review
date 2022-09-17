@@ -10,12 +10,9 @@ application.register("add-to-favourite-animation", AddToFavouriteAnimationContro
 import AutocompleteController from "./autocomplete_controller"
 application.register("autocomplete", AutocompleteController)
 
-<<<<<<< HEAD
-=======
 import CalendarController from "./calendar_controller"
 application.register("calendar", CalendarController)
 
->>>>>>> master
 import CardsCarouselController from "./cards_carousel_controller"
 application.register("cards-carousel", CardsCarouselController)
 

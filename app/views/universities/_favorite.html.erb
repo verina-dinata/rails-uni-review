@@ -1,12 +1,16 @@
-<div data-controller="favorite">
-<%= simple_form_for(:favorite, url: university_favorites_path(university.id), data: {
-  action: "submit->favorite#addToFavorite",
-  favorite_target: "form"
-  }) do %>
+<% favorite = current_user.favorites.find{|f| f.university == university} %>
+<div data-controller="favorite"
+     data-favorite-favorite-id-value="<%= favorite ? favorite.id : 0 %>"
+     data-favorite-page-value="<%= request.path %>">
 
-    <%= button_tag type: 'submit', class: favorite_class, style: favorite_style do %>
-      <i class="<%= current_user.favorites.find{|f| f.university == university}? "fas" : "far" %> fa-heart" style="z-index: 100" data-favorite-target="heart"></i>
-    <% end %>
+  <%= simple_form_for(:favorite, url: university_favorites_path(university.id), data: {
+    action: "submit->favorite#addToFavorite",
+    favorite_target: "form"
+    }) do %>
 
-<% end %>
+      <%= button_tag type: 'submit', class: favorite_class, style: favorite_style do %>
+        <i class="<%= favorite ? "fas" : "far" %> fa-heart" style="z-index: 100" data-favorite-target="heart"></i>
+      <% end %>
+
+  <% end %>
 </div>

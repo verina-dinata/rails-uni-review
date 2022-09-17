@@ -4,29 +4,16 @@
       <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
         <div class="card uni-index-card position-relative" >
           <%= link_to university_path(university), class: "home-link" do %>
-<<<<<<< HEAD
               <%= image_tag university.logo, class: "logo"%>
               <p><strong><%= university.name  %></strong><br></p>
           <% end %>
 
 
-            <%= render 'universities/favorite', university: university, favorite_class: "btn btn-link", favorite_style: "top:0;right:0; position:absolute;" %>
+            <%= render 'universities/favorite', university: university, favorite_class: "btn btn-link", favorite_style: "top:0;right:0; position:absolute;", page: "universities" %>
 
 
           <%= university.reviews.count %> Reviews<br>
           <%# <%= (university.reputabilty_rating + university.education_quality_rating) %> rating <br> %>
-=======
-
-            <%= image_tag university.logo, class: "logo"%>
-            <p><strong><%= university.name  %></strong><br></p>
-          <% end %>
-
-          <div data-controller="favorite">
-            <%= render 'universities/favorite', university: university %>
-          </div>
-
-          <%= university.reviews.count %> Reviews<br>
->>>>>>> master
           <div class="pt-3">
             <strong><%= university.country %></strong>
           </div>

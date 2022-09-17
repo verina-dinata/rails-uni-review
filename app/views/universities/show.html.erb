@@ -5,45 +5,25 @@
         <div class="col-xs-7 col-sm-7 col-lg-7">
           <div class="uni-header">
             <div>
-<<<<<<< HEAD
-              <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/300px-Harvard_shield_wreath.svg.png" width=100%>
-
-=======
               <%= image_tag(@university.logo, width: "100%") %>
->>>>>>> master
             </div>
             <div>
               <div class="position-relative">
                 <span style="color:grey"><%= @university.city %> | <%= @university.country %></span><br>
-<<<<<<< HEAD
-
-                <span style="font-size:36px"><strong><%= @university.name %></strong></span>
-                <%= render 'universities/favorite', university: @university, favorite_class:"btn btn-link", favorite_style:"position:absolute; font-size:large;"%>
-
-                <br>
-                Rating <i data-star="4.1"></i>
-                <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews | <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
-              <div class="btn-group gap-2">
-=======
                 <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
                 Rating <i data-star="4.1"></i>
                 <strong> 4.1 / 5 </strong> based on <%= @university.reviews.length %> Reviews<br>
                 <i class="fa-solid fa-trophy"></i> Ranked by our users: #<%= @university.ranking %>
               </div>
               <div>
->>>>>>> master
                 <button class="accordian-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
                     Description
                 </button>
                 <button type="button" class="btn btn-secondary">Leave a review</button>
                 <button type="button" class="btn btn-secondary">Official Website</button>
-<<<<<<< HEAD
-              </div>
-=======
                 <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->add-to-favourite-animation#heartAnimation">
                   <span class="fa-solid fa-heart active"></span>
                 </i>
->>>>>>> master
               </div>
             </div>
             <div>

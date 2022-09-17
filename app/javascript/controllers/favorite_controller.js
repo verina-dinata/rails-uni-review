@@ -3,8 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="favorite"
 export default class extends Controller {
   static targets = ["heart", "form"]
+  static values = { favoriteId: Number, page: String }
   connect() {
     console.log("hello")
+    console.log(this.favcardTarget)
   }
 
   addToFavorite(event) {
@@ -29,8 +31,13 @@ export default class extends Controller {
           // this.heartTarget.classList.replace('far fa-heart')
           this.heartTarget.classList.replace('far', 'fas')
         } else {
-          // make the heart white
           this.heartTarget.classList.replace('fas', 'far')
+          console.log(this.favoriteIdValue)
+          console.log(this.pageValue)
+          if(this.pageValue === "/favorites"){
+            document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
+          }
+          // make the heart white
         }
       })
 
