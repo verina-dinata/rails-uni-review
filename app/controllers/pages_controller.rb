@@ -5,6 +5,9 @@ class PagesController < ApplicationController
     @first_review = Review.first
     @third_review = Review.third
     @last_review = Review.last
+    @second_review = Review.second
+    @fourth_review = Review.fourth
+    @fifth_review = Review.fifth
   end
 
   def home_search
@@ -18,4 +21,5 @@ class PagesController < ApplicationController
       format.text { render partial: "universities/list", locals: { universities: @universities }, formats: [:html] }
     end
   end
+
 end

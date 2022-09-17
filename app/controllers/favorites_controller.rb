@@ -28,5 +28,8 @@ class FavoritesController < ApplicationController
     @favorite.destroy
     redirect_to universities_path
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 end

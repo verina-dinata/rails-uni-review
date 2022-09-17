@@ -20,12 +20,15 @@ class UniversitiesController < ApplicationController
         lng: @university.longitude
       }
     ]
+
     @reviews = @university.reviews.order(created_at: :desc).page params[:page]
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
     @resource = User.new
     @review = Review.new
     @educations = []
-    @educations = current_user.educations unless current_user.nil?
+    if user_signed_in?
+      @educations = current_user.educations
+    end
   end
 
   private
@@ -35,6 +38,6 @@ class UniversitiesController < ApplicationController
   end
 
   def university_params
-    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address, :latitude, :longitude)
+    params.require(:university).permit(:name, :ranking, :reviews, :description, :city, :country, :address, :latitude, :longitude, :logo, :image, :image2, :image3)
   end
 end

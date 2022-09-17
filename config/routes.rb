@@ -15,11 +15,21 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "education", to: "educations#index"
 
+  get "universities",     to: "universities#index"
+  get "universities/:id", to: "universities#show"
+
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show] do
-    resources :reviews, only: %i[create]
+    resources :reviews, only: %i[create] do
+      resources :votes, only: %i[create]
+      delete '/votes', to: 'votes#destroy'
+    end
   end
 
   resources :reviews, only: :destroy
+
+  resources :chatrooms, only: %i[show index create] do
+    resources :messages, only: :create
+  end
 end

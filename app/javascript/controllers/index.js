@@ -10,8 +10,17 @@ application.register("add-to-favourite-animation", AddToFavouriteAnimationContro
 import AutocompleteController from "./autocomplete_controller"
 application.register("autocomplete", AutocompleteController)
 
+<<<<<<< HEAD
+=======
+import CalendarController from "./calendar_controller"
+application.register("calendar", CalendarController)
+
+>>>>>>> master
 import CardsCarouselController from "./cards_carousel_controller"
 application.register("cards-carousel", CardsCarouselController)
+
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
 
 import DisplayCircleRatingsController from "./display_circle_ratings_controller"
 application.register("display-circle-ratings", DisplayCircleRatingsController)
@@ -33,3 +42,9 @@ application.register("navbar", NavbarController)
 
 import StarRatingController from "./star_rating_controller"
 application.register("star-rating", StarRatingController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
+
+import VotesController from "./votes_controller"
+application.register("votes", VotesController)

@@ -35,7 +35,6 @@ class ReviewsController < ApplicationController
 
   def set_university
     @university = University.find(params[:university_id])
-
   end
 
   def review_params
