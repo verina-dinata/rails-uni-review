@@ -25,8 +25,8 @@ application.register("display-circle-ratings", DisplayCircleRatingsController)
 import FavoriteController from "./favorite_controller"
 application.register("favorite", FavoriteController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+// import HelloController from "./hello_controller"
+// application.register("hello", HelloController)
 
 import InsertInListController from "./insert_in_list_controller"
 application.register("insert-in-list", InsertInListController)

@@ -216,13 +216,17 @@
             <div class="d-flex justify-content-between">
               <h5><strong>Reviews</strong></h5>
               <div>
-                <% @educations.each do |education|  %>
-                  <% if education.university == @university %>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="review-link"><strong>Leave a review</strong></a>
-                    <%= render "review_form" %>
-                    <% break %>
-                  <% end %>
+                <% if @can_review %>
+                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="review-link"><strong>Leave a review</strong></a>
+                  <%= render "review_form" %>
+                <% else %>
+                  <span id="btn-tooltip" class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Add your education record in your profile to leave a review!">
+                    <a href="" class="review-link disabled-link"><strong>Leave a review</strong></a>
+                  </span>
                 <% end %>
+                <%# <span id="btn-tooltip" class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Hello tooltip">
+                  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+                </span> %>
               </div>
             </div>
 
