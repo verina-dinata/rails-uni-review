@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="favorite"
 export default class extends Controller {
   static targets = ["heart", "form"]
+  static values = { favoriteId: Number, page: String }
   connect() {
 
   }
@@ -32,6 +33,9 @@ export default class extends Controller {
         } else {
           // make the heart white
           this.heartTarget.classList.replace('fas', 'far')
+          if(this.pageValue === "/favorites"){
+            document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
+          }
         }
       })
   }
