@@ -1,6 +1,22 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+  // position: fixed;
+  // bottom: 16px;
+  // right: 16px;
   z-index: 1000;
+  top: 50px !important;
+  width: auto;
+}
+
+.alert-info {
+  text-align: center;
+  color: #055160 !important;
+  background-color: #83d7e4 !important;
+  border: none !important;
+}
+
+.alert-warning {
+  text-align: center;
+  color: #055160 !important;
+  background-color: #97e8f5 !important;
+  border: none !important;
 }
