@@ -775,15 +775,16 @@ reviews = {
     For some reason, alumnis of NUS do not perform well in large social environment where people to people social skills are required.',
     'NUS provides you with great infrastructures and facilities. There are college bus which you could take to travel between faculties. Went to U-Town to eat at the foodcourt. The variety of the foods there are quite broad. You could find Korean, Indian, Japanese, Chinese and other foods. The price is cheap for students and non-students. There is also a small swimming pool in the U-Town
 
-    In the USP (I’m not really sure whether it’s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.'],
-    'reputabilty rating' => [5, 5, 5, 4],
-    'education quality rating' => [5, 4, 4, 5],
-    'campus facilities accom rating' => [5, 5, 4, 5],
-    'course difficulty rating' => [5, 4, 4, 4],
-    'social element rating' => [5, 3, 4, 4],
-    'value for money rating' => [5, 3, 4, 4],
-    'safety rating' => [5, 5, 5, 4],
-    'career services rating' => [5, 4, 3, 4]
+    In the USP (I’m not really sure whether it’s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.',
+    'Perhaps the best part of NUS is the vast amount of opportunities it affords it’s students. It’s almost as if every week there’s a new career fair, industrial visit, hackathon, or any other competition or event for it’s students to join. NUS also offers multiple exchange programs ranging from 3 to 12 months (see the NOC programme) to grant it’s students a more international outlook upon their graduation.'],
+    'reputabilty rating' => [5, 5, 5, 4, 5],
+    'education quality rating' => [5, 4, 4, 5, 4],
+    'campus facilities accom rating' => [5, 5, 4, 5, 5],
+    'course difficulty rating' => [5, 4, 4, 4, 5],
+    'social element rating' => [5, 3, 4, 4, 5],
+    'value for money rating' => [5, 3, 4, 4, 5],
+    'safety rating' => [5, 5, 5, 4, 4],
+    'career services rating' => [5, 4, 3, 4, 3]
   },
   'Nanyang Technological University' => {
     comment: ['Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
