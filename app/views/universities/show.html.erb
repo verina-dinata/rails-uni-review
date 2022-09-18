@@ -251,5 +251,54 @@
         </section>
       </div>
     </div>
+
+    <br>
+    <hr>
+    <h5 class="ms-4 mt-5 text-grey"><strong> YOU MAY ALSO VISIT </strong></h5>
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-bs-ride="carousel" style="height: 500px;">
+      <div class="d-flex justify-content-center mb-4">
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselMultiItemExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselMultiItemExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="carousel-inner py-4">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <% @similar_universities.each_with_index do |university, i| %>
+                <% break if i == 3 %>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <%= render 'university',  university: university%>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <% ((@similar_universities.count - 3) / 3.to_f).ceil.times do %>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <% @similar_universities = @similar_universities.drop(3) %>
+                <% @similar_universities.each_with_index do |university, i| %>
+                  <% break if i == 3 %>
+                  <div class="col-lg-4">
+                    <%= render 'university',  university: university%>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
