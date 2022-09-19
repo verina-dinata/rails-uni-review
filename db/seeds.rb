@@ -913,7 +913,7 @@ reviews = {
 
     But if you just want a job, and doesn’t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
     'Currently I’m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.',
-    'Many (not all) lecturers encountered are only part-time or associate lecturers and are not committed to help the students. Facilities are also not helpful and sufficient to meet students needs.'],
+    'Unhelpful and inflexible students support team. Instructors do not help much as well. Not highly recommended!'],
     'reputabilty rating' => [4, 3, 3, 3, 3],
     'education quality rating' => [3, 3, 3, 2, 2],
     'campus facilities accom rating' => [4, 2, 4, 4, 3],
