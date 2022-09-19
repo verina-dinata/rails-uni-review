@@ -206,13 +206,11 @@
           </div>
         </section>
 
-        <hr>
-
-        <section id="reviews-section" class="row">
+        <section id="reviews-section" class="row mt-5">
           <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
 
             <div class="d-flex justify-content-between">
-              <h5><strong>Reviews</strong></h5>
+              <h5 class="mb-5"><strong>Reviews</strong></h5>
               <div>
                 <% if @can_review %>
                   <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="review-link"><strong>Leave a review</strong></a>
@@ -228,9 +226,6 @@
               </div>
             </div>
 
-            <% if user_signed_in? %>
-              <%= paginate @reviews, remote: true %>
-            <% end %>
 
             <div data-insert-in-list-target="items">
               <% @reviews.each do |review| %>
@@ -239,7 +234,11 @@
                 <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
               <% end %>
 
-              <% if current_user == nil %>
+              <% if user_signed_in? %>
+                <div class="d-flex justify-content-center mt-4">
+                  <%= paginate @reviews, remote: true %>
+                </div>
+              <% else %>
                 <button type="button" class="save-btn width-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   View more reviews
                 </button>

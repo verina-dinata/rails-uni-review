@@ -37,14 +37,25 @@
     <h6 class="mb-3 mt-5"><strong>Email</strong></h6>
     <%= @user.email %>
 
-    <div class="d-flex justify-content-between mt-5 my-4">
-      <h5><strong>Education</strong></h5>
-      <%= link_to educations_path, class: "icon" do %>
-        <div>
-            <i class="fa-solid fa-pen"></i>
-        </div>
+    <div class="mt-5 my-4">
+      <div class="d-flex justify-content-between">
+        <h5><strong>Education</strong></h5>
+        <%= link_to educations_path, class: "icon" do %>
+          <div>
+              <i class="fa-solid fa-pen"></i>
+          </div>
+        <% end %>
+      </div>
+      <h6 class="posted-text" style="font-size: 14px;">Add your education record to leave a review for your university</h6>
+    </div>
+    <div>
+
+      <% if @educations.blank? %>
+        <h6>Your education record is currently empty.</h6>
+      <% else %>
+        <%= render "education", educations: @educations %>
       <% end %>
     </div>
-    <%= render "education", educations: @educations %>
+
   </div>
 </div>
