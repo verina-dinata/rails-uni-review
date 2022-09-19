@@ -11,7 +11,7 @@
     }) do %>
 
     <%= button_tag type: 'submit', class: favorite_class, style: favorite_style do %>
-      <i class="<%= favorite ? "fas" : "far" %> fa-heart" style="z-index: 100" data-favorite-target="heart"></i>
+      <i class="<%= favorite ? "fas" : "far" %> fa-heart heart-red" style="z-index: 100" data-favorite-target="heart"></i>
     <% end %>
 
   <% end %>

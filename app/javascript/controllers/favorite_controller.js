@@ -27,15 +27,16 @@ export default class extends Controller {
       .then(response => response.json())
       .then(data => {
         if (data.favorite) {
-          // make the heart black
-          // this.heartTarget.classList.replace('far fa-heart')
           this.heartTarget.classList.replace('far', 'fas')
         } else {
-          // make the heart white
           this.heartTarget.classList.replace('fas', 'far')
-          if(this.pageValue === "/favorites"){
-            document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
-          }
+          setTimeout(() => {
+
+            if(this.pageValue === "/favorites"){
+              document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
+            }
+          }, 200)
+
         }
       })
   }
