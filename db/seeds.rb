@@ -795,15 +795,17 @@ reviews = {
     'Really nice campus. Great facilities. Nice people.
 
     But if you’re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It’s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
-    'It’s a great university with lots of things going around. But be competitive minded otherwise it’s going to be tough like hell.'],
-    'reputabilty rating' => [5, 5, 4, 5],
-    'education quality rating' => [5, 4, 3, 5],
-    'campus facilities accom rating' => [4, 3, 4, 5],
-    'course difficulty rating' => [4, 4, 4, 5],
-    'social element rating' => [4, 4, 5, 3],
-    'value for money rating' => [4, 3, 2, 4],
-    'safety rating' => [5, 5, 4, 5],
-    'career services rating' => [4, 4, 3, 3]
+    'It’s a great university with lots of things going around. But be competitive minded otherwise it’s going to be tough like hell.',
+    'When sending an enquiry/request to the school, emails and calls will be transferred from one person to another without getting them addressed. The business course is overhyped and after three years there, I felt that I do not get the kind of knowledge that is relevant to the specialized industry. The only good thing about this school is probably their perceived good brand name, in Singapore.',
+    'NTU is dynamic environment for you to learn and engage in many activities after class. It gives you opportunities to make new friends, enhance your network and have an insight about yourself. Moreover, what I like at NTU is that it provides you variety of majors and courses, proficient professors and instructors as well as good infrastructure for studying and accommodation.'],
+    'reputabilty rating' => [5, 5, 4, 5, 3, 4],
+    'education quality rating' => [5, 4, 3, 5, 3, 4],
+    'campus facilities accom rating' => [4, 3, 4, 5, 3, 5],
+    'course difficulty rating' => [4, 4, 4, 5, 3, 4],
+    'social element rating' => [4, 4, 5, 3, 3, 4],
+    'value for money rating' => [4, 3, 2, 4, 2, 4],
+    'safety rating' => [5, 5, 4, 5, 3, 5],
+    'career services rating' => [4, 4, 3, 3, 3, 4]
   },
   'Singapore Management University' => {
     comment: ['The Good
@@ -840,15 +842,17 @@ reviews = {
     I wasn’t one of those grade-obsessed students but I learnt a lot trying to juggle a business, school projects, running a CCA, family, love, friends and homework during my time in school (did not sleep very much)
     Seriously people should get over the whole idea of being like at Wharton and fighting for that JPM, DB, MS blah internship. Find your voice!
     Then again, school and life, in general, is what you make out of it. If you wanna be another cog in the machine and run the rat race with your frenemies, go ahead',
-    'SMU’s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.'],
-    'reputabilty rating' => [4, 4, 4],
-    'education quality rating' => [4, 4, 5],
-    'campus facilities accom rating' => [4, 4, 3],
-    'course difficulty rating' => [5, 4, 3],
-    'social element rating' => [3, 4, 4],
-    'value for money rating' => [4, 4, 4],
-    'safety rating' => [5, 5, 4],
-    'career services rating' => [4, 3, 5]
+    'SMU’s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.',
+    'The learning experience is great with lots of interaction in law classes. There is also a lot of emphasis on understanding and application of concepts and rules. Do not be afraid to venture beyond your comfort zone and get to know the locals.',
+    'Its a nice overall experience. One most important advice I could give to future students is to be prepared for classes because the professors will be going through the assigned readings in class.'],
+    'reputabilty rating' => [4, 4, 4, 5, 4, 5],
+    'education quality rating' => [4, 4, 5, 4, 4, 4],
+    'campus facilities accom rating' => [4, 4, 3, 4, 4, 3],
+    'course difficulty rating' => [5, 4, 3, 4, 4, 3],
+    'social element rating' => [3, 4, 4, 4, 4, 4],
+    'value for money rating' => [4, 4, 4, 4, 4, 4],
+    'safety rating' => [5, 5, 4, 5, 4, 4],
+    'career services rating' => [4, 3, 5, 4, 3, 4]
   },
   'Singapore University of Social Sciences' => {
     comment: ['Most of the lecturers are good. The school environment is moderate, as there are not enough canteens to accommodate the school population (shared with SIM Global). The school’s communication with the students can be improved because regarding some issues like paperwork for eportfolio and work attachment, there is some confusion among students.',
@@ -908,15 +912,16 @@ reviews = {
     My conclusion, if you must go to a local uni for 4 years, SUSS is a good choice. Its less torturous than traditional unis, but you can definitely still learn what is needed. You will still have periods of stress. Degree is recognized, you will definitely have all available career options if you can get the grades. Think of SUSS as local uni "lite".
 
     But if you just want a job, and doesn’t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
-    'Currently I’m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.'],
-    'reputabilty rating' => [4, 3, 3, 3],
-    'education quality rating' => [3, 3, 3, 2],
-    'campus facilities accom rating' => [4, 2, 4, 4],
-    'course difficulty rating' => [3, 3, 2, 3],
-    'social element rating' => [4, 4, 5, 3],
-    'value for money rating' => [4, 2, 3, 2],
-    'safety rating' => [5, 4, 4, 4],
-    'career services rating' => [3, 2, 4, 3]
+    'Currently I’m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.',
+    'Many (not all) lecturers encountered are only part-time or associate lecturers and are not committed to help the students. Facilities are also not helpful and sufficient to meet students needs.'],
+    'reputabilty rating' => [4, 3, 3, 3, 3],
+    'education quality rating' => [3, 3, 3, 2, 2],
+    'campus facilities accom rating' => [4, 2, 4, 4, 3],
+    'course difficulty rating' => [3, 3, 2, 3, 3],
+    'social element rating' => [4, 4, 5, 3, 3],
+    'value for money rating' => [4, 2, 3, 2, 3],
+    'safety rating' => [5, 4, 4, 4, 4],
+    'career services rating' => [3, 2, 4, 3, 3]
   },
   'Singapore University of Technology and Design' => {
     comment: ['Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
@@ -939,15 +944,16 @@ reviews = {
     Fast-paced. A double-sided coin. You get 1 year of common studies and ~2.5 years of major. Compare this to 4 years in other universities - that’s alot of content in a tight time. Depending on what you take, you might need to play catch up vs other peers. But you have stronger design & project portfolios.
     Namesake. In SUTD, it is really your own ball game - what you achieve is fully dependent on what you do. You can have great club activities, many research projects and competitions, or have nothing. Here, you better prepare to do much more and work harder - because companies are going to look at your achievement and not your university.
     Hall Life? For now, the new Hall system just began - so this can definitely change. But currently, if you are looking for hall experience like NUS or NTU, you won’t find them here. While there are floor activities and houses, the bond and dedication to your floor is much less than other universities. You would focus on club activities much more instead. Once again, this is for now - things are looking to change.',
-    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduate degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best, we need to solve that.'],
-    'reputabilty rating' => [5, 4, 4],
-    'education quality rating' => [5, 5, 4],
-    'campus facilities accom rating' => [4, 4, 3],
-    'course difficulty rating' => [5, 3, 3],
-    'social element rating' => [3, 4, 4],
-    'value for money rating' => [4, 4, 4],
-    'safety rating' => [5, 4, 5],
-    'career services rating' => [4, 4, 4]
+    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduate degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best, we need to solve that.',
+    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing, and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduste degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best.'],
+    'reputabilty rating' => [5, 4, 4, 5],
+    'education quality rating' => [5, 5, 4, 5],
+    'campus facilities accom rating' => [4, 4, 3, 4],
+    'course difficulty rating' => [5, 3, 3, 4],
+    'social element rating' => [3, 4, 4, 4],
+    'value for money rating' => [4, 4, 4, 4],
+    'safety rating' => [5, 4, 5, 5],
+    'career services rating' => [4, 4, 4, 4]
   }
 }
 
