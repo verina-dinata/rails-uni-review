@@ -30,9 +30,13 @@ export default class extends Controller {
           this.heartTarget.classList.replace('far', 'fas')
         } else {
           this.heartTarget.classList.replace('fas', 'far')
-          if(this.pageValue === "/favorites"){
-            document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
-          }
+          setTimeout(() => {
+
+            if(this.pageValue === "/favorites"){
+              document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
+            }
+          }, 200)
+
         }
       })
   }
