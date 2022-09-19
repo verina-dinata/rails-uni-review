@@ -8,12 +8,12 @@
       <p><span data-controller="typed-js"></span></p>
       <div class="mt-4 home-form d-flex" data-controller="autocomplete">
         <div style="width:100%; position:relative;">
-          <input data-autocomplete-target="input" search-url=<%= home_search_path %> data-action="keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear" class="form-control" placeholder="Enter University name or Country" type="text" name="query" id="query">
+          <input data-autocomplete-target="input" search-url=<%= home_search_path %> data-action="keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear" class="form-control" placeholder="Enter University name or Country" type="text" name="query" id="query" style="height:50px;">
           <div data-autocomplete-target="list" style="z-index: 1; position:absolute; top:38; left:0; width:100%;">
 
           </div>
         </div>
-        <button data-action="click->autocomplete#filterUni" class="btn search-btn text-white">Search</button>
+        <button data-action="click->autocomplete#filterUni" class="animated-border-button">Search</button>
       </div>
     </div>
   </header>
