@@ -1,5 +1,16 @@
 
 <div class="container mt-5">
+  <div class="row pt-4 pb-4">
+    <div class="mt-4 home-form d-flex" data-controller="autocomplete" style="width: 50%; margin: 0 auto;">
+      <div style="width:100%; position:relative;">
+        <input data-autocomplete-target="input" search-url=<%= home_search_path %> data-action="keyup->autocomplete#update focus->autocomplete#update blur->autocomplete#clear" class="form-control" placeholder="Enter University name or Country" type="text" name="query" id="query" style="height:50px;">
+        <div data-autocomplete-target="list" style="z-index: 1; position:absolute; top:38; left:0; width:100%; border-radius:5px;">
+
+        </div>
+      </div>
+      <button data-action="click->autocomplete#filterUni" class="search-btn">Search</button>
+    </div>
+  </div>
   <div class="row">
     <% @universities.each do |university| %>
       <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-4 px-3">
