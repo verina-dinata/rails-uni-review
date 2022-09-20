@@ -21,12 +21,13 @@
 
               <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
               <strong class="fav-card-info"><%= f.university.name %></strong>
-              <%= render "universities/favorite",
+
+            </div>
+          <% end %>
+          <%= render "universities/favorite",
                   university: f.university,
                   favorite_class: "btn btn-link",
                   favorite_style: "top:0; right:0; position:absolute; margin:36px; font-size:x-large;" %>
-            </div>
-          <% end %>
         </div>
       <% end %>
     </div>

@@ -35,7 +35,7 @@ export default class extends Controller {
             if(this.pageValue === "/favorites"){
               document.querySelector(`#favorite-${this.favoriteIdValue}`).remove();
             }
-          }, 200)
+          }, 250)
 
         }
       })
