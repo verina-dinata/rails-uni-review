@@ -536,8 +536,8 @@ reviews = {
     There are many sport clubs.
     It is amongst the top universities not only in social sciences and philosophy but also is physics and data science globally.',
     'Degree mill, literally go to any other university',
-    'Worst studying experience & service'
-    'It is the best university to study International Affairs. Professors are knowledgeable about their fields; Staffs are helpful'
+    'Worst studying experience & service',
+    'It is the best university to study International Affairs. Professors are knowledgeable about their fields; Staffs are helpful',
     'I finished my master degree in ANU this year. I felt like ANU is not responsible for coursework students since it is famous for researching. My friends and I would like to choose courses by ourselves but the receptionist in the CBE said we have to follow university plans to choose courses and we nearly burn out in the second and the third semester because of a huge amount of assignments. A lot of my friends got depressed because of the stressful study. The only good thing is I made friends with a lot of outstanding students.'],
     'reputabilty rating' => [5, 5, 2, 1, 5, 4],
     'education quality rating' => [4, 5, 2, 1, 5, 3],
