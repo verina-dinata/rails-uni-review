@@ -455,31 +455,22 @@ puts "Manually patching Coordinates"
 @university.longitude = 103.77615440609962
 @university.save
 
-puts "Creating Users"
-
-# avatars = ["avatars/avatar1.jpg"]
+puts "Creating Users (will take ~5 minutes)"
 
 50.times do |i|
-  User.create(
+  random_num = rand(1..21)
+  avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
+  curr_user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: "user#{i}@gmail.com",
     password: "password"
-
   )
-# User.first.photo.attach(io: File.open("app/assets/images/avatars"), filename: "avatar1.jpg", content_type: "ima
-# ge.jpg")
+  curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
+  curr_user.save
 end
 
 users = User.all
-
-# puts "Creating Favorites"
-# users.each do |user|
-#   3.times do
-#     university = University.all.sample
-#     Favorite.create(:user, :university)
-#   end
-# end
 
 puts "Creating Departments"
 
@@ -496,10 +487,19 @@ users.size.times do |i|
   2.times do |j|
     start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
     end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
-    academic_degree = ['Diploma', 'Bachelor’s Degree'][j]
+    academic_degree = ['Diploma', "Bachelor's Degree"][j]
     course = Faker::Educator.subject
     curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
     curr_education.user = users[i]
+    # if j.zero?
+    #   curr_education.university = University.all.sample
+    #   puts "blank"
+    # else
+    #   debugger
+    #   first_uni = curr_education.user.educations[0].university.name
+    #   curr_education.university = University.where.not(name: first_uni).sample
+    #   puts "second"
+    # end
     curr_education.university = University.all.sample
     curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
     curr_education.department = Department.all.sample
