@@ -536,29 +536,32 @@ reviews = {
     There are many sport clubs.
     It is amongst the top universities not only in social sciences and philosophy but also is physics and data science globally.',
     'Degree mill, literally go to any other university',
-    'Worst studying experience & service'],
-    'reputabilty rating' => [5, 5, 2, 1],
-    'education quality rating' => [4, 5, 2, 1],
-    'campus facilities accom rating' => [5, 5, 3, 1],
-    'course difficulty rating' => [4, 3, 4, 2],
-    'social element rating' => [5, 4, 3, 1],
-    'value for money rating' => [4, 5, 1, 1],
-    'safety rating' => [5, 4, 4, 1],
-    'career services rating' => [5, 4, 2, 2]
+    'Worst studying experience & service'
+    'It is the best university to study International Affairs. Professors are knowledgeable about their fields; Staffs are helpful'
+    'I finished my master degree in ANU this year. I felt like ANU is not responsible for coursework students since it is famous for researching. My friends and I would like to choose courses by ourselves but the receptionist in the CBE said we have to follow university plans to choose courses and we nearly burn out in the second and the third semester because of a huge amount of assignments. A lot of my friends got depressed because of the stressful study. The only good thing is I made friends with a lot of outstanding students.'],
+    'reputabilty rating' => [5, 5, 2, 1, 5, 4],
+    'education quality rating' => [4, 5, 2, 1, 5, 3],
+    'campus facilities accom rating' => [5, 5, 3, 1, 5, 3],
+    'course difficulty rating' => [4, 3, 4, 2, 4, 5],
+    'social element rating' => [5, 4, 3, 1, 4, 5],
+    'value for money rating' => [4, 5, 1, 1, 4, 3],
+    'safety rating' => [5, 4, 4, 1, 4, 3],
+    'career services rating' => [5, 4, 2, 2, 3, 1]
   },
   'The University of Queensland' => {
     comment: ['It is a Great university in Australia and is highly ranked on software engineering course. Also the culture of Australia is something that a person would like to explore. Job opportunities in Australia are really good and there is a huge demand of software and data science engineers in Australia',
     'Terrible University, didn’t have an origin kebabs on site. Would not spend another 40 thousand dollars at this venue again. Instead I prefer the much superior facilities at The Queensland University of Technology which does have an origin kebabs.',
     'Fantastic facilities for students, it’s such a treat to have well-maintained grounds and good equipment. The library is always clean, tidy and you can easily find quiet places to study.',
-    'This is a university in Queensland. If you are looking to go to university in Queensland this place has your back. Nice trees and I hear some resident turkeys can tutor in horticulture.'],
-    'reputabilty rating' => [5, 2, 4, 5],
-    'education quality rating' => [5, 3, 4, 5],
-    'campus facilities accom rating' => [5, 2, 5, 4],
-    'course difficulty rating' => [3, 4, 3, 4],
-    'social element rating' => [5, 2, 4, 4],
-    'value for money rating' => [5, 1, 5, 4],
-    'safety rating' => [5, 3, 4, 5],
-    'career services rating' => [5, 2, 4, 4]
+    'This is a university in Queensland. If you are looking to go to university in Queensland this place has your back. Nice trees and I hear some resident turkeys can tutor in horticulture.'
+    'lovely university and wonderful experience'],
+    'reputabilty rating' => [5, 2, 4, 5, 4],
+    'education quality rating' => [5, 3, 4, 5, 4],
+    'campus facilities accom rating' => [5, 2, 5, 4, 4],
+    'course difficulty rating' => [3, 4, 3, 4, 4],
+    'social element rating' => [5, 2, 4, 4, 3],
+    'value for money rating' => [5, 1, 5, 4, 4],
+    'safety rating' => [5, 3, 4, 5, 4],
+    'career services rating' => [5, 2, 4, 4, 3]
   },
   'University of Sydney' => {
     comment: ['One of the most prestigious universities in Australia with great history yet artistic and innovative at heart! Love thr broadwalk and this Quadrang view never gets old',
@@ -582,15 +585,16 @@ reviews = {
     comment: ['Not enough subject choices- too limited! Would love to study here but only has three subjects which is a real shame. Hopefully they improve soon.',
     'I came to this university after completing my degree in Sydney and moved from Sydney to come here. The problem with this university is that there is a huge problem with bullying across the campus which has also been noted in the media as well. I recall coming across Associate Professor Heather Sharp in the education faculty screaming during a lecture and going on about how she’s against multiculturalism. Considering most of the student body are international students, it was a ridiculous statement.',
     'This university does nothing to help me as an autistic and dyslexic person to actually learn or apply the content. The only "help" they offer is an extension on written assignments',
-    'Great campus, but the problem is that there is no help for us international students. It would be good if there were more support and programs!'],
-    'reputabilty rating' => [3, 2, 3, 4],
-    'education quality rating' => [2, 2, 1, 4],
-    'campus facilities accom rating' => [4, 3, 4, 4],
-    'course difficulty rating' => [3, 3, 3, 4],
-    'social element rating' => [4, 3, 3, 3],
-    'value for money rating' => [2, 2, 1, 3],
-    'safety rating' => [5, 3, 4, 3],
-    'career services rating' => [3, 3, 2, 2]
+    'Great campus, but the problem is that there is no help for us international students. It would be good if there were more support and programs!'
+    'Love my university experience! enjoyed every bit of my time here'],
+    'reputabilty rating' => [3, 2, 3, 4, 4],
+    'education quality rating' => [2, 2, 1, 4, 4],
+    'campus facilities accom rating' => [4, 3, 4, 4, 4],
+    'course difficulty rating' => [3, 3, 3, 4, 4],
+    'social element rating' => [4, 3, 3, 3, 4],
+    'value for money rating' => [2, 2, 1, 3, 5],
+    'safety rating' => [5, 3, 4, 3, 3],
+    'career services rating' => [3, 3, 2, 2, 3]
   },
   'The University of Western Australia' => {
     comment: ['The University I studied in, really a beautiful place, its modern yet quirkey with the rustic look. Very beautiful at night. Have loads of animals, can be sort of a tourist stop as the building itself is majestic. One of the better Universities in Perth, have a good education system, and everyone is friendly.',
@@ -614,15 +618,17 @@ reviews = {
     comment: ['Few electives available in one semester, ban you from the class that they think you have the ability already and force you to choose other subjects. Make decisions for you but not give enough help. Always feel helpless and anxious. Two stars for the teaching quality and ZERO for student service.',
     'The lecturers are wonderful and the only asset the uni has. They are supportive, patient and encouraging.',
     'Currently studying master of mechanical engineering here. Nice campus with warm staff. Some places are unable to access if you are not a student of the faculty after 6 o’clock on weekdays or whole weekends. The teaching styles of professors are all different but normally satisfied with them. If you are looking for a better future, be better prepared.',
-    'We Adelaidians are so privileged to have such highly advanced facilities for education. Thank you to all staff for your fantastic efforts.'],
-    'reputabilty rating' => [3, 5, 4, 5],
-    'education quality rating' => [2, 5, 5, 5],
-    'campus facilities accom rating' => [4, 4, 3, 4],
-    'course difficulty rating' => [5, 3, 4, 3],
-    'social element rating' => [3, 4, 2, 4],
-    'value for money rating' => [2, 4, 4, 5],
-    'safety rating' => [5, 4, 4, 4],
-    'career services rating' => [1, 5, 4, 5]
+    'We Adelaidians are so privileged to have such highly advanced facilities for education. Thank you to all staff for your fantastic efforts.'
+    'Appreciate the teaching staff for their fantastic efforts.'
+    'The university has let down it is staff and students, and pushes a view of cynicism over optimism. In particular, I cannot stand with a board of directors that disregard the wellbeing of its students, casual tutors, admin staff and full academic staff. It is time for a change'],
+    'reputabilty rating' => [3, 5, 4, 5, 5, 3],
+    'education quality rating' => [2, 5, 5, 5, 5, 2],
+    'campus facilities accom rating' => [4, 4, 3, 4, 5, 3],
+    'course difficulty rating' => [5, 3, 4, 3, 5, 2],
+    'social element rating' => [3, 4, 2, 4, 5, 2],
+    'value for money rating' => [2, 4, 4, 5, 5, 3],
+    'safety rating' => [5, 4, 4, 4, 5, 3],
+    'career services rating' => [1, 5, 4, 5, 4, 3]
   },
   'Universiti Malaya' => {
     comment: ['Top university in Malaysia, it’s good to study here. The cafes and foods are very nice especially the Faculty of Science roti canai. Have quite some good places to relieve stress and near to most malls around KL.',
