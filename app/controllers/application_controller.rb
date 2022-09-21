@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
     # :user is the scope we are authenticating
     store_location_for(:user, request.fullpath)
   end
+
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
 end
