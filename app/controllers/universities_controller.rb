@@ -2,7 +2,6 @@ class UniversitiesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @average_rating = average_rating
     if params[:query].present?
       sql_query = "name ILIKE :query OR country ILIKE :query OR city ILIKE :query"
       @universities = University.where(sql_query, query: "%#{params[:query]}%")
