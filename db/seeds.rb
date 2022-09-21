@@ -503,7 +503,7 @@ users.size.times do |i|
     sg_uni = University.where(country: "Singapore")
     au_uni = University.where(country: "Australia")
     my_uni = University.where(country: "Malaysia")
-    random_uni = [sg_uni, sg_uni, sg_uni, au_uni, au_uni, au_uni, my_uni].flatten
+    random_uni = [sg_uni, sg_uni, sg_uni, au_uni, au_uni, my_uni].flatten
     curr_education.university = random_uni.sample
     curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
     curr_education.department = Department.all.sample

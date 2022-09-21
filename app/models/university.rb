@@ -9,10 +9,12 @@ class University < ApplicationRecord
 
   def retrieve_ratings(attr)
     total = 0
-    self.reviews.each do |review|
+    reviews.each do |review|
       total += review.send(attr)
     end
-    (total / self.reviews.count).to_f.round(1)
+    return 0 if reviews.count.zero?
+
+    (total / reviews.count).to_f.round(1)
   end
 
   def reputability_avg
