@@ -603,9 +603,9 @@ reviews = {
   'The University of Western Australia' => {
     comment: ['The University I studied in, really a beautiful place, its modern yet quirkey with the rustic look. Very beautiful at night. Have loads of animals, can be sort of a tourist stop as the building itself is majestic. One of the better Universities in Perth, have a good education system, and everyone is friendly.',
     'These guys are so bad.
-    Emails don’t get sorted, they just kick you off without answering your questions.
+    Emails do not get sorted, they just kick you off without answering your questions.
     Their admission and covid team are USELESS,  no one responds properly. Even visiting the admissions office in person doesn’t help.
-    They say "send us an email" which they can’t answer within their own time frame.
+    They say "send us an email" which they cannot answer within their own time frame.
     Ridiculous.',
     'The experience is great, meet new people, make new friends as well as learning the latest information with associate scholar. Now more clubs than ever time join and have fun.',
     'Lovely environment not just focused on the facilities but also on the fauna and flora. The campus is simply amazing with a wide range of buildings for various subjects. Faultless.'],
