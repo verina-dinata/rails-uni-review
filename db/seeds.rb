@@ -575,15 +575,17 @@ reviews = {
     3) VERY VERY BUREAUCRATIC - why do you create so many extra steps that take so long and still not working well???! Because you have too much employees and insufficient work for them to do? Many times the website will just guides you from one page to another, it provides no answer to your questions, which forces you to call.
     TBH, I REGRET MY DECISION TO ACCEPT THEIR OFFER IN MY VERY FIRST SEMESTER, BUT FORTUNATELY, I’M GRADUATING SO I NO LONGER NEED TO SUFFER. LOL',
     'Trust me this is the best place in the world to study. Australia is the hub of study, environment is the best. but but.. this uni is quite expensive and requires a lot of effort in order to maintain your studies. if you are good at studies, which I was not. this is the place for you, make sure u check the fees before :)',
-    'One star for their prestige and a few good people working here. But a good majority of them are unsupportive, and egotistical. I learnt nothing of relevance to actual work.'],
-    'reputabilty rating' => [4, 1, 5, 1],
-    'education quality rating' => [5, 1, 4, 1],
-    'campus facilities accom rating' => [5, 1, 4, 2],
-    'course difficulty rating' => [2, 1, 3, 2],
-    'social element rating' => [4, 1, 4, 3],
-    'value for money rating' => [5, 1, 3, 1],
-    'safety rating' => [5, 1, 4, 2],
-    'career services rating' => [4, 1, 3, 1]
+    'One star for their prestige and a few good people working here. But a good majority of them are unsupportive, and egotistical. I learnt nothing of relevance to actual work.',
+    "Not very flexible subject choices in third year (was difficult to do any subjects from infectious diseases, medicine, immunology, couldn't major in Microbiology due to compulsory subjects). Best theory and practical experience was during honours year. Prior to this, hands on experience is broad and quite shallow. Academics involved with subjects where less students enrolled (less than 50) were generally better tailored, much more involved and greater learning experience compared to subjects with large student intakes.",
+  "The course has provided me comprehensive knowledge on both accounting and commerce, besides, it is an efficient way to obtain two master degrees in a reasonable period of time. I was doing professional accounting and finance when I studied in the University of Sydney, enables me a better chance of getting various jobs in different systems. Overall, it was great experience studying in such a beautiful campus and I had awesome times spending there."],
+    'reputabilty rating' => [4, 1, 5, 1, 4, 4],
+    'education quality rating' => [5, 1, 4, 1, 4, 5],
+    'campus facilities accom rating' => [5, 1, 4, 2, 4, 5],
+    'course difficulty rating' => [2, 1, 3, 2, 4, 4],
+    'social element rating' => [4, 1, 4, 3, 4, 4],
+    'value for money rating' => [5, 1, 3, 1, 3, 4],
+    'safety rating' => [5, 1, 4, 2, 4, 5],
+    'career services rating' => [4, 1, 3, 1, 4, 4]
   },
   'University of Newcastle' => {
     comment: ['Not enough subject choices- too limited! Would love to study here but only has three subjects which is a real shame. Hopefully they improve soon.',
@@ -608,15 +610,28 @@ reviews = {
     They say "send us an email" which they cannot answer within their own time frame.
     Ridiculous.',
     'The experience is great, meet new people, make new friends as well as learning the latest information with associate scholar. Now more clubs than ever time join and have fun.',
-    'Lovely environment not just focused on the facilities but also on the fauna and flora. The campus is simply amazing with a wide range of buildings for various subjects. Faultless.'],
-    'reputabilty rating' => [5, 3, 4, 4],
-    'education quality rating' => [5, 3, 4, 3],
-    'campus facilities accom rating' => [5, 4, 4, 5],
-    'course difficulty rating' => [3, 3, 4, 4],
-    'social element rating' => [5, 4, 5, 4],
-    'value for money rating' => [5, 2, 4, 4],
-    'safety rating' => [5, 4, 4, 4],
-    'career services rating' => [5, 1, 3, 3]
+    'Lovely environment not just focused on the facilities but also on the fauna and flora. The campus is simply amazing with a wide range of buildings for various subjects. Faultless.',
+    "My life experience and academic skills have been enriched and improved a lot by studying in UWA. It shaped a better me, a stronger, tougher, and a more independent 'me'. All the students, teachers, staff and my Australian host are sooooo friendly! They encouraged and pushed me to dream big and work hard!
+    The environment of Perth is unbelievable, I always think of the blue ocean, beach with great cafes, and the beautiful sunset after I back to China! Perth and Western Australia definitely worth to explore!
+    Because of the lovely people and environment, I spent a sweet and fullest time in Perth! I believe my experience in UWA & Perth is one of my best memories of my whole life! I will treasure them all the time!
+    Thanks, UWA & Perth!
+    Missing you as always!",
+    "I stuided for a full Year in a Study Abroad programme from Brazil.
+    I found the installations to be Fantastic at UWA, as well as the Professors and the hole Team from this University.
+
+    I just felt very welcomed in there, since we had an Orientation Week wich allowed me to get to know the Campus and gave me tips in subjects that went beyond the University, such as 'How to find a residence', besides the welcome Parties wich helped to get to know a wide virety of students.
+
+    I would surely, if I had a chance, have another experience at UWA.
+
+    Just Fantastic. :)"],
+    'reputabilty rating' => [5, 3, 4, 4, 5, 5],
+    'education quality rating' => [5, 3, 4, 3, 4, 5],
+    'campus facilities accom rating' => [5, 4, 4, 5, 5, 5],
+    'course difficulty rating' => [3, 3, 4, 4, 4, 4],
+    'social element rating' => [5, 4, 5, 4, 5, 5],
+    'value for money rating' => [5, 2, 4, 4, 5, 5],
+    'safety rating' => [5, 4, 4, 4, 4, 5],
+    'career services rating' => [5, 1, 3, 3, 5, 5]
   },
   'The University of Adelaide' => {
     comment: ['Few electives available in one semester, ban you from the class that they think you have the ability already and force you to choose other subjects. Make decisions for you but not give enough help. Always feel helpless and anxious. Two stars for the teaching quality and ZERO for student service.',
@@ -638,15 +653,21 @@ reviews = {
     comment: ['Top university in Malaysia, it’s good to study here. The cafes and foods are very nice especially the Faculty of Science roti canai. Have quite some good places to relieve stress and near to most malls around KL.',
     'The best place that I study right now that got many necessity for student',
     'Bad administration, bad module registration, bad student mobility, and bad college facilities. Overrated for a no1 university in Malaysia. I still have to suffer in this university for another 1.5 years',
-    'As a student, I would say I’m lucky to be able to study here, the facilities here are adequate and there are many places with beautiful sceneries such as the lake where students and visitors can go canoeing, I dont know the exact term, too lazy to google.'],
-    'reputabilty rating' => [5, 5, 2, 4],
-    'education quality rating' => [5, 4, 1, 5],
-    'campus facilities accom rating' => [5, 4, 2, 4],
-    'course difficulty rating' => [5, 4, 3, 4],
-    'social element rating' => [5, 4, 2, 3],
-    'value for money rating' => [5, 4, 1, 4],
-    'safety rating' => [5, 4, 4, 4],
-    'career services rating' => [5, 4, 2, 4]
+    'As a student, I would say I’m lucky to be able to study here, the facilities here are adequate and there are many places with beautiful sceneries such as the lake where students and visitors can go canoeing, I dont know the exact term, too lazy to google.',
+    'First year was more general and next 2 years focus on applied chemistry. They have lecturers from local and overseas as well. This is a 100-year old institution, reputable and ranked best university in my country.  Campus is big and students life is wonderful, haven’t mentioned a lot of sport and cultural activities besides studying.',
+    'For international students life can be fun at UM. There is an international students’ organisation and there is usually quite a number of students from overseas, particularly at post-graduate level.
+
+    The campus is attractive with a lot of greenery. It is hot and humid however, and because it is a large campus you will generally need motorized transport to get around, although taxi/car hire is relatively cheap, and there are available for short-trip hire scooters strategically placed on campus. There is also a bus service on campus, however to enjoy the university and KL more a private car or motorbike is recommended.
+
+    KL is a big international city with high level shops, services, food and beverage and entertainment available. Although it is a warm climate, the temperature is fairly steady and the environment is culturally rich so that you can expose yourself to diverse people, food and activities.'],
+    'reputabilty rating' => [5, 5, 2, 4, 5, 4],
+    'education quality rating' => [5, 4, 1, 5, 4, 4],
+    'campus facilities accom rating' => [5, 4, 2, 4, 4, 4],
+    'course difficulty rating' => [5, 4, 3, 4, 4, 4],
+    'social element rating' => [5, 4, 2, 3, 5, 5],
+    'value for money rating' => [5, 4, 1, 4, 5, 4],
+    'safety rating' => [5, 4, 4, 4, 4, 4],
+    'career services rating' => [5, 4, 2, 4, 4, 4]
   },
   'Universiti Kebangsaan Malaysia' => {
     comment: ['Very advanced architectural study and research centre. Don’t let the poor condition of the building paint facade fools you, this place is among best of the faculty among others with its very humble and proffesional lectures which came from various educational background from Masters and PH.D. They also have good proficiency in English. So international student don’t need to worry much. It is even better if you practice simple malay language if you were international, and it was more welcomed to speak malay since it was National University of Malaysia were as you know national relates to the country, Malaysia',
@@ -656,29 +677,31 @@ reviews = {
 
     As for teaching aspects in Information Technology related majors (took a 4years Software Engineering course), their professors have poor communication skills and teaching abilities. With outdated courses and professors out of touch with current industry practices, you will face a huge load of useless repetitive assignments that keep you busy, but without any practical knowledge. If your plan is to spend your whole life in academia and continue your masters, phd, work career in UKM, then yeah go for UKM, they will love you there. But if you have bigger ambitions, UKM will make sure to waste 4 years of your life and keep you distracted from self-study over academic work.',
     'I am doing my PG from here and it’s a v nyc university. 1 of the best in Asia and also the fee compared to others is nominal. The science department is v good. People and teachers are courteous and students are not over burdened.',
-    'Very big campus. Law school is great. Adequate facilities for "tutorials" and lectures. Lecture room is very big. The library has a sleeping area, which is great. Professors are really kind.'],
-    'reputabilty rating' => [5, 3, 4, 4],
-    'education quality rating' => [5, 2, 5, 5],
-    'campus facilities accom rating' => [5, 2, 4, 5],
-    'course difficulty rating' => [4, 3, 3, 3],
-    'social element rating' => [4, 2, 4, 4],
-    'value for money rating' => [5, 2, 5, 4],
-    'safety rating' => [5, 4, 5, 5],
-    'career services rating' => [5, 1, 4, 3]
+    'Very big campus. Law school is great. Adequate facilities for "tutorials" and lectures. Lecture room is very big. The library has a sleeping area, which is great. Professors are really kind.',
+    'Nice campus, A very good environment for international students'],
+    'reputabilty rating' => [5, 3, 4, 4, 4],
+    'education quality rating' => [5, 2, 5, 5, 4],
+    'campus facilities accom rating' => [5, 2, 4, 5, 5],
+    'course difficulty rating' => [4, 3, 3, 3, 4],
+    'social element rating' => [4, 2, 4, 4, 4],
+    'value for money rating' => [5, 2, 5, 4, 4],
+    'safety rating' => [5, 4, 5, 5, 4],
+    'career services rating' => [5, 1, 4, 3, 4]
   },
   'Universiti Putra Malaysia' => {
     comment: ['I just loved it here. Living inside campus for a year now. But only got physical classes for 1 month. I really miss that busy month.',
     'This place that calls itself a university is nothing more than a plausible commercial advertisement aka $pam. Who should go to this university? Those who have loads of money, and do not know what to do with it. You are also the right candidate if you have years to dillydally. Indeed, it is also an ideal institution for those looking to inspire others on why to not select a bad university. These intelligent researches may also be studying on how awful universities can be. Now who should not join this university? First, those that do not meet the eligibility requirements mentioned above. Second, people who genuinely want to study. Third, individuals who know English.... Infinite, who need jobs in future. :D.  I am sure I have made my point, however if you still want to risk it, then I must say you are definitely adventures and love challenges life throws at you.',
     'As I am a student of this University,I really feel proud of this.The campus is huge&the environment is very study friendly.Though the campus is very big,the movement is very easy because of the given bus for transit. Someone can only feel the beauty of the campus when he will visit it...',
-    'Poor management for new intake. Though there are many volunteers, only concentrate in registration area. Nobody and no sign guiding parents and students to the registration area.'],
-    'reputabilty rating' => [5, 3, 5, 4],
-    'education quality rating' => [4, 2, 5, 3],
-    'campus facilities accom rating' => [3, 4, 5, 3],
-    'course difficulty rating' => [3, 2, 4, 4],
-    'social element rating' => [2, 4, 4, 3],
-    'value for money rating' => [4, 1, 5, 4],
-    'safety rating' => [5, 4, 5, 4],
-    'career services rating' => [5, 3, 4, 2]
+    'Poor management for new intake. Though there are many volunteers, only concentrate in registration area. Nobody and no sign guiding parents and students to the registration area.',
+    "My overall Master's experience has been quite enjoyable. This is because, the staffs are friendly, proffessional and understanding to any needs that you may have. The facilities within the university campus are good as you can use all of the buildings facilities and not just the universities."],
+    'reputabilty rating' => [5, 3, 5, 4, 5],
+    'education quality rating' => [4, 2, 5, 3, 5],
+    'campus facilities accom rating' => [3, 4, 5, 3, 5],
+    'course difficulty rating' => [3, 2, 4, 4, 4],
+    'social element rating' => [2, 4, 4, 3, 5],
+    'value for money rating' => [4, 1, 5, 4, 4],
+    'safety rating' => [5, 4, 5, 4, 5],
+    'career services rating' => [5, 3, 4, 2, 5]
   },
   'Universiti Sains Malaysia' => {
     comment: ['Hey guys, given your post-pandemic lavish expenditures on the main campus would you make a room in your budgets to upgrade the old degenerate buses that goes back and forth from engineering campus????? They have been in service since day one I joined your uni… I am drenching in my sweat as I am writing this review.',
