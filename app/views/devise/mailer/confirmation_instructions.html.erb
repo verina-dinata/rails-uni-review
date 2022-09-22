@@ -1,5 +1,15 @@
-<p>Welcome <%= @email %>!</p>
+<div class="d-flex justify-content-center">
+  <%= image_tag("u-review_logo.png") %>
+</div>
 
-<p>You can confirm your account email through the link below:</p>
+<h1>Hi, <%= @resource.first_name %>!</h1>
+
+<p>Thanks for getting started with U-Review! We need a little more information to complete your registration, including confirmation of your email address. Click below to confirm your email address.</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<br>
+<br>
+<br>
+<p>Thanks,</p>
+<p>U-Review Support</p>
