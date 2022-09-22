@@ -1,0 +1,2 @@
+class UserSignUpMailer < ApplicationMailer
+end
