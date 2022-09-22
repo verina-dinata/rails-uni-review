@@ -49,8 +49,13 @@
                   <%= f.full_error :password_confirmation %>
                   <div class="form-text">Retype your password</div>
                 </div>
+
                 <div class="form-actions form-btn my-4">
                   <%= f.submit "Sign up", class:"save-btn mx-0", style:"width:100%;" %>
+                </div>
+
+                <div>
+                  <p class="posted-text">By signing up, you agree to receive a confirmation email from us to the email provided in the form.</p>
                 </div>
               <% end %>
               <div class="d-flex justify-content-center card-info-light align-items-center">
