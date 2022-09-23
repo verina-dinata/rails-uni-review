@@ -88,6 +88,7 @@
   font-size: x-large;
   text-align: left;
   margin-bottom: 16px;
+  letter-spacing: 2px;
 }
 
 .card-sg p {
@@ -118,6 +119,7 @@
   font-size: x-large;
   text-align: right;
   margin-bottom: 16px;
+  letter-spacing: 2px;
 }
 
 .card-au p {
@@ -130,4 +132,8 @@
   height: 451px;
   border-radius: 0px 8px 8px 0px;
   object-fit: cover;
+}
+
+hr {
+  height: 2px !important;
 }
