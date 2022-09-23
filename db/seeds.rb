@@ -761,30 +761,35 @@ reviews = {
     comment: ['An actual horrendous environment to study in, students plagiarising left and right with the teachers allowing it and in fact, encouraging academic dishonesty. Tried reporting said lecturers before with video proof of academic malpractice but the school department straight up told me that reporting teachers were not allowed. A true cesspool of AI disguising as professionals. 0/10 would never come back again.',
     'I am Sunway University PhD graduate. I have done my PhD in Biology. Sunway is my dream place. Everything is perfect, all the faculty members are highly skilled and enegetic. The staff is fully cooperative and vibrent. The facilities are more than enough for a PhD studies. I enjoyed the university life and missing those unforgetable moments. In fact, I love Sunway.',
     'The most happening campus!',
-    'The cost of study is really higher than other universities of Malaysia. However the service, education system, faculties and environment are world class. Highly recommended for pursuing a degree where you make your smooth career path.'],
-    'reputabilty rating' => [1, 5, 4, 4],
-    'education quality rating' => [1, 5, 4, 4],
-    'campus facilities accom rating' => [1, 4, 4, 5],
-    'course difficulty rating' => [1, 4, 3, 4],
-    'social element rating' => [1, 4, 4, 4],
-    'value for money rating' => [1, 4, 4, 5],
-    'safety rating' => [1, 5, 4, 4],
-    'career services rating' => [1, 4, 3, 4]
+    'The cost of study is really higher than other universities of Malaysia. However the service, education system, faculties and environment are world class. Highly recommended for pursuing a degree where you make your smooth career path.',
+    'Pros
+    Good facilities with ease of access to public transport. The classrooms are air conditioned with adequate tables and chairs. The toilets are also washed daily and are relatively clean.
+    Cons
+    The syllabus for their own foundation programme has a few hiccups such as inconsistent formatting of exam papers - leading to uneven distribution of these papers and difficulty levels varying among students. The elevators are also constantly under maintenance.'],
+    'reputabilty rating' => [1, 5, 4, 4, 4],
+    'education quality rating' => [1, 5, 4, 4, 3],
+    'campus facilities accom rating' => [1, 4, 4, 5, 4],
+    'course difficulty rating' => [1, 4, 3, 4, 4],
+    'social element rating' => [1, 4, 4, 4, 4],
+    'value for money rating' => [1, 4, 4, 5, 4],
+    'safety rating' => [1, 5, 4, 4, 4],
+    'career services rating' => [1, 4, 3, 4, 4]
   },
   'Taylors University' => {
     comment: ['The education is extremely bad. Lecturers are mostly untrained and lacked experience. The way majority of how they teach is by reading directly from the slides with no effort in attempting to elaborate the materials, and sometimes topics are skipped for idk what reason. One of my former lecturer was literally a recently enrolled part time master’s degree student (in terms of qualification, he only had bachelor’s essentially), which you can imagine how incompetent he was at teaching us students regarding the module that he was teaching. If you ask any other foundation student from different departments (business, arts, engineering, etc), they will say the exact same thing (topics are for some reason skipped, low effort teaching such as reading from the slides with no elaboration, and etc)',
     'Campus life is god horrible, especially in 2022. A LOT of shops are closed in Syopz Mall. There are no more Tealive, no more Mamak, no more Apple store, no more old town white coffee, no more bakery, and the whole bottom floor of Syopz Mall is COMPLETELY CLOSED DOWN/BANKRUPTED. Honestly I have no idea how would students in 2022+ are gonna survive with such a limited selection of eateries. You might as well choose Sunway University - as it has a mall connected via canopy walk/bridge and MORE eateries both in AND outside (MORE than 30 hawker stalls!!!) campus  - if you prioritize on a good campus life, cause it’s literally 1-2km away from Taylor’s. I would literally would’ve chosen to sacrifice the whole lake to create more eateries. The lake literally serves no purpose other than being an eye candy, which again in my opinion, eye candy is useless if I’m dying from hunger.',
     'Overall an above average teaching quality (depending on program).
     Top notch facilities with a stunning lake, wish they could add a bridge connecting both ends as walking distance between both ends are quite far.',
-    'Bad food, good ambiance. You can feel the stress during submission period. Very realistic university experience. Parking is usually very full, and lifts are very slow.'],
-    'reputabilty rating' => [2, 3, 4, 4],
-    'education quality rating' => [1, 3, 4, 4],
-    'campus facilities accom rating' => [3, 1, 4, 2],
-    'course difficulty rating' => [3, 3, 4, 3],
-    'social element rating' => [4, 4, 3, 4],
-    'value for money rating' => [2, 4, 3, 4],
-    'safety rating' => [4, 4, 4, 4],
-    'career services rating' => [2, 2, 3, 3]
+    'Bad food, good ambiance. You can feel the stress during submission period. Very realistic university experience. Parking is usually very full, and lifts are very slow.',
+    'Very supportive lecturer that will be there for you to help you with your difficulties, great student environment that will make you feel like home, great food that will always guarantee your stomach full and satisfied and have the BEST library !'],
+    'reputabilty rating' => [2, 3, 4, 4, 4],
+    'education quality rating' => [1, 3, 4, 4, 5],
+    'campus facilities accom rating' => [3, 1, 4, 2, 5],
+    'course difficulty rating' => [3, 3, 4, 3, 4],
+    'social element rating' => [4, 4, 3, 4, 4],
+    'value for money rating' => [2, 4, 3, 4, 4],
+    'safety rating' => [4, 4, 4, 4, 4],
+    'career services rating' => [2, 2, 3, 3, 4]
   },
   'Management and Science University' => {
     comment: ['Please don’t study here. The lecturers are the best, but their management part is the worst. Some of the staffs are even rude.',
