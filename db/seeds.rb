@@ -458,7 +458,7 @@ puts "Manually patching Coordinates"
 puts "Creating Users (will take ~5 minutes)"
 
 50.times do |i|
-  random_num = rand(1..21)
+  random_num = rand(1..38)
   avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
   curr_user = User.new(
     first_name: Faker::Name.first_name,

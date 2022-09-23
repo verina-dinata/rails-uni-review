@@ -8,7 +8,7 @@ class UniversitiesController < ApplicationController
     elsif params[:country]
       @universities = University.where(country: params[:country])
     else
-      @universities = University.all.order(country: :asc)
+      @universities = University.all.order(country: :desc)
     end
   end
 
