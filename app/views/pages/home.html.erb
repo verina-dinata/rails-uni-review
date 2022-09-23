@@ -21,7 +21,52 @@
 
 <div class="container">
   <div class="row justify-content-center">
+    <!-- Sample home card -->
+    <div class="col-lg-10 col-md-11 col-sm-12 mt-5 mb-5">
+      <div class="card card-sg-row">
+        <div class="row card-bg">
+          <div class="col-lg-7 col-md-6 col-sm-12" style="padding: 0;">
+            <img src="https://u-paris.fr/wp-content/uploads/2020/12/2017-NUS-Signage-1-1.jpg" alt="" class="home-img" style="border-radius: 8px 0px 0px 8px;">
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 text-align-center card-sg" style="padding: 2.5rem; margin: auto;">
+            <h2><%= link_to "UNIVERSITIES IN SINGAPORE", universities_path(:country=>"Singapore"), class:"card-sg-link"%></h2>
+            <hr>
+            <p>Singapore’s universities and colleges rank as the best in Asia, and among top 20 in the world. Find out more about universities in Singapore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="col-lg-10 col-md-11 col-sm-12 mb-5">
+      <div class="card card-sg-row">
+        <div class="row justify-content-end card-bg" >
+          <div class="col-lg-5 col-md-6 col-sm-6 card-au" style="padding: 2.5rem; margin: auto;">
+            <h2><%= link_to "UNIVERSITIES IN AUSTRALIA", universities_path(:country=>"Australia"), class:"card-sg-link"%></h2>
+            <hr>
+            <p>Australia has 37 government-funded universities and three private universities, as well as a number of other specialist institutions that provide approved courses at the higher education level. Learn more about Austrialian Universities.</p>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12" style="padding: 0;">
+            <img src="https://www.anao.gov.au/sites/default/files/anao_report/image/anu-governance-control-frameworks-anao.jpg" alt="" class="card-country-img" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-10 col-md-11 col-sm-12 mb-5">
+      <div class="card card-sg-row">
+        <div class="row card-bg">
+          <div class="col-lg-7 col-md-6 col-sm-12" style="padding: 0;">
+            <img src="https://theacademicinsights.com/wp-content/uploads/2020/07/imej_5ccfe917a8b765ccfef83b7420-740x357.jpg" alt="" class="home-img" style="border-radius: 8px 0px 0px 8px;">
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 text-align-center card-sg" style="padding: 3.5rem; margin: auto;">
+            <h2><%= link_to "UNIVERSITIES IN MALAYSIA", universities_path(:country=>"Malaysia"), class:"card-sg-link" %></h2>
+            <hr>
+            <p>Malaysia as you know it, is home to one of the most affordable student cities in the world. This is why the number of international students in Malaysia are growing tremenduously.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Old card code -->
     <div class="col-lg-10 col-md-11 col-sm-12 mt-5 mb-5">
       <div class="card home-card">
         <div class="row">
@@ -30,7 +75,7 @@
           </div>
           <div class="col-lg-5 col-md-6 col-sm-6 text-align-center home-info" style="padding: 1.5rem; margin: auto;">
             <h2><%= link_to "Universities in Singapore", universities_path(:country=>"Singapore"), class:"home-link"%></h2>
-            <p>Singapore’s universities and colleges rank as the best in Asia, and among top 20 in the world. Find out more about universities in Singapore.</p>
+            <p>Singapore's universities and colleges rank as the best in Asia, and among top 20 in the world. Find out more about universities in Singapore.</p>
           </div>
         </div>
       </div>
@@ -64,7 +109,10 @@
       </div>
     </div>
 
-    <h2 class="text-center mt-4 mb-5">Student Reviews</h2>
+    <!-- Carousel -->
+    <hr>
+    <h2 class="text-center mt-4 mb-5 fw-bolder">What students are saying</h2>
+    <hr>
     <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-bs-ride="carousel" style="height: 500px;">
       <!-- Controls -->
       <div class="d-flex justify-content-center mb-4">
