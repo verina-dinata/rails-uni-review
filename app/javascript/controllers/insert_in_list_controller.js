@@ -6,6 +6,14 @@ export default class extends Controller {
   static values = { position: String }
 
   connect() {
+    fetch(window.location.pathname + '/reviews', {
+      method: "GET",
+
+    })
+      .then(response => response.text())
+      .then(content => {
+        this.itemsTarget.innerHTML = content
+      })
   }
 
   send(event) {
@@ -20,7 +28,7 @@ export default class extends Controller {
       .then((data) => {
         if (data.inserted_item) {
           this.itemsTarget.insertAdjacentHTML(this.positionValue, data.inserted_item)
-          if (this.itemsTarget.children.length > 5) {
+          if (this.itemsTarget.children.length > 4) {
             this.itemsTarget.removeChild(this.itemsTarget.lastElementChild)
           }
         }
