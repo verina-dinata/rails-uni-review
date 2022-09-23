@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = @university.reviews.order(created_at: :desc).page params[:page]
+    @reviews = @university.reviews.order(created_at: :desc).page(params[:page]).per(3)
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
 
     render 'reviews/index', layout: false, as: :text
