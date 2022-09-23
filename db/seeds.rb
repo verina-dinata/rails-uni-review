@@ -795,15 +795,17 @@ reviews = {
     comment: ['Please don’t study here. The lecturers are the best, but their management part is the worst. Some of the staffs are even rude.',
     'Excellent university to complete your tertiary education. I completed my PhD in Management here. They have excellent Professors to guide through your thesis. Excellent environment for students, very cosy,  with lots of shops and restaurants.',
     'The residence needs improvement as I came and it wasn’t clean, it was supposed to be clean before I arrive....',
-    'Good campus, good facility'],
-    'reputabilty rating' => [4, 4, 4],
-    'education quality rating' => [5, 5, 4],
-    'campus facilities accom rating' => [5, 4, 2],
-    'course difficulty rating' => [3, 4, 4],
-    'social element rating' => [4, 4, 4],
-    'value for money rating' => [4, 5, 5],
-    'safety rating' => [5, 5, 3],
-    'career services rating' => [3, 5, 4]
+    'Good campus, good facility',
+    "I think the positive highlights of our uni is the external and internal programme's that conducted in each and every sem. I don't think so, most of the othet uni's out there have such kind of programme. Moreover, we do also have PEC where it improves a students English knowledge and also develop's internel talent of a student. Msu is a university of choice of course. Here, we can see alot of foreign student's and I believe that they have never felt leftover at any time as Msu gives a great comfort to them too.",
+    'Well, it is a good environment to study at...however, english is a non priority so it made it harder to learn and speak proper english and they have so many of things that we are required to pay...gems is a must to be collected here...but all events we want to join to collect gems, we have to pay..i have paid more just to get gems points compared to paying for assignments..that is the not so appreciated part of it especially when being a student...'],
+    'reputabilty rating' => [4, 4, 4, 4, 4],
+    'education quality rating' => [5, 5, 4, 4, 3],
+    'campus facilities accom rating' => [5, 4, 2, 5, 3],
+    'course difficulty rating' => [3, 4, 4, 4, 3],
+    'social element rating' => [4, 4, 4, 5, 4],
+    'value for money rating' => [4, 5, 5, 4, 3],
+    'safety rating' => [5, 5, 3, 4, 4],
+    'career services rating' => [3, 5, 4, 4, 4]
   },
   'National University of Singapore' => {
     comment: ['Best research & education university in Asia. Student campus is so good. You will learn your life skills here.',
@@ -819,15 +821,19 @@ reviews = {
 
     In the USP (I’m not really sure whether it’s called USP because I found it in between halls near the U-Town) cafeteria/foodcourt area, there is also a halal food section. This canteen is only for NUS students since you need your student card to get the foods there.',
     'Perhaps the best part of NUS is the vast amount of opportunities it affords it’s students. It’s almost as if every week there’s a new career fair, industrial visit, hackathon, or any other competition or event for it’s students to join. NUS also offers multiple exchange programs ranging from 3 to 12 months (see the NOC programme) to grant it’s students a more international outlook upon their graduation.',
-    'Teachers usually have some experience in research and are meticulous in teaching. Teachers are also usually open to interaction and would provide extra help when required. Students are open and collaborative.  Campus facilities are more than sufficient.'],
-    'reputabilty rating' => [5, 5, 5, 4, 5, 4],
-    'education quality rating' => [5, 4, 4, 5, 4, 5],
-    'campus facilities accom rating' => [5, 5, 4, 5, 5, 5],
-    'course difficulty rating' => [5, 4, 4, 4, 5, 4],
-    'social element rating' => [5, 3, 4, 4, 5, 4],
-    'value for money rating' => [5, 3, 4, 4, 5, 4],
-    'safety rating' => [5, 5, 5, 4, 4, 4],
-    'career services rating' => [5, 4, 3, 4, 3, 4]
+    'Teachers usually have some experience in research and are meticulous in teaching. Teachers are also usually open to interaction and would provide extra help when required. Students are open and collaborative.  Campus facilities are more than sufficient.',
+    "If there's one thing I dislike about NUS, is that classes are really quiet. Most classes suffer from a lack of tutor-student interaction. This can be attributed to the result-oriented nature of Asian culture. Although, it doesn't help that some of the student tutors have difficulty speaking well in class.
+
+    Nonetheless, the standard of education would definitely be considered good. Lecturers are knowledgeable and friendly (at least in my faculty, Science/Computing) and students are always welcomed to seek their help or to arrange for consultations.",
+    "I was admitted to law and transferred to computing at NUS. I was also in USP. Singaporean universities attempt to combine both UK and US curricula. US system is known for its liberal arts education. NUS allows its students to take electives, so much so that it takes one extra year to graduate than UK universities. UK universities admit students to a particular subject only and is students graduate in 3 years. NUS students take 4 years to graduate, 3 of which are similar to the UK system and 1 one which is reserved for liberal arts electives."],
+    'reputabilty rating' => [5, 5, 5, 4, 5, 4, 5, 5],
+    'education quality rating' => [5, 4, 4, 5, 4, 5, 3, 4],
+    'campus facilities accom rating' => [5, 5, 4, 5, 5, 5, 4, 4],
+    'course difficulty rating' => [5, 4, 4, 4, 5, 4, 4, 5],
+    'social element rating' => [5, 3, 4, 4, 5, 4, 4, 4],
+    'value for money rating' => [5, 3, 4, 4, 5, 4, 4, 4],
+    'safety rating' => [5, 5, 5, 4, 4, 4, 5, 5],
+    'career services rating' => [5, 4, 3, 4, 3, 4, 4, 4]
   },
   'Nanyang Technological University' => {
     comment: ['Although there is still room for improvement for some professor, the overall study experience there is excellent. New building also very beautiful. Point deducted due to 1) Sometimes the library really noisy, many students like to make loud discussion there; 2) No MRT access (But if there were, maybe, in the future, who knows, it might become very crowed....)',
@@ -839,15 +845,17 @@ reviews = {
     But if you’re studying engineering, be forewarned that most modules are conducted with online, pre-recorded video lectures as the primary means of learning. It’s hardly effective, nor what one would expect when signing up for a degree course at a leading local university.',
     'It’s a great university with lots of things going around. But be competitive minded otherwise it’s going to be tough like hell.',
     'When sending an enquiry/request to the school, emails and calls will be transferred from one person to another without getting them addressed. The business course is overhyped and after three years there, I felt that I do not get the kind of knowledge that is relevant to the specialized industry. The only good thing about this school is probably their perceived good brand name, in Singapore.',
-    'NTU is dynamic environment for you to learn and engage in many activities after class. It gives you opportunities to make new friends, enhance your network and have an insight about yourself. Moreover, what I like at NTU is that it provides you variety of majors and courses, proficient professors and instructors as well as good infrastructure for studying and accommodation.'],
-    'reputabilty rating' => [5, 5, 4, 5, 3, 4],
-    'education quality rating' => [5, 4, 3, 5, 3, 4],
-    'campus facilities accom rating' => [4, 3, 4, 5, 3, 5],
-    'course difficulty rating' => [4, 4, 4, 5, 3, 4],
-    'social element rating' => [4, 4, 5, 3, 3, 4],
-    'value for money rating' => [4, 3, 2, 4, 2, 4],
-    'safety rating' => [5, 5, 4, 5, 3, 5],
-    'career services rating' => [4, 4, 3, 3, 3, 4]
+    'NTU is dynamic environment for you to learn and engage in many activities after class. It gives you opportunities to make new friends, enhance your network and have an insight about yourself. Moreover, what I like at NTU is that it provides you variety of majors and courses, proficient professors and instructors as well as good infrastructure for studying and accommodation.',
+    'Please please stay away from this university if you are foreigners. After you graduated, you will get discriminated from hiring by Singaporean companies because they must apply Employment Pass for you. EP is approved by government only if your salary is 6k or higher which is ridiculous for a new grad. So good luck pay back your student loans that you got from local banks when you cannot get a job here just because you are foreigners.',
+    'NTU is a very reputed university worldwide. I personally know people who did their MSc or PhD from NTU and then got into top univsersities in the world for PhD or Post-Docs (like MIT and other similiar universities).'],
+    'reputabilty rating' => [5, 5, 4, 5, 3, 4, 4, 5],
+    'education quality rating' => [5, 4, 3, 5, 3, 4, 4, 5],
+    'campus facilities accom rating' => [4, 3, 4, 5, 3, 5, 4, 5],
+    'course difficulty rating' => [4, 4, 4, 5, 3, 4, 5, 5],
+    'social element rating' => [4, 4, 5, 3, 3, 4, 3, 5],
+    'value for money rating' => [4, 3, 2, 4, 2, 4, 3, 5],
+    'safety rating' => [5, 5, 4, 5, 3, 5, 4, 5],
+    'career services rating' => [4, 4, 3, 3, 3, 4, 3, 5]
   },
   'Singapore Management University' => {
     comment: ['The Good
@@ -886,15 +894,23 @@ reviews = {
     Then again, school and life, in general, is what you make out of it. If you wanna be another cog in the machine and run the rat race with your frenemies, go ahead',
     'SMU’s selection of top-notch infrastructure, collaborative academic style and diversity among students contributed greatly to my learning and development. It equipped with key skills that have helped me make a smooth transition into my career.',
     'The learning experience is great with lots of interaction in law classes. There is also a lot of emphasis on understanding and application of concepts and rules. Do not be afraid to venture beyond your comfort zone and get to know the locals.',
-    'Its a nice overall experience. One most important advice I could give to future students is to be prepared for classes because the professors will be going through the assigned readings in class.'],
-    'reputabilty rating' => [4, 4, 4, 5, 4, 5],
-    'education quality rating' => [4, 4, 5, 4, 4, 4],
-    'campus facilities accom rating' => [4, 4, 3, 4, 4, 3],
-    'course difficulty rating' => [5, 4, 3, 4, 4, 3],
-    'social element rating' => [3, 4, 4, 4, 4, 4],
-    'value for money rating' => [4, 4, 4, 4, 4, 4],
-    'safety rating' => [5, 5, 4, 5, 4, 4],
-    'career services rating' => [4, 3, 5, 4, 3, 4]
+    'Its a nice overall experience. One most important advice I could give to future students is to be prepared for classes because the professors will be going through the assigned readings in class.',
+    'If you look at the world rankings, SMU gets placed quite low on the tables, or finds no mention on others.
+
+    Talking about the Americas, people hardly know about SMU there. SMU is synonymous to Southern Methodist University. Therefore, SMU is not as famous there.
+
+    However, in Asia, SMU has a great reputation. Students from India, Indonesia, Malaysia, Thailand etc. attend SMU in large numbers. In Sinagpore, from what I’ve heard , SMU graduates are greatly valued. Their job prospects are bery bright. Students do get placed in the top-notch companies.',
+    'Outside Singapore, no one really knows about it, but thinks that since it is Singapore, it must be good.
+
+    Inside Singapore, its as good as it gets - especially when it comes to consulting/banking.'],
+    'reputabilty rating' => [4, 4, 4, 5, 4, 5, 4, 4],
+    'education quality rating' => [4, 4, 5, 4, 4, 4, 4, 4],
+    'campus facilities accom rating' => [4, 4, 3, 4, 4, 3, 4, 4],
+    'course difficulty rating' => [5, 4, 3, 4, 4, 3, 4, 4],
+    'social element rating' => [3, 4, 4, 4, 4, 4, 4, 4],
+    'value for money rating' => [4, 4, 4, 4, 4, 4, 4, 4],
+    'safety rating' => [5, 5, 4, 5, 4, 4, 5, 5],
+    'career services rating' => [4, 3, 5, 4, 3, 4, 4, 5]
   },
   'Singapore University of Social Sciences' => {
     comment: ['Most of the lecturers are good. The school environment is moderate, as there are not enough canteens to accommodate the school population (shared with SIM Global). The school’s communication with the students can be improved because regarding some issues like paperwork for eportfolio and work attachment, there is some confusion among students.',
@@ -955,15 +971,17 @@ reviews = {
 
     But if you just want a job, and doesn’t have to be prestigious or high flyer, go for SIM GE 2 to 3 years degree. Most of my friends are from SIM and all found jobs in good companies with pay on par with local uni grads. Save your time and effort, just go SIM.',
     'Currently I’m my first sem at SUSS and I have to say, the curriculum really sucks. I’m literally walking around like a headless chicken. I do follow everything that’s said in class and when the assignment comes up, it’s nothing like what’s taught. And when I ask my lecturer questions, he just says he cannot reveal anything and I’m like ??? I’m not asking for the answer key?? But I don’t know, everyone in my class seems to have nothing to say about it, are all universities like this? I was from SP and tbh, SP was golden in terms of like, teaching and curriculum etc.',
-    'Unhelpful and inflexible students support team. Instructors do not help much as well. Not highly recommended!'],
-    'reputabilty rating' => [4, 3, 3, 3, 3],
-    'education quality rating' => [3, 3, 3, 2, 2],
-    'campus facilities accom rating' => [4, 2, 4, 4, 3],
-    'course difficulty rating' => [3, 3, 2, 3, 3],
-    'social element rating' => [4, 4, 5, 3, 3],
-    'value for money rating' => [4, 2, 3, 2, 3],
-    'safety rating' => [5, 4, 4, 4, 4],
-    'career services rating' => [3, 2, 4, 3, 3]
+    'Unhelpful and inflexible students support team. Instructors do not help much as well. Highly not recommended!',
+    "It's quite a place to hang out with plenty of food including Starbucks and a good mix of international staff and students. They have full them classes and part time classes for professionals, Managers, Executives and Techs (PMET). Good library complete with nice lecture Theatres. ATM cash machine include DBS, UOB and OCBC. Need an instant photo, there is a photo booth with the ATM. Stamps and bills to pay? But from the SAM machine and use the AXS machine. Wow.",
+    "I dont understand why SUSS does not allow the quizzes results to be shown after completing it. Keeping it a secret keeps the students unable to know what questions they got wrong. It creates the problem of dont know what we dont know, instead of knowing what we dont know so at least the students would have a chance to go and learn what they missed out."],
+    'reputabilty rating' => [4, 3, 3, 3, 3, 4, 3],
+    'education quality rating' => [3, 3, 3, 2, 2, 3],
+    'campus facilities accom rating' => [4, 2, 4, 4, 3, 3],
+    'course difficulty rating' => [3, 3, 2, 3, 3, 4, 4],
+    'social element rating' => [4, 4, 5, 3, 3, 5, 4],
+    'value for money rating' => [4, 2, 3, 2, 3, 4, 4],
+    'safety rating' => [5, 4, 4, 4, 4, 5, 5],
+    'career services rating' => [3, 2, 4, 3, 3, 4, 3]
   },
   'Singapore University of Technology and Design' => {
     comment: ['Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
@@ -987,15 +1005,23 @@ reviews = {
     Namesake. In SUTD, it is really your own ball game - what you achieve is fully dependent on what you do. You can have great club activities, many research projects and competitions, or have nothing. Here, you better prepare to do much more and work harder - because companies are going to look at your achievement and not your university.
     Hall Life? For now, the new Hall system just began - so this can definitely change. But currently, if you are looking for hall experience like NUS or NTU, you won’t find them here. While there are floor activities and houses, the bond and dedication to your floor is much less than other universities. You would focus on club activities much more instead. Once again, this is for now - things are looking to change.',
     'I had the best undergraduate life I could possibly have here with a good mix of learning, growing and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduate degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best, we need to solve that.',
-    'I had the best undergraduate life I could possibly have here with a good mix of learning, growing, and socialising. The fabrication lab here is better than MIT as visited both places. The amount of resources you get is above when compared to an average undergraduste degree. The lessons gained beyond the textbooks will last me a lifetime. Unfortunately food is not the best.'],
-    'reputabilty rating' => [5, 4, 4, 5],
-    'education quality rating' => [5, 5, 4, 5],
-    'campus facilities accom rating' => [4, 4, 3, 4],
-    'course difficulty rating' => [5, 3, 3, 4],
-    'social element rating' => [3, 4, 4, 4],
-    'value for money rating' => [4, 4, 4, 4],
-    'safety rating' => [5, 4, 5, 5],
-    'career services rating' => [4, 4, 4, 4]
+    "One of it's kind in Singapore and you always meet people who have something interesting to talk about. Excellent research minds. The paperwork and access to facilities is a bit of a pain as is the case in almost most of the universitites in Singapore.",
+    "I have personally been there and seen the facilities and studios there.
+
+    It is Fabulous !!
+
+    If extended an admission advise, do accept it! You will not regret the decision.
+
+    However keep in mind that education in Sg does not guarantee that you will also get empoloyment there. Also after the big hit to its economy, entry of Foreigners into their workforce will be definitly scrutinized and restricted.",
+    "A nice, modern university catering to Singapore's current and future needs. It is conveniently located to the nearby Upper Changi MRT station and the Changi City Point shopping mall which is not far away. I have always liked design but unfortunately during my time, there were no courses related to design thinking other than architecture. Otherwise, I would not have wasted my time studying engineering at NUS."],
+    'reputabilty rating' => [5, 4, 4, 5, 5, 5],
+    'education quality rating' => [5, 5, 4, 5, 4, 4],
+    'campus facilities accom rating' => [4, 4, 3, 5, 5, 5],
+    'course difficulty rating' => [5, 3, 3, 5, 4, 4],
+    'social element rating' => [3, 4, 4, 5, 4, 4],
+    'value for money rating' => [4, 4, 4, 5, 4, 5],
+    'safety rating' => [5, 4, 5, 5, 5, 5],
+    'career services rating' => [4, 4, 4, 5, 4, 5]
   }
 }
 
