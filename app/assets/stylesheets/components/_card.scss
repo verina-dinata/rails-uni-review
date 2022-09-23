@@ -77,3 +77,57 @@
 .fav-card-info {
   color: black !important;
 }
+
+.card-bg {
+  background-color: #4CACBC;
+  border-radius: 8px;
+}
+
+.card-sg h2 {
+  font-weight: bold;
+  font-size: x-large;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.card-sg p {
+  text-align: left;
+  color: white !important;
+}
+
+.card-sg-link {
+  text-decoration: none !important;
+  color: white;
+
+  &:hover {
+    color: rgba(61, 59, 59, 0.8);
+    transition-duration: .5s;
+  }
+}
+
+.card-sg-row {
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: 4px 6px 6px rgba(96, 96, 96, 0.8);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card-au h2 {
+  font-weight: bold;
+  font-size: x-large;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.card-au p {
+  text-align: right;
+  color: white !important;
+}
+
+.card-country-img{
+  width: 100%;
+  height: 451px;
+  border-radius: 0px 8px 8px 0px;
+  object-fit: cover;
+}
