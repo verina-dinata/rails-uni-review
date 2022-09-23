@@ -21,7 +21,7 @@
 
 <div class="container">
   <div class="row justify-content-center">
-
+    <!-- Sample home card -->
     <div class="col-lg-10 col-md-11 col-sm-12 mt-5 mb-5">
       <div class="card card-sg-row">
         <div class="row card-bg">
@@ -56,7 +56,7 @@
       <div class="card card-sg-row">
         <div class="row card-bg">
           <div class="col-lg-7 col-md-6 col-sm-12" style="padding: 0;">
-            <img src="https://apicms.thestar.com.my/uploads/images/2021/04/11/1109035.jpg" alt="" class="home-img" style="border-radius: 8px 0px 0px 8px;">
+            <img src="https://theacademicinsights.com/wp-content/uploads/2020/07/imej_5ccfe917a8b765ccfef83b7420-740x357.jpg" alt="" class="home-img" style="border-radius: 8px 0px 0px 8px;">
           </div>
           <div class="col-lg-5 col-md-6 col-sm-6 text-align-center card-sg" style="padding: 3.5rem; margin: auto;">
             <h2><%= link_to "UNIVERSITIES IN MALAYSIA", universities_path(:country=>"Malaysia"), class:"card-sg-link" %></h2>
@@ -92,7 +92,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4">
-                <%= image_tag(user_avatar(@first_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@first_review.user.photo_key, class: "rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3"><%= @first_review.user.first_name %> <%= @first_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @first_review.university.name %></strong></p>
                 <p class="text-muted">
@@ -108,7 +108,7 @@
               </div>
 
               <div class="col-lg-4 d-none d-lg-block">
-                <%= image_tag(user_avatar(@third_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@third_review.user.photo_key, class:"rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3"><%= @third_review.user.first_name %> <%= @third_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @third_review.university.name %></strong></p>
                 <p class="text-muted">
@@ -124,7 +124,7 @@
               </div>
 
               <div class="col-lg-4 d-none d-lg-block">
-                <%= image_tag(user_avatar(@last_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@last_review.user.photo_key, class:"rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3"><%= @last_review.user.first_name %> <%= @last_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @last_review.university.name %></strong></p>
                 <p class="text-muted">
@@ -147,7 +147,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4">
-                <%= image_tag(user_avatar(@second_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@second_review.user.photo_key, class:"rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3">John <%= @second_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @second_review.university.name %></strong></p>
                 <p class="text-muted">
@@ -163,7 +163,7 @@
               </div>
 
               <div class="col-lg-4 d-none d-lg-block">
-                <%= image_tag(user_avatar(@fourth_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@fourth_review.user.photo_key, class:"rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3">Zac <%= @fourth_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @fourth_review.university.name %></strong></p>
                 <p class="text-muted">
@@ -179,7 +179,7 @@
               </div>
 
               <div class="col-lg-4 d-none d-lg-block">
-                <%= image_tag(user_avatar(@fifth_review.user), class: "rounded-circle mb-4 avatar-bordered") %>
+                <%= cl_image_tag(@fifth_review.user.photo_key, class:"rounded-circle mb-4 avatar-bordered") %>
                 <h5 class="mb-3"><%= @fifth_review.user.first_name %> <%= @fifth_review.user.last_name %></h5>
                 <p class="text-secondary">Student at <strong><%= @fifth_review.university.name %></strong></p>
                 <p class="text-muted">
