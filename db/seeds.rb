@@ -464,7 +464,8 @@ puts "Creating Users (will take ~5 minutes)"
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: "user#{i}@gmail.com",
-    password: "password"
+    password: "password",
+    confirmed_at: Time.now
   )
   curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
   curr_user.save
