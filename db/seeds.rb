@@ -524,15 +524,16 @@ reviews = {
     2) International student
     3) Ridiculously smart
     Other then that, don’t waste your time here studying a degree that will take you 5 years to get when you could get it at any other university for 3 years of studying only. A great example is the Bachelor of Nursing that Melbourne University offers. For starters, it is a post graduate course which means you must do previous undergraduate studies before hand, whilst you could have direct entry into a Bachelor of nursing at any other institution. Also, as mentioned above, the University is catered to those students who come under the three options, it is so disappointing to see very little representation of students who come from a lower demographic background. It’s not the 18th century anymore!',
-    'Worst uni ever. So many mistake made by school admin while enrollment. A lot of confused standards and discribe for study process such as paying your fees etc. No idea why this suck uni can be ranked so high with such stupid services.'],
-    'reputabilty rating' => [5, 4, 4, 2, 1],
-    'education quality rating' => [5, 5, 5, 3, 2],
-    'campus facilities accom rating' => [5, 4, 3, 3, 1],
-    'course difficulty rating' => [4, 4, 5, 3, 2],
-    'social element rating' => [4, 5, 3, 3, 2],
-    'value for money rating' => [5, 4, 4, 2, 1],
-    'safety rating' => [5, 4, 4, 3, 4],
-    'career services rating' => [5, 5, 3, 2, 1]
+    'Worst uni ever. So many mistake made by school admin while enrollment. A lot of confused standards and discribe for study process such as paying your fees etc. No idea why this suck uni can be ranked so high with such stupid services.',
+    'Great course, school and teachers. Not so keen on syndicate assignments, in the end I did them mostly by myself and submitted for the group. Never really saw the point, mostly the person who most wants a good mark carries the rest.'],
+    'reputabilty rating' => [5, 4, 4, 2, 1, 4],
+    'education quality rating' => [5, 5, 5, 3, 2, 4],
+    'campus facilities accom rating' => [5, 4, 3, 3, 1, 4],
+    'course difficulty rating' => [4, 4, 5, 3, 2, 4],
+    'social element rating' => [4, 5, 3, 3, 2, 3],
+    'value for money rating' => [5, 4, 4, 2, 1, 4],
+    'safety rating' => [5, 4, 4, 3, 4, 4],
+    'career services rating' => [5, 5, 3, 2, 1, 3]
   },
   'Australian National University' => {
     comment: ['Has spent almost 10 years in ANU, it is always a lovely place for work and study, really enjoyed the peaceful nature environment and the culture of the academics.',
