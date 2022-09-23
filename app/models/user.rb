@@ -12,6 +12,10 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  def photo_key
+    self.photo&.key.presence || 'default-avatar'
+  end
+
   # protected
 
   # def confirmation_required?
