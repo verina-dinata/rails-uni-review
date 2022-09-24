@@ -17,6 +17,7 @@ Department.destroy_all
 Education.destroy_all
 University.destroy_all
 User.destroy_all
+Course.destroy_all
 
 puts "Creating Universities"
 
@@ -475,10 +476,17 @@ users = User.all
 
 puts "Creating Departments"
 
-departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
+departments = { "Arts and Social Sciences" => {courses: ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"]},
+                "Business" => {courses: ["Accountancy", "Business Administration", "Economics", "Finance"]},
+                "Computing" => {courses: ["Computer Science", "Information Security", "Information Systems", "Business Analytics"]},
+                "Dentistry & Medicine" => {courses: ["Dentistry", "Medicine", "Nursing"]},
+                "Design" => {courses: ["Architecture", "Mass Communications", "Digital Media"]},
+                "Public Policy" => {courses: ["Journalism", "Political Sciences", "Public Affairs"]},
+                "Science & Engineering" => {courses: ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"]}}
 
-departments.each do |department|
+departments.each do |department, detail|
   curr_department = Department.new(name: department)
+  curr_department.courses = detail[:courses]
   curr_department.save!
 end
 
