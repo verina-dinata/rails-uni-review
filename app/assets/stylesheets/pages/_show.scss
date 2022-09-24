@@ -2,28 +2,37 @@
 @import "../components/add_to_favourite";
 @import "components/price_ratings";
 
-.container {
-  // align-items: center;
-}
-
-.info-block {
+.title-block {
   position: sticky;
-  top: 0;
+  top: 75px;
   z-index: 99;
   background: white;
+  margin-bottom: 10px;
 }
 
-.uni-header {
-  display: grid;
-  grid-template-columns: 100px 1fr 50px;
-  margin: 10px;
+#university-img {
+  height: 250px;
+  overflow: hidden;
 }
+
+#heart-button
+
+.accordian {
+  border: black;
+}
+
+.main-body-container {
+  margin: 10px;
+  position: relative;
+}
+
 
 .side-nav-menu {
-  width: 130px;
+  width: 150px;
   position: fixed;
-  top: 50%;
-  left: 150px;
+  top: 350px;
+  left: 80px;
+  font-size: 18px;
   z-index: 1;
   background: #eee;
   overflow-x: hidden;
@@ -33,7 +42,6 @@
 .side-nav-menu a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 18px;
   color: #2196F3;
   display: block;
 }
@@ -42,22 +50,20 @@
   color: #064579;
 }
 
+.body-content {
+  top: 70px;
+  position: relative;
+}
+
+
 .stats-grid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
-.accordian {
-  border: black;
-}
-
-.main-content {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  margin: 10px;
-  position: relative;
+.stats-elements {
+  text-align: center;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -76,7 +82,13 @@
   .side-nav-menu {
     display: none;
   }
+
+  .nav-bar-spacer {
+    display: none;
+  }
+
 }
+
 
 #card-carousel {
   .carousel-inner .carousel-item > div {
@@ -111,6 +123,7 @@
     .carousel-inner{
       padding: 1em;
     }
+
     .card{
         margin: 0 .5em;
         box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
