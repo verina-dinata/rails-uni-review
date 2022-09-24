@@ -9,3 +9,16 @@
     transition: 0.3s !important;
   }
 }
+
+
+.side-nav-menu-custom {
+  width: 150px;
+  height: 160px;
+  position: fixed;
+  top: 350px;
+  font-size: 18px;
+  z-index: 1;
+  background: #eee;
+  overflow-x: hidden;
+  // padding: 10px 20px;
+}

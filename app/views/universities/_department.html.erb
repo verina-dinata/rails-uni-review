@@ -1,8 +1,5 @@
-<div class="card dept-card" style="height: 15rem;">
-  <h5 class="card-title text-center"><%= department.name %></h5>
-  <p class="card-text text-left">
+
+  <h3 class="card-title text-center"><%= department.name %></h3>
   <% department.courses.each do |course| %>
-    <%= course.name %><br>
+    <p><%= course.name %><br></p>
   <% end %>
-  </p>
-</div>
