@@ -13,6 +13,7 @@ Chatroom.destroy_all
 Vote.destroy_all
 Favorite.destroy_all
 Review.destroy_all
+Course.destroy_all
 Department.destroy_all
 Education.destroy_all
 University.destroy_all
@@ -459,7 +460,7 @@ puts "Creating Users (will take ~5 minutes)"
 
 50.times do |i|
   random_num = rand(1..38)
-  # avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
+  avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
   curr_user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -467,7 +468,7 @@ puts "Creating Users (will take ~5 minutes)"
     password: "password",
     confirmed_at: Time.now
   )
-  # curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
+  curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
   curr_user.save
 end
 
@@ -475,19 +476,32 @@ users = User.all
 
 puts "Creating Departments"
 
-departments = { "Arts and Social Sciences" => { courses: ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"] },
-                "Business" => { courses: ["Accountancy", "Business Administration", "Economics", "Finance"] },
-                "Computing" => { courses: ["Computer Science", "Information Security", "Information Systems", "Business Analytics"] },
-                "Dentistry & Medicine" => { courses: ["Dentistry", "Medicine", "Nursing"] },
-                "Design" => { courses: ["Architecture", "Mass Communications", "Digital Media"] },
-                "Public Policy" => { courses: ["Journalism", "Political Sciences", "Public Affairs"] },
-                "Science & Engineering" => { courses: ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] } }
+departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design", "Public Policy", "Science & Engineering"]
 
-departments.each do |department, detail|
-  name =  department
-  courses = detail[:courses]
-  Department.create(name:, courses:)
+departments.each do |department|
+  name = department
+  Department.create(name:)
 end
+
+puts "Creating Courses"
+
+courses = { "Arts and Social Sciences" => ["English Literature", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Sociology"],
+            "Business" => ["Accountancy", "Business Administration", "Economics", "Finance"],
+            "Computing" => ["Computer Science", "Information Security", "Information Systems", "Business Analytics"],
+            "Dentistry & Medicine" => ["Dentistry", "Medicine", "Nursing"],
+            "Design" => ["Architecture", "Mass Communications", "Digital Media"],
+            "Public Policy" => ["Journalism", "Political Sciences", "Public Affairs"],
+            "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
+
+courses.each do |department, courses|
+  courses.each do |course|
+    name = course
+    curr_course = Course.new(name:)
+    curr_course.department = Department.find_by(name: department)
+    curr_course.save!
+  end
+end
+
 
 
 puts "Creating Education"
@@ -517,10 +531,6 @@ users.size.times do |i|
     curr_education.department = Department.all.sample
     curr_education.course = curr_education.department.courses.sample
     curr_education.save!
-    puts curr_education
-    puts curr_education.department
-    puts curr_education.course
-    debugger
   end
 end
 
