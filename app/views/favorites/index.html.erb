@@ -1,13 +1,33 @@
 <div class="container mt-5 pt-3">
   <div class="row justify-content-center">
-    <h1 class="text-center"><strong>Favorites</strong></h1>
-    <div class="col-lg-8">
+    <div class="d-flex">
+      <div class="m-2 mt-2">
+        <%= link_to root_path, class: "link" do %>
+          <i class="fa-solid fa-chevron-left fa-lg icon pt-3"></i>
+        <% end %>
+      </div>
+      <h1 class="mb-4 ms-2"><strong>Favorites</strong></h1>
+    </div>
+    <div>
+      <% if @favorites.blank? %>
+        <h5>Your favorite list is empty. Add any university you're interested in to your favorite list!</h5>
+      <% end %>
+    </div>
+    <div class="col-lg-8 mt-4">
       <% @favorites.each do |f| %>
-        <div class="card">
-          <%= link_to university_path(f.university) do %>
-            <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
-            <%= f.university.name %>
+        <div class="card" id="favorite-<%= f.id %>">
+          <%= link_to university_path(f.university), class:"university-link", style:"border-radius:0.25rem;" do %>
+            <div class="card-body">
+
+              <%= image_tag(f.university.logo, class: "uni-card-image logoo") %>
+              <strong class="fav-card-info"><%= f.university.name %></strong>
+
+            </div>
           <% end %>
+          <%= render "universities/favorite",
+                  university: f.university,
+                  favorite_class: "btn btn-link",
+                  favorite_style: "top:0; right:0; position:absolute; margin:36px; font-size:x-large;" %>
         </div>
       <% end %>
     </div>

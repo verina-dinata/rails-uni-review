@@ -55,6 +55,8 @@
   background-color: #2F8F9D !important;
   width: 25%;
   border: none !important;
+  border-radius: 5px;
+  color: white;
 
   &:hover {
     background-color:  #fff !important;
@@ -80,4 +82,52 @@
     color: rgb(58, 53, 53) !important;
     border: 1px solid rgb(58, 53, 53) !important;
   }
+}
+
+
+
+.animated-border-button {
+  background-color: #2F8F9D !important;
+  border: none !important;
+  color: #ffffff !important;
+  outline: none;
+  padding: 12px 40px 10px !important;
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px !important;
+
+  // &:hover {
+  //   background-color: white !important;
+  //   color: #2F8F9D !important;
+  //   border: 1px solid #2F8F9D;
+  // }
+}
+
+.animated-border-button:before,
+.animated-border-button:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button:before {
+  border-top: 2px solid #2F8F9D;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button:after {
+  border-bottom: 2px solid #2F8F9D;
+  bottom: -4px;
+  left: 0;
+}
+
+.animated-border-button:hover:before,
+.animated-border-button:hover:after {
+  width: 100%;
 }

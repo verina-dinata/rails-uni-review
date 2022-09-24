@@ -55,15 +55,15 @@
             <%= f.label :academic_degree, 'Academic Degree' %>
           </div>
 
-          <div class="row align-items-center">
-            <div class="form-floating mb-3 col-6">
+          <div class= "d-flex">
+            <div class="form-floating mb-3 col-6 pe-2">
               <%= f.input_field :start_date, as: :date, html5: true,
               class: "form-control",
               value: education.start_date.presence || Date.today  %>
               <%= f.label :start_date, 'Start date' %>
             </div>
 
-            <div class="form-floating mb-3 col-6">
+            <div class="form-floating mb-3 col-6 ps-2">
               <%= f.input_field :end_date, as: :date, html5: true,
               class: "form-control",
               value: education.end_date.presence || (Date.today + 1.year)  %>
