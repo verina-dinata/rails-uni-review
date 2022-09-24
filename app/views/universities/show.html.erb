@@ -226,14 +226,14 @@
             <% end %>
             </span>
             <br>Enrollment Deadline:<br>
-            <span id="create-invite"><%= @university.application_deadline %></span>
+            <p id="create-invite"><%= @university.application_deadline.strftime("%d %h %Y") %></p>
             <button type="button"
             data-controller="calendar"
             name-value="<%= @university.name.to_json %>"
             deadline-value="<%= @university.application_deadline.to_json %>"
             address-value="<%= @university.address.to_json %>"
             data-action="click->calendar#createInvite"
-            class="btn btn-secondary">Book a campus tour</button>
+            class="btn search-btn" style="width: 100%;">Add to calendar</button>
           </div>
         </section>
 
