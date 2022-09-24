@@ -6,33 +6,33 @@
       </div>
 
       <div class="col-6">
+        <div class="d-flex justify-content-between">
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <span style="color:grey"><%= @university.city %> | <%= @university.country %></span>
+          </div>
+          <div>
+            <%= render "universities/favorite",
+                  university: @university,
+                  favorite_class: "btn btn-link",
+                  favorite_style: "padding-top:0; font-size:large;" %>
+          </div>
+        </div>
         <div>
-          <i class="fa-solid fa-location-dot"></i>
-          <span style="color:grey"><%= @university.city %> | <%= @university.country %></span>
+          <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
         </div>
-        <div class="row">
-          <div class="col-10">
-            <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
-          </div>
-          <div class="col-2" style="margin: auto">
-            <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->add-to-favourite-animation#heartAnimation">
-              <span class="fa-solid fa-heart active"></span>
-            </i>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
+        <div class="d-flex justify-content-between">
+          <div class="">
             Overall Rating based on <%= @university.reviews.length %> Reviews<br>
             <i class="fa-solid fa-trophy"></i> Ranked Globally: #<%= @university.ranking %><br>
               <i class="fa-solid fa-crown"></i> Uni-Versus Ranking: <strong>#<%= @internal_ranking %></strong><br>
           </div>
-          <div class="col-2">
+          <div class="me-5">
             <div class="circle-rating">
               <%= @university.global_avg.round(3) * 20 %>
             </div>
           </div>
-          <div class="col-4">
-          </div>
+
         </div>
         <div class="my-3">
           <button class="accordian-button btn search-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
