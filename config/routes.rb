@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :universities, only: %i[index show] do
     resources :favorites, only: %i[create destroy]
-    resources :reviews, only: %i[create] do
+    resources :reviews, only: %i[create index] do
       resources :votes, only: %i[create]
       delete '/votes', to: 'votes#destroy'
     end

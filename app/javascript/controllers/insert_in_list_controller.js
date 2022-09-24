@@ -6,6 +6,7 @@ export default class extends Controller {
   static values = { position: String }
 
   connect() {
+    this.loadFirstPage()
   }
 
   send(event) {
@@ -18,15 +19,39 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then((data) => {
-        if (data.inserted_item) {
-          this.itemsTarget.insertAdjacentHTML(this.positionValue, data.inserted_item)
-          if (this.itemsTarget.children.length > 5) {
-            this.itemsTarget.removeChild(this.itemsTarget.lastElementChild)
-          }
-        }
-        this.formTarget.outerHTML = data.form
+        // if (data.inserted_item) {
+        //   this.itemsTarget.insertAdjacentHTML(this.positionValue, data.inserted_item)
+        //   if (this.itemsTarget.children.length > 5) {
+        //     this.itemsTarget.removeChild(this.itemsTarget.lastElementChild)
+        //   }
+        // }
+        // this.formTarget.outerHTML = data.form
+        this.loadFirstPage()
         this.closeTarget.click()
       })
 
+    }
+
+    getReviews(url) {
+      fetch(url, {
+        method: "GET",
+
+      })
+        .then(response => response.text())
+        .then(content => {
+          this.itemsTarget.innerHTML = content
+        })
+    }
+
+    handlePagination(event) {
+      event.preventDefault()
+      event.stopPropagation()
+      this.getReviews(event.target.href)
+      document.getElementById("review-top").scrollIntoView()
+    }
+
+    loadFirstPage() {
+      const url = window.location.pathname + '/reviews?page=' + 1
+      this.getReviews(url)
     }
 }
