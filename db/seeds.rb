@@ -476,7 +476,7 @@ users = User.all
 
 puts "Creating Departments"
 
-departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design", "Public Policy", "Science & Engineering"]
+departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design", "Law", "Public Policy", "Science & Engineering"]
 
 departments.each do |department|
   name = department
@@ -485,13 +485,14 @@ end
 
 puts "Creating Courses"
 
-courses = { "Arts and Social Sciences" => ["English Literature", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Sociology"],
+courses = { "Arts and Social Sciences" => ["English Literature", "Music", "Philosophy", "Theatre and Performance", "History", "Geography", "Sociology"],
             "Business" => ["Accountancy", "Business Administration", "Economics", "Finance"],
             "Computing" => ["Computer Science", "Information Security", "Information Systems", "Business Analytics"],
             "Dentistry & Medicine" => ["Dentistry", "Medicine", "Nursing"],
             "Design" => ["Architecture", "Mass Communications", "Digital Media"],
+            "Law" => ["Law"],
             "Public Policy" => ["Journalism", "Political Sciences", "Public Affairs"],
-            "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
+            "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
 
 courses.each do |department, courses|
   courses.each do |course|
@@ -501,8 +502,6 @@ courses.each do |department, courses|
     curr_course.save!
   end
 end
-
-
 
 puts "Creating Education"
 
