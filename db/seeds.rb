@@ -17,7 +17,6 @@ Department.destroy_all
 Education.destroy_all
 University.destroy_all
 User.destroy_all
-Course.destroy_all
 
 puts "Creating Universities"
 
@@ -484,41 +483,19 @@ users = User.all
 
 puts "Creating Departments"
 
-departments = { "Arts and Social Sciences" => {courses: ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"]},
-                "Business" => {courses: ["Accountancy", "Business Administration", "Economics", "Finance"]},
-                "Computing" => {courses: ["Computer Science", "Information Security", "Information Systems", "Business Analytics"]},
-                "Dentistry & Medicine" => {courses: ["Dentistry", "Medicine", "Nursing"]},
-                "Design" => {courses: ["Architecture", "Mass Communications", "Digital Media"]},
-                "Public Policy" => {courses: ["Journalism", "Political Sciences", "Public Affairs"]},
-                "Science & Engineering" => {courses: ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"]}}
+departments = { "Arts and Social Sciences" => { courses: ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"] },
+                "Business" => { courses: ["Accountancy", "Business Administration", "Economics", "Finance"] },
+                "Computing" => { courses: ["Computer Science", "Information Security", "Information Systems", "Business Analytics"] },
+                "Dentistry & Medicine" => { courses: ["Dentistry", "Medicine", "Nursing"] },
+                "Design" => { courses: ["Architecture", "Mass Communications", "Digital Media"] },
+                "Public Policy" => { courses: ["Journalism", "Political Sciences", "Public Affairs"] },
+                "Science & Engineering" => { courses: ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] } }
 
 departments.each do |department, detail|
-  curr_department = Department.new(name: department)
-  curr_department.courses = detail[:courses]
-  curr_department.save!
+  name =  department
+  courses = detail[:courses]
+  Department.new(name:, courses:)
 end
-
-universities = {
-  'The University of Melbourne' => {
-    description: 'The University of Melbourne is a public research university in Melbourne, Australia.  Having been established in 1853, it is the second oldest university in Australia and the oldest in the state of Victoria.  The main campus is located in the Melbourne suburb of Parkville with several other campuses located across Victoria. These include the campuses at Southbank, Burnley, Creswick, Dookie, Shepparton, Werribee.  The university is divided into 10 faculties including architecture, building and planning; arts; business and economics; education; engineering; fine arts and music; law; medicine, dentistry and health sciences; science and veterinary and agricultural sciences.Notable alumni include the former prime minister of Australia Julia Gillard, author and academic Germaine Greer, comedian Ronny Chieng and chef, restaurateur and food writer Stephanie Alexander. Seven Nobel Laureates have also taught in the institution.',
-    address: 'Grattan Street, Parkville, Victoria, VIC 3010, Australia',
-    city: 'Melbourne',
-    country: 'Australia',
-    url: 'https://www.unimelb.edu.au',
-    ranking: 33,
-    'domestic course fee' => '27k AUD',
-    'international course fee' => '130k AUD',
-    'application deadline' => Date.parse('20231031'),
-    'student count' => 48_088,
-    dorm: true,
-    'email domain' => '@student.unimelb.edu.au',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Logo_of_the_University_of_Melbourne.svg/330px-Logo_of_the_University_of_Melbourne.svg.png',
-    image: 'https://www.unimelb.edu.au/__data/assets/image/0005/2749640/varieties/medium.jpg',
-    image2: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Melbourne_University_grand_building.jpg/220px-Melbourne_University_grand_building.jpg',
-    image3: 'https://images.shiksha.com/mediadata/images/1539253667php1AcBOm.jpeg'
-
-  }
-}
 
 # for each user, go through the educations list
 # for each education, get the university id
