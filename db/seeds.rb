@@ -13,6 +13,7 @@ Chatroom.destroy_all
 Vote.destroy_all
 Favorite.destroy_all
 Review.destroy_all
+Course.destroy_all
 Department.destroy_all
 Education.destroy_all
 University.destroy_all
@@ -473,21 +474,26 @@ end
 
 users = User.all
 
-puts "Creating Departments"
+puts "Creating Departments & Courses"
 
-departments = { "Arts and Social Sciences" => { courses: ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"] },
-                "Business" => { courses: ["Accountancy", "Business Administration", "Economics", "Finance"] },
-                "Computing" => { courses: ["Computer Science", "Information Security", "Information Systems", "Business Analytics"] },
-                "Dentistry & Medicine" => { courses: ["Dentistry", "Medicine", "Nursing"] },
-                "Design" => { courses: ["Architecture", "Mass Communications", "Digital Media"] },
-                "Public Policy" => { courses: ["Journalism", "Political Sciences", "Public Affairs"] },
-                "Science & Engineering" => { courses: ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] } }
+departments = { "Arts and Social Sciences" => ["English Literature", "History", "Music", "Philosophy", "Theatre and Performance", "History", "South-East Asian Studies", "Geography", "Social Work", "Sociology"],
+                "Business" => ["Accountancy", "Business Administration", "Economics", "Finance"],
+                "Computing" => ["Computer Science", "Information Security", "Information Systems", "Business Analytics"],
+                "Dentistry & Medicine" => ["Dentistry", "Medicine", "Nursing"],
+                "Design" => ["Architecture", "Mass Communications", "Digital Media"],
+                "Public Policy" => ["Journalism", "Political Sciences", "Public Affairs"],
+                "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Environmental Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
 
-departments.each do |department, detail|
-  name =  department
-  courses = detail[:courses]
-  Department.create(name:, courses:)
+departments.keys.each do |department|
+  name = department
+  curr_department = Department.create(name:)
+  departments[department].each do |course|
+    curr_course = Course.new(name: course)
+    curr_course.department = curr_department
+    curr_course.save
+  end
 end
+
 
 
 puts "Creating Education"
@@ -517,10 +523,7 @@ users.size.times do |i|
     curr_education.department = Department.all.sample
     curr_education.course = curr_education.department.courses.sample
     curr_education.save!
-    puts curr_education
-    puts curr_education.department
-    puts curr_education.course
-    debugger
+
   end
 end
 

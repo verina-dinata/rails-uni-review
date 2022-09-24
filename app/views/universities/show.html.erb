@@ -158,7 +158,51 @@
 
         <section id="departments-section" class="row">
         Check out the Faculties of <%= @university.name %> below!<br>
+          <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center mb-4" data-bs-ride="carousel" style="height: 500px;">
+            <div class="d-flex justify-content-center">
+              <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselMultiItemExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselMultiItemExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="carousel-inner py-4">
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row">
+                    <% @departments.each_with_index do |department, i| %>
+                      <% break if i == 3 %>
 
+                      <div class="col-lg-4">
+                        <%= render "department", department: department %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <% ((@departments.count - 3) / 3.to_f).ceil.times do %>
+                <div class="carousel-item">
+                  <div class="container">
+                    <div class="row">
+                      <% @departments = @departments.drop(3) %>
+                      <% @departments.each_with_index do |department, i| %>
+                        <% break if i == 3 %>
+                        <div class="col-lg-4">
+                          <%= render "department", department: department %>
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+
+            </div>
+          </div>
           <div class="container text-center my-3">
             <div class="row">
               <div id="card-carousel" class="carousel slide" data-controller="cards-carousel" data-ride="carousel" data-interval="12000">
