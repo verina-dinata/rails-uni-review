@@ -25,6 +25,7 @@ class UniversitiesController < ApplicationController
       @can_review = current_user.educations.where(university_id: @university.id).exists?
     end
     @internal_ranking = find_ranking
+    @departments = Department.all
   end
 
   private
