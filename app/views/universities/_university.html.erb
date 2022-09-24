@@ -7,7 +7,7 @@
 
   <%= render 'universities/favorite', university: university, favorite_class: "btn btn-link", favorite_style: "top:0;right:0; position:absolute;", page: "universities" %>
 
-  <%= university.reviews.count %> Reviews<br>
+  <div>(Total Reviews : <%= university.reviews.count %>)</div>
   <div class="pt-3">
     <strong><%= university.country %></strong>
   </div>
