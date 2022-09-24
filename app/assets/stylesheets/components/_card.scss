@@ -150,27 +150,29 @@ hr {
 
 
 body {
-	background: #262a2b;
+	background: rgb(238, 236, 236);
 }
 .tilesWrap {
 	padding: 0;
 	margin: 50px auto;
 	list-style: none;
 	text-align: center;
+  height: 310px;
 }
 .tilesWrap li {
 	display: inline-block;
 	width: 100%;
+  height: 370px;
 	min-width: 200px;
 	max-width: 230px;
 	padding: 80px 20px 40px;
 	position: relative;
 	vertical-align: top;
-	margin: 10px 40px;
+	margin: 10px 20px;
 	font-family: 'helvetica', san-serif;
 	min-height: 25vh;
-	background: #262a2b;
-	border: 1px solid #252727;
+	background: rgb(238, 236, 236);
+	border: 1px solid rgb(238, 236, 236);
 	text-align: left;
 }
 .tilesWrap li h2 {
@@ -184,20 +186,20 @@ body {
 }
 .tilesWrap li h3 {
 	font-size: 20px;
-	color: #b7b7b7;
+	color: #252727;
 	margin-bottom: 5px;
 }
 .tilesWrap li p {
 	font-size: 16px;
 	line-height: 18px;
-	color: #b7b7b7;
+	color: #252727;
 	margin-top: 5px;
 }
 .tilesWrap li button {
 	background: transparent;
-	border: 1px solid #b7b7b7;
+	border: 1px solid rgb(238, 236, 236);
 	padding: 10px 20px;
-	color: #b7b7b7;
+	color: #252727;
 	border-radius: 3px;
 	position: relative;
 	transition: all 0.3s ease-in-out;
@@ -211,7 +213,7 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 120%;
-	background: #b7b7b7;
+	background: rgb(238, 236, 236);
 	top: 0;
 	opacity: 0;
 	left: -140px;

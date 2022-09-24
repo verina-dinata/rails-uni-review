@@ -174,63 +174,36 @@
               <div class="carousel-inner py-4">
                 <div class="carousel-item active">
                   <div class="container">
-                    <div class="row">
+                    <ul class="tilesWrap">
+                      <% @departments.each_with_index do |department, i| %>
+                        <% break if i == 3 %>
+                        <li class="pt-4">
+                          <%= render "department", department: department %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+                <% ((@departments.count - 3) / 3.to_f).ceil.times do %>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <% @departments = @departments.drop(3) %>
                       <ul class="tilesWrap">
                         <% @departments.each_with_index do |department, i| %>
                           <% break if i == 3 %>
-                          <li class="pt-5">
+                          <li class="pt-4">
                             <%= render "department", department: department %>
                           </li>
                         <% end %>
                       </ul>
                     </div>
                   </div>
-                </div>
-
+                <% end %>
               </div>
-
+            </div>
           </div>
         </section>
-        <ul class="tilesWrap">
-          <li>
-            <h2>01</h2>
-            <h3>Title 1</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s.
-            </p>
-            <button>Read more</button>
-          </li>
-          <li>
-            <h2>02</h2>
-            <h3>Title 2</h3>
-            <p>
-              When an unknown printer took a galley of type and scrambled it to make
-              a type specimen book. It has survived not only five centuries.
-            </p>
-            <button>Read more</button>
-          </li>
-          <li>
-            <h2>03</h2>
-            <h3>Title 3</h3>
-            <p>
-              But also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s.
-            </p>
-            <button>Read more</button>
-          </li>
-          <li>
-            <h2>04</h2>
-            <h3>Title 4</h3>
-            <p>
-              With the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-            <button>Read more</button>
-          </li>
-        </ul>
+
         <hr>
 
         <section id="map-section" class="row">
