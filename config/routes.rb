@@ -8,21 +8,10 @@ Rails.application.routes.draw do
   resources :educations
   resources :favorites, only: %i[index]
 
-  resources :universities do
-    resources :favorites, only: %i[create destroy]
-  end
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # get "education", to: "educations#index"
-  get "universities",     to: "universities#index"
-  get "universities/:id", to: "universities#show"
-
-  get "universities",     to: "universities#index"
-  get "universities/:id", to: "universities#show"
-
   get "search", to: "pages#home_search", as: :home_search
 
   resources :universities, only: %i[index show] do
+    resources :favorites, only: %i[create destroy]
     resources :reviews, only: %i[create] do
       resources :votes, only: %i[create]
       delete '/votes', to: 'votes#destroy'
