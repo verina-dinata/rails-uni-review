@@ -26,6 +26,7 @@ class UniversitiesController < ApplicationController
     end
     @internal_ranking = find_ranking
     @similar_universities = University.where(country: @university.country)
+    @departments = Department.all
   end
 
   private
