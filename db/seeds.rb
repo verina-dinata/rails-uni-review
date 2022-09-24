@@ -459,7 +459,7 @@ puts "Creating Users (will take ~5 minutes)"
 
 50.times do |i|
   random_num = rand(1..38)
-  avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
+  # avatar = File.open("app/assets/images/avatars/avatar#{random_num}.jpg")
   curr_user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -467,7 +467,7 @@ puts "Creating Users (will take ~5 minutes)"
     password: "password",
     confirmed_at: Time.now
   )
-  curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
+  # curr_user.photo.attach(io: avatar, filename: "avatar#{random_num}.jpg")
   curr_user.save
 end
 
@@ -486,8 +486,9 @@ departments = { "Arts and Social Sciences" => { courses: ["English Literature", 
 departments.each do |department, detail|
   name =  department
   courses = detail[:courses]
-  Department.new(name:, courses:)
+  Department.create(name:, courses:)
 end
+
 
 puts "Creating Education"
 
@@ -496,8 +497,7 @@ users.size.times do |i|
     start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
     end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
     academic_degree = ['Diploma', "Bachelor's Degree"][j]
-    course = Faker::Educator.subject
-    curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
+    curr_education = Education.new(start_date:, end_date:, academic_degree:)
     curr_education.user = users[i]
     # if j.zero?
     #   curr_education.university = University.all.sample
@@ -515,7 +515,12 @@ users.size.times do |i|
     curr_education.university = random_uni.sample
     curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
     curr_education.department = Department.all.sample
+    curr_education.course = curr_education.department.courses.sample
     curr_education.save!
+    puts curr_education
+    puts curr_education.department
+    puts curr_education.course
+    debugger
   end
 end
 
