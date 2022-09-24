@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <div class="main-body-container">
+  <div class="main-body-container margin-custom-bottom">
     <div class="side-nav-menu">
       <div>
         <nav>
@@ -240,11 +240,8 @@
 
         <section id="reviews-section" class="row mt-5">
           <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
-            <div style="height: 6vh;" id="review-top">
 
-            </div>
             <div class="d-flex justify-content-between">
-
               <h5 class="mb-5"><strong>Reviews</strong></h5>
               <div>
                 <% if @can_review %>
@@ -262,11 +259,21 @@
             </div>
 
 
-            <div>
-              <div data-insert-in-list-target="items">
-
-              </div>
-
+            <div data-insert-in-list-target="items">
+              <% @reviews.each do |review| %>
+                <% education = review.user.educations.where(university: @university) %>
+                <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
+                <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
+              <% end %>
+              <% if user_signed_in? %>
+                <div class="d-flex justify-content-center mt-4">
+                  <%= paginate @reviews, remote: true %>
+                </div>
+              <% else %>
+                <button type="button" class="animated-border-button width-100 mt-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  View more reviews
+                </button>
+              <% end %>
             </div>
           </div>
         </section>

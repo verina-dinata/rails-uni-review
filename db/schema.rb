@@ -61,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_24_065012) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "courses"
   end
 
   create_table "educations", force: :cascade do |t|
