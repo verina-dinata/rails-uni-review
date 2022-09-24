@@ -35,7 +35,7 @@ export default class extends Controller {
   getReviews(url) {
     fetch(url, {
       method: "GET",
-
+      // headers: { "Accept": "text/plain"}
     })
       .then(response => response.text())
       .then(content => {

@@ -26,6 +26,12 @@ class ReviewsController < ApplicationController
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
 
     render 'reviews/index', layout: false, as: :text
+
+    # respond_to do |format|
+    #   debugger
+    #   format.text { render 'reviews/index', layout: false, as: :text }
+    # end
+
   end
 
   def destroy
