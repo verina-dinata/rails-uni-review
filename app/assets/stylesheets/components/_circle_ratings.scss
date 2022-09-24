@@ -1,13 +1,13 @@
 /* Rating Circle Kit */
 :root {
   --rating-size: 5rem;
-  --bar-size: 1rem;
+  --bar-size: 0.5rem;
   --background-color: #e7f2fa;
   --rating-color-default: #2980b9;
   --rating-color-background: #c7e1f3;
-  --rating-color-good: #27ae60;
+  --rating-color-good: #1ac80d;
   --rating-color-meh: #f1c40f;
-  --rating-color-bad: #e74c3c;
+  --rating-color-bad: #f22e2e;
 }
 
 /* Rating item */
@@ -38,7 +38,7 @@
 }
 
 .circle-rating span small {
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: 900;
   align-self: center;
 }

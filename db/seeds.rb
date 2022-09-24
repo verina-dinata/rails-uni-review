@@ -13,14 +13,13 @@ Chatroom.destroy_all
 Vote.destroy_all
 Favorite.destroy_all
 Review.destroy_all
+Course.destroy_all
 Department.destroy_all
 Education.destroy_all
 University.destroy_all
 User.destroy_all
 
 puts "Creating Universities"
-
-# regex for email domain: /(@.*)/
 
 universities = {
   'The University of Melbourne' => {
@@ -473,14 +472,28 @@ end
 
 users = User.all
 
-puts "Creating Departments"
+puts "Creating Departments & Courses"
 
-departments = ["Arts and Social Sciences", "Business", "Computing", "Dentistry & Medicine", "Design & Environment", "Law", "Music", "Public Health", "Public Policy", "Science & Engineering"]
+departments = { "Arts and Social Sciences" => ["English Literature", "Music", "Philosophy", "Theatre and Performance", "History", "Geography", "Social Work", "Sociology"],
+                "Business" => ["Accountancy", "Business Administration", "Economics", "Finance"],
+                "Computing" => ["Computer Science", "Information Security", "Information Systems", "Business Analytics"],
+                "Dentistry & Medicine" => ["Dentistry", "Medicine", "Nursing"],
+                "Design" => ["Architecture", "Mass Communications", "Digital Media"],
+                "Law" => ["Law"],
+                "Public Policy" => ["Journalism", "Political Sciences", "Public Affairs"],
+                "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
 
-departments.each do |department|
-  curr_department = Department.new(name: department)
-  curr_department.save!
+departments.keys.each do |department|
+  name = department
+  curr_department = Department.create(name:)
+  departments[department].each do |course|
+    curr_course = Course.new(name: course)
+    curr_course.department = curr_department
+    curr_course.save
+  end
 end
+
+
 
 puts "Creating Education"
 
@@ -489,8 +502,7 @@ users.size.times do |i|
     start_date = Faker::Date.between(from: Date.today - 6.year, to: Date.today)
     end_date = start_date + Faker::Date.between(from: 1.day, to: 31.day) + Faker::Date.between(from: 1.month, to: 12.month) + Faker::Date.between(from: 1.year, to: 5.year)
     academic_degree = ['Diploma', "Bachelor's Degree"][j]
-    course = Faker::Educator.subject
-    curr_education = Education.new(start_date:, end_date:, academic_degree:, course:)
+    curr_education = Education.new(start_date:, end_date:, academic_degree:)
     curr_education.user = users[i]
     # if j.zero?
     #   curr_education.university = University.all.sample
@@ -508,7 +520,9 @@ users.size.times do |i|
     curr_education.university = random_uni.sample
     curr_education.university_email = "#{curr_education.user.first_name.downcase}.#{curr_education.user.last_name.downcase}#{curr_education.university.email_domain}"
     curr_education.department = Department.all.sample
+    curr_education.course = curr_education.department.courses.sample
     curr_education.save!
+
   end
 end
 
@@ -984,7 +998,8 @@ reviews = {
     'career services rating' => [3, 2, 4, 3, 3, 4, 3]
   },
   'Singapore University of Technology and Design' => {
-    comment: ['Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or NUS. The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
+    comment: ['Not an easy school to study in but really skillful. They maybe a new university, but there are also alot of dropouts in the first year, even more than NTU or
+      . The students there really learn on the hands-on and thinking skills which ultimately make most of them really smart and good workers. This are all my 2 cents from interacting with a dozen of student.',
     'When I first accepted enrollment, it was for their curriculum approach and their scholarship.
 
     Today, if you want to join, these should be the main factors:

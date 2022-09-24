@@ -1,185 +1,214 @@
-<div class="container my-5">
-  <div class="col-11">
-    <div class="title-block">
-      <div class="row" >
-        <div class="col-xs-7 col-sm-7 col-lg-7">
-          <div class="uni-header">
-            <div>
-              <%= image_tag(@university.logo, width: "100%") %>
-            </div>
-            <div>
-              <div>
-                <span style="color:grey"><%= @university.city %> | <%= @university.country %></span><br>
-                <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
-                Overall Rating <i data-star=<%= @university.global_avg.round(1).to_s %> ></i>
-                <strong> <%= @university.global_avg %> / 5 </strong> based on <%= @university.reviews.length %> Reviews<br>
-                <i class="fa-solid fa-trophy"></i> Ranked Globally: #<%= @university.ranking %><br>
-                <i class="fa-solid fa-crown"></i> Uni-Versus Ranking: <strong>#<%= @internal_ranking %></strong>
-              </div>
-              <div>
-                <button class="accordian-button btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
-                    Description
-                </button>
-                <button type="button" class="btn btn-secondary">Leave a review</button>
-                <button type="button" class="btn btn-secondary">Official Website</button>
-                <i id="heart-button" data-controller="add-to-favourite-animation" data-action="click->add-to-favourite-animation#heartAnimation">
-                  <span class="fa-solid fa-heart active"></span>
-                </i>
-              </div>
-            </div>
+<div class="container">
+  <div class="title-block">
+    <div class="row" >
+      <div class="col-2">
+        <%= image_tag(@university.logo, width: "100%") %>
+      </div>
+
+      <div class="col-6">
+        <div class="d-flex justify-content-between">
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <span style="color:grey"><%= @university.city %> | <%= @university.country %></span>
+          </div>
+          <div>
+            <%= render "universities/favorite",
+                  university: @university,
+                  favorite_class: "btn btn-link",
+                  favorite_style: "padding-top:0; font-size:large;" %>
           </div>
         </div>
+        <div>
+          <span id="university-name" style="font-size:36px"><strong><%= @university.name %></strong></span><br>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="">
+            Overall Rating based on <%= @university.reviews.length %> Reviews<br>
+            <i class="fa-solid fa-trophy"></i> Ranked Globally: #<%= @university.ranking %><br>
+              <i class="fa-solid fa-crown"></i> Uni-Versus Ranking: <strong>#<%= @internal_ranking %></strong><br>
+          </div>
+          <div class="me-5">
+            <div class="circle-rating">
+              <%= @university.global_avg.round(3) * 20 %>
+            </div>
+          </div>
 
-        <div id="university-img" class="carousel slide col-xs-5 col-sm-5 col-lg-5" data-bs-ride="true" data-interval="5000">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <%= image_tag(@university.image, width: "100%") %>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag(@university.image2, width: "100%") %>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag(@university.image3, width: "100%") %>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#university-img" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+        </div>
+        <div class="my-3">
+          <button class="accordian-button btn search-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
+              Description
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#university-img" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <a class="btn search-btn" href=<%= @university.url %> target="_blank">Official Website</a>
         </div>
       </div>
-      <div class="accordion" id="accordion">
-        <div class="accordion-item">
-          <div id="collapse" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#accordion">
-            <div class="accordion-body">
-              <p><%= @university.description %></p><br>
-            </div>
+
+      <div id="university-img" class="carousel slide col-4" data-bs-ride="true" data-interval="100">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag(@university.image, width: "100%") %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag(@university.image2, width: "100%") %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag(@university.image3, width: "100%") %>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#university-img" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#university-img" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="accordion" id="accordion">
+      <div class="accordion-item">
+        <div id="collapse" class="accordion-collapse collapse" aria-labelledby="heading" data-bs-parent="#accordion">
+          <div class="accordion-body">
+            <p><%= @university.description %></p><br>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="main-content" >
-      <nav>
-        <div class="side-nav-menu">
-          <a href="#info-section">Info</a>
-          <a href="#departments-section">Departments</a>
-          <a href="#map-section">Check it out</a>
-          <a href="#reviews-section">Reviews</a>
+  <div class="main-body-container margin-custom-bottom">
+    <div class="body-content row">
+      <div class="nav-bar-spacer col-2">
+        <div class="side-nav-menu-custom py-0 d-flex align-items-center justify-content-center">
+          <nav>
+            <a href="#info-section" class="side-nav-bar py-2">General Info</a><br>
+            <a href="#departments-section" class="side-nav-bar py-2">Faculties</a><br>
+            <a href="#map-section" class="side-nav-bar py-2">Location</a><br>
+            <a href="#reviews-section" class="side-nav-bar py-2">Reviews</a><br>
+          </nav>
         </div>
-      </nav>
-
-      <div data-spy="scroll" data-target=".side-nav-menu" data-offset="220px" tabindex="0">
-        <section class="row">
-          <div class="col-4">
-            Student Population:<br>
-              <i class="fa fa-user"></i>  <%= @university.student_count %><br><br>
-            Average fees for locals:<br>
-              <i data-price="3.2"></i> <%= @university.domestic_course_fee %><br><br></i>
-            Average fees for foreigners:<br>
-              <i data-price="1.7"></i> <%= @university.international_course_fee %><br><br>
-          </div>
-          <div id="info-section"
-            data-controller="display-circle-ratings"
-            class="stats-grid col-8">
-            <div>Reputation
-              <div class="circle-rating"><%= @university.reputability_avg * 20 %>%</div>
+      </div>
+      <div class="col-lg-10 col-md-12 col-sm-12">
+        <section>
+          <h5 class="mt-3 mb-4"><strong>General information</strong></h5>
+          <div class="row">
+            <div class="col-3">
+              Student Population:<br>
+                <i class="fa fa-user"></i>  <%= @university.student_count %><br><br>
+              Average fees for locals:<br>
+                <i data-price="3.2"></i> <%= @university.domestic_course_fee %><br><br></i>
+              Average fees for foreigners:<br>
+                <i data-price="1.7"></i> <%= @university.international_course_fee %><br><br>
             </div>
-            <div>Education Quality
-              <div class="circle-rating"><%= @university.education_quality_avg * 20 %>%</div>
-            </div>
-            <div>Facilities/Accomodation
-              <div class="circle-rating"><%= @university.campus_facilities_accom_avg * 20 %>%</div>
-            </div>
-            <div>Course Difficulty
-              <div class="circle-rating"><%= @university.course_difficulty_avg * 20 %>%</div>
-            </div>
-            <div>Social elements
-              <div class="circle-rating"><%= @university.social_element_avg * 20 %>%</div>
-            </div>
-            <div>Value for Money
-              <div class="circle-rating"><%= @university.value_for_money_avg * 20 %>%</div>
-            </div>
-            <div>Safety
-              <div class="circle-rating"><%= @university.safety_avg * 20 %>%</div>
-            </div>
-            <div>Career Services
-              <div class="circle-rating"><%= @university.career_services_avg * 20 %>%</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="departments-section" class="row">
-        Check out the Faculties of <%= @university.name %> below!<br>
-
-          <div class="container text-center my-3">
-            <div class="row mx-auto my-auto">
-              <div id="card-carousel" class="carousel slide w-100" data-controller="cards-carousel" data-ride="carousel" data-interval="12000">
-                <div class="carousel-inner w-100" role="listbox">
-                  <div class="carousel-item active">
-                    <div>
-                      <div class="card card-body">
-                        <h5>Department of A</h5>
-                        <p>Some description</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div>
-                      <div class="card card-body">
-                        <h5>Department of B</h5>
-                        <p>Some description</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div>
-                      <div class="card card-body">
-                        <h5>Department of C</h5>
-                        <p>Some description</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div>
-                      <div class="card card-body">
-                        <h5>Department of D</h5>
-                        <p>Some description</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div>
-                      <div class="card card-body">
-                        <h5>Department of E</h5>
-                        <p>Some description</p>
-                      </div>
-                    </div>
-                  </div>
+            <div id="info-section"
+              data-controller="display-circle-ratings"
+              class="stats-grid col-9">
+              <div class="row">
+                <div class="col-3 stats-elements">Reputation</div>
+                <div class="col-3 stats-elements">Education Quality</div>
+                <div class="col-3 stats-elements">Facilities/<br>Accomodation</div>
+                <div class="col-3 stats-elements">Course Difficulty<br></div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.reputability_avg * 20 %></div>
                 </div>
-                <a class="carousel-control-prev w-auto" href="#card-carousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next w-auto" href="#card-carousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.education_quality_avg * 20 %></div>
+                </div>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.campus_facilities_accom_avg * 20 %></div>
+                </div>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.course_difficulty_avg * 20 %></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3 stats-elements">Social elements</div>
+                <div class="col-3 stats-elements">Value for Money</div>
+                <div class="col-3 stats-elements">Safety</div>
+                <div class="col-3 stats-elements">Career Services</div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <div class="circle-rating stats-elements "><%= @university.social_element_avg * 20 %></div>
+                </div>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.value_for_money_avg * 20 %></div>
+                </div>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.safety_avg * 20 %></div>
+                </div>
+                <div class="col-3">
+                  <div class="circle-rating stats-elements"><%= @university.career_services_avg * 20 %></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
+        <hr>
+
+        <section id="departments-section" class="row">
+          <div class="container my-3">
+            <div class="row">
+              <div class="col-10">
+                <h5><strong>Check out the Faculties of <%= @university.name %> below!</strong></h5>
+              </div>
+              <div id="departmentCarouselIndicators" class="carousel slide carousel-dark mb-4" data-bs-ride="carousel">
+               <div class="d-flex justify-content-center">
+                <button class="carousel-control-prev" type="button"
+                  data-bs-target="#departmentCarouselIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                  data-bs-target="#departmentCarouselIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="carousel-inner py-4">
+                <div class="carousel-item active">
+                  <div class="container">
+                    <ul class="tilesWrap">
+                      <% @departments.each_with_index do |department, i| %>
+                        <% break if i == 3 %>
+                        <li class="pt-4">
+                          <%= render "department", department: department %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+                <% ((@departments.count - 3) / 3.to_f).ceil.times do %>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <% @departments = @departments.drop(3) %>
+                      <ul class="tilesWrap">
+                        <% @departments.each_with_index do |department, i| %>
+                          <% break if i == 3 %>
+                          <li class="pt-4">
+                            <%= render "department", department: department %>
+                          </li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
         <section id="map-section" class="row">
+          <h5 class="mt-3 mb-4"><strong>Location</strong></h5>
           <div id="map" class="col-9">
             <div class="" style="width: 100%; height: 450px;"
               data-controller="map"
@@ -195,16 +224,23 @@
             <% end %>
             </span>
             <br>Enrollment Deadline:<br>
-            <span id="create-invite"><%= @university.application_deadline %></span>
-            <button type="button"
-            data-controller="calendar"
-            name-value="<%= @university.name.to_json %>"
-            deadline-value="<%= @university.application_deadline.to_json %>"
-            address-value="<%= @university.address.to_json %>"
-            data-action="click->calendar#createInvite"
-            class="btn btn-secondary">Book a campus tour</button>
+            <% if @rolling_admission %>
+              <p>Rolling admission</p>
+              <button type="button"
+              class="btn search-btn" style="width: 100%;" disabled>Add to calendar</button>
+            <% else %>
+              <p id="create-invite"><%= @university.application_deadline.strftime("%d %h %Y") %></p>
+              <button type="button"
+              data-controller="calendar"
+              name-value="<%= @university.name.to_json %>"
+              deadline-value="<%= @university.application_deadline.to_json %>"
+              address-value="<%= @university.address.to_json %>"
+              data-action="click->calendar#createInvite"
+              class="btn search-btn" style="width: 100%;">Add to calendar</button>
+            <% end %>
           </div>
         </section>
+
 
         <section id="reviews-section" class="row mt-5">
           <div data-controller="insert-in-list" data-insert-in-list-position-value="afterbegin">
@@ -233,7 +269,6 @@
                 <% average_review_rating = (review.reputabilty_rating + review.education_quality_rating + review.campus_facilities_accom_rating + review.course_difficulty_rating + review.social_element_rating + review.value_for_money_rating + review.safety_rating + review.career_services_rating) / 8.0 %>
                 <%= render "universities/review", review: review, education: education, average_review_rating: average_review_rating %>
               <% end %>
-
               <% if user_signed_in? %>
                 <div class="d-flex justify-content-center mt-4">
                   <%= paginate @reviews, remote: true %>
@@ -254,7 +289,7 @@
   </div>
   <hr>
   <h5 class="ms-4 mt-5 text-grey"><strong> YOU MAY ALSO VISIT </strong></h5>
-  <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center mb-4" data-bs-ride="carousel" style="height: 500px;">
+  <div id="carouselMultiItemExample" class="carousel slide carousel-dark mb-4" data-bs-ride="carousel" style="height: 500px;">
     <div class="d-flex justify-content-center">
       <button class="carousel-control-prev" type="button"
         data-bs-target="#carouselMultiItemExample" data-bs-slide="prev">
