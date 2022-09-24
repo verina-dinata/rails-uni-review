@@ -21,12 +21,12 @@ class UniversitiesController < ApplicationController
     @review = Review.new
     @educations = []
     if user_signed_in?
-    #   @educations = current_user.educations
       @can_review = current_user.educations.where(university_id: @university.id).exists?
     end
     @internal_ranking = find_ranking
     @similar_universities = University.where(country: @university.country)
     @departments = Department.all
+    @rolling_admission = @university.application_deadline.nil?
   end
 
   private

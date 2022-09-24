@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div id="university-img" class="carousel slide col-4" data-bs-ride="true" data-interval="5000">
+      <div id="university-img" class="carousel slide col-4" data-bs-ride="true" data-interval="100">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -224,14 +224,20 @@
             <% end %>
             </span>
             <br>Enrollment Deadline:<br>
-            <p id="create-invite"><%= @university.application_deadline.strftime("%d %h %Y") %></p>
-            <button type="button"
-            data-controller="calendar"
-            name-value="<%= @university.name.to_json %>"
-            deadline-value="<%= @university.application_deadline.to_json %>"
-            address-value="<%= @university.address.to_json %>"
-            data-action="click->calendar#createInvite"
-            class="btn search-btn" style="width: 100%;">Add to calendar</button>
+            <% if @rolling_admission %>
+              <p>Rolling admission</p>
+              <button type="button"
+              class="btn search-btn" style="width: 100%;" disabled>Add to calendar</button>
+            <% else %>
+              <p id="create-invite"><%= @university.application_deadline.strftime("%d %h %Y") %></p>
+              <button type="button"
+              data-controller="calendar"
+              name-value="<%= @university.name.to_json %>"
+              deadline-value="<%= @university.application_deadline.to_json %>"
+              address-value="<%= @university.address.to_json %>"
+              data-action="click->calendar#createInvite"
+              class="btn search-btn" style="width: 100%;">Add to calendar</button>
+            <% end %>
           </div>
         </section>
 
