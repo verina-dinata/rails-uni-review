@@ -35,11 +35,12 @@ export default class extends Controller {
     getReviews(url) {
       fetch(url, {
         method: "GET",
-
+        headers: { "Accept": "application/json" }
       })
-        .then(response => response.text())
-        .then(content => {
-          this.itemsTarget.innerHTML = content
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          this.itemsTarget.innerHTML = data.reviews
         })
     }
 

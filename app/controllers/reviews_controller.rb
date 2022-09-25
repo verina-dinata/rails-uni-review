@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: %i[destroy]
   before_action :set_university, only: %i[create index]
+  skip_before_action :authenticate_user!, only: %i[index]
 
   def create
     @review = Review.new(review_params)
@@ -25,7 +26,6 @@ class ReviewsController < ApplicationController
     @reviews = @university.reviews.order(created_at: :desc).page(params[:page]).per(3)
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
 
-    render 'reviews/index', layout: false, as: :text
   end
 
   def destroy
