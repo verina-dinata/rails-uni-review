@@ -1,25 +1,23 @@
 <div class="row">
   <% educations.each do |education| %>
-    <%= link_to university_path(education.university), class:"university-link" do %>
-      <div class="d-flex justify-content-between">
+    <div class="position-relative">
+      <%= link_to university_path(education.university), class:"university-link" do %>
         <div class="d-flex my-2">
           <%= image_tag(education.university.logo, class: "uni-card-image") %>
           <div class="ms-3">
             <p class="mb-0"><strong><%= education.university.name %></strong></p>
+
             <div class="card-info-light">
               <p class="mb-0 text-small"><%= education.academic_degree %>, <%= education.course.name %></p>
               <p class="text-small"><%= education.start_date.strftime("%h %Y") %> - <%= education.end_date.strftime("%h %Y") %></p>
             </div>
           </div>
         </div>
-
-        <div class="my-2">
-          <i class="fa-solid fa-pen icon" data-bs-toggle="modal" data-bs-target="#educationModal<%= education.id %>"></i>
-          <%= render "users/education_modal", education: education, universities: @universities, departments: @departments %>
-        </div>
-
-
+      <% end %>
+      <div style="position:absolute; top:0;right:0;">
+        <i class="fa-solid fa-pen icon" data-bs-toggle="modal" data-bs-target="#educationModal<%= education.id %>"></i>
+        <%= render "users/education_modal", education: education, universities: @universities, departments: @departments, courses: @courses %>
       </div>
-    <% end %>
+    </div>
   <% end %>
 </div>

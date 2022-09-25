@@ -1,14 +1,16 @@
 <div class="row">
   <% educations.each do |education| %>
-    <div class="d-flex my-2">
-      <%= image_tag(education.university.logo, class: "uni-card-image") %>
-      <div class="ms-3">
-        <p class="mb-0"><strong><%= education.university.name %></strong></p>
-        <div class="card-info-light">
-          <p class="mb-0 text-small"><%= education.academic_degree %>, <%= education.course.name %></p>
-          <p class="text-small"><%= education.start_date.strftime("%h %Y") %> - <%= education.end_date.strftime("%h %Y") %></p>
+    <%= link_to university_path(education.university), class:"university-link" do %>
+      <div class="d-flex my-2">
+        <%= image_tag(education.university.logo, class: "uni-card-image") %>
+        <div class="ms-3">
+          <p class="mb-0"><strong><%= education.university.name %></strong></p>
+          <div class="card-info-light">
+            <p class="mb-0 text-small"><%= education.academic_degree %>, <%= education.course.name %></p>
+            <p class="text-small"><%= education.start_date.strftime("%h %Y") %> - <%= education.end_date.strftime("%h %Y") %></p>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>

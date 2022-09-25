@@ -19,6 +19,11 @@
             <% department_list << [department.name, department.id] %>
           <% end %>
 
+          <% course_list = [] %>
+          <% courses.each do | course | %>
+            <% course_list << [course.name, course.id] %>
+          <% end %>
+
           <div class="form-floating mb-3 mt-3">
             <%= f.input_field :university_id,
             collection: university_list,
@@ -40,9 +45,13 @@
           </div>
 
           <div class="form-floating mb-3">
-            <%= f.input_field :course, class: 'form-control', placeholder: "Input your course name" %>
-            <%= f.label :course, 'Course name' %>
-            <%= f.full_error :course %>
+            <%= f.input_field :course_id,
+            collection: course_list,
+            selected: education.course_id.presence || course_list.first.first,
+            class: "form-select",
+            placeholder:"Enter the name of your course"  %>
+            <%= f.label :course_id, 'Course name' %>
+            <%= f.full_error :course_id %>
             <div class="form-text">Let us know your field of study!</div>
           </div>
 

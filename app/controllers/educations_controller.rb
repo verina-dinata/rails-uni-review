@@ -3,8 +3,9 @@ class EducationsController < ApplicationController
   def index
     @educations = current_user.educations
     @education_new = Education.new
-    @universities = University.all
-    @departments = Department.all
+    @universities = University.all.order(country: :asc)
+    @departments = Department.all.order(name: :asc)
+    @courses = Course.all.order(name: :asc)
   end
 
   def new
