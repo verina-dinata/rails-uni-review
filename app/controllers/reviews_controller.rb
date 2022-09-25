@@ -25,10 +25,10 @@ class ReviewsController < ApplicationController
   def index
     @reviews = @university.reviews.order(created_at: :desc).page(params[:page])
     @reviews = @university.reviews.order(created_at: :desc).limit(2) if current_user.nil?
-
   end
 
   def destroy
+    @review.votes.map(&:delete)
     @review.destroy
     flash[:notice] = "Review has been deleted."
     redirect_back(fallback_location: root_path)
