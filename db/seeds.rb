@@ -483,7 +483,7 @@ departments = { "Arts and Social Sciences" => ["English Literature", "Music", "P
                 "Public Policy" => ["Journalism", "Political Sciences", "Public Affairs"],
                 "Science & Engineering" => ["Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Materials Science & Engineering", "Mathematics", "Physics"] }
 
-departments.keys.each do |department|
+departments.each_key do |department|
   name = department
   curr_department = Department.create(name:)
   departments[department].each do |course|
@@ -492,8 +492,6 @@ departments.keys.each do |department|
     curr_course.save
   end
 end
-
-
 
 puts "Creating Education"
 
@@ -522,7 +520,6 @@ users.size.times do |i|
     curr_education.department = Department.all.sample
     curr_education.course = curr_education.department.courses.sample
     curr_education.save!
-
   end
 end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_24_065012) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_25_052602) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -75,6 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_24_065012) do
     t.string "university_email"
     t.date "start_date"
     t.date "end_date"
+    t.bigint "course_id"
+    t.index ["course_id"], name: "index_educations_on_course_id"
     t.index ["department_id"], name: "index_educations_on_department_id"
     t.index ["university_id"], name: "index_educations_on_university_id"
     t.index ["user_id"], name: "index_educations_on_user_id"

@@ -4,7 +4,7 @@
     <div class="">
       <p class="mb-0 review-font"><strong><%= review.user.first_name %> <%= review.user.last_name %></strong></p>
       <div class="card-info-light review-font-small">
-        <p class="mb-0"><%= education[0].course %></p>
+        <p class="mb-0"><%= education[0].course.name %></p>
         <p class=""><%= education[0].start_date.strftime("%h %Y") %> - <%= education[0].end_date.strftime("%h %Y") %></p>
       </div>
     </div>
