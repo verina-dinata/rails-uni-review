@@ -156,7 +156,6 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    local_time (2.1.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -318,7 +317,6 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   kaminari
-  local_time
   pg (~> 1.1)
   puma (~> 5.0)
   pundit
