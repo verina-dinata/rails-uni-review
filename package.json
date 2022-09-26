@@ -8,6 +8,7 @@
     "@rails/actioncable": "^7.0.4",
     "bootstrap": "^5.2.0",
     "ics": "^2.40.0",
+    "local-time": "^2.1.0",
     "star-rating.js": "^4.3.0",
     "typed.js": "^2.0.12",
     "webpack": "^5.74.0",
