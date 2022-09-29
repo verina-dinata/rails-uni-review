@@ -54,7 +54,7 @@
           <p><%= review.votes.where(status: :downvote).size %></p>
         </div>
       </div>
-      <p class="posted-text">Posted on <%= review.created_at.localtime.strftime("%d %h %Y, %I:%M %P") %></p>
+      <p class="posted-text">Posted on <%= review.created_at.strftime("%d %h %Y, %I:%M %P") %></p>
     </div>
   </div>
 </div>
